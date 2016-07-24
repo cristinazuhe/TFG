@@ -44,8 +44,9 @@ numero_braid4 = 4;
 % contador=contador+3;
 % cilindro_braid(numero_braid3+contador,inicio,fin,N_cortes,Radio);
 
-braid_cad_char = input('Ingrese braid: ','s');
+braid_cad_char = input('Ingrese braid (ej: +s2-s1+s1) ','s');
 contador_braid=1;
+numero_braid = zeros(1,length(braid_cad_char)/3);
 for i=1:length(braid_cad_char)
     if(strcmpi(braid_cad_char(i),'-'))
        aux= braid_cad_char(i+2);
