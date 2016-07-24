@@ -36,16 +36,26 @@ numero_braid2 = 2;
 numero_braid3 = 3;
 numero_braid4 = 4;
 
-contador=0;
-cilindro_braid(numero_braid1,inicio,fin,N_cortes,Radio);
-contador=contador+1;
-hold on;
-braid_neg(numero_braid2+contador,inicio,fin,N_cortes,Radio); %1--> de 1 a 3. 2 --> 2 a 4...
-contador=contador+3;
-cilindro_braid(numero_braid3+contador,inicio,fin,N_cortes,Radio);
+% contador=0;
+% cilindro_braid(numero_braid1,inicio,fin,N_cortes,Radio);
+% contador=contador+1;
+% hold on;
+% braid_neg(numero_braid2+contador,inicio,fin,N_cortes,Radio); %1--> de 1 a 3. 2 --> 2 a 4...
+% contador=contador+3;
+% cilindro_braid(numero_braid3+contador,inicio,fin,N_cortes,Radio);
 
-
-
-
+braid_cad_char = input('Ingrese braid: ','s');
+contador_braid=1;
+for i=1:length(braid_cad_char)
+    if(strcmpi(braid_cad_char(i),'-'))
+       aux= braid_cad_char(i+2);
+       numero_braid(contador_braid) = -str2double(aux);
+       contador_braid = contador_braid+1;
+    elseif(strcmpi(braid_cad_char(i),'+'))
+       aux= braid_cad_char(i+2);
+       numero_braid(contador_braid) = str2double(aux);
+       contador_braid = contador_braid+1;
+    end
+end
 
 
