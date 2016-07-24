@@ -4,14 +4,14 @@ if (fin-inicio == 3*pi)
     l=zeros([1 length(alpha)]);
 
     y0=l;z0=alpha;
-    x1=(signo)*cos(alpha)+numero_braid+1;y1=(-signo)*sin(alpha);z1=alpha;
+    x1=(signo)*cos(alpha)+1;y1=(signo)*sin(alpha);z1=alpha;
     y2=l;z2=alpha;
     if(mod(inicio,2) == 0)
-        x0=l-signo+numero_braid+1;
-        x2=l+signo+numero_braid+1;
+        x0=l-signo+1;
+        x2=l+signo+1;
     else
-        x0=l+signo+numero_braid+1;
-        x2=l-signo+numero_braid+1;
+        x0=l+signo+1;
+        x2=l-signo+1;
     end
     
     x = ((alpha>=inicio)&(alpha<=inicio+pi)).*x0 + ((alpha>=inicio+pi)&(alpha<=inicio+2*pi)).*x1...
@@ -25,5 +25,3 @@ if (fin-inicio == 3*pi)
 else 
     disp('ERROR: El intervalo (fin-inicio) tiene que ser de tamaño 3pi.');
 end
-
-

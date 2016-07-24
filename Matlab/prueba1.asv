@@ -26,11 +26,12 @@
 % surf(x,y,z);
 % axis equal;
 
+
+signo = 1;
 inicio = 0;
 fin = 3*pi;
 N_cortes=20;
-Radio=0.7;
-
+Radio=0.5;
 numero_braid1 = 1;
 numero_braid2 = 2;
 numero_braid3 = 3;
@@ -41,11 +42,7 @@ cilindro_braid(numero_braid1,inicio,fin,N_cortes,Radio);
 contador=contador+1;
 hold on;
 braid_neg(numero_braid2+contador,inicio,fin,N_cortes,Radio); %1--> de 1 a 3. 2 --> 2 a 4...
-contador=contador+3;
-cilindro_braid(numero_braid3+contador,inicio,fin,N_cortes,Radio);
-
-
-
-
+contador=contador+
+cilindro_braid(numero_braid1,inicio,fin,N_cortes,Radio);
 
 

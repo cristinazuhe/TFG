@@ -10,7 +10,7 @@ function traceplot = tubep(x,y,z,N,R)
     xx=x0+repmat(xcir,size(x0,1),1);yy=y0+repmat(ycir,size(y0,1),1);
     zz=repmat(z,1,N+1);
     traceplot=surface(xx',yy',zz');
-    axis equal off;
+    axis equal ;
     shading interp;
     light;
     lighting phong;

@@ -1,10 +1,10 @@
-function tp = giro_braid_pos(numero_braid, signo,inicio,fin,N_cortes,Radio)
+function tp = giro_braid_neg(numero_braid, signo,inicio,fin,N_cortes,Radio)
 if (fin-inicio == 3*pi)
     alpha=inicio:0.1:fin;
     l=zeros([1 length(alpha)]);
 
     y0=l;z0=alpha;
-    x1=(signo)*cos(alpha)+numero_braid+1;y1=(-signo)*sin(alpha);z1=alpha;
+    x1=(signo)*cos(alpha)+numero_braid+1;y1=(signo)*sin(alpha);z1=alpha;
     y2=l;z2=alpha;
     if(mod(inicio,2) == 0)
         x0=l-signo+numero_braid+1;
@@ -25,5 +25,4 @@ if (fin-inicio == 3*pi)
 else 
     disp('ERROR: El intervalo (fin-inicio) tiene que ser de tamaño 3pi.');
 end
-
 
