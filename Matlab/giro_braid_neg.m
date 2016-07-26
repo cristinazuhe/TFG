@@ -1,4 +1,4 @@
-function tp = giro_braid_neg(numero_braid, signo,inicio,fin,N_cortes,Radio)
+function [tp,p3,x,y,z,x_cil,y_cil,z_cil] = giro_braid_neg(numero_braid, signo,inicio,fin,N_cortes,Radio)
     alpha=inicio:0.1:fin;
     l=zeros([1 length(alpha)]);
 
@@ -19,7 +19,10 @@ function tp = giro_braid_neg(numero_braid, signo,inicio,fin,N_cortes,Radio)
         ((alpha>=inicio+2*pi)&(alpha<=fin)).*y2;
     z = ((alpha>=inicio)&(alpha<=inicio+pi)).*z0 +((alpha>=inicio+pi)&(alpha<=inicio+2*pi)).*z1 +...
         ((alpha>=inicio+2*pi)&(alpha<=fin)).*z2;
-    plot3(x, y, z);
+    p3 = plot3(x, y, z);
     tp = tubep(x,y,z,N_cortes,Radio);
+    x_cil = ((alpha>=inicio)&(alpha<=fin)).*x0;
+    y_cil = ((alpha>=inicio)&(alpha<=fin)).*y0;
+    z_cil = ((alpha>=inicio)&(alpha<=fin)).*z0;
 end
 

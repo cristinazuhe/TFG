@@ -1,4 +1,10 @@
-function [tp,p3,x,y,z,x_cil,y_cil,z_cil] = giro_braid_pos(numero_braid, signo,inicio,fin,N_cortes,Radio)
+N_cortes=20;
+Radio=0.4;
+inicio = -3*pi;
+fin = 0;
+signo = 1;
+numero_braid = 3;
+
     alpha=inicio:0.1:fin;
     l=zeros([1 length(alpha)]);
     y0=l;z0=alpha;
@@ -18,11 +24,23 @@ function [tp,p3,x,y,z,x_cil,y_cil,z_cil] = giro_braid_pos(numero_braid, signo,in
         ((alpha>=inicio+2*pi)&(alpha<=fin)).*y2;
     z = ((alpha>=inicio)&(alpha<=inicio+pi)).*z0 +((alpha>=inicio+pi)&(alpha<=inicio+2*pi)).*z1 +...
         ((alpha>=inicio+2*pi)&(alpha<=fin)).*z2;
-    p3 = plot3(x, y, z);
-    tp = tubep(x,y,z,N_cortes,Radio);
-    x_cil = ((alpha>=inicio)&(alpha<=fin)).*x2;
-    y_cil = ((alpha>=inicio)&(alpha<=fin)).*y2;
-    z_cil = ((alpha>=inicio)&(alpha<=fin)).*z2;
-end
 
+    xc = ((alpha>=inicio)&(alpha<=fin)).*x2 ;
+    yc = ((alpha>=inicio)&(alpha<=fin)).*y2;
+    zc = ((alpha>=inicio)&(alpha<=fin)).*z2;
+   
+    
+    representar_braid([2 -2 1], N_cortes, Radio ); 
+for t=0:0.1:1
+    x_tran = (1-t)*x + (t)*xc;
+    y_tran = (1-t)*y + (t)*yc;
+    z_tran = (1-t)*z + (t)*zc;
+    aux1 = plot3(x_tran, y_tran, z_tran);
+    aux2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+    pause(0.1);
+    if(t ~= 1)
+    delete(aux1);
+    delete(aux2);
+    end
+end
 
