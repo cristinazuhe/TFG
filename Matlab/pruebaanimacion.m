@@ -30,17 +30,20 @@ numero_braid = 3;
     zc = ((alpha>=inicio)&(alpha<=fin)).*z2;
    
     
-    representar_braid([2 -2 1], N_cortes, Radio ); 
-for t=0:0.1:1
-    x_tran = (1-t)*x + (t)*xc;
-    y_tran = (1-t)*y + (t)*yc;
-    z_tran = (1-t)*z + (t)*zc;
+   % representar_braid([2 -2 1], N_cortes, Radio ); 
+   
+    au1 = xc; 
+    au2 = yc;
+    au3 = zc;
+for t=1:1:length(zc)
+    au1(1) = []; 
+    au2(1) = [];
+    au3(1) = [];
+    x_tran = au1;
+    y_tran = au2;
+    z_tran = au3;
     aux1 = plot3(x_tran, y_tran, z_tran);
     aux2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
-    pause(0.1);
-    if(t ~= 1)
-    delete(aux1);
-    delete(aux2);
-    end
+    pause(0.01);
 end
 

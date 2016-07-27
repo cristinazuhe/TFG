@@ -44,7 +44,7 @@ function [p0,p1,p2,p3 ] = representar_primer_movimiento(indices_braid, N_cortes,
         contador = 0; 
     end
     
-   %hago movimiento de los crossing i,i+1 
+  %hago movimiento de los crossing i,i+1 
   for t=0:0.1:1
         x_tran1 = (1-t)*x1_cross + (t)*x1_cil_cross;
         y_tran1 = (1-t)*y1_cross + (t)*y1_cil_cross;
@@ -71,11 +71,38 @@ function [p0,p1,p2,p3 ] = representar_primer_movimiento(indices_braid, N_cortes,
         aux4n = tubep(x_tran2n,y_tran2n,z_tran2n,N_cortes,Radio);
         
         pause(0.1);
-        if(t ~= 1)
-        delete(aux1);delete(aux2);delete(aux3);delete(aux4);
         delete(aux1n);delete(aux2n);delete(aux3n);delete(aux4n);
-        end
+        delete(aux1);delete(aux2);delete(aux3);delete(aux4);
   end
+
+ %borro los cilindros...
+    
+     au1n = x1_cil_cross_n; au2n = y1_cil_cross_n;au3n = z1_cil_cross_n;
+     au1_2n = x2_cil_cross_n;au2_2n = y2_cil_cross_n;au3_2n = z2_cil_cross_n;   
+     au1 = x1_cil_cross; au2 = y1_cil_cross;au3 = z1_cil_cross;
+     au1_2 = x2_cil_cross;au2_2 = y2_cil_cross;au3_2 = z2_cil_cross;
+  for t=1:1:length(z1_cil_cross)
+    au1(1)=[]; au2(1)=[]; au3(1)=[];  
+    au1_2(1)=[]; au2_2(1)=[];au3_2(1)=[];
+    au1n(1)=[]; au2n(1)=[]; au3n(1)=[];  
+    au1_2n(1)=[]; au2_2n(1)=[];au3_2n(1)=[];
+    x_tran = au1;y_tran = au2;z_tran = au3;
+    x_tran_2 = au1_2;y_tran_2 = au2_2;z_tran_2 = au3_2;
+    x_tran_n = au1n;y_tran_n = au2n;z_tran_n = au3n;
+    x_tran_2n = au1_2n;y_tran_2n = au2_2n;z_tran_2n = au3_2n;
+    auxi1 = plot3(x_tran, y_tran, z_tran);
+    auxi2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+    auxi1_2 = plot3(x_tran_2, y_tran_2, z_tran_2);
+    auxi2_2 = tubep(x_tran_2, y_tran_2, z_tran_2, N_cortes, Radio);
+    auxi1n = plot3(x_tran_n, y_tran_n, z_tran_n);
+    auxi2n = tubep(x_tran_n,y_tran_n,z_tran_n,N_cortes,Radio);
+    auxi1_2n = plot3(x_tran_2n, y_tran_2n, z_tran_2n);
+    auxi2_2n = tubep(x_tran_2n, y_tran_2n, z_tran_2n, N_cortes, Radio);
+    pause(0.0001);
+    delete(auxi1);delete(auxi2);delete(auxi1_2);delete(auxi2_2);
+    delete(auxi1n);delete(auxi2n);delete(auxi1_2n);delete(auxi2_2n);
+
+ end
        
                   
 
