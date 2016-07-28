@@ -75,34 +75,34 @@ function [p0,p1,p2,p3 ] = representar_primer_movimiento(indices_braid, N_cortes,
         delete(aux1);delete(aux2);delete(aux3);delete(aux4);
   end
 
- %borro los cilindros...
-    
-     au1n = x1_cil_cross_n; au2n = y1_cil_cross_n;au3n = z1_cil_cross_n;
-     au1_2n = x2_cil_cross_n;au2_2n = y2_cil_cross_n;au3_2n = z2_cil_cross_n;   
-     au1 = x1_cil_cross; au2 = y1_cil_cross;au3 = z1_cil_cross;
-     au1_2 = x2_cil_cross;au2_2 = y2_cil_cross;au3_2 = z2_cil_cross;
-  for t=1:1:length(z1_cil_cross)
-    au1(1)=[]; au2(1)=[]; au3(1)=[];  
-    au1_2(1)=[]; au2_2(1)=[];au3_2(1)=[];
-    au1n(1)=[]; au2n(1)=[]; au3n(1)=[];  
-    au1_2n(1)=[]; au2_2n(1)=[];au3_2n(1)=[];
-    x_tran = au1;y_tran = au2;z_tran = au3;
-    x_tran_2 = au1_2;y_tran_2 = au2_2;z_tran_2 = au3_2;
-    x_tran_n = au1n;y_tran_n = au2n;z_tran_n = au3n;
-    x_tran_2n = au1_2n;y_tran_2n = au2_2n;z_tran_2n = au3_2n;
-    auxi1 = plot3(x_tran, y_tran, z_tran);
-    auxi2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
-    auxi1_2 = plot3(x_tran_2, y_tran_2, z_tran_2);
-    auxi2_2 = tubep(x_tran_2, y_tran_2, z_tran_2, N_cortes, Radio);
-    auxi1n = plot3(x_tran_n, y_tran_n, z_tran_n);
-    auxi2n = tubep(x_tran_n,y_tran_n,z_tran_n,N_cortes,Radio);
-    auxi1_2n = plot3(x_tran_2n, y_tran_2n, z_tran_2n);
-    auxi2_2n = tubep(x_tran_2n, y_tran_2n, z_tran_2n, N_cortes, Radio);
-    pause(0.0001);
-    delete(auxi1);delete(auxi2);delete(auxi1_2);delete(auxi2_2);
-    delete(auxi1n);delete(auxi2n);delete(auxi1_2n);delete(auxi2_2n);
-
- end
+ %borro los cilindros del cruce... 
+ au1 = x1_cil_cross; au2 = y1_cil_cross;au3 = z1_cil_cross;
+ au1_2 = x2_cil_cross;au2_2 = y2_cil_cross;au3_2 = z2_cil_cross;
+ au1n = x1_cil_cross_n; au2n = y1_cil_cross_n;au3n = z1_cil_cross_n;
+ au1_2n = x2_cil_cross_n;au2_2n = y2_cil_cross_n;au3_2n = z2_cil_cross_n;  
+ aumat1 = vertcat(au1, au1_2, au1n, au1_2n);
+ aumat2 = vertcat(au2, au2_2, au2n, au2_2n);     
+ aumat3 = vertcat(au3, au3_2, au3n, au3_2n);
+ for t=1:5:length(z1_cil_cross)
+      dim = size(aumat3);
+      for i=1:1:5 %para que el cilindro se borre más rápido.
+          aumat1(:,1)=[];aumat2(:,1)=[];aumat3(:,1)=[];
+      end
+      for j=1:1:dim(1)
+          x_tran =  aumat1(j,:);y_tran = aumat2(j,:); z_tran = aumat3(j,:);
+          if j==1
+            auxi1 = plot3(x_tran, y_tran, z_tran);
+            auxi2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+          else
+              auxi1 = vertcat(auxi1, plot3(x_tran, y_tran, z_tran));
+              auxi2 = vertcat(auxi2, tubep(x_tran,y_tran,z_tran,N_cortes,Radio));
+          end
+      end
+      disp(auxi1);
+      pause(0.001);
+      delete(auxi1);delete(auxi2);
+      clear auxi1;clear auxi2;
+end
        
                   
 
