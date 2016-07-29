@@ -43,3 +43,5 @@ end
 N_cortes=20;
 Radio=0.7;
 representar_braid(indices_braid, N_cortes, Radio);
+
+

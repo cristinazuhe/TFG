@@ -1,4 +1,4 @@
-indices_braid=[1 -2 3 -3 4 5];
+indices_braid=[1 -4];
 
  for i=1:length(indices_braid)-1
     if(indices_braid(i) + indices_braid(i+1) == 0)

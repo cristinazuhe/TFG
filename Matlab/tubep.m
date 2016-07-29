@@ -12,8 +12,8 @@ function traceplot = tubep(x,y,z,N,R)
     traceplot=surface(xx',yy',zz');
     axis equal off;
     shading interp;
-    light;
-    lighting phong;
+    %light;
+    %lighting phong;
     camlight left;
 end
 
