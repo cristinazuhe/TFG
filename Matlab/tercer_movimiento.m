@@ -1,5 +1,4 @@
-indices_braid=[-2 -3 -1];
-
+indices_braid=[-1 -2 -1 -4];
  for i=1:length(indices_braid)-1
     if(abs(abs(indices_braid(i)) - abs(indices_braid(i+1))) > 1)
         nueva_braid = zeros(1,length(indices_braid)-2);

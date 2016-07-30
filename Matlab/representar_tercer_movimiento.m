@@ -9,11 +9,21 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
         for j=1:abs(cruce)-1
             [p0,plt0] = cilindro_braid(j+contador,inicio,fin,N_cortes,Radio);
             hold on;
-            contador = contador +1;         
-            if i == (crossing+1)
-                indice = abs(indices_braid(crossing));
-                if j == (indice + 1) || j==indice
-                    delete ([p0,plt0])
+            contador = contador +1;
+            if (abs(indices_braid(crossing)) < abs(indices_braid(crossing+1)))
+                if i == (crossing+1)
+                    indice = abs(indices_braid(crossing));
+                    if j == (indice + 1) || j==indice
+                        delete ([p0,plt0])
+                    end
+                end
+            end
+            if (abs(indices_braid(crossing)) > abs(indices_braid(crossing+1)))
+                if i == (crossing)
+                    indice = abs(indices_braid(crossing+1));
+                    if j == (indice + 1) || j==indice
+                        delete ([p0,plt0])
+                    end
                 end
             end
         end
@@ -28,14 +38,24 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
                    x1_cross1_n=x1; y1_cross1_n=y1; z1_cross1_n=z1;
                    x1_cil_cross1_n=x1_cil;y1_cil_cross1_n=y1_cil;z1_cil_cross1_n=z1_cil;
                    x2_cross1_n=x2; y2_cross1_n=y2; z2_cross1_n=z2;
-                   x2_cil_cross1_n=x2_cil;y2_cil_cross1_n=y2_cil;z2_cil_cross1_n=z2_cil;                                 
+                   x2_cil_cross1_n=x2_cil;y2_cil_cross1_n=y2_cil;z2_cil_cross1_n=z2_cil;  
+                   if(mod(crossing,2) ==0)
+                        x1_cil_cross1_n_mod = x1_cil_cross1_n+2; x2_cil_cross1_n_mod = x2_cil_cross1_n - 2;
+                   else
+                        x1_cil_cross1_n_mod = x1_cil_cross1_n-2; x2_cil_cross1_n_mod = x2_cil_cross1_n + 2;
+                   end
                  end
                  if(i== (crossing+1))   
                    delete ([p1,plt1,p2,plt2]);
                    x1_cross2_n=x1; y1_cross2_n=y1; z1_cross2_n=z1;
                    x1_cil_cross2_n=x1_cil;y1_cil_cross2_n=y1_cil;z1_cil_cross2_n=z1_cil;
                    x2_cross2_n=x2; y2_cross2_n=y2; z2_cross2_n=z2;
-                   x2_cil_cross2_n=x2_cil;y2_cil_cross2_n=y2_cil;z2_cil_cross2_n=z2_cil;                                
+                   x2_cil_cross2_n=x2_cil;y2_cil_cross2_n=y2_cil;z2_cil_cross2_n=z2_cil;                   
+                   if(mod((crossing+1),2) ==0)
+                        x1_cil_cross2_n_mod = x1_cil_cross2_n+2; x2_cil_cross2_n_mod = x2_cil_cross2_n - 2;
+                   else
+                        x1_cil_cross2_n_mod = x1_cil_cross2_n-2; x2_cil_cross2_n_mod = x2_cil_cross2_n + 2;
+                   end                             
                  end
         else   
                  [p1,plt1,x1,y1,z1,x1_cil,y1_cil,z1_cil,...
@@ -53,10 +73,20 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
             [p3,plt3] = cilindro_braid(j+contador,inicio,fin,N_cortes,Radio);
             hold on;
             contador = contador +1;
-            if i == crossing
-                indice = abs(indices_braid(crossing+1));
-                if j == (indice -1 ) || j==indice
-                    delete ([p3,plt3])
+            if (abs(indices_braid(crossing)) < abs(indices_braid(crossing+1)))
+                if i == (crossing)
+                    indice = abs(indices_braid(crossing+1));
+                    if j == (indice - 1) || j==indice
+                        delete ([p3,plt3])
+                    end
+                end
+            end
+            if (abs(indices_braid(crossing)) > abs(indices_braid(crossing+1)))
+                if i == (crossing+1)
+                    indice = abs(indices_braid(crossing));
+                    if j == (indice - 1) || j==indice
+                        delete ([p3,plt3])
+                    end
                 end
             end
         end
@@ -69,7 +99,7 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
     
     
   for t=0:0.1:1
-        x_tran1 = (1-t)*x1_cross1_n + (t)*(x1_cil_cross1_n+2);
+        x_tran1 = (1-t)*x1_cross1_n + (t)*x1_cil_cross1_n_mod;
         y_tran1 = (1-t)*y1_cross1_n + (t)*y1_cil_cross1_n;
         z_tran1 = (1-t)*z1_cross1_n + (t)*z1_cil_cross1_n;
         aux1 = plot3(x_tran1, y_tran1, z_tran1);
@@ -82,7 +112,7 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
         aux4 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
         
         
-        x_tran1 = (1-t)*x2_cross1_n + (t)*(x2_cil_cross1_n-2);
+        x_tran1 = (1-t)*x2_cross1_n + (t)*x2_cil_cross1_n_mod;
         y_tran1 = (1-t)*y2_cross1_n + (t)*y2_cil_cross1_n;
         z_tran1 = (1-t)*z2_cross1_n + (t)*z2_cil_cross1_n;
         aux5 = plot3(x_tran1, y_tran1, z_tran1);
@@ -101,7 +131,7 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
         aux9 = plot3(x_tran1, y_tran1, z_tran1);
         aux10 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
         
-        x_tran1 = (1-t)*(x1_cil_cross2_n-2) + (t)*x1_cross2_n;
+        x_tran1 = (1-t)*x1_cil_cross2_n_mod + (t)*x1_cross2_n;
         y_tran1 = (1-t)*y1_cil_cross2_n + (t)*y1_cross2_n;
         z_tran1 = (1-t)*(z1_cil_cross2_n+3*pi) + (t)*(z1_cross2_n+3*pi);
         aux11 = plot3(x_tran1, y_tran1, z_tran1);
@@ -113,13 +143,13 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
         aux13 = plot3(x_tran1, y_tran1, z_tran1);
         aux14 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
         
-        x_tran1 = (1-t)*(x2_cil_cross2_n+2) + (t)*x2_cross2_n;
+        x_tran1 = (1-t)*x2_cil_cross2_n_mod + (t)*x2_cross2_n;
         y_tran1 = (1-t)*y2_cil_cross2_n + (t)*y2_cross2_n;
         z_tran1 = (1-t)*(z2_cil_cross2_n+3*pi) + (t)*(z2_cross2_n+3*pi);
         aux15 = plot3(x_tran1, y_tran1, z_tran1);
         aux16 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
        
-        pause(1);
+        pause(0.1);
         if(t~=1)
          delete(aux1);delete(aux2);delete(aux3);delete(aux4);
          delete(aux5);delete(aux6);delete(aux7);delete(aux8);

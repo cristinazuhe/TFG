@@ -9,11 +9,13 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
         for j=1:abs(cruce)-1
             [p0,plt0] = cilindro_braid(j+contador,inicio,fin,N_cortes,Radio);
             hold on;
-            contador = contador +1;         
-            if i == (crossing+1)
-                indice = abs(indices_braid(crossing));
-                if j == (indice + 1) || j==indice
-                    delete ([p0,plt0])
+            contador = contador +1;
+            if ((indices_braid(crossing) > indices_braid(crossing+1))
+                if i == (crossing+1)
+                    indice = abs(indices_braid(crossing));
+                    if j == (indice + 1) || j==indice
+                        delete ([p0,plt0])
+                    end
                 end
             end
         end
@@ -68,52 +70,65 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
 
     
     
-  for t=0:0.1:1
-        x_tran1 = (1-t)*x1_cross1_n + (t)*(x1_cil_cross1_n+2);
-        y_tran1 = (1-t)*y1_cross1_n + (t)*y1_cil_cross1_n;
-        z_tran1 = (1-t)*z1_cross1_n + (t)*z1_cil_cross1_n;
-        aux1 = plot3(x_tran1, y_tran1, z_tran1);
-        aux2 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-        
-        x_tran1 = (1-t)*x1_cil_cross1_n + (t)*x1_cross1_n;
-        y_tran1 = (1-t)*y1_cil_cross1_n + (t)*y1_cross1_n;
-        z_tran1 = (1-t)*(z1_cil_cross1_n-3*pi) + (t)*(z1_cross1_n-3*pi);
-        aux3 = plot3(x_tran1, y_tran1, z_tran1);
-        aux4 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-        
-        
-        x_tran1 = (1-t)*x2_cross1_n + (t)*(x2_cil_cross1_n-2);
-        y_tran1 = (1-t)*y2_cross1_n + (t)*y2_cil_cross1_n;
-        z_tran1 = (1-t)*z2_cross1_n + (t)*z2_cil_cross1_n;
-        aux5 = plot3(x_tran1, y_tran1, z_tran1);
-        aux6 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-        
-        x_tran1 = (1-t)*x2_cil_cross1_n + (t)*x2_cross1_n;
-        y_tran1 = (1-t)*y2_cil_cross1_n + (t)*y2_cross1_n;
-        z_tran1 = (1-t)*(z2_cil_cross1_n-3*pi) + (t)*(z2_cross1_n-3*pi);
-        aux7 = plot3(x_tran1, y_tran1, z_tran1);
-        aux8 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-        
-        %crossing+1
-        x_tran1 = (1-t)*x1_cross2_n + (t)*x1_cil_cross2_n;
-        y_tran1 = (1-t)*y1_cross2_n + (t)*y1_cil_cross2_n;
-        z_tran1 = (1-t)*z1_cross2_n + (t)*z1_cil_cross2_n;
-        aux9 = plot3(x_tran1, y_tran1, z_tran1);
-        aux10 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-        
-        x_tran1 = (1-t)*(x1_cil_cross2_n-2) + (t)*x1_cross2_n;
-        y_tran1 = (1-t)*y1_cil_cross2_n + (t)*y1_cross2_n;
-        z_tran1 = (1-t)*(z1_cil_cross2_n+3*pi) + (t)*(z1_cross2_n+3*pi);
-        aux11 = plot3(x_tran1, y_tran1, z_tran1);
-        aux12 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
-       
-        pause(1);
-        if(t~=1)
-         delete(aux1);delete(aux2);delete(aux3);delete(aux4);
-         delete(aux5);delete(aux6);delete(aux7);delete(aux8);
-         delete(aux9);delete(aux10);delete(aux11);delete(aux12);
-        end
-  end
+%   for t=0:0.1:1
+%         x_tran1 = (1-t)*x1_cross1_n + (t)*(x1_cil_cross1_n+2);
+%         y_tran1 = (1-t)*y1_cross1_n + (t)*y1_cil_cross1_n;
+%         z_tran1 = (1-t)*z1_cross1_n + (t)*z1_cil_cross1_n;
+%         aux1 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux2 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         x_tran1 = (1-t)*x1_cil_cross1_n + (t)*x1_cross1_n;
+%         y_tran1 = (1-t)*y1_cil_cross1_n + (t)*y1_cross1_n;
+%         z_tran1 = (1-t)*(z1_cil_cross1_n-3*pi) + (t)*(z1_cross1_n-3*pi);
+%         aux3 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux4 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         
+%         x_tran1 = (1-t)*x2_cross1_n + (t)*(x2_cil_cross1_n-2);
+%         y_tran1 = (1-t)*y2_cross1_n + (t)*y2_cil_cross1_n;
+%         z_tran1 = (1-t)*z2_cross1_n + (t)*z2_cil_cross1_n;
+%         aux5 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux6 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         x_tran1 = (1-t)*x2_cil_cross1_n + (t)*x2_cross1_n;
+%         y_tran1 = (1-t)*y2_cil_cross1_n + (t)*y2_cross1_n;
+%         z_tran1 = (1-t)*(z2_cil_cross1_n-3*pi) + (t)*(z2_cross1_n-3*pi);
+%         aux7 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux8 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         %crossing+1
+%         x_tran1 = (1-t)*x1_cross2_n + (t)*x1_cil_cross2_n;
+%         y_tran1 = (1-t)*y1_cross2_n + (t)*y1_cil_cross2_n;
+%         z_tran1 = (1-t)*z1_cross2_n + (t)*z1_cil_cross2_n;
+%         aux9 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux10 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         x_tran1 = (1-t)*(x1_cil_cross2_n-2) + (t)*x1_cross2_n;
+%         y_tran1 = (1-t)*y1_cil_cross2_n + (t)*y1_cross2_n;
+%         z_tran1 = (1-t)*(z1_cil_cross2_n+3*pi) + (t)*(z1_cross2_n+3*pi);
+%         aux11 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux12 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         x_tran1 = (1-t)*x2_cross2_n + (t)*x2_cil_cross2_n;
+%         y_tran1 = (1-t)*y2_cross2_n + (t)*y2_cil_cross2_n;
+%         z_tran1 = (1-t)*z2_cross2_n + (t)*z2_cil_cross2_n;
+%         aux13 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux14 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%         
+%         x_tran1 = (1-t)*(x2_cil_cross2_n+2) + (t)*x2_cross2_n;
+%         y_tran1 = (1-t)*y2_cil_cross2_n + (t)*y2_cross2_n;
+%         z_tran1 = (1-t)*(z2_cil_cross2_n+3*pi) + (t)*(z2_cross2_n+3*pi);
+%         aux15 = plot3(x_tran1, y_tran1, z_tran1);
+%         aux16 = tubep(x_tran1,y_tran1,z_tran1,N_cortes,Radio);
+%        
+%         pause(1);
+%         if(t~=1)
+%          delete(aux1);delete(aux2);delete(aux3);delete(aux4);
+%          delete(aux5);delete(aux6);delete(aux7);delete(aux8);
+%          delete(aux9);delete(aux10);delete(aux11);delete(aux12);
+%          delete(aux13);delete(aux14);delete(aux15);delete(aux16);
+%         end
+%   end
     
 
 end
