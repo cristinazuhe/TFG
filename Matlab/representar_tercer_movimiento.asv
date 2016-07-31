@@ -32,8 +32,7 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
                 [p1,plt1,x1,y1,z1,x1_cil,y1_cil,z1_cil,...
                  p2,plt2,x2,y2,z2,x2_cil,y2_cil,z2_cil] = braid_neg(abs(cruce)+contador,inicio,fin,N_cortes,Radio); 
                  hold on;
-                 %obtengo las funciones de cilindro y de cruce del crossing 
-                 if(i== crossing) 
+                 if(i== crossing)   
                    delete ([p1,plt1,p2,plt2]);
                    x1_cross1_n=x1; y1_cross1_n=y1; z1_cross1_n=z1;
                    x1_cil_cross1_n=x1_cil;y1_cil_cross1_n=y1_cil;z1_cil_cross1_n=z1_cil;
@@ -46,7 +45,6 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
                    end
                    x1_cil_cross1_n_mod1 = x1_cil_cross1_n; x2_cil_cross1_n_mod1 = x2_cil_cross1_n;
                  end
-                 %obtengo las funciones de cilindro y de cruce del crossing+1
                  if(i== (crossing+1))  
                    delete ([p1,plt1,p2,plt2]);
                    x1_cross2_n=x1; y1_cross2_n=y1; z1_cross2_n=z1;
@@ -60,11 +58,10 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
                    end
                    x1_cil_cross2_n_mod1 = x1_cil_cross2_n; x2_cil_cross2_n_mod1 = x2_cil_cross2_n;
                  end
-        else   %Si el cruce es negativo, represento trenza cruzada positiva
+        else   
                  [p1,plt1,x1,y1,z1,x1_cil,y1_cil,z1_cil,...
                  p2,plt2,x2,y2,z2,x2_cil,y2_cil,z2_cil] = braid_pos(abs(cruce)+contador,inicio,fin,N_cortes,Radio);
-                 hold on;      
-                 %obtengo las funciones de cilindro y de cruce del crossing   
+                 hold on;         
                  if(i== crossing)   
                    delete ([p1,plt1,p2,plt2]);
                    x1_cross1_n=x1; y1_cross1_n=y1; z1_cross1_n=z1;
@@ -78,7 +75,6 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
                    end
                    x1_cil_cross1_n_mod2 = x1_cil_cross1_n; x2_cil_cross1_n_mod2 = x2_cil_cross1_n;
                  end
-                 %obtengo las funciones de cilindro y de cruce del crossing+1
                  if(i== (crossing+1)) 
                    delete ([p1,plt1,p2,plt2]);
                    x1_cross2_n=x1; y1_cross2_n=y1; z1_cross2_n=z1;
@@ -126,10 +122,6 @@ function [p0,p1,p2,p3 ] = representar_tercer_movimiento(indices_braid, N_cortes,
 
     
   %hago el movimiento de las trenzas  
-  %Cada trozo de trenza de crossing y crossing+1 (un total de 8 trozos)
-  %tendrá una función cilindro y una funcion cruce (cross). Tendremos que
-  %ir de una función a otra según nos vaya interesando en cada trozo de
-  %trenza. 
   aumat1 = vertcat(x1_cross1_n, x1_cil_cross1_n_mod1, x2_cross1_n, x2_cil_cross1_n_mod1,...
                    x1_cross2_n, x1_cil_cross2_n_mod2, x2_cross2_n,x2_cil_cross2_n_mod2 );
   aumat2 = vertcat(x1_cil_cross1_n_mod2, x1_cross1_n, x2_cil_cross1_n_mod2, x2_cross1_n,...
