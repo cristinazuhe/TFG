@@ -18,6 +18,12 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
                      x_cil_centro_mod = x_cil_a + 4;
                  end               
              end
+            %para el cilindro del primer y segundo crossing
+            if (abs(indices_braid(crossing+1)) < abs(indices_braid(crossing)))
+                 if((i == (crossing) || i == (crossing+2)) && j == abs(cruce)-1)
+                     delete ([p0,plt0]);
+                 end               
+             end
             
         end
         if(cruce < 0)
@@ -29,18 +35,26 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
                    x1_cross1_n=x1; y1_cross1_n=y1; z1_cross1_n=z1;
                    x1_cil_cross1_n=x1_cil;y1_cil_cross1_n=y1_cil;z1_cil_cross1_n=z1_cil;
                    x2_cross1_n=x2; y2_cross1_n=y2; z2_cross1_n=z2;
-                   x2_cil_cross1_n=x2_cil;y2_cil_cross1_n=y2_cil;z2_cil_cross1_n=z2_cil;  
+                   x2_cil_cross1_n=x2_cil;y2_cil_cross1_n=y2_cil;z2_cil_cross1_n=z2_cil;                                       
                    if (abs(indices_braid(crossing+1)) > abs(indices_braid(crossing)))
                        if(mod(crossing,2) ==0)
                             x1_cil_cross1_n_mod1 = x2_cross1_n+2; x2_cil_cross1_n_mod1 = x2_cil_cross1_n-2;
+                            x_cil_sup = x2_cil_cross1_n +2; y_cil_sup = y2_cil_cross1_n; z_cil_sup = z2_cil_cross1_n;
+                            x_cross_sup_mod = x1_cross1_n+2; y_cross_sup = y1_cross1_n; z_cross_sup = z1_cross1_n;
                        else
                             x1_cil_cross1_n_mod1 = x1_cil_cross1_n-2; x2_cil_cross1_n_mod1 = x1_cross1_n+2;
+                            x_cil_sup = x1_cil_cross1_n +2; y_cil_sup = y1_cil_cross1_n; z_cil_sup = z1_cil_cross1_n;
+                            x_cross_sup_mod = x2_cross1_n+2; y_cross_sup = y2_cross1_n; z_cross_sup = z2_cross1_n;
                        end
                    else
                        if(mod(crossing,2) ==0)
                             x1_cil_cross1_n_mod1 = x2_cil_cross1_n; x2_cil_cross1_n_mod1 = x1_cross1_n-2;
+                            x_cil_sup = x1_cil_cross1_n-2; y_cil_sup = y1_cil_cross1_n; z_cil_sup = z1_cil_cross1_n;
+                            x_cross_sup_mod = x2_cross1_n-2; y_cross_sup = y2_cross1_n; z_cross_sup = z2_cross1_n;
                        else
                             x1_cil_cross1_n_mod1 = x2_cross1_n-2; x2_cil_cross1_n_mod1 = x1_cil_cross1_n;
+                            x_cil_sup = x2_cil_cross1_n-2; y_cil_sup = y2_cil_cross1_n; z_cil_sup = z2_cil_cross1_n;
+                            x_cross_sup_mod = x1_cross1_n-2; y_cross_sup = y1_cross1_n; z_cross_sup = z1_cross1_n;
                        end
                    end
              end
@@ -65,14 +79,22 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
                    if (abs(indices_braid(crossing+1)) > abs(indices_braid(crossing)))
                        if(mod(crossing+2,2) ==0)
                             x1_cil_cross3_n_mod1 = x1_cil_cross3_n; x2_cil_cross3_n_mod1 = x1_cross3_n+2;
+                            x_cil_inf = x2_cil_cross3_n +2; y_cil_inf = y2_cil_cross3_n; z_cil_inf = z2_cil_cross3_n;
+                            x_cross_inf = x2_cross3_n+2; y_cross_inf = y2_cross3_n; z_cross_inf = z2_cross3_n;
                        else
                             x1_cil_cross3_n_mod1 = x2_cross3_n+2; x2_cil_cross3_n_mod1 = x2_cil_cross3_n;
+                            x_cil_inf = x1_cil_cross3_n +2; y_cil_inf = y1_cil_cross3_n; z_cil_inf = z1_cil_cross3_n;
+                            x_cross_inf = x1_cross3_n+2; y_cross_inf = y1_cross3_n; z_cross_inf = z1_cross3_n;
                        end
                    else
                        if(mod(crossing,2) ==0)
                             x1_cil_cross3_n_mod1 = x2_cross3_n-2; x2_cil_cross3_n_mod1 = x2_cil_cross3_n;
+                            x_cil_inf = x1_cil_cross3_n -2; y_cil_inf = y1_cil_cross3_n; z_cil_inf = z1_cil_cross3_n;
+                            x_cross_inf = x1_cross3_n-2; y_cross_inf = y1_cross3_n; z_cross_inf = z1_cross3_n;
                        else
                             x1_cil_cross3_n_mod1 = x1_cil_cross3_n; x2_cil_cross3_n_mod1 = x1_cross3_n-2;
+                            x_cil_inf = x2_cil_cross3_n -2; y_cil_inf = y2_cil_cross3_n; z_cil_inf = z2_cil_cross3_n;
+                            x_cross_inf = x2_cross3_n-2; y_cross_inf = y2_cross3_n; z_cross_inf = z2_cross3_n;
                        end
                    end
              end
@@ -92,6 +114,12 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
                      delete ([p3,plt3]);
                      x_cil_centro=x_cil_d; y_cil_centro=y_cil_d; z_cil_centro=z_cil_d;
                      x_cil_centro_mod = x_cil_d - 4;
+                 end               
+            end
+            %para el cilindro del primer y segundo crossing
+            if (abs(indices_braid(crossing+1)) > abs(indices_braid(crossing)))
+                 if((i == (crossing) || i == (crossing+2)) && j == abs(cruce)+1)
+                     delete ([p3,plt3]);
                  end               
              end
         end
@@ -149,6 +177,20 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
         z_tran = (1-t)*z_cil_centro + (t)*z_cil_centro;
         aux13 = plot3(x_tran, y_tran, z_tran);
         aux14 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+        
+        %cilindro primer cruce      
+        x_tran = (1-t)*x_cil_sup + (t)*x_cross_sup_mod;
+        y_tran = (1-t)*y_cil_sup + (t)*y_cross_sup;
+        z_tran = (1-t)*z_cil_sup + (t)*z_cross_sup;
+        aux15 = plot3(x_tran, y_tran, z_tran);
+        aux16 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+        
+        %cilindro tercer cruce      
+        x_tran = (1-t)*x_cil_inf + (t)*x_cross_inf;
+        y_tran = (1-t)*y_cil_inf + (t)*y_cross_inf;
+        z_tran = (1-t)*z_cil_inf + (t)*z_cross_inf;
+        aux17 = plot3(x_tran, y_tran, z_tran);
+        aux18 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
          
         pause(0.1);
         if(t~=1)
@@ -156,6 +198,8 @@ function [p0,p1,p2,p3 ] = representar_segundo_movimiento(indices_braid, N_cortes
             delete(aux5);delete(aux6);delete(aux7);delete(aux8);
             delete(aux9);delete(aux10);delete(aux11);delete(aux12);
             delete(aux13);delete(aux14);
+            delete(aux15);delete(aux16);
+            delete(aux17);delete(aux18);
         end
   end
 
