@@ -71,5 +71,5 @@ for i=1:num_terms
     end
 end
 
-salida = strcat('Su Dowker Notation es: ',num2str(dowker));
-disp(salida);
+disp('Su Dowker Notation es:');
+disp
