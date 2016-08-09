@@ -14,7 +14,7 @@ condicion = true;
 while(condicion)
     string_encontrado = false;
     for i=cross:num_terms
-        if( (abs(indices_braid(i)) == string) || (abs(indices_braid(i)) == (string+1)))
+        if( (abs(indices_braid(i)) == string) || (abs(indices_braid(i)) == (string-1)))
             string_encontrado = true;
             cross = i;
             break;
@@ -22,11 +22,8 @@ while(condicion)
     end
 
     if (string_encontrado == 0)
-        disp(cross);
-        disp(string);
         for i=1:cross
-           if( (abs(indices_braid(i)) == string) || (abs(indices_braid(i)) == (string+1)))
-            disp('aqui');
+           if( (abs(indices_braid(i)) == string) || (abs(indices_braid(i)) == (string-1)))
             string_encontrado = true;
             cross = i;
             break;
@@ -35,7 +32,6 @@ while(condicion)
     end
 
     vector_etiquetas(2*(cross-1) + mod(siguiente_etiqueta,2)+1) = siguiente_etiqueta;
-
     siguiente_etiqueta = siguiente_etiqueta +1;
 
     %falta lo del type para los signos....
@@ -47,5 +43,17 @@ while(condicion)
     end
 
     cross = cross + 1;
-    condicion = (siguiente_etiqueta <= 2*num_terms-7);
+    condicion = (siguiente_etiqueta <= 2*num_terms);
+end
+
+%me quedo con los indices pares en el orden correcto. Sera la notación que
+%buscamos
+dowker = zeros(1,num_terms);
+for i=1:num_terms
+    for j=1:num_terms
+        if(vector_etiquetas(2*j) == (2*i-1))
+           dowker(i) = vector_etiquetas(2*j-1);
+           break;
+        end
+    end
 end
