@@ -33,7 +33,6 @@ function m_burau = burau_matrix( indices_braid )
         end
         m_burau = m_burau*aux;
     end
-
     m_burau = simplify(m_burau);
 
 end
