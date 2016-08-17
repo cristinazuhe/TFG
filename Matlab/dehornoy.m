@@ -1,4 +1,4 @@
-indices_braid = [-4 3 2 2 3 -2 -3 3];
+indices_braid = [ 3 -2 -1 4 -2 1 3];
 
 %elimino tantos movimientos de tipo1 como pueda -+simga +-simga
 indices_braid = Simplifica(indices_braid);
@@ -33,7 +33,10 @@ if(~encontrado)
 end
 clearvars i primero signo_anterior;
 
+
 %Ahora ya tengo marcado con pos1 y pos2 el subvector con el que voy a hacer
-%la reduccion de dehornoy. 
+%la reduccion de dehornoy.
+nuevo = reduccion_base(indices_braid, minimo, pos1, pos2);
+
 
 
