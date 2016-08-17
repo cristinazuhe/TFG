@@ -1,45 +1,40 @@
-indices_braid = [3 -1 4 -2 1 ];
+indices_braid = [-1 -2 4 3 4 -3 2 1];
 
 %elimino tantos movimientos de tipo1 como pueda -+simga +-simga
 indices_braid = Simplifica(indices_braid);
 
 %obtengo el indice de la trenza de menor valor 
 minimo = min(abs(indices_braid));
-%busco posiciones de hadle con dicho indice
-primero = true;
-encontrado = false;
-for i=1:length(indices_braid)
-    if(~encontrado)
-        if(primero)
-            if(abs(indices_braid(i)) == minimo)
-                pos1 = i;
-                signo_anterior = sign(indices_braid(i));
-                primero = false;
-            end
-        else
-            if(abs(indices_braid(i)) == minimo)
-                if(sign(indices_braid(i)) ~= signo_anterior)
-                    pos2 = i;
-                    encontrado = true;
-                else
-                    pos1 = i;
-                end
-            end
-        end
-    end
+%busco posiciones de handle con dicho indice
+[pos1,pos2] = encuentra_handle(indices_braid, minimo);
+if(pos1==0 && pos2==0)
+    encontrado = false;
+else
+    encontrado = true;
 end
-if(~encontrado)
-    clearvars pos1 pos2;
-end
-clearvars i primero signo_anterior;
 
+haysubhandle = true;
 if(encontrado)
-    %Ahora ya tengo marcado con pos1 y pos2 el subvector con el que voy a hacer
-    %la reduccion de dehornoy.
-
-    %esta reduccion es para cuando ya tengo el handle en condiciones para
-    %reducir. 
-    nuevo = reduccion_base(indices_braid, minimo, pos1, pos2);
+if(haysubhandle)
+   [pos1_sig, pos2_sig] = encuentra_handle(indices_braid(pos1+1:pos2-1),minimo+1);
+   if(pos1_sig~=0 && pos2_sig~=0)
+       pos1 = pos1_sig; pos2 = pos2_sig; minimo = minimo+1;
+       haysubhandle = true;
+   else
+       haysubhandle = false;
+   end
+end
 end
 
 
+% 
+% if(encontrado)
+%     %Ahora ya tengo marcado con pos1 y pos2 el subvector con el que voy a hacer
+%     %la reduccion de dehornoy.
+% 
+%     %esta reduccion es para cuando ya tengo el handle en condiciones para
+%     %reducir. 
+%     nuevo = reduccion_base(indices_braid, minimo, pos1, pos2);
+% end
+% 
+% 
