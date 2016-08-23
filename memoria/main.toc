@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Teor\IeC {\'\i }a de nudos. }{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n.}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Historia.}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Composici\IeC {\'o}n de nudos.}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Equivalencia de nudos: movimientos de Reidemeister.}{7}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Notaci\IeC {\'o}n de nudos.}{7}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Algunos invariantes.}{7}{subsection.1.6}

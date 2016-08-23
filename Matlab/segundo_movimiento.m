@@ -1,4 +1,4 @@
-indices_braid=[4 -2 1 -2 5];
+indices_braid=[4 -2 -1 -2 5];
 
  for i=1:length(indices_braid)-2
     if(indices_braid(i)*indices_braid(i+1) > 0) %necesito que los signos sean iguales.

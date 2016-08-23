@@ -1,0 +1,173 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{ dsfont }
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage[vmargin=3cm,hmargin=2cm]{geometry}
+
+\title{Entendiendo la Teoría de Nudos mediante la Simulación y la Informática Gráfica.}
+\author{\textbf{ Autora:} Cristina Zuheros Montes - 50616450\\
+	    \href{https://github.com/cristinazuhe}{Enlace a Github}}
+\date{\textbf{Fecha:} 22 Agosto 2016}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{Teoría de nudos. }\label{PrimerTema}
+
+\subsection{Introducción.}
+Antes de ver la definición formal del término nudo, vamos a hacernos una idea intuitiva de su significado.
+
+  
+\underline{\textbf{Definición:}}\\
+ Un nudo es una curva cerrada en $\mathds{R}^{3}$ que no tiene auto-intersecciones.\\
+
+Podemos representar un nudo en el plano visualizando su proyección. Como hay muchas formas de representar un mismo nudo, podremos tener diferentes proyecciones que representen al mismo nudo. 
+ Algunos ejemplos básicos de nudos son los siguientes:
+ 
+  \begin{figure}[h!]
+  	\includegraphics[width=2cm]{1.jpg}
+  	\includegraphics[width=2cm]{3f.png} 
+  	\includegraphics[width=2cm]{fig8.jpg}
+  	\centering
+  	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
+  	\label{uno} 
+  \end{figure}
+  
+    \underline{\textbf{Definición:}}\\
+     Un enlace es una o más curvas cerradas disjuntas en $\mathds{R}^{3}$. Cada una de sus componentes recibe el nombre de componente.\\
+    //HACER UNA REPRESENTACIÓN DE ENLACE!
+    
+    Por tanto, podemos ver un nudo como un caso particular de enlace en el que sólo tenemos una componente.\\
+    
+  Una de las cuestiones más interesantes en la teoría de nudos es la siguiente: \\
+  ¿Dada un nudo, o alguna proyección suya, podremos saber si se trata del nudo trivial?. A lo largo de este proyecto trataremos de dar respuesta, en parte, a dicha cuestión.\\
+  
+  Esta rama de la topología de baja dimensión destaca por su gran interés en áreas como:
+  \begin{enumerate}
+  	\item Química: En el siguiente apartado veremos que la teoría de nudos nace en este área.
+  	\item Biología: se descubrieron los anudamientos en las moléculas de ADN. 
+  	\item Criptografía: 
+  	//COMPLETAR!!!!!!!!!!!!!!1
+  \end{enumerate}
+ 
+  \newpage
+\subsection{Historia.}
+En el siglo XIX, ciertos físicos escoceses se preguntaban por la estructura de los átomos.\\
+Estos científicos partieron de la base de la teoría de Descartes, que afirmaba que el \textit{éter} era un fluido que ocupaba todo el espacio espacio y transmitía la luz (éter lumínico), para desarrollar su modelo del átomo. \\
+Aunque dichos físicos conocían la existencia de los elementos y que estaban formados por átomos, no conocían la propia estructura de los átomos. \\
+
+Científicos como Peter Guthrie Tait y Willian Thomson llegaron a la teoría de que los átomos se concebían como vórtices, que podríamos ver como remolinos tubulares, en dicho fluido. Estos vórtices se encontraban anudados y en función del tipo de anudamiento darían lugar a un tipo de elemento u otro.\\
+De este modo se plantearon que los diferentes nudos corresponderían a los diferentes elementos de la naturaleza. De acuerdo con la teoría, si conociésemos todos los nudos posibles, crearíamos la tabla de elementos que reemplazaría la tabla periódica actual. \\
+
+Para hacernos una idea más clara, para Willian Thomson el nudo trébol podría corresponder con el átomo de helio, el nudo de ocho con el átomo de oxígeno....\\
+
+Numerosos científicos contribuyeron a dicha teoría intentando crear la tabla de nudos pero a finales de este mismo siglo, Michelson-Morley demostró que el éter lumínico no existía y por tanto la teoría de los átomos de vórtice fue descartada. \\
+
+Tras este hecho, la teoría de nudos perdió su interés hasta que fue objeto de estudio en Topología a principios del siglo XX.
+
+
+\newpage
+\subsection{Composición de nudos.}
+Supongamos que tenemos dos proyecciones J y K de nudos. Podemos definir un nuevo nudo a partir de ellos eliminando un arco de cada una de las proyecciones y conectando los 4 extremos finales de dos en dos mediante otros arcos de modo que no se añadan ni eliminen cruces.\\
+A este nudo resultante le llamaremos \textbf{composición} de los dos nudos y se denotará como \textbf{J\#K}. A los nudos originales J y K les llamaremos \textbf{nudos factores}. \\
+
+Por ejemplo, consideremos como nudos factores el nudo trébol y el nudo de ocho. 
+  \begin{figure}[h!]
+  	\includegraphics[width=2.5cm]{3f.png} 
+  	\includegraphics[width=2.5cm]{fig8.jpg}
+  	\centering
+  	\label{comp1} 
+  \end{figure}
+  
+  //PONER BIEN EL TREBOL!!!!!!!!!!!!!!!!!!!!!!
+  
+Haciendo la suma conexa de ambos nudos obtenemos el nudo composición siguiente:
+  \begin{figure}[h!]
+  	\includegraphics[width=8cm]{conexion.jpg} 
+  	\centering
+  	\label{comp2} 
+  \end{figure}
+  
+  //RECORTAR LA CONEXION!!!!!!!!!!!!!!!!!!!!
+  
+  EL nudo trivial es un elemento identidad para la suma conexa: si hacemos la composición de un nudo cualquiera J con el nudo trivial, vamos a obtener el propio nudo J. \\
+  //HACER UNA IMAGEN DE ESTO!!!!!!!!!!!!!!!!!!!!!!!\\
+  
+ \underline{\textbf{ Definición:}}\\
+ Diremos que un \textbf{nudo es primo} si no puede ser expresado como la suma conexa de dos nudos, a menos que uno de ellos sea el nudo trivial. \\
+ 
+\underline{ \textbf{ Definición:}}\\
+ Diremos que un \textbf{nudo es compuesto} si no es el nudo trivial ni es un nudo primo.\\
+  
+  Por ejemplo, los nudos trébol y nudo de ocho de la figura \\PONER REFERENCIA!!! son nudos primos mientras que el nudo de la figura \\PONER REFERENCIA!!! es un nudo compuesto. \\
+  
+    
+    Es importante destacar el hecho de que la elección que hacemos de los arcos que eliminamos de cada uno de los nudos factores afecta al nudo composición. Por tanto, es posible construir dos nudos composición diferentes a partir del mismo par de nudos factores. Veamos esta idea con más detalle, para ello necesitamos:\\
+    
+   \underline{\textbf{ Definición:}}\\
+   \textbf{ Un nudo orientado} es un nudo al que se le ha asignado una orientación, es decir, es un nudo que dispone de una dirección de viaje sobre él mismo. Esta orientación se indica mediante flechas en la proyección. \\
+   
+   \underline{\textbf{ Definición:}}\\
+   \textbf{ Un nudo es invertible} si es equivalente a sí mismo con la orientación opuesta. \\
+   
+   Como ejemplo de nuevo invertible nos podemos encontrar el nudo trébol.
+   \\CREAR IMAGEN CON LAS DOS ORIENTACIONES DEL TREBOL!!!\\
+   
+   Sean los dos nudos factores J y K a los que se asignamos una orientación. Tendremos dos formas posibles de hacer la composición: conectar con las orientaciones emparejadas o no emparejadas. \\
+   Todas las composiciones de los nudos cuyas orientaciones emparejan al componer, darán el mismo nudo composición. Todas las composiciones de los nudos cuyas orientaciones no emparejan al componer, también darán el mismo nudo composición. Sin embargo, es posible que la composición de los nudos cuyas orientaciones emparejen no de lugar al mismo nudo que haciendo la composición de los nudos cuyas orientaciones no emparejen. Serán el mismo si uno de los nudos factores es invertible.\\
+   
+   El problema de determinar si un nudo cualquiera es o no invertible no es para nada trivial. 
+    
+    
+  
+  
+  
+  
+  
+
+\subsection{Equivalencia de nudos: movimientos de Reidemeister.}
+
+  \begin{figure}[h!]
+  	\includegraphics[width=7cm]{movi1.png}
+  	\includegraphics[width=7cm]{movi2.png}
+  	\centering
+  	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
+  	\label{movi1} 
+  \end{figure}
+  
+    \begin{figure}[h!]
+    	\includegraphics[width=7cm]{movi3.png}
+    	\includegraphics[width=7cm]{movi4.png}
+    	\centering
+    	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
+    	\label{movi2} 
+    \end{figure}
+    
+      \begin{figure}[h!]
+      	\includegraphics[width=7cm]{movi5.png}
+      	\includegraphics[width=7cm]{movi6.png}
+      	\centering
+      	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
+      	\label{movim3} 
+      \end{figure}
+  
+
+\subsection{Notación de nudos.}
+\subsection{Algunos invariantes.}
+
+
+
+ 
+
+
+
+\end{document}
