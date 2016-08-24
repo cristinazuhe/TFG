@@ -5,5 +5,5 @@
 \contentsline {subsection}{\numberline {1.3}Componiendo nudos.}{5}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Equivalencia de nudos: movimientos de Reidemeister.}{9}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Algunos invariantes.}{12}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Notaci\IeC {\'o}n de nudos.}{15}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{15}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.6}Notaci\IeC {\'o}n de nudos.}{16}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{16}{subsection.1.7}

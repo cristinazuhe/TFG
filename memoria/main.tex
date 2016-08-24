@@ -286,9 +286,14 @@ Esto nos lleva a deducir el nudo K tendrá como mínimo c(K) cruces por muchas t
 Aunque es un invariante sencillo de visualizar, no es fácil de obtener: puede ser que al estudiar muchas proyecciones de un nudo pensemos que su número de cruces es $n$, sin embargo puede existir otra proyecciones del nudo que no conocemos con menor número de cruces. Por este motivo, no vamos a trabajar posteriormente con este invariante.\\
 
 Para dejarlo más claro vamos a ver un ejemplo.\\
-Consideramos la siguiente proyección de cierto nudo. Podemos pensar que el número de cruces del nudo sería 4 (ver los 4 cruces de la figura a //PONER ENLACE). Sin embargo, esta proyección es equivalente a la proyección que vamos en la figura b //PONER ENLACE, que tiene como número de cruces el valor 3. Por tanto, el número de cruces del nudo, que es el nudo trébol, es 3. 
-
-//HACER IMAGENES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+Consideramos la proyección de la primera figura \ref{cross1}. Podemos pensar que el número de cruces del nudo sería 4 (ver los 4 cruces de la figura a). Sin embargo, esta proyección es equivalente a la proyección que vamos en la figura b, que tiene como número de cruces el valor 3. Por tanto, el número de cruces del nudo, que es el nudo trébol, es 3. 
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[4 cruces]{\includegraphics[width=3.5cm]{3fseg.png}}
+   	\subfigure[3 cruces]{\includegraphics[width=3.5cm]{3f.png}}
+   	\caption{Crossing number del nudo trébol.}
+   	\label{cross1} 
+   \end{figure}  
 
 
 \begin{center}
@@ -296,10 +301,15 @@ Consideramos la siguiente proyección de cierto nudo. Podemos pensar que el núm
 \end{center}
 Para definir este invariante de enlaces, tenemos que conocer unos conceptos previos:\\
 Entendemos por undercrossing y overcrossing a un recorrido en el cruce de la proyección de un nudo que nos lleva por encima o por debajo en el cruce. Veamos la siguiente imagen donde queda representado:\\
-\\HACER IMAGEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   \begin{figure}[h!]
+   	\centering
+   	\includegraphics[width=6.5cm]{cruce.png}
+   	\caption{Tipo de cruce.}
+   	\label{tric1} 
+   \end{figure}
 
 \underline{\textbf{Definición:}}\\
-Una\textbf{ hebra }de una proyección de un enlace es una región de cuerda del enlace que va desde un undercrossing a otro undercrossing con sólo overcrossings en su recorrido.\\ 
+Una\textbf{ hebra }de una proyección de un enlace es una región de cuerda del enlace que va desde un undercrossing a otro undercrossing atravesando sólo overcrossings.\\ 
 
 \underline{\textbf{Definición:}}\\
 Una proyección de un enlace es tricolorable si cada una de las hebras de la proyección puede ser coloreada con uno de tres colores diferentes de modo que en cada cruce o los 3 colores se junten o se junte un sólo color. En este caso diremos que el enlace es \textbf{tricolorable}. 
@@ -307,13 +317,20 @@ Una proyección de un enlace es tricolorable si cada una de las hebras de la pro
 \begin{teo}
 	La tricolorabilidad se perserva mediante movimientos de Reidemeister.
 \end{teo}
-//DEMOSTRACION EN KNOTS, MOLECULES....
+//DEMOSTRACION EN KNOTS, MOLECULES....\\
 
 Haciendo uso de este invariante podemos demostrar que el nudo trivial y el nudo trébol no son equivalentes, es decir, son topológicamente distintos. Esto se debe a que el nudo trébol es tricolorable pero el nudo trivial no lo es. Podemos verlo en la siguiente imagen:\\
-//PONER IMAGEINES DEL TRIVIAL Y DEL TREBOL COLOREADO!!!!!!!!!!!!!!!!
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[No tricolorable]{\includegraphics[width=5cm]{1.jpg}}
+   	\subfigure[Tricolorable]{\includegraphics[width=5cm]{3ftri.png}}
+   	\caption{Dos nudos no equivalentes.}
+   	\label{Tric2} 
+   \end{figure} 
 
 
 Este hecho confirma que existe al menos un nudo distinto del nudo trivial. Es más, todo nudo que sea tricolorable será distinto del nudo trivial.\\
+
 Sin embargo, este invariante no es muy potente en el sentido de que sólo clasifica los enlaces en tricolorables y no tricolorables y sólo podremos afirmar que dos proyecciones representan a diferentes nudos si una de ellas es tricolorable y la otra no lo es.   
 
 
