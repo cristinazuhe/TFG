@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{ dsfont }
 \usepackage{caption}
+\usepackage{subfigure}
 \usepackage[hidelinks]{hyperref}
 \usepackage[vmargin=3cm,hmargin=2cm]{geometry}
 
@@ -24,8 +25,6 @@
 \section{Teoría de nudos. }\label{PrimerTema}
 
 \subsection{Introducción.}
-Antes de ver la definición formal del término nudo, vamos a hacernos una idea intuitiva de su significado.
-
   
 \underline{\textbf{Definición:}}\\
  Un nudo es una curva cerrada en $\mathds{R}^{3}$ que no tiene auto-intersecciones.\\
@@ -44,7 +43,13 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
   
     \underline{\textbf{Definición:}}\\
      Un enlace es una o más curvas cerradas disjuntas en $\mathds{R}^{3}$. Cada una de sus componentes recibe el nombre de componente.\\
-    //HACER UNA REPRESENTACIÓN DE ENLACE!
+     Por ejemplo, el siguiente enlace tiene dos componentes:
+  \begin{figure}[h!]
+  	\includegraphics[width=2.7cm]{enlace.png}
+  	\centering
+  	\caption{Enlace de dos componentes.}
+  	\label{dos} 
+  \end{figure}
     
     Por tanto, podemos ver un nudo como un caso particular de enlace en el que sólo tenemos una componente.\\
     
@@ -82,25 +87,41 @@ A este nudo resultante le llamaremos \textbf{composición} de los dos nudos y se
 
 Por ejemplo, consideremos como nudos factores el nudo trébol y el nudo de ocho. 
   \begin{figure}[h!]
-  	\includegraphics[width=2.5cm]{3f.png} 
-  	\includegraphics[width=2.5cm]{fig8.jpg}
+  	\subfigure[J]{\includegraphics[width=2.5cm]{conexion1.jpg}} 
+  	\subfigure[K]{\includegraphics[width=2.5cm]{fig8.jpg}}
   	\centering
+  	\caption{Nudo trébol y nudo de ocho.}
   	\label{comp1} 
   \end{figure}
   
-  //PONER BIEN EL TREBOL!!!!!!!!!!!!!!!!!!!!!!
-  
-Haciendo la suma conexa de ambos nudos obtenemos el nudo composición siguiente:
+Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
   \begin{figure}[h!]
-  	\includegraphics[width=8cm]{conexion.jpg} 
+  	\subfigure[Haciendo la composición]{\includegraphics[width=7cm]{conexion2.jpg} }
+  	\subfigure[J\#K]{\includegraphics[width=7cm]{conexion3.jpg}}
   	\centering
+  	\caption{Composición de nudo trébol y nudo de ocho.}
   	\label{comp2} 
   \end{figure}
   
-  //RECORTAR LA CONEXION!!!!!!!!!!!!!!!!!!!!
   
-  EL nudo trivial es un elemento identidad para la suma conexa: si hacemos la composición de un nudo cualquiera J con el nudo trivial, vamos a obtener el propio nudo J. \\
-  //HACER UNA IMAGEN DE ESTO!!!!!!!!!!!!!!!!!!!!!!!\\
+  El nudo trivial es un elemento identidad para la suma conexa: si hacemos la composición de un nudo cualquiera J con el nudo trivial, vamos a obtener el propio nudo J. Por ejemplo, seguimos considerando J como el nudo trébol y el nudo trivial como K. \\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[J]{\includegraphics[width=2.5cm]{conexion1.jpg} }
+   	\subfigure[K]{\includegraphics[width=2.5cm]{1.jpg}}
+   	\caption{Nudo trébol y nudo trivial.}
+   	\label{comp3} 
+   \end{figure}
+   
+  Su suma conexa nos seguiría dando el nudo factor J, es decir, el nudo trébol.\\
+   
+      \begin{figure}[h!]
+      	\subfigure[Haciendo la composición]{\includegraphics[width=8cm]{conexion4.jpg} }
+      	\subfigure[J\#K]{\includegraphics[width=4cm]{conexion1.jpg}}
+      	\centering
+      	\caption{Composición de nudo trébol y nudo trivial.}
+      	\label{comp4} 
+      \end{figure}
   
  \underline{\textbf{ Definición:}}\\
  Diremos que un \textbf{nudo es primo} si no puede ser expresado como la suma conexa de dos nudos, a menos que uno de ellos sea el nudo trivial. \\
@@ -108,10 +129,20 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición siguiente:
 \underline{ \textbf{ Definición:}}\\
  Diremos que un \textbf{nudo es compuesto} si no es el nudo trivial ni es un nudo primo.\\
   
-  Por ejemplo, los nudos trébol y nudo de ocho de la figura \\PONER REFERENCIA!!! son nudos primos mientras que el nudo de la figura \\PONER REFERENCIA!!! es un nudo compuesto. \\
+  Por ejemplo, los nudos trébol y nudo de ocho de la figura \ref{comp1} son nudos primos mientras que el nudo de la figura \ref{comp2} es un nudo compuesto. \\ 
+  
+  Hay una gran variedad de nudos primos. Cualquier nudo puede ser expresado singularmente como suma conexa de nudos primos. En la siguiente tabla podemos ver los diferentes nudos primos que tienen menos de 8 cruces.\\
+        \begin{figure}[h!]
+        	\includegraphics[width=14cm]{tableknot.png}
+        	\centering
+        	\caption{Composición de nudo trébol y nudo trivial.}
+        	\label{comp6} 
+        \end{figure}
+  
+  
   
     
-    Es importante destacar el hecho de que la elección que hacemos de los arcos que eliminamos de cada uno de los nudos factores afecta al nudo composición. Por tanto, es posible construir dos nudos composición diferentes a partir del mismo par de nudos factores. Veamos esta idea con más detalle, para ello necesitamos:\\
+    Finalmente, es importante destacar el hecho de que la elección que hacemos de los arcos que eliminamos de cada uno de los nudos factores afecta al nudo composición. Por tanto, es posible construir dos nudos composición diferentes a partir del mismo par de nudos factores. Veamos esta idea con más detalle, para ello necesitamos:\\
     
    \underline{\textbf{ Definición:}}\\
    \textbf{ Un nudo orientado} es un nudo al que se le ha asignado una orientación, es decir, es un nudo que dispone de una dirección de viaje sobre él mismo. Esta orientación se indica mediante flechas en la proyección. \\
@@ -119,13 +150,36 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición siguiente:
    \underline{\textbf{ Definición:}}\\
    \textbf{ Un nudo es invertible} si es equivalente a sí mismo con la orientación opuesta. \\
    
+      El problema de determinar si un nudo cualquiera es o no invertible no es para nada trivial.\\
+   
    Como ejemplo de nuevo invertible nos podemos encontrar el nudo trébol.
-   \\CREAR IMAGEN CON LAS DOS ORIENTACIONES DEL TREBOL!!!\\
+      \begin{figure}[h!]
+      	\includegraphics[width=3cm]{3fcon1.png}
+      	\includegraphics[width=3cm]{3fcon2.png}
+      	\centering
+      	\caption{Ambas orientaciones del nudo trébol.}
+      	\label{comp5} 
+      \end{figure}
    
    Sean los dos nudos factores J y K a los que se asignamos una orientación. Tendremos dos formas posibles de hacer la composición: conectar con las orientaciones emparejadas o no emparejadas. \\
    Todas las composiciones de los nudos cuyas orientaciones emparejan al componer, darán el mismo nudo composición. Todas las composiciones de los nudos cuyas orientaciones no emparejan al componer, también darán el mismo nudo composición. Sin embargo, es posible que la composición de los nudos cuyas orientaciones emparejen no de lugar al mismo nudo que haciendo la composición de los nudos cuyas orientaciones no emparejen. Serán el mismo si uno de los nudos factores es invertible.\\
    
-   El problema de determinar si un nudo cualquiera es o no invertible no es para nada trivial. 
+   Veamos un caso en el que la composición de dos mismos factores, genera nudos diferentes. Consideramos el siguiente nudo:
+         \begin{figure}[h!]
+         	\includegraphics[width=3cm]{817.png}
+         	\centering
+         	\caption{Nudo factor J y K.}
+         	\label{comp7} 
+         \end{figure}
+   Si componemos el nudo consigo mismo conectando las orientaciones emparejadas y desemparejadas obtenemos nudos que no son equivalentes. Lo podemos comprobar visualmente con la Figura \ref{comp8}.
+         \begin{figure}[h!]
+         	\includegraphics[width=7cm]{817def1.png}
+         	\includegraphics[width=7cm]{817def2.png}
+         	\centering
+         	\caption{Las composiciones no son equivalentes.}
+         	\label{comp8} 
+         \end{figure}
+ 
     
     
   
