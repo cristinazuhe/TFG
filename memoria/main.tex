@@ -13,9 +13,7 @@
 \usepackage[vmargin=3cm,hmargin=2cm]{geometry}
 
 \title{Entendiendo la Teoría de Nudos mediante la Simulación y la Informática Gráfica.}
-\author{\textbf{ Autora:} Cristina Zuheros Montes - 50616450\\
-	    \href{https://github.com/cristinazuhe}{Enlace a Github}}
-\date{\textbf{Fecha:} 22 Agosto 2016}
+
 \begin{document}
 \newtheorem{teo}{Teorema}[section]
 
@@ -27,13 +25,13 @@
 \section{Teoría de nudos. }\label{PrimerTema}
 
 \subsection{Motivación y primeras definiciones.}
-  ¿Alguna vez has visto una cuerda anudada y te has preguntado si podrías deshacerlos sin necesidad de romper la cuerda? ¿Te has planteado si algo tan usual como los nudos pueden estar presentes en áreas esenciales para la vida? Es más, ¿cuál fue el motivo inicial para estudiar dicha teoría de nudos? Quizás te sorprendan las respuestas pero antes de descubrirlo, veamos que se entiende formalmente por un nudo.\\
+  ¿Alguna vez has visto una cuerda con nudos y te has preguntado si podrías deshacerlos sin necesidad de romper la cuerda? ¿Te has planteado si algo tan usual como los nudos pueden estar presentes en áreas esenciales para la vida? Es más, ¿cuál fue el motivo inicial para estudiar dicha teoría de nudos? Quizás te sorprendan las respuestas pero antes de descubrirlo, veamos que se entiende formalmente por un nudo.\\
   
 \underline{\textbf{Definición:}}\\
  Un \textbf{nudo} es una curva cerrada en $\mathds{R}^{3}$ que no tiene auto-intersecciones.\\
 
 Podemos representar un nudo en el plano visualizando su proyección. Como hay muchas formas de representar un mismo nudo, podremos tener diferentes proyecciones que representen al mismo nudo. 
- Algunos ejemplos básicos de nudos son los siguientes:
+ Algunos ejemplos básicos son los siguientes:
  
   \begin{figure}[h!]
   	\includegraphics[width=2cm]{1.jpg}
@@ -44,7 +42,7 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
   	\label{uno} 
   \end{figure}
   
-  Podemos ver en ellos una serie de cruces. En concreto en el nudo trébol tenemos 3 cruces y en un nudo de ocho tenemos 4 cruces. El nudo trivial destaca por no tener ningún cruce. \\
+  Podemos ver en ellos una serie de cruces. En concreto en el nudo trébol tenemos 3 cruces y el nudo de ocho tenemos 4 cruces. El nudo trivial destaca por no tener ningún cruce. \\
   
     \underline{\textbf{Definición:}}\\
      Un \textbf{enlace} es una o más curvas cerradas disjuntas en $\mathds{R}^{3}$. Cada una de sus curvas recibe el nombre de componente.\\
@@ -71,7 +69,7 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
   \newpage
 \subsection{Sobre su historia.}
 En el siglo XIX, ciertos físicos escoceses se preguntaban por la estructura de los átomos.\\
-Estos científicos partieron de la base de la teoría de Descartes, que afirmaba que el \textit{éter} era un fluido que ocupaba todo el espacio espacio y transmitía la luz (éter lumínico), para desarrollar su modelo del átomo. \\
+Estos científicos tomaron como base la teoría de Descartes, que afirmaba que el \textit{éter} era un fluido que ocupaba todo el espacio y transmitía la luz (éter lumínico), para desarrollar su modelo del átomo. \\
 Aunque dichos físicos conocían la existencia de los elementos y que estaban formados por átomos, no conocían la propia estructura de los átomos. \\
 
 Científicos como Peter Guthrie Tait y Willian Thomson llegaron a la teoría de que los átomos se concebían como vórtices, que podríamos ver como remolinos tubulares, en dicho fluido. Estos vórtices se encontraban anudados y en función del tipo de anudamiento darían lugar a un tipo de elemento u otro.\\
@@ -230,17 +228,108 @@ Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del 
 
 \begin{teo} \textbf{Teorema de Reidemeister.} Sean P1 y P2 las proyecciones que representan a dos nudos K1 y K2, respectivamente. Entonces, K1 $\thicksim$ K2 si, y solo si, P1 y P2 están conectados por una secuencia finita de movimientos de Reidemeister e isotopías planas.
 \end{teo}
-//PENDIENTE DEMOSTRACIÓN. NO ESTÁN EN LOS LIBROS.\\
+//PENDIENTE DEMOSTRACIÓN. NO ESTÁ EN LOS LIBROS.\\
 //PONER EJEMPLO VISUAL DE UNA SECUENCIA DE MOVIMIENTOS. \\
 
 Gracias a dicho teorema podremos estudiar si dos proyecciones representan el mismo nudo. Para ello tendremos que encontrar una secuencia de movimientos de Reidemeister que nos lleve de una proyección a la otra. Sin embargo, este proceso puede no tener el número de movimientos intermedios limitado por lo que no tiene mucho sentido implementarlo.\\
  
-//PENDIENTE DE LEER KNOTS, MOLECULES AND THE UNIVERSE PARA COMPLETAR LOS MOVIMIENTOS. 
+ Aunque este teorema no nos permita ver de una forma cómoda la equivalencia entre dos nudos en la práctica (por la fuerte complejidad) si que nos permite obtener una conclusión esencial:\\
+ 
+ Si una propiedad de un nudo no cambia al aplicarle cualquiera de estos tres movimientos de Reidemeister, entonces esta propiedad no va a cambiar por muchas deformaciones que se le hagan al nudo. En definitiva, si un nudo cumple cierta propiedad y otro nudo no la cumple, esos nudos no podrán ser equivalentes. Incidiremos en esta idea en la siguiente Sección \ref{seccion5}.
+ 
+  
 
+\newpage
+\subsection{Algunos invariantes.}\label{seccion5}
+Suponga que cierto día ha ido a trabajar con su portátil fuera de casa y se lo ha dejado olvidado. Cuando te das cuenta, vuelves a buscarlo pero ya no está. Pasan unos días y un amigo te comenta que se ha encontrado un portátil con $x$ número de puertos, procesador $y$ y modelo $z$.\\
+
+Es claro que si alguna de esas características no fuese la de tu portátil, tendrías claro que no es el tuyo. Pero resulta que tu portátil tiene exactamente las mismas características. Piensas que tal vez sea tu portátil pero no tienes garantía de que realmente lo sea. \\
+
+Algo similar, aplicado a nudos, es lo que vamos a tratar de ver en esta sección. ¿Dadas dos proyecciones, podremos decir que representan al mismo nudo? Vamos a tratar de estudiar ciertos invariantes sobre los nudos. Al igual que ocurría con el caso del portátil, si dos proyecciones tienen valores de un invariante distintos podremos decir que no representan al mismo nudo. Sin embargo, si ambos tienen valores de un invariante iguales no podremos saber si se trata del mismo nudo. Tendremos que estudiar otros invariantes de nudos. \\
+
+¿Y si estudiamos una gran cantidad de invariantes de dos proyecciones y siempre toman los mismos valores?¿Podremos garantizar que son equivalentes? La respuesta es clara, no. Tendremos que analizar en mayor detalle las proyecciones, pero puede ser que no lleguemos a obtener un conclusión definitiva. \\
+
+    
+Por tanto, el estudio de invariantes de los nudos nos va a permitir saber si dos nudos pueden ser (destacamos, que no quiere decir que lo sean) o no son equivalentes.\\
+
+
+Antes de ver algunos de los invariantes de nudos más conocidos y útiles vamos a dar una definición formal de lo que se conoce como un invariante:\\
+
+\underline{\textbf{Definición:}} \\
+Un \textbf{invariante} de un nudo (o de un enlace) es una propiedad que no cambia cuando el nudo sufre deformaciones en el espacio. \\
+
+
+
+\begin{center}
+	\textbf{Número de componentes:}
+\end{center}
+Es uno de los invariantes de enlaces más sencillos que nos podemos encontrar y que ya hemos comentado ligeramente en las secciones anteriores.\\
+
+Cada componente de un enlace es una curva disjunta del mismo. En la Figura \ref{inv1} vemos un enlace con dos componentes. 
+  \begin{figure}[h!]
+  	\includegraphics[width=2.7cm]{enlace.png}
+  	\centering
+  	\caption{Enlace con dos componentes.}
+  	\label{inv1} 
+  \end{figure}
+  
+Al aplicarle a un enlace cualquier transformación no se le puede añadir ni eliminar ninguna componente. De modo que este invariante no nos va a permitir comparar nudos, pues todo nudo tiene una sola componente. \\
+
+\bigskip
+\begin{center}
+	\textbf{Crossing number:}
+\end{center}
+Sea un nudo K. Su \textbf{crossing number} es el menor número de cruces que se encuentra en cualquier proyección del nudo. Se denota como $c(K)$. \\
+
+Esto nos lleva a deducir el nudo K tendrá como mínimo c(K) cruces por muchas transformaciones que se haga a sus proyecciones.\\
+
+Aunque es un invariante sencillo de visualizar, no es fácil de obtener: puede ser que al estudiar muchas proyecciones de un nudo pensemos que su número de cruces es $n$, sin embargo puede existir otra proyecciones del nudo que no conocemos con menor número de cruces. Por este motivo, no vamos a trabajar posteriormente con este invariante.\\
+
+Para dejarlo más claro vamos a ver un ejemplo.\\
+Consideramos la siguiente proyección de cierto nudo. Podemos pensar que el número de cruces del nudo sería 4 (ver los 4 cruces de la figura a //PONER ENLACE). Sin embargo, esta proyección es equivalente a la proyección que vamos en la figura b //PONER ENLACE, que tiene como número de cruces el valor 3. Por tanto, el número de cruces del nudo, que es el nudo trébol, es 3. 
+
+//HACER IMAGENES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+
+
+\begin{center}
+	\textbf{Tricolorabilidad:}
+\end{center}
+Para definir este invariante de enlaces, tenemos que conocer unos conceptos previos:\\
+Entendemos por undercrossing y overcrossing a un recorrido en el cruce de la proyección de un nudo que nos lleva por encima o por debajo en el cruce. Veamos la siguiente imagen donde queda representado:\\
+\\HACER IMAGEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\underline{\textbf{Definición:}}\\
+Una\textbf{ hebra }de una proyección de un enlace es una región de cuerda del enlace que va desde un undercrossing a otro undercrossing con sólo overcrossings en su recorrido.\\ 
+
+\underline{\textbf{Definición:}}\\
+Una proyección de un enlace es tricolorable si cada una de las hebras de la proyección puede ser coloreada con uno de tres colores diferentes de modo que en cada cruce o los 3 colores se junten o se junte un sólo color. En este caso diremos que el enlace es \textbf{tricolorable}. 
+
+\begin{teo}
+	La tricolorabilidad se perserva mediante movimientos de Reidemeister.
+\end{teo}
+//DEMOSTRACION EN KNOTS, MOLECULES....
+
+Haciendo uso de este invariante podemos demostrar que el nudo trivial y el nudo trébol no son equivalentes, es decir, son topológicamente distintos. Esto se debe a que el nudo trébol es tricolorable pero el nudo trivial no lo es. Podemos verlo en la siguiente imagen:\\
+//PONER IMAGEINES DEL TRIVIAL Y DEL TREBOL COLOREADO!!!!!!!!!!!!!!!!
+
+
+Este hecho confirma que existe al menos un nudo distinto del nudo trivial. Es más, todo nudo que sea tricolorable será distinto del nudo trivial.\\
+Sin embargo, este invariante no es muy potente en el sentido de que sólo clasifica los enlaces en tricolorables y no tricolorables y sólo podremos afirmar que dos proyecciones representan a diferentes nudos si una de ellas es tricolorable y la otra no lo es.   
+
+
+
+\begin{center}
+	\textbf{Unkotting number:}
+\end{center}
+
+\begin{center}
+	\textbf{Cruces positivos y negativos:}
+\end{center}
 
 \subsection{Notación de nudos.}
-\subsection{Algunos invariantes.}
 \subsection{Tipos y ejemplos de nudos.}
+
+
 
 
  
