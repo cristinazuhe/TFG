@@ -83,7 +83,7 @@ Tras este hecho, la teoría de nudos perdió su interés hasta que fue objeto de
 
 
 \newpage
-\subsection{Componiendo nudos.}
+\subsection{Componiendo nudos.}\label{seccion3}
 Supongamos que tenemos dos proyecciones J y K de nudos. Podemos definir un nuevo nudo a partir de ellos eliminando un arco de cada una de las proyecciones y conectando los 4 extremos finales de dos en dos mediante otros arcos de modo que no se añadan ni eliminen cruces.\\
 A este nudo resultante le llamaremos \textbf{composición} de los dos nudos y se denotará como \textbf{J\#K}. A los nudos originales J y K les llamaremos \textbf{nudos factores}. \\
 
@@ -185,7 +185,7 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
  
     
    
-\subsection{Equivalencia de nudos: movimientos de Reidemeister.}
+\subsection{Equivalencia de nudos: movimientos de Reidemeister.}\label{seccion4}
 Dos nudos K1 y K2 serán equivalentes (K1 $\thicksim$ K2) si podemos distorsionar uno de ellos en el otro sin hacer ningún corte. A esta distorsión se le conoce como isotopía ambiente. \\
 
 Una deformación de la proyección de un nudo se llama isotopía plana si se deforma el plano de proyección como si estuviese hecho de goma.\\
@@ -193,7 +193,7 @@ Con más precisión definimos una \textbf{isotopía plana} de las proyecciones P
 
 Los movimientos de Reidemeister que vamos a ver a continuación nos permiten cambiar la proyección de un nudo de modo que se cambie la relación entre los cruces pero que no cambie el nudo al que representa la proyección. Cada uno de estos movimientos es una isotopía:\\
 
-	\textbf{Primer movimiento de Reidemeister.}\\
+	\textbf{Primer movimiento de Reidemeister - R1}\\
 En cualquier zona de la proyección nos permite añadir o eliminar un giro tal y como vemos en la figura \ref{movi1}.\\
 
   \begin{figure}[h!]
@@ -204,7 +204,7 @@ En cualquier zona de la proyección nos permite añadir o eliminar un giro tal y
   	\label{movi1} 
   \end{figure}
   
-	\textbf{Segundo movimiento de Reidemeister.}\\
+	\textbf{Segundo movimiento de Reidemeister - R2.}\\
 Nos permite añadir o eliminar dos cruces del nudo como se ve en la figura \ref{movi2}.\\
 
     \begin{figure}[h!]
@@ -215,7 +215,7 @@ Nos permite añadir o eliminar dos cruces del nudo como se ve en la figura \ref{
     	\label{movi2} 
     \end{figure}
     
-	\textbf{Tercer movimiento de Reidemeister.}\\
+	\textbf{Tercer movimiento de Reidemeister - R3.}\\
 Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del cruce. Veamos la figura \ref{movi3} para aclarar la idea.
       \begin{figure}[h!]
       	\includegraphics[width=7.5cm]{movi5.png}
@@ -229,7 +229,28 @@ Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del 
 \begin{teo} \textbf{Teorema de Reidemeister.} Sean P1 y P2 las proyecciones que representan a dos nudos K1 y K2, respectivamente. Entonces, K1 $\thicksim$ K2 si, y solo si, P1 y P2 están conectados por una secuencia finita de movimientos de Reidemeister e isotopías planas.
 \end{teo}
 //PENDIENTE DEMOSTRACIÓN. NO ESTÁ EN LOS LIBROS.\\
-//PONER EJEMPLO VISUAL DE UNA SECUENCIA DE MOVIMIENTOS. \\
+
+Veamos un ejemplo en el que vemos la equivalencia de dos proyecciones, que en un primer momento podrían no parecernos equivalentes:
+  \begin{figure}[h!]
+  	\subfigure[P1]{\includegraphics[width=3cm]{3f.png}}
+  	\subfigure[R1]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{3fseg.png}
+  	\subfigure[R3]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{fase3.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{fase4.png}
+  	\subfigure[R3]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{fase5.png}
+  	\subfigure[R1]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{fase6.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
+  	\includegraphics[width=3cm]{fase7.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
+  	\subfigure[P2]{\includegraphics[width=3cm]{fase8.png}}
+  	\centering
+  	\caption{Equivalencia de dos proyecciones de nudos.}
+  	\label{algosj} 
+  \end{figure}
 
 Gracias a dicho teorema podremos estudiar si dos proyecciones representan el mismo nudo. Para ello tendremos que encontrar una secuencia de movimientos de Reidemeister que nos lleve de una proyección a la otra. Sin embargo, este proceso puede no tener el número de movimientos intermedios limitado por lo que no tiene mucho sentido implementarlo.\\
  
@@ -261,7 +282,7 @@ Un \textbf{invariante} de un nudo (o de un enlace) es una propiedad que no cambi
 
 
 \begin{center}
-	\textbf{Número de componentes:}
+	\subsubsection{Número de componentes:}
 \end{center}
 Es uno de los invariantes de enlaces más sencillos que nos podemos encontrar y que ya hemos comentado ligeramente en las secciones anteriores.\\
 
@@ -277,7 +298,7 @@ Al aplicarle a un enlace cualquier transformación no se le puede añadir ni eli
 
 \bigskip
 \begin{center}
-	\textbf{Crossing number:}
+	\subsubsection{Crossing number:}
 \end{center}
 Sea un nudo K. Su \textbf{crossing number} es el menor número de cruces que se encuentra en cualquier proyección del nudo. Se denota como $c(K)$. \\
 
@@ -297,7 +318,7 @@ Consideramos la proyección de la primera figura \ref{cross1}. Podemos pensar qu
 
 
 \begin{center}
-	\textbf{Tricolorabilidad:}
+	\subsubsection{Tricolorabilidad:}
 \end{center}
 Para definir este invariante de enlaces, tenemos que conocer unos conceptos previos:\\
 Entendemos por undercrossing y overcrossing a un recorrido en el cruce de la proyección de un nudo que nos lleva por encima o por debajo en el cruce. Veamos la siguiente imagen donde queda representado:\\
@@ -334,22 +355,145 @@ Este hecho confirma que existe al menos un nudo distinto del nudo trivial. Es m�
 Sin embargo, este invariante no es muy potente en el sentido de que sólo clasifica los enlaces en tricolorables y no tricolorables y sólo podremos afirmar que dos proyecciones representan a diferentes nudos si una de ellas es tricolorable y la otra no lo es.   
 
 
-
+\bigskip
 \begin{center}
-	\textbf{Unkotting number:}
+	\subsubsection{Unknotting number:}\label{subunk}
 \end{center}
+Supongamos que tenemos la proyección de un nudo no trivial. Modificar la proyección para que un undercrossing pase a ser un overcrossing, o viceversa, no es un movimiento válido pues estamos intersecando la cuerda. Sin embargo, es un movimiento interesante ya que nos llevará al nudo trivial. \\
 
+\underline{\textbf{Definición:}}
+Se define el \textbf{número de desanudamiento} de un nudo como el menor número de cambios en los cruces necesarios para desanudarlo, es decir, para llegar al nudo trivial. Se denota como $u(K)$. \\
+
+Es claro que en un número finito de pasos conseguiremos obtenemos el número de desanudamiento: Recorremos el nudo y al llegar a un cruce, si no hemos pasado anteriormente por él y es un undercrossing, lo convertimos en overcrossing. \\ 
+
+Podemos ver el número de desanudamiento para el nudo trébol en la siguiente figura:\\
+HACER LA IMAGEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+\bigskip
 \begin{center}
-	\textbf{Cruces positivos y negativos:}
+	\item \subsubsection{Polinomio de Alexander:}
 \end{center}
+Anteriormente hemos visto algunos invariantes geométricos y numéricos que nos pueden ayudar en la tarea de comprobar si dos proyecciones representan al mismo nudo. Ahora vamos a ver un invariante polinómico que estudiaremos con más detalle pues será uno de los puntos fuertes que implementaremos para resolver, en parte, la cuestión. \\
 
+Se trata de un polinomio, con variable $t$, para nudos orientados. En 1969, se probó que dicho polinomio puede calcularse computacionalmente haciendo uso de dos reglas:
+\begin{itemize}
+	\item \underline{Regla 1:} \\
+	El polinomio de Alexander del nudo trivial es el polinimio trivial equivalente a 1. Esta regla se representa como $\vartriangle$($\bigcirc$)= 1
+\end{itemize}
+
+Para poder exponer la segunda regla tenemos que conocer antes las siguientes ideas:
+Si tenemos un cruce, podemos establecer su cruce positivo ($L_{+}$), cruce negativo ($ L_{-} $) y cruce nulo ($ L_{0} $) como se ve en la siguiente imagen.\\
+//HACER LAS 3 IMAGENESFIGURA 6.24
+
+\begin{itemize}
+	\item \underline{Regla 2:} \\
+	 Esta regla se representa como $\vartriangle(L_{+}) - \vartriangle(L_{-}) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(L_{0})  = 0$
+\end{itemize}
+
+Veamos cómo se calcularía el polinomio de Alexander con el nudo trébol:\\
+\\HACER IMAGENES DEL PROCESO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Es importante destacar el hecho de que podemos tener un nudo no trivial que tenga como polinomio de Alexander el polinomio trivial equivalente a 1. Por este motivo, con dicho invariante no podemos distinguir cualquier nudo del nudo trivial. \\
+
+¿Mediante estas dos reglas podremos obtener siempre el polinomio de Alexander en tiempo finito? La respuesta es afirmativa, veámoslo:\\
+
+La idea que vamos a seguir en este proceso será reducir las proyecciones, a las que le queremos obtener el polinomio de Alexander, hasta llegar al nudo trivial. Reducir estas proyecciones quieres decir ir modificando sus cruces obteniendo $L_{+}$, $L_{-}$ y $L_{0}$ . Como veíamos en el invariante de la sección \ref{subunk}, a cualquier proyección le podemos aplicar una secuencia finita de cambios en los cruces de modo que resulte el nudo trivial. Por tanto, este procedimiento tendrá fin en una secuencia finita de pasos.\\
+
+Al ir considerando los distintos nudos de la proyección, obtendremos dos nuevas proyecciones en cada paso. Con estas nuevas proyecciones podremos formar lo que se denomina \textbf{ árbol de resolución}. En la siguiente figura podemos ver el arbol de resolución del nudo trébol.\\
+
+//HACER FIGURA DEL ARBOL DEL NUDO TRÉBOL!!!!!!!!!!!!!!!
+
+\underline{\textbf{Definición:}}\\
+Se define la \textbf{profundidad de un nudo} (o enlace) como el mínimo número de niveles que nos encontramos en los árboles de resolución del nudo. \\
+
+Esta profundidad del nudo es un invariante que además nos permite medir la complejidad que supondrá el cálculo del polinomio de Alexander. \\
+
+El árbol de resolución del nudo trébol que vemos en la imagen //PONER ENLACE A LA FIGURA!!!!!!!!!!!! tiene una profundidad de 2 niveles (la proyección inicial no se cuenta como nivel). Es importante destacar que el único nudo que tiene profundidad de nudo igual a 0 es el nudo trivial. \\
+ 
+\newpage
 \subsection{Notación de nudos.}
+Ya sabemos qué son los nudos y algunas nociones esenciales sobre los mismos, pero aún no sabemos asociar una notación concreta a un nudo. En esta sección vamos a ver algunas de las notaciones más comunes de los nudos. 
+
+\begin{center}
+	\item \subsubsection{Notación de Dowker:}
+\end{center}
+Se trata de una notación muy sencilla para describir la proyección de un nudo. La notación en sí es una secuencia de números enteros, veamos cómo se obtiene:\\
+
+Consideramos una orientación en la proyección de n cruces y asignamos el valor 1 al primer cruce que nos encontremos. Continuamos por la proyección y asignamos el valor 2 al siguiente cruce. Vamos repitiendo el proceso hasta haber pasado por cada cruce un par de veces (una vez por el undercrossing y otra por el overcrossing). Como resultado tendremos un número par y un número impar por cada cruce de la proyección. \\
+
+Finalmente es necesario asignar los signos a cada uno de estos $2n$ números. Lo números pares que correspondan a un overcrossing tendrán signo negativo. Veamos un par de ejemplos:\\
+//PONER LOS DOS EJEMPLOS (O UNO...SEGUN ME DE)
+
+
+\begin{center}
+	\item \subsubsection{Notación de Gauss:}
+\end{center}
+La notación de Gauss es una notación parecida a la de Dowker. Consideremos de nuevo una orientación en la proyección de n cruces de un nudo.\\
+
+En este caso cada vez que pasamos por un cruce, tendremos un solo número asignado. De este modo la secuencia de números de la notación se compone de $2n$ elementos con valores desde 1 hasta n, cada uno de ellos repetido dos veces. El procedimiento es análogo que en la notación de Dowker. Veamos el mismo par de ejemplos.\\
+//PODER LOS DOS EJEMPLOS 
+
+
+\begin{center}
+	\item \subsubsection{Notación de Conway:}
+\end{center}
+Por último vamos a ver una notación que puede resultar algo más compleja pero que tiene gran uso e interés, sobre todo en la tería del ADN. \\
+
+\underline{\textbf{Definición:}}
+Un \textbf{enredo} o tangle de una proyección de un enlace es una región de la proyección rodeada por una bola de modo que las dos cuerdas enlazadas de la proyección tocan la bola exactamente en cuatro puntos. A estos puntos los denotaremos como NO, NE, SO y SE.\\
+
+En la siguiente figura vemos un enredo general y un ejemplo particular de un enredo.\\
+//CREAR IMAGENes!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Pero la idea es trabajar con enredos más sencillos como son los que vemos en la figura //PONER ENLACE!. La notación se corresponde con el número de cruces que tiene el enredo con signo positivo y negativo según se ve en las imágenes.\\
+//CREAR LAS 4 IMAGENES!!!!!!!!!!!!!!!!!!!!!!\\
+
+Haciendo uso de estos enredos básicos podemos construir nuevos enredos uniendo, respectivamente, los extremos NE y SE de un enredo con los extremos NO y SO del otro enredo. A esta operación se le conoce como suma de enredos.\\
+Además, disponemos de una operación de multiplicación: reflejaremos el primer enredo y hacemos la operación de suma.\\
+A los enredos construidos con estas operaciones se les conoce con \textbf{enredos racionales}. Podemos ver un esquema básico estas dos operaciones en la siguiente imagen:\\
+//HACER OPERACION DE SUMA Y MULTIPLICACIÓN!!!!!!!!!!!!!!!!!!!!!!\\
+
+En la siguiente figura podemos ver un ejemplo de un enlace más complejo:
+//HACER IMAGEN DE 3 -2 3 !!!!
+
+A partir de estos enredos podemos construir proyecciones de nudos enlazando los puntos NO con NE y los puntos SO con SE. La notación del nudo corresponde con la notación que le damos a su enredo.\\ 
+
+Nos interesa ver si dos proyecciones de nudos representan al mismo nudo, luego nos interesa ver si dos enredos son equivalentes. Veamos qué quiere decir que sean equivalentes:\\
+
+\underline{\textbf{Definición:}}\\
+Diremos que dos enredos son equivalentes si podemos pasar de un enredo al otro mediante los movimientos de Reidemeister, que vimos en la sección \ref{seccion4}, manteniendo los cuatro extremos fijos en la bola imaginaria. \\
+
+Ver si dos enredos son equivalentes por definición no es viable de modo que vamos a aplicar otro método: consiste en calcular la fracción continua asociada a cada enredo.\\
+
+\underline{\textbf{Definición:}}\\
+Sea un enredo con notación $a_{n}...a_{1}a_{0}$. Su\textbf{ fracción continua} es una expresión del tipo:
+\begin{equation}
+    a_{0} + \frac{1}{a_{1} + \frac{1}{a_{2} + \frac{1}{...a_{n}}}}
+\end{equation}
+siendo $a_{i} \in \mathds{Z},  \forall i = 0,1,..,n.$\\
+
+\begin{teo}
+Dos enredos racionales son equivalentes si y solo si sus fracciones continuas toman el mismo valor. 
+\end{teo}
+
+Veamos un ejemplo. Consideramos los enredos racionales -2 3 2 y 3 -2 3 que vemos en la siguiente figura.//
+//PONER LAS DOS FIGURAS DE ESTOS ENREDOS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+A simple vista resulta difícil confirmar que sean equivalentes. Vamos a obtener sus fracciones continuas asociadas:\\
+$-2 \hspace{1cm} 3 \hspace{1cm} 2 \hspace{1cm}$ tiene fracción continua
+\begin{equation}
+ 2 + \frac{1}{3 + \frac{1}{-2}} = \frac{12}{5}
+\end{equation}
+
+$3 \hspace{1cm} -2 \hspace{1cm} 3 \hspace{1cm}$ tiene fracción continua
+\begin{equation}
+3 + \frac{1}{-2 + \frac{1}{3}} = \frac{12}{5}
+\end{equation}
+Ambas fracciones continuas son iguales, luego los enredos -2 3 2 y 3 -2 3 son equivalentes. 
+
 \subsection{Tipos y ejemplos de nudos.}
 
-
-
-
- 
 
 
 
