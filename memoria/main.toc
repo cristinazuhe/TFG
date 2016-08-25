@@ -9,9 +9,9 @@
 \contentsline {subsubsection}{\numberline {1.5.2}Crossing number:}{14}{subsubsection.1.5.2}
 \contentsline {subsubsection}{\numberline {1.5.3}Tricolorabilidad:}{15}{subsubsection.1.5.3}
 \contentsline {subsubsection}{\numberline {1.5.4}Unknotting number:}{17}{subsubsection.1.5.4}
-\contentsline {subsubsection}{\numberline {1.5.5}Polinomio de Alexander:}{17}{subsubsection.1.5.5}
-\contentsline {subsection}{\numberline {1.6}Notaci\IeC {\'o}n de nudos.}{20}{subsection.1.6}
-\contentsline {subsubsection}{\numberline {1.6.1}Notaci\IeC {\'o}n de Dowker:}{20}{subsubsection.1.6.1}
-\contentsline {subsubsection}{\numberline {1.6.2}Notaci\IeC {\'o}n de Gauss:}{20}{subsubsection.1.6.2}
-\contentsline {subsubsection}{\numberline {1.6.3}Notaci\IeC {\'o}n de Conway:}{21}{subsubsection.1.6.3}
-\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{23}{subsection.1.7}
+\contentsline {subsubsection}{\numberline {1.5.5}Polinomio de Alexander:}{18}{subsubsection.1.5.5}
+\contentsline {subsection}{\numberline {1.6}Notaci\IeC {\'o}n de nudos.}{22}{subsection.1.6}
+\contentsline {subsubsection}{\numberline {1.6.1}Notaci\IeC {\'o}n de Dowker:}{22}{subsubsection.1.6.1}
+\contentsline {subsubsection}{\numberline {1.6.2}Notaci\IeC {\'o}n de Gauss:}{22}{subsubsection.1.6.2}
+\contentsline {subsubsection}{\numberline {1.6.3}Notaci\IeC {\'o}n de Conway:}{23}{subsubsection.1.6.3}
+\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{25}{subsection.1.7}

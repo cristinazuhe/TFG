@@ -364,11 +364,16 @@ Supongamos que tenemos la proyección de un nudo no trivial. Modificar la proyec
 \underline{\textbf{Definición:}}
 Se define el \textbf{número de desanudamiento} de un nudo como el menor número de cambios en los cruces necesarios para desanudarlo, es decir, para llegar al nudo trivial. Se denota como $u(K)$. \\
 
-Es claro que en un número finito de pasos conseguiremos obtenemos el número de desanudamiento: Recorremos el nudo y al llegar a un cruce, si no hemos pasado anteriormente por él y es un undercrossing, lo convertimos en overcrossing. \\ 
+Es claro que en un número finito de pasos conseguiremos obtenemos el número de desanudamiento: Recorremos el nudo con cierta orientación y al llegar a un cruce, si no hemos pasado anteriormente por él y es un undercrossing, lo convertimos en overcrossing. \\ 
 
-Podemos ver el número de desanudamiento para el nudo trébol en la siguiente figura:\\
-HACER LA IMAGEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+Podemos ver el número de desanudamiento para el nudo trébol en la siguiente figura. El punto de partida lo indicamos con un punto grueso.
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[Nudo de partida]{\includegraphics[width=4cm]{3fcon1start.png}}
+   	\subfigure[Nudo modificado]{\includegraphics[width=4cm]{3fcon1negstart.png}}
+   	\caption{Unknotting number trébol.}
+   	\label{unk1} 
+   \end{figure}
 
 \bigskip
 \begin{center}
@@ -386,14 +391,60 @@ Para poder exponer la segunda regla tenemos que conocer antes las siguientes ide
 Si tenemos un cruce, podemos establecer su cruce positivo ($L_{+}$), cruce negativo ($ L_{-} $) y cruce nulo ($ L_{0} $) como se ve en la siguiente imagen.\\
 //HACER LAS 3 IMAGENESFIGURA 6.24
 
+
+
+
+
+
 \begin{itemize}
 	\item \underline{Regla 2:} \\
 	 Esta regla se representa como $\vartriangle(L_{+}) - \vartriangle(L_{-}) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(L_{0})  = 0$
 \end{itemize}
 
 Veamos cómo se calcularía el polinomio de Alexander con el nudo trébol:\\
-\\HACER IMAGENES DEL PROCESO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Aplicamos la segunda regla al nudo de partida que ponemos ver en la primera imagen de la figura \ref{alex2}. Tendremos que generar las proyecciones siguientes que vemos en la misma figura, las llamamos A, B y C por comodidad. 
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[A]{\includegraphics[width=4cm]{3fcon1.png}}
+   	\subfigure[B]{\includegraphics[width=4cm]{3fcon1neg.png}}
+   	\subfigure[C]{\includegraphics[width=4cm]{doble1b.png}}
+   	\caption{}
+   	\label{alex2} 
+   \end{figure}
 
+Al aplicar la segunda regla tendremos:\\
+\begin{equation}
+ \vartriangle(A) - \vartriangle(B) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(C)  = 0.
+ \end{equation}
+ Sabemos que $\vartriangle(B)$ = $\vartriangle$($\bigcirc$)= 1. Luego nos quedaría la ecuación:
+\begin{equation}
+\vartriangle(A) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(C)  = 1.
+\end{equation}
+Ahora necesitamos conocer el valor de $\vartriangle(C)$. Para ello vamos a aplicar la regla dos a dicha proyección. Para aplicarla tendremos que generar las proyecciones que vemos en la figura \ref{alex3}, a las que llamaremos D y E. 
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[D]{\includegraphics[width=4cm]{doble2b.png}}
+   	\subfigure[E]{\includegraphics[width=4cm]{doble3b.png}}
+   	\caption{}
+   	\label{alex3} 
+   \end{figure}
+
+Al aplicar la segunda regla tendremos:\\
+\begin{equation}
+\vartriangle(C) - \vartriangle(D) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(E)  = 0.
+\end{equation}
+ Sabemos que $\vartriangle(E)$ = $\vartriangle$($\bigcirc$)= 1. Además $\vartriangle(D)$ = $\vartriangle$($\bigcirc$ $\bigcirc$)= 0. Luego nos quedaría la ecuación:
+ \begin{equation}
+ \vartriangle(C) = -  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}).
+ \end{equation}
+
+Volviendo a la ecuación (2) tendemos:
+\begin{equation}
+\vartriangle(A) =  (t^{\frac{1}{2}} - t^{\frac{-1}{2}})^{2} + 1 = t^{-1} -1 + t.
+\end{equation}
+Luego $ t^{-1} -1 + t $ es el polinomio de Alexander del nudo trébol. \\
+
+\bigskip
 Es importante destacar el hecho de que podemos tener un nudo no trivial que tenga como polinomio de Alexander el polinomio trivial equivalente a 1. Por este motivo, con dicho invariante no podemos distinguir cualquier nudo del nudo trivial. \\
 
 ¿Mediante estas dos reglas podremos obtener siempre el polinomio de Alexander en tiempo finito? La respuesta es afirmativa, veámoslo:\\
@@ -402,7 +453,12 @@ La idea que vamos a seguir en este proceso será reducir las proyecciones, a las
 
 Al ir considerando los distintos nudos de la proyección, obtendremos dos nuevas proyecciones en cada paso. Con estas nuevas proyecciones podremos formar lo que se denomina \textbf{ árbol de resolución}. En la siguiente figura podemos ver el arbol de resolución del nudo trébol.\\
 
-//HACER FIGURA DEL ARBOL DEL NUDO TRÉBOL!!!!!!!!!!!!!!!
+   \begin{figure}[h!]
+   	\centering
+   	\includegraphics[width=18cm]{arbol.png}
+   	\caption{Árbol de resolución del nudo trébol.}
+   	\label{alex4} 
+   \end{figure}
 
 \underline{\textbf{Definición:}}\\
 Se define la \textbf{profundidad de un nudo} (o enlace) como el mínimo número de niveles que nos encontramos en los árboles de resolución del nudo. \\
