@@ -452,7 +452,7 @@ Es importante destacar el hecho de que podemos tener un nudo no trivial que teng
 
 ¿Mediante estas dos reglas podremos obtener siempre el polinomio de Alexander en tiempo finito? La respuesta es afirmativa, veámoslo:\\
 
-La idea que vamos a seguir en este proceso será reducir las proyecciones, a las que le queremos obtener el polinomio de Alexander, hasta llegar al nudo trivial. Reducir estas proyecciones quieres decir ir modificando sus cruces obteniendo $L_{+}$, $L_{-}$ y $L_{0}$ . Como veíamos en el invariante de la sección \ref{subunk}, a cualquier proyección le podemos aplicar una secuencia finita de cambios en los cruces de modo que resulte el nudo trivial. Por tanto, este procedimiento tendrá fin en una secuencia finita de pasos.\\
+La idea que vamos a seguir en este proceso será reducir las proyecciones, a las que le queremos obtener el polinomio de Alexander, hasta llegar al nudo trivial. Reducir estas proyecciones quiere decir ir modificando sus cruces obteniendo $L_{+}$, $L_{-}$ y $L_{0}$ . Como veíamos en el invariante de la sección \ref{subunk}, a cualquier proyección le podemos aplicar una secuencia finita de cambios en los cruces de modo que resulte el nudo trivial. Por tanto, este procedimiento tendrá fin en una secuencia finita de pasos.\\
 
 Al ir considerando los distintos nudos de la proyección, obtendremos dos nuevas proyecciones en cada paso. Con estas nuevas proyecciones podremos formar lo que se denomina \textbf{ árbol de resolución}. En la figura \ref{alex4} podemos ver el árbol de resolución del nudo trébol.\\
 
@@ -479,7 +479,7 @@ Ya sabemos qué son los nudos y algunas nociones esenciales sobre los mismos, pe
 \end{center}
 Se trata de una notación muy sencilla para describir la proyección de un nudo. La notación en sí es una secuencia de números enteros, veamos cómo se obtiene:\\
 
-Consideramos una orientación en la proyección de n cruces y asignamos el valor 1 al primer cruce que nos encontremos. Continuamos por la proyección y asignamos el valor 2 al siguiente cruce. Vamos repitiendo el proceso hasta haber pasado por cada cruce un par de veces (una vez por el undercrossing y otra por el overcrossing). Como resultado tendremos un número par y un número impar por cada cruce de la proyección. \\
+Consideramos una orientación en la proyección de n cruces y asignamos el valor 1 al primer cruce que nos encontremos. Continuamos por la proyección y asignamos el valor 2 al siguiente cruce. Vamos repitiendo el proceso hasta pasar por cada cruce un par de veces (una vez por el undercrossing y otra por el overcrossing). Como resultado tendremos un número par y un número impar por cada cruce de la proyección. \\
 
 Finalmente es necesario asignar los signos a cada uno de estos $2n$ números. Los números pares que correspondan a un overcrossing tendrán signo negativo. Veamos un ejemplo con el nudo trébol:\\
    \begin{figure}[h!]
@@ -544,14 +544,19 @@ Además, disponemos de una operación de multiplicación: reflejaremos el primer
 A los enredos construidos con estas operaciones se les conoce con \textbf{enredos racionales}. Podemos ver un esquema básico estas dos operaciones en la imagen \ref{conw3}:\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[Operacion suma]{\includegraphics[width=8cm]{ensum.png}}
-   	\subfigure[Operacion multiplicacion]{\includegraphics[width=8cm]{enmul.png}}
+   	\subfigure[Operacion suma]{\includegraphics[width=8.5cm]{ensum.png}}
+   	\subfigure[Operacion multiplicacion]{\includegraphics[width=8.5cm]{enmul.png}}
    	\caption{Operaciones con enredos.}
    	\label{conw3} 
    \end{figure}
 
-En la siguiente figura podemos ver un ejemplo de un enlace más complejo:
-//HACER IMAGEN DE 3 -2 3 !!!!
+En la figura \ref{conw4} podemos ver un ejemplo de un enlace más complejo:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=3.5cm]{en5fin.png}
+	\caption{Enlace -2 3 2}
+	\label{conw4} 
+\end{figure}
 
 A partir de estos enredos podemos construir proyecciones de nudos enlazando los puntos NO con NE y los puntos SO con SE. La notación del nudo corresponde con la notación que le damos a su enredo.\\ 
 
@@ -573,8 +578,15 @@ siendo $a_{i} \in \mathds{Z},  \forall i = 0,1,..,n.$\\
 Dos enredos racionales son equivalentes si y solo si sus fracciones continuas toman el mismo valor. 
 \end{teo}
 
-Veamos un ejemplo. Consideramos los enredos racionales -2 3 2 y 3 -2 3 que vemos en la siguiente figura.//
-//PONER LAS DOS FIGURAS DE ESTOS ENREDOS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Veamos un ejemplo. Consideramos los enredos racionales -2 3 2 y 3 -2 3 que vemos en la siguiente figura.\\
+\begin{figure}[h!]
+	\centering
+	\subfigure[Enlace -2 3 2]{\includegraphics[width=3.5cm]{en5fin.png}}
+	\space
+	\subfigure[Enlace 3 -2 3]{\includegraphics[width=3.5cm]{en6fin.png}}
+	\caption{Enlaces equivalentes}
+	\label{conw5} 
+\end{figure}
 
 A simple vista resulta difícil confirmar que sean equivalentes. Vamos a obtener sus fracciones continuas asociadas:\\
 $-2 \hspace{1cm} 3 \hspace{1cm} 2 \hspace{1cm}$ tiene fracción continua
@@ -588,6 +600,7 @@ $3 \hspace{1cm} -2 \hspace{1cm} 3 \hspace{1cm}$ tiene fracción continua
 \end{equation}
 Ambas fracciones continuas son iguales, luego los enredos -2 3 2 y 3 -2 3 son equivalentes. 
 
+\newpage
 \subsection{Tipos y ejemplos de nudos.}
 
 

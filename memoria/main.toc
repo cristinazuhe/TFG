@@ -14,4 +14,4 @@
 \contentsline {subsubsection}{\numberline {1.6.1}Notaci\IeC {\'o}n de Dowker:}{22}{subsubsection.1.6.1}
 \contentsline {subsubsection}{\numberline {1.6.2}Notaci\IeC {\'o}n de Gauss:}{23}{subsubsection.1.6.2}
 \contentsline {subsubsection}{\numberline {1.6.3}Notaci\IeC {\'o}n de Conway:}{24}{subsubsection.1.6.3}
-\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{27}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.7}Tipos y ejemplos de nudos.}{28}{subsection.1.7}
