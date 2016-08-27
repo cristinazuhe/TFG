@@ -9,6 +9,7 @@
 \usepackage{caption}
 \usepackage{subfigure}
 \usepackage{ amssymb }
+\usepackage{amsthm}
 \usepackage[hidelinks]{hyperref}
 \usepackage[vmargin=3cm,hmargin=2cm]{geometry}
 
@@ -31,12 +32,13 @@
  Un \textbf{nudo} es una curva cerrada en $\mathds{R}^{3}$ que no tiene auto-intersecciones.\\
 
 Podemos representar un nudo en el plano visualizando su proyección. Como hay muchas formas de representar un mismo nudo, podremos tener diferentes proyecciones que representen al mismo nudo. 
- Algunos ejemplos básicos son los siguientes:
- 
+ Algunos ejemplos básicos son los siguientes:\\
+ //PONER LAS FIGURAS EN 3D!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
+ //HABLAR DE LA EQUIVALENCIA DE NUDOS!!!!!!!!!!!!!!!!!!!!!\\
   \begin{figure}[h!]
-  	\includegraphics[width=2cm]{1.jpg}
-  	\includegraphics[width=2cm]{3f.png} 
-  	\includegraphics[width=2cm]{fig8.jpg}
+  	\includegraphics[width=2cm]{inudos/1.jpg}
+  	\includegraphics[width=2cm]{inudos/3f.png} 
+  	\includegraphics[width=2cm]{inudos/fig8.jpg}
   	\centering
   	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
   	\label{uno} 
@@ -48,7 +50,7 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
      Un \textbf{enlace} es una o más curvas cerradas disjuntas en $\mathds{R}^{3}$. Cada una de sus curvas recibe el nombre de componente.\\
      Por ejemplo, el siguiente enlace tiene dos componentes:
   \begin{figure}[h!]
-  	\includegraphics[width=2.7cm]{enlace.png}
+  	\includegraphics[width=2.7cm]{inudos/enlace.png}
   	\centering
   	\label{dos} 
   \end{figure}
@@ -58,16 +60,9 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
   Una de las cuestiones más interesantes en la teoría de nudos es la siguiente: \\
   ¿Dada un nudo, o alguna proyección suya, podremos saber si se trata del nudo trivial?. A lo largo de este proyecto trataremos de dar respuesta, en parte, a dicha cuestión.\\
   
-  Esta rama de la topología de baja dimensión destaca por su gran interés en áreas como:
-  \begin{enumerate}
-  	\item Química: En el siguiente apartado veremos que la teoría de nudos nace en este área.
-  	\item Biología: se descubrieron los anudamientos en las moléculas de ADN. 
-  	\item Criptografía: 
-  	//TENGO QUE COMPLETAR LAS ÁREAS!!!!!!!!!!!!!!
-  \end{enumerate}
  
   \newpage
-\subsection{Sobre su historia.}
+\subsection{Sobre su historia y aplicaciones.}
 En el siglo XIX, ciertos físicos escoceses se preguntaban por la estructura de los átomos.\\
 Estos científicos tomaron como base la teoría de Descartes, que afirmaba que el \textit{éter} era un fluido que ocupaba todo el espacio y transmitía la luz (éter lumínico), para desarrollar su modelo del átomo. \\
 Aunque dichos físicos conocían la existencia de los elementos y que estaban formados por átomos, no conocían la propia estructura de los átomos. \\
@@ -79,18 +74,36 @@ Para hacernos una idea más clara, para Willian Thomson el nudo trébol podría 
 
 Numerosos científicos contribuyeron a dicha teoría intentando crear la tabla de nudos pero a finales de este mismo siglo, Michelson-Morley demostró que el éter lumínico no existía y por tanto la teoría de los átomos de vórtice fue descartada. \\
 
-Tras este hecho, la teoría de nudos perdió su interés hasta que fue objeto de estudio en Topología a principios del siglo XX.
+Tras este hecho, la teoría de nudos perdió su interés hasta que fue objeto de estudio en Topología a principios del siglo XX.\\
 
+Posteriormente esta rama de la topología de baja dimensión destacó por su gran interés en áreas como:
+  \begin{enumerate}
+  	\item Química: ya hemos visto que la teoría de nudos nace en este área.
+  	\item Biología: se estudia la teoría de nudos en la estructura de ADN.\\
+  	Conocemos como ácido desoxirribonucleico (ADN) a aquella molécula que se encuentra en el núcleo de nuestras células y, por tanto, que contiene nuestro código genético. Se trata de un elemento esencial para la vida. Es muy conocida su forma: se puede ver como dos cuerdas enrolladas formando un doble hélice. \\
+  	
+  	Su forma de doble hélice puede encontrarse cerrada por los extremos de forma que nos encontraríamos con la propia forma de un nudo. Las ideas que veremos en este proyecto, junto con algunas más, se pueden aplicar a estas estructuras de ADN.\\
+  	
+  	Además, esta estructura de ADN puede sufrir ciertas alteraciones producidas por la encima topoisomerasa. Lo interesante es que estas alteraciones se corresponden con algunos de los movimientos que veremos para los nudos.\\
+  	
+  	
+  	\item Criptografía: 
+  	La fuerte relación que veremos entre la teoría de nudos y la teoría de trenzas, hace que podamos establecer cierta relación entre la teoría de nudos y la criptografía. \\
+  	
+  	Haciendo uso de la criptografía tratamos de encontrar métodos para que el intercambio de información no sea comprensible por terceras personas.\\
+  	
+  	Algunos métodos para encriptar dicha información están inspirados en la teoría de trenzas. En concreto el problema de la conjugación de trenzas, que trata de estudiar la igualdad de dos trenzas haciendo uso de una tercera trenza, nos permitirá encriptar la información de forma segura. \\
+  \end{enumerate}
 
 \newpage
 \subsection{Componiendo nudos.}\label{seccion3}
 Supongamos que tenemos dos proyecciones J y K de nudos. Podemos definir un nuevo nudo a partir de ellos eliminando un arco de cada una de las proyecciones y conectando los 4 extremos finales de dos en dos mediante otros arcos de modo que no se añadan ni eliminen cruces.\\
-A este nudo resultante le llamaremos \textbf{composición} de los dos nudos y se denotará como \textbf{J\#K}. A los nudos originales J y K les llamaremos \textbf{nudos factores}. \\
+A este nudo resultante le llamaremos \textbf{suma conexa} o composición de los dos nudos y se denotará como \textbf{J\#K}. A los nudos originales J y K les llamaremos \textbf{nudos factores}. \\
 
 Por ejemplo, consideremos como nudos factores el nudo trébol y el nudo de ocho. 
   \begin{figure}[h!]
-  	\subfigure[J]{\includegraphics[width=2.5cm]{conexion1.jpg}} 
-  	\subfigure[K]{\includegraphics[width=2.5cm]{fig8.jpg}}
+  	\subfigure[J]{\includegraphics[width=2.5cm]{inudos/conexion1.jpg}} 
+  	\subfigure[K]{\includegraphics[width=2.5cm]{inudos/fig8.jpg}}
   	\centering
   	\caption{Nudo trébol y nudo de ocho.}
   	\label{comp1} 
@@ -98,8 +111,8 @@ Por ejemplo, consideremos como nudos factores el nudo trébol y el nudo de ocho.
   
 Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
   \begin{figure}[h!]
-  	\subfigure[Haciendo la composición]{\includegraphics[width=7cm]{conexion2.jpg} }
-  	\subfigure[J\#K]{\includegraphics[width=7cm]{conexion3.jpg}}
+  	\subfigure[Haciendo la composición]{\includegraphics[width=7cm]{inudos/conexion2.jpg} }
+  	\subfigure[J\#K]{\includegraphics[width=7cm]{inudos/conexion3.jpg}}
   	\centering
   	\caption{Composición de nudo trébol y nudo de ocho.}
   	\label{comp2} 
@@ -109,8 +122,8 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
   El nudo trivial es un elemento identidad para la suma conexa: si hacemos la composición de un nudo cualquiera J con el nudo trivial, vamos a obtener el propio nudo J. Por ejemplo, seguimos considerando J como el nudo trébol y el nudo trivial como K. \\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[J]{\includegraphics[width=2.5cm]{conexion1.jpg} }
-   	\subfigure[K]{\includegraphics[width=2.5cm]{1.jpg}}
+   	\subfigure[J]{\includegraphics[width=2.5cm]{inudos/conexion1.jpg} }
+   	\subfigure[K]{\includegraphics[width=2.5cm]{inudos/1.jpg}}
    	\caption{Nudo trébol y nudo trivial.}
    	\label{comp3} 
    \end{figure}
@@ -118,8 +131,8 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
   Su suma conexa nos seguiría dando el nudo factor J, es decir, el nudo trébol.\\
    
       \begin{figure}[h!]
-      	\subfigure[Haciendo la composición]{\includegraphics[width=8cm]{conexion4.jpg} }
-      	\subfigure[J\#K]{\includegraphics[width=4cm]{conexion1.jpg}}
+      	\subfigure[Haciendo la composición]{\includegraphics[width=8cm]{inudos/conexion4.jpg} }
+      	\subfigure[J\#K]{\includegraphics[width=4cm]{inudos/conexion1.jpg}}
       	\centering
       	\caption{Composición de nudo trébol y nudo trivial.}
       	\label{comp4} 
@@ -135,7 +148,7 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
   
   Hay una gran variedad de nudos primos. Cualquier nudo puede ser expresado singularmente como suma conexa de nudos primos. En la siguiente tabla podemos ver los diferentes nudos primos que tienen menos de 8 cruces.\\
         \begin{figure}[h!]
-        	\includegraphics[width=14cm]{tableknot.png}
+        	\includegraphics[width=14cm]{inudos/tableknot.png}
         	\centering
         	\caption{Composición de nudo trébol y nudo trivial.}
         	\label{comp6} 
@@ -156,8 +169,8 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
    
    Como ejemplo de nuevo invertible nos podemos encontrar el nudo trébol.
       \begin{figure}[h!]
-      	\includegraphics[width=3cm]{3fcon1.png}
-      	\includegraphics[width=3cm]{3fcon2.png}
+      	\includegraphics[width=3cm]{inudos/3fcon1.png}
+      	\includegraphics[width=3cm]{inudos/3fcon2.png}
       	\centering
       	\caption{Ambas orientaciones del nudo trébol.}
       	\label{comp5} 
@@ -166,9 +179,11 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
    Sean los dos nudos factores J y K a los que se asignamos una orientación. Tendremos dos formas posibles de hacer la composición: conectar con las orientaciones emparejadas o no emparejadas. \\
    Todas las composiciones de los nudos cuyas orientaciones emparejan al componer, darán el mismo nudo composición. Todas las composiciones de los nudos cuyas orientaciones no emparejan al componer, también darán el mismo nudo composición. Sin embargo, es posible que la composición de los nudos cuyas orientaciones emparejen no de lugar al mismo nudo que haciendo la composición de los nudos cuyas orientaciones no emparejen. Serán el mismo si uno de los nudos factores es invertible.\\
    
-   Veamos un caso en el que la composición de dos mismos factores, genera nudos diferentes. Consideramos el siguiente nudo:
+   Veamos un caso en el que la composición de dos mismos factores, genera nudos diferentes. Consideramos el siguiente nudo:\\
+   
+   //MODIFICAR LA FIGURA A LA MISMA PERO CON LOS CRUCES BORRADOS!!!
          \begin{figure}[h!]
-         	\includegraphics[width=3cm]{817.png}
+         	\includegraphics[width=3cm]{inudos/817.png}
          	\centering
          	\caption{Nudo factor J y K.}
          	\label{comp7} 
@@ -176,8 +191,8 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
    Si componemos el nudo consigo mismo conectando las orientaciones emparejadas y desemparejadas obtenemos nudos que no son equivalentes. Lo podemos comprobar visualmente con la Figura \ref{comp8}.
    
          \begin{figure}[h!]
-         	\includegraphics[width=6.5cm]{817def1.png}
-         	\includegraphics[width=6.5cm]{817def2.png}
+         	\includegraphics[width=6.5cm]{inudos/817def1.png}
+         	\includegraphics[width=6.5cm]{inudos/817def2.png}
          	\centering
          	\caption{Las composiciones no son equivalentes.}
          	\label{comp8} 
@@ -186,10 +201,9 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
     
    
 \subsection{Equivalencia de nudos: movimientos de Reidemeister.}\label{seccion4}
-Dos nudos K1 y K2 serán equivalentes (K1 $\thicksim$ K2) si podemos distorsionar uno de ellos en el otro sin hacer ningún corte. A esta distorsión se le conoce como isotopía ambiente. \\
+Dos nudos K1 y K2 serán equivalentes (K1 $\thicksim$ K2) si podemos distorsionar uno de ellos en el otro sin hacer ningún corte. \\
 
-Una deformación de la proyección de un nudo se llama isotopía plana si se deforma el plano de proyección como si estuviese hecho de goma.\\
-Con más precisión definimos una \textbf{isotopía plana} de las proyecciones P1 y P2 de nudos como la aplicación continua $F: \mathds{R}^{2}$ x $[0,1] \rightarrow \mathds{R}^{2}$ tal que $F_{0}=identidad$, $F_{1}(P1) = P2$ y $F_{t}$ es un homeomorfismo $\forall t$.\\
+Para ver si dos proyecciones corresponden a nudos equivalentes, usaremos el conepto de isotopía plana. Más precisamente, definimos una \textbf{isotopía plana} de las proyecciones P1 y P2 de nudos como la aplicación continua $F: \mathds{R}^{2}$ x $[0,1] \rightarrow \mathds{R}^{2}$ tal que $F_{0}=identidad$, $F_{1}(P1) = P2$ y $F_{t}$ es un homeomorfismo $\forall t$.\\
 
 Los movimientos de Reidemeister que vamos a ver a continuación nos permiten cambiar la proyección de un nudo de modo que se cambie la relación entre los cruces pero que no cambie el nudo al que representa la proyección. Cada uno de estos movimientos es una isotopía:\\
 
@@ -197,8 +211,8 @@ Los movimientos de Reidemeister que vamos a ver a continuación nos permiten cam
 En cualquier zona de la proyección nos permite añadir o eliminar un giro tal y como vemos en la figura \ref{movi1}.\\
 
   \begin{figure}[h!]
-  	\includegraphics[width=7.2cm]{movi1.png}
-  	\includegraphics[width=7.2cm]{movi2.png}
+  	\includegraphics[width=7.2cm]{inudos/movi1.png}
+  	\includegraphics[width=7.2cm]{inudos/movi2.png}
   	\centering
   	\caption{Primer movimiento Reidemeister.}
   	\label{movi1} 
@@ -208,8 +222,8 @@ En cualquier zona de la proyección nos permite añadir o eliminar un giro tal y
 Nos permite añadir o eliminar dos cruces del nudo como se ve en la figura \ref{movi2}.\\
 
     \begin{figure}[h!]
-    	\includegraphics[width=7.5cm]{movi3.png}
-    	\includegraphics[width=7.5cm]{movi4.png}
+    	\includegraphics[width=7.5cm]{inudos/movi3.png}
+    	\includegraphics[width=7.5cm]{inudos/movi4.png}
     	\centering
     	\caption{Segundo movimiento de Reidemeister.}
     	\label{movi2} 
@@ -218,8 +232,8 @@ Nos permite añadir o eliminar dos cruces del nudo como se ve en la figura \ref{
 	\textbf{Tercer movimiento de Reidemeister - R3.}\\
 Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del cruce. Veamos la figura \ref{movi3} para aclarar la idea.
       \begin{figure}[h!]
-      	\includegraphics[width=7.5cm]{movi5.png}
-      	\includegraphics[width=7.5cm]{movi6.png}
+      	\includegraphics[width=7.5cm]{inudos/movi5.png}
+      	\includegraphics[width=7.5cm]{inudos/movi6.png}
       	\centering
       	\caption{Tercer movimiento de Reidemeister.}
       	\label{movi3} 
@@ -232,21 +246,21 @@ Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del 
 
 Veamos un ejemplo en el que vemos la equivalencia de dos proyecciones, que en un primer momento podrían no parecernos equivalentes:
   \begin{figure}[h!]
-  	\subfigure[P1]{\includegraphics[width=3cm]{3f.png}}
-  	\subfigure[R1]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{3fseg.png}
-  	\subfigure[R3]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{fase3.png}
-  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{fase4.png}
-  	\subfigure[R3]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{fase5.png}
-  	\subfigure[R1]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{fase6.png}
-  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
-  	\includegraphics[width=3cm]{fase7.png}
-  	\subfigure[Isotopia]{\includegraphics[width=2cm]{flecha.png}}
-  	\subfigure[P2]{\includegraphics[width=3cm]{fase8.png}}
+  	\subfigure[P1]{\includegraphics[width=3cm]{inudos/3f.png}}
+  	\subfigure[R1]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/3fseg.png}
+  	\subfigure[R3]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/fase3.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/fase4.png}
+  	\subfigure[R3]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/fase5.png}
+  	\subfigure[R1]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/fase6.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\includegraphics[width=3cm]{inudos/fase7.png}
+  	\subfigure[Isotopia]{\includegraphics[width=2cm]{inudos/flecha.png}}
+  	\subfigure[P2]{\includegraphics[width=3cm]{inudos/fase8.png}}
   	\centering
   	\caption{Equivalencia de dos proyecciones de nudos.}
   	\label{algosj} 
@@ -288,7 +302,7 @@ Es uno de los invariantes de enlaces más sencillos que nos podemos encontrar y 
 
 Cada componente de un enlace es una curva disjunta del mismo. En la Figura \ref{inv1} vemos un enlace con dos componentes. 
   \begin{figure}[h!]
-  	\includegraphics[width=2.7cm]{enlace.png}
+  	\includegraphics[width=2.7cm]{inudos/enlace.png}
   	\centering
   	\caption{Enlace con dos componentes.}
   	\label{inv1} 
@@ -304,14 +318,14 @@ Sea un nudo K. Su \textbf{crossing number} es el menor número de cruces que se 
 
 Esto nos lleva a deducir el nudo K tendrá como mínimo c(K) cruces por muchas transformaciones que se haga a sus proyecciones.\\
 
-Aunque es un invariante sencillo de visualizar, no es fácil de obtener: puede ser que al estudiar muchas proyecciones de un nudo pensemos que su número de cruces es $n$, sin embargo puede existir otra proyecciones del nudo que no conocemos con menor número de cruces. Por este motivo, no vamos a trabajar posteriormente con este invariante.\\
+Aunque es un invariante sencillo de visualizar, no es fácil de obtener: puede ser que al estudiar muchas proyecciones de un nudo pensemos que su número de cruces es $n$, sin embargo pueden existir otras proyecciones del nudo que no conocemos con menor número de cruces. Por este motivo, no vamos a trabajar posteriormente con este invariante.\\
 
 Para dejarlo más claro vamos a ver un ejemplo.\\
 Consideramos la proyección de la primera figura \ref{cross1}. Podemos pensar que el número de cruces del nudo sería 4 (ver los 4 cruces de la figura a). Sin embargo, esta proyección es equivalente a la proyección que vamos en la figura b, que tiene como número de cruces el valor 3. Por tanto, el número de cruces del nudo, que es el nudo trébol, es 3. 
    \begin{figure}[h!]
    	\centering
-   	\subfigure[4 cruces]{\includegraphics[width=3.5cm]{3fseg.png}}
-   	\subfigure[3 cruces]{\includegraphics[width=3.5cm]{3f.png}}
+   	\subfigure[4 cruces]{\includegraphics[width=3.5cm]{inudos/3fseg.png}}
+   	\subfigure[3 cruces]{\includegraphics[width=3.5cm]{inudos/3f.png}}
    	\caption{Crossing number del nudo trébol.}
    	\label{cross1} 
    \end{figure}  
@@ -324,7 +338,7 @@ Para definir este invariante de enlaces, tenemos que conocer unos conceptos prev
 Entendemos por undercrossing y overcrossing a un recorrido en el cruce de la proyección de un nudo que nos lleva por encima o por debajo en el cruce. Veamos la siguiente imagen donde queda representado:\\
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=6.5cm]{cruce.png}
+   	\includegraphics[width=6.5cm]{inudos/cruce.png}
    	\caption{Tipo de cruce.}
    	\label{tric1} 
    \end{figure}
@@ -337,14 +351,64 @@ Una proyección de un enlace es tricolorable si cada una de las hebras de la pro
 
 \begin{teo}
 	La tricolorabilidad se perserva mediante movimientos de Reidemeister.
+\begin{proof}
+	Supongamos que partimos de una proyección de un nudo que es tricolorable y vamos a aplicarle los movimientos de Reidemeister. Tendremos que ver que la proyección final es tricolorable. Podemos centrarnos en la zona de la proyección a la que se le aplica el movimiento. Veamos qué ocurre al aplicar cada movimiento:\\
+	
+	\underline{R1:}
+	En este caso sólo se puede dar que tengamos un sólo color. Al aplicar el movimiento R1 seguiremos utilizando ese mismo color, de modo que la proyección modificada seguirá siendo tricolorable. 
+	   \begin{figure}[h!]
+	   	\centering
+	   	\includegraphics[width=4cm]{inudos/movi1.png}
+	   	\includegraphics[width=4cm]{inudos/movi2.png}
+	   	\caption{}
+	   	\label{demotri1} 
+	   \end{figure}
+	   
+	\underline{R2:}
+	Supongamos que el coloreado inicial se ha realizado con un sólo color. Al igual que con el movimiento R1, no tendríamos ninguna dificultad pues al aplicar el movimiento R2 seguiremos coloreando con el mismo color y la proyección seguirá siguiendo tricolorable. \\
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=4cm]{inudos/movi3.png}
+		\includegraphics[width=4cm]{inudos/movi4.png}
+		\caption{}
+		\label{demotri2} 
+	\end{figure}
+	
+	Ahora tenemos otra segunda opción de coloreado en la proyección inicial y es que en ambos cruces posibles usemos los 3 colores posibles. Se puede ver en la figura \ref{demotri3}. Se observa que la proyección sigue siendo tricolorable. \\
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=8cm]{inudos/movi3tri.png}
+		\includegraphics[width=8cm]{inudos/movi4tri.png}
+		\caption{}
+		\label{demotri3} 
+	\end{figure}
+	
+		\underline{R3:}
+	Este movimiento tiene más complejidad pues tenemos 3 cruces posibles. Analizamos todos los casos posibles y vemos que nos podemos reducir a cinco situaciones. Veamos en la figura \ref{demotri4} cómo sería el cambio de color en cada caso para confirmar que las proyecciones resultantes al aplicar el movimiento siguen siendo tricolorables. \\
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=8cm]{inudos/movi5.png}
+			\includegraphics[width=8cm]{inudos/movi5tri1.png}
+			\includegraphics[width=8cm]{inudos/movi5tri2.png}
+			\includegraphics[width=8cm]{inudos/movi5tri3.png}
+			\includegraphics[width=8cm]{inudos/movi5tri4.png}
+			\caption{}
+			\label{demotri4} 
+		\end{figure}
+		
+	Concluimos que si tenemos una proyección tricolorable y aplicamos los movimientos de Reidemeister, la proyección resultante sigue siendo tricolorable. \\
+	Si la proyección de partida no fuese tricolorable, la proyección resultante tampoco podría ser tricolorable: supongamos que la proyección resultante es tricolorable, por el razonamiento que hemos seguido anteriormente, tendríamos que tener que la proyección inicial sería tricolorable llegando a contradicción. 
+		
+\end{proof}
 \end{teo}
-//DEMOSTRACION EN KNOTS, MOLECULES....\\
 
-Haciendo uso de este invariante podemos demostrar que el nudo trivial y el nudo trébol no son equivalentes, es decir, son topológicamente distintos. Esto se debe a que el nudo trébol es tricolorable pero el nudo trivial no lo es. Podemos verlo en la siguiente imagen:\\
+
+Haciendo uso de este invariante podemos demostrar que el nudo trivial y el nudo trébol no son equivalentes, es decir, son topológicamente distintos. Esto se debe a que el nudo trébol es tricolorable pero el nudo trivial no lo es. Podemos verlo en la imagen \ref{Tric2}:\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[No tricolorable]{\includegraphics[width=5cm]{1.jpg}}
-   	\subfigure[Tricolorable]{\includegraphics[width=5cm]{3ftri.png}}
+   	\subfigure[No tricolorable]{\includegraphics[width=5cm]{inudos/1.jpg}}
+   	\subfigure[Tricolorable]{\includegraphics[width=5cm]{inudos/3ftri.png}}
    	\caption{Dos nudos no equivalentes.}
    	\label{Tric2} 
    \end{figure} 
@@ -366,11 +430,11 @@ Se define el \textbf{número de desanudamiento} de un nudo como el menor número
 
 Es claro que en un número finito de pasos conseguiremos obtenemos el número de desanudamiento: Recorremos el nudo con cierta orientación y al llegar a un cruce, si no hemos pasado anteriormente por él y es un undercrossing, lo convertimos en overcrossing. \\ 
 
-Podemos ver el número de desanudamiento para el nudo trébol en la siguiente figura. El punto de partida lo indicamos con un punto grueso.
+Podemos ver, en la figura \ref{unk1}, que el número uno es el número de desanudamiento para el nudo trébol. El punto de partida lo indicamos con un punto grueso.
    \begin{figure}[h!]
    	\centering
-   	\subfigure[Nudo de partida]{\includegraphics[width=4cm]{3fcon1start.png}}
-   	\subfigure[Nudo modificado]{\includegraphics[width=4cm]{3fcon1negstart.png}}
+   	\subfigure[Nudo de partida]{\includegraphics[width=4cm]{inudos/3fcon1start.png}}
+   	\subfigure[Nudo modificado]{\includegraphics[width=4cm]{inudos/3fcon1negstart.png}}
    	\caption{Unknotting number trébol.}
    	\label{unk1} 
    \end{figure}
@@ -391,9 +455,9 @@ Para poder exponer la segunda regla tenemos que conocer antes las siguientes ide
 Si tenemos un cruce, podemos establecer su cruce positivo ($L_{+}$), cruce negativo ($ L_{-} $) y cruce nulo ($ L_{0} $) como se ve en la siguiente imagen.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[$ L_{+} $]{\includegraphics[width=4cm]{pro1.png}}
-   	\subfigure[$ L_{-} $]{\includegraphics[width=4cm]{pro2.png}}
-   	\subfigure[$ L_{0} $]{\includegraphics[width=4cm]{pro3.png}}
+   	\subfigure[$ L_{+} $]{\includegraphics[width=4cm]{inudos/pro1.png}}
+   	\subfigure[$ L_{-} $]{\includegraphics[width=4cm]{inudos/pro2.png}}
+   	\subfigure[$ L_{0} $]{\includegraphics[width=4cm]{inudos/pro3.png}}
    	\caption{Tipos de cruces.}
    	\label{alex1} 
    \end{figure}
@@ -408,9 +472,9 @@ Veamos cómo se calcularía el polinomio de Alexander con el nudo trébol:\\
 Aplicamos la segunda regla al nudo de partida que ponemos ver en la primera imagen de la figura \ref{alex2}. Tendremos que generar las proyecciones siguientes que vemos en la misma figura, las llamamos A, B y C por comodidad. 
    \begin{figure}[h!]
    	\centering
-   	\subfigure[A]{\includegraphics[width=4cm]{3fcon1.png}}
-   	\subfigure[B]{\includegraphics[width=4cm]{3fcon1neg.png}}
-   	\subfigure[C]{\includegraphics[width=4cm]{doble1b.png}}
+   	\subfigure[A]{\includegraphics[width=4cm]{inudos/3fcon1.png}}
+   	\subfigure[B]{\includegraphics[width=4cm]{inudos/3fcon1neg.png}}
+   	\subfigure[C]{\includegraphics[width=4cm]{inudos/doble1b.png}}
    	\caption{}
    	\label{alex2} 
    \end{figure}
@@ -426,8 +490,8 @@ Al aplicar la segunda regla tendremos:\\
 Ahora necesitamos conocer el valor de $\vartriangle(C)$. Para ello vamos a aplicar la regla dos a dicha proyección. Para aplicarla tendremos que generar las proyecciones que vemos en la figura \ref{alex3}, a las que llamaremos D y E. 
    \begin{figure}[h!]
    	\centering
-   	\subfigure[D]{\includegraphics[width=4cm]{doble2b.png}}
-   	\subfigure[E]{\includegraphics[width=4cm]{doble3b.png}}
+   	\subfigure[D]{\includegraphics[width=4cm]{inudos/doble2b.png}}
+   	\subfigure[E]{\includegraphics[width=4cm]{inudos/doble3b.png}}
    	\caption{}
    	\label{alex3} 
    \end{figure}
@@ -458,7 +522,7 @@ Al ir considerando los distintos nudos de la proyección, obtendremos dos nuevas
 
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=18cm]{arbol.png}
+   	\includegraphics[width=18cm]{inudos/arbol.png}
    	\caption{Árbol de resolución del nudo trébol.}
    	\label{alex4} 
    \end{figure}
@@ -484,7 +548,7 @@ Consideramos una orientación en la proyección de n cruces y asignamos el valor
 Finalmente es necesario asignar los signos a cada uno de estos $2n$ números. Los números pares que correspondan a un overcrossing tendrán signo negativo. Veamos un ejemplo con el nudo trébol:\\
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=4cm]{3fcon2dow.png}
+   	\includegraphics[width=4cm]{inudos/3fcon2dow.png}
    	\caption{Numeración de cruces-Dowker.}
    	\label{dow1} 
    \end{figure}
@@ -503,7 +567,7 @@ Consideramos una orientación en la proyección de n cruces y asignamos el valor
 Finalmente es necesario asignar los signos a cada uno de esos $2n$ números. Los números que representen uncrossings tendrán signo negativo. Veamos la notación de Gauss para el nudo trébol.\\
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=4cm]{3fcon2gaus.png}
+   	\includegraphics[width=4cm]{inudos/3fcon2gaus.png}
    	\caption{Numeración de cruces-Gauss.}
    	\label{gaus1} 
    \end{figure} 
@@ -520,8 +584,8 @@ Un \textbf{enredo} o tangle de una proyección de un enlace es una región de la
 En la figura \ref{conw1} vemos un enredo general y un ejemplo particular de un enredo.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[Enredo general]{\includegraphics[width=4cm]{en1.png}}
-   	\subfigure[Ejemplo de enredo]{\includegraphics[width=4cm]{en2.png}}
+   	\subfigure[Enredo general]{\includegraphics[width=4cm]{inudos/en1.png}}
+   	\subfigure[Ejemplo de enredo]{\includegraphics[width=4cm]{inudos/en2.png}}
    	\caption{}
    	\label{conw1} 
    \end{figure} 
@@ -529,12 +593,12 @@ En la figura \ref{conw1} vemos un enredo general y un ejemplo particular de un e
 Pero la idea es trabajar con enredos más sencillos como son los que vemos en la figura \ref{conw2}. La notación se corresponde con el número de cruces que tiene el enredo con signo positivo y negativo según se ve en las imágenes.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[Enredo $\infty$]{\includegraphics[width=4cm]{en3.png}}
-   	\subfigure[Enredo 0]{\includegraphics[width=4cm]{3enrot.png}}
+   	\subfigure[Enredo $\infty$]{\includegraphics[width=4cm]{inudos/en3.png}}
+   	\subfigure[Enredo 0]{\includegraphics[width=4cm]{inudos/3enrot.png}}
    	
-   	\subfigure[Enredo 4]{\includegraphics[width=10cm]{en4.png}}
+   	\subfigure[Enredo 4]{\includegraphics[width=10cm]{inudos/en4.png}}
    	
-   	\subfigure[Enredo -4]{\includegraphics[width=10cm]{en4conneg.png}}
+   	\subfigure[Enredo -4]{\includegraphics[width=10cm]{inudos/en4conneg.png}}
    	\caption{Tipos básicos de enredos.}
    	\label{conw2} 
    \end{figure} 
@@ -544,8 +608,8 @@ Además, disponemos de una operación de multiplicación: reflejaremos el primer
 A los enredos construidos con estas operaciones se les conoce con \textbf{enredos racionales}. Podemos ver un esquema básico estas dos operaciones en la imagen \ref{conw3}:\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[Operacion suma]{\includegraphics[width=8.5cm]{ensum.png}}
-   	\subfigure[Operacion multiplicacion]{\includegraphics[width=8.5cm]{enmul.png}}
+   	\subfigure[Operacion suma]{\includegraphics[width=8.5cm]{inudos/ensum.png}}
+   	\subfigure[Operacion multiplicacion]{\includegraphics[width=8.5cm]{inudos/enmul.png}}
    	\caption{Operaciones con enredos.}
    	\label{conw3} 
    \end{figure}
@@ -553,7 +617,7 @@ A los enredos construidos con estas operaciones se les conoce con \textbf{enredo
 En la figura \ref{conw4} podemos ver un ejemplo de un enlace más complejo:
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=3.5cm]{en5fin.png}
+	\includegraphics[width=3.5cm]{inudos/en5fin.png}
 	\caption{Enlace -2 3 2}
 	\label{conw4} 
 \end{figure}
@@ -581,9 +645,9 @@ Dos enredos racionales son equivalentes si y solo si sus fracciones continuas to
 Veamos un ejemplo. Consideramos los enredos racionales -2 3 2 y 3 -2 3 que vemos en la siguiente figura.\\
 \begin{figure}[h!]
 	\centering
-	\subfigure[Enlace -2 3 2]{\includegraphics[width=3.5cm]{en5fin.png}}
+	\subfigure[Enlace -2 3 2]{\includegraphics[width=3.5cm]{inudos/en5fin.png}}
 	\space
-	\subfigure[Enlace 3 -2 3]{\includegraphics[width=3.5cm]{en6fin.png}}
+	\subfigure[Enlace 3 -2 3]{\includegraphics[width=3.5cm]{inudos/en6fin.png}}
 	\caption{Enlaces equivalentes}
 	\label{conw5} 
 \end{figure}
@@ -601,7 +665,61 @@ $3 \hspace{1cm} -2 \hspace{1cm} 3 \hspace{1cm}$ tiene fracción continua
 Ambas fracciones continuas son iguales, luego los enredos -2 3 2 y 3 -2 3 son equivalentes. 
 
 \newpage
-\subsection{Tipos y ejemplos de nudos.}
+\subsection{Conexión con distintas teorías.}
+\begin{center}
+	\item \subsubsection{Teoría de grafos:}
+\end{center}
+
+\underline{\textbf{Definición:}}\\
+Un \textbf{grafo} es un par $ (V,A) $ de conjuntos, junto con la aplicación 
+\begin{center}
+	 $  \gamma :A \rightarrow$ \{\{$u,v$\} / $u,v \in V$\}  
+\end{center}
+Al conjunto de puntos V se se llama conjunto de vértices y al conjunto A le llamaremos conjunto de aristas. \\
+
+\underline{\textbf{Definición:}}\\
+Un \textbf{grafo plano} $ G $ es un grafo que permanece en el plano.\\
+
+Podemos ver varios ejemplos en la figura //PONER REFERENCIA!!!!!!!!!!!!!!!!\\
+//CREAR ALGUNOS GRAFOS!!!!!!!!!!!1
+
+A partir de la proyección de un nudo (o de un enlace en general) podemos crear un grafo plano correspondiente. Para ello tendremos que realizar el siguiente proceso:\\
+
+Sombreamos las regiones de la proyección que estén de modo que la región externa al nudo se quede sin sombrear y situamos un vértice en cada zona. Unimos los vértices con aristas que pasan por los cruces de la proyección. Ya tendríamos el grafo plano. Podemos ver un ejemplo en la figura //PONER ENLACE!!!!!!!!!!!!!!!!!!!!!!1
+//CREAR PROYECCION, PROYECCION SOBREADA Y GRAFO!!!! \\
+
+Además, si el nudo tiene asignada una orientación, podremos asignarle el tipo de cruce (positivo o negativo) a cada arista. \\
+
+Finalmente, para ver que los problemas de nudos se pueden ver como problemas de grafos y viceversa, vamos a ver el procedimiento inverso. Dado un grafo plano, podremos obtener la proyección del nudo asociado. Veamos cuál sería el procedimiento:\\
+
+Partiendo del grafo plano con los signos asociados en cada vértice, marcamos cada uno de las aristas. Uniremos cada una de estas marcas con aquellas marcas que estén en las aristas que conectan con los vértices de la arista que tiene la marca. A continuación, sombreamos las zonas que contienen a cada vértice. Finalmente, establecemos los cruces conforme a los signos del grafo plano. Podemos ver un ejemplo en la figura //PONER ENLACE"!!!!!!!!!!!!!!!!
+//CREAR LAS 5 FIGURAS DE THE KNOT BOOK! DE MI RESUMEN. \\
+
+
+
+\begin{center}
+	\item \subsubsection{Teoría de trenzas:}
+\end{center}
+En esta sección vamos a introducir la relación que hay entre teoría de nudos y teoría de trenzas, teoría que estudiaremos con mayor detalle en el próximo tema.\\
+
+Vamos a ver la idea general de lo que se entiende por el término trenza y veremos una definición más precisa más adelante. Podemos pensar en una trenza como un conjunto de $n$ cadenas que son atadas horizontalmente a un tope imaginario arriba y abajo. Podemos ver algunos ejemplos de trenzas en la figura //PONER ENLACE!!!!\\
+//CREAR IMAGENES DE TRENZAS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
+
+A partir de una trenza, podemos obtener su nudo o enlace correspondiente. Simplemente tendremos que unir en orden  los topes superiores de las cadenas con los inferiores. Esta trenza cerrada será el nudo al que representa la trenza. Podemos ver un ejemplo en la figura //PONER ENLACE!!!!!!!!!!!!!!!!!!!\\
+//CREAR ALGUNA TRENZA DE LAS ANTERIORES, CERRADA  \\
+
+Para ver el proceso inverso haremos uso del siguiente teorema:\\
+\begin{teo}Teorema de Alexander.\\
+	Todo nudo puede ser representado como una trenza cerrada.
+\end{teo}
+//PENDIENTE LA DEMOSTRACIÓN!!!!!!!!!!!!!!!!!!!!!
+
+
+
+\section{Teoría de trenzas. }\label{SegundoTema}
+
+\subsection{Motivación y primeras definiciones.}
+
 
 
 
