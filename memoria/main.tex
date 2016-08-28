@@ -31,16 +31,30 @@
 \underline{\textbf{Definición:}}\\
  Un \textbf{nudo} es una curva cerrada en $\mathds{R}^{3}$ que no tiene auto-intersecciones.\\
 
-Podemos representar un nudo en el plano visualizando su proyección. Como hay muchas formas de representar un mismo nudo, podremos tener diferentes proyecciones que representen al mismo nudo. 
- Algunos ejemplos básicos son los siguientes:\\
- //PONER LAS FIGURAS EN 3D!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
- //HABLAR DE LA EQUIVALENCIA DE NUDOS!!!!!!!!!!!!!!!!!!!!!\\
+Veamos algunos ejemplos:\\
+
   \begin{figure}[h!]
-  	\includegraphics[width=2cm]{inudos/1.jpg}
-  	\includegraphics[width=2cm]{inudos/3f.png} 
-  	\includegraphics[width=2cm]{inudos/fig8.jpg}
+  	\includegraphics[width=4cm]{inudos/cubo1.png}
+  	\includegraphics[width=4cm]{inudos/cubo2.png} 
+  	\includegraphics[width=4cm]{inudos/cubo3.png}
   	\centering
   	\caption{De izquierda a derecha: nudo trivial, nudo trébol, nudo de ocho.}
+  	\label{trid} 
+  \end{figure}
+
+Nos interesa saber cuándo dos nudos son equivalentes: se puede pasar de uno a otro mediante deformaciones. Veámoslo formalmente:\\
+
+Se dice que dos nudos son equivalentes si existe un homeomorfismo de  $\mathds{R}^{3}$ que nos lleve de un nudo al otro. \\
+
+
+Podemos representar un nudo en el plano visualizando su proyección. Como hay muchas formas de representar un mismo nudo, podremos tener diferentes proyecciones que representen al mismo nudo. 
+ Algunos ejemplos básicos son los siguientes:\\
+  \begin{figure}[h!]
+  	\includegraphics[width=3cm]{inudos/1.jpg}
+  	\includegraphics[width=3cm]{inudos/3f.png} 
+  	\includegraphics[width=3cm]{inudos/fig8.jpg}
+  	\centering
+  	\caption{Proyecciones del nudo trivial, nudo trébol, nudo de ocho.}
   	\label{uno} 
   \end{figure}
   
@@ -54,7 +68,7 @@ Podemos representar un nudo en el plano visualizando su proyección. Como hay mu
   	\centering
   	\label{dos} 
   \end{figure}
-    \newpage
+
     Por tanto, podemos ver un nudo como un caso particular de enlace en el que sólo tenemos una componente.\\
     
   Una de las cuestiones más interesantes en la teoría de nudos es la siguiente: \\
@@ -181,9 +195,8 @@ Haciendo la suma conexa de ambos nudos obtenemos el nudo composición:
    
    Veamos un caso en el que la composición de dos mismos factores, genera nudos diferentes. Consideramos el siguiente nudo:\\
    
-   //MODIFICAR LA FIGURA A LA MISMA PERO CON LOS CRUCES BORRADOS!!!
          \begin{figure}[h!]
-         	\includegraphics[width=3cm]{inudos/817.png}
+         	\includegraphics[width=3cm]{inudos/817con.png}
          	\centering
          	\caption{Nudo factor J y K.}
          	\label{comp7} 
@@ -665,7 +678,7 @@ $3 \hspace{1cm} -2 \hspace{1cm} 3 \hspace{1cm}$ tiene fracción continua
 Ambas fracciones continuas son iguales, luego los enredos -2 3 2 y 3 -2 3 son equivalentes. 
 
 \newpage
-\subsection{Conexión con distintas teorías.}
+\subsection{Conexión con distintas teorías.}\label{seccion7}
 \begin{center}
 	\item \subsubsection{Teoría de grafos:}
 \end{center}
@@ -715,10 +728,140 @@ Para ver el proceso inverso haremos uso del siguiente teorema:\\
 //PENDIENTE LA DEMOSTRACIÓN!!!!!!!!!!!!!!!!!!!!!
 
 
-
+\newpage
 \section{Teoría de trenzas. }\label{SegundoTema}
+\subsection{Nudos y trenzas.}
+En la sección \ref{seccion7} dimos una idea general de lo que se entiende por una trenza. Veamos su definición más formal:\\
 
-\subsection{Motivación y primeras definiciones.}
+\underline{\textbf{Definición:}}
+Consideremos el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$ y situamos $A_{i}$ puntos en su cara superior y $B_{i}$ puntos en la cara inferior, siendo $i \in \mathds{N}$. Unimos cada punto $A_{i}$ con un punto $B_{i}$ mediante segmentos $d_{i}$ de modo que:
+\begin{enumerate}
+	\item $ d_{1}, d_{2},...,d_{n} $ sean disjuntos.
+	\item Los segmentos $ d_{i} $ no pueden conectar puntos $A_{i}$ o $B_{i}$ entre sí.
+	\item Al cortar por cualquier plano horizontal, cada segmento $ d_{i} $ toca en un sólo punto al plano. 
+\end{enumerate}
+A cada uno de estos segmentos $ d_{i} $ les llamaremos cadenas y al conjunto de las n-cadenas se le conoce como \textbf{trenza}.\\
+
+Podemos ver algunos ejemplos de trenzas en la figura \ref{tren1}.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1-\sigma3$]{\includegraphics[width=3.6cm]{itrenzas/t1.png}}
+   	\space
+   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t2.png}}
+   	\caption{Ejemplos de trenzas}
+   	\label{tren1} 
+   \end{figure} 
+
+Al igual que hacíamos con los nudos, podremos representar una trenza en el plano visualizando su proyección. En la figura \ref{tren2} se pueden ver las proyección de las trenzas representadas en la figura \ref{tren1}.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1-\sigma3$]{\includegraphics[width=3.3cm]{itrenzas/t1pro.png}}
+   	\space
+   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2$]{\includegraphics[width=2.8cm]{itrenzas/t2pro.png}}
+   	\caption{Proyección de trenzas}
+   	\label{tren2} 
+   \end{figure}  
+
+Anteriormente vimos que a cada trenza le corresponde un nudo o un enlace particular. Se obtendrá uniendo los extremos superiores con los extremos inferiores de las cadenas en el mismo orden. A este nudo se le conocerá como \textbf{trenza cerrada}. \\
+
+Intuitivamente diremos que dos trenzas son equivalentes si podemos deformar las cadenas de las trenzas de forma que ambas trenzas se vean iguales. Las trenzas de la figura \ref{tren3} son equivalentes.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$+\sigma1-\sigma2+\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t3.png}}
+   	\space
+   	\subfigure[$+\sigma1+\sigma2-\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t4.png}}
+   	\caption{Trenzas equivalentes.}
+   	\label{tren3} 
+   \end{figure} 
+
+\begin{center}
+	\subsubsection{Notación de trenzas:}
+\end{center}
+Para poder trabajar de forma cómodo con las trenzas vamos a darle la siguiente notación:\\
+Sean las cadenas que se encuentran en las posiciones $i$ e $i+1$. Al producir un intercambio de posiciones de estas cadenas se producirá un \textbf{cruce}. Este cruce puede realizarse de dos formas: 
+\begin{itemize}
+	\item La cadena que se encuentra en la posición $i$ cruza por delante de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$.
+	\item La cadena que se encuentra en la posición $i$ cruza por detrás de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$.
+\end{itemize}
+Podemos verlo más claro en la figura \ref{tren4}.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$+\sigma(i)$]{\includegraphics[width=3.1cm]{itrenzas/t5.png}}
+   	\space
+   	\subfigure[$+\sigma(i)$]{\includegraphics[width=3cm]{itrenzas/t6.png}}
+   	\caption{Signo cruce.}
+   	\label{tren4} 
+   \end{figure}
+
+Cualquier trenza no trivial tendrá de una serie de cruces. En cada plano horizontal podremos tener como mucho un cruce. Notaremos a la trenza con la secuencia de cruces que tenga, empezando por la parte superior de la trenza. A esta secuencia se le conoce como \textbf{palabra} que representa a la trenza. Podemos ver un ejemplo en la figura \ref{tren5}.\\
+   \begin{figure}[h!]
+   	\centering
+   	\includegraphics[width=8cm]{itrenzas/t7.png}
+   	\caption{Trenza $-\sigma3+\sigma2-\sigma4$.}
+   	\label{tren5} 
+   \end{figure}
+
+\bigskip
+\begin{center}
+	\subsubsection{Trenzas equivalentes:}\label{trenzasequi}
+\end{center}
+Para analizar cuándo dos trenzas son equivalentes tendremos que ver cuándo las palabras que representan a dichas trenzas son equivalentes. Dos palabras representarán la misma trenza si y sólo si podemos pasar de una palabra a otra por un secuencia de estas tres operaciones:
+\begin{enumerate}
+	\item \underline{Primer movimiento - M1:} \\
+	Podemos añadir o eliminar $+\sigma(i) -\sigma(i)$ o $-\sigma(i) +\sigma(i)$ en cualquier palabra. Es claro que la palabra inicial y la palabra final representan a la misma trenza. Podemos verlo en la figura //PONER ENLACE!!\\
+	//PONER FIGURA DEL PRIMER MOVIMIENTO!!!!!!!!CAPTURA A INICIO Y A FIN.
+	
+	\item \underline{Segundo movimiento - M2:} \\
+	Las palabras $+\sigma(i) +\sigma(i+1) +\sigma(i)$ y $+\sigma(i+1) +\sigma(i) +\sigma(i+1)$ son equivalentes. Se puede ver en la figura //PONER ENLACE!!\\
+	//PONER FIGURA DEL SEGUNDO MOVIMIENTO!!!!!!!
+	
+	
+	\item \underline{Tercer movimiento - M3:} \\
+	Las palabras $+\sigma(i) +\sigma(j)$ y $+\sigma(j) +\sigma(i)$ son equivalentes si se verifica que $|i-j| > 1$. Se ve claro en la figura //PONER ENLACE!!\\
+	//PONER FIGURA DEL TERCER MOVIMIENTO!!!!!
+	
+\end{enumerate}
+En la figura //PONER REFERENCIA!!! podemos ver los movimientos que nos demuestran que las trenzas vistas en la figura //PONER REFERENCIA !!!! son equivalentes.\\
+//PONER PASO A PASO LA EQUIVALENCIA DE LAS TRENZAS QUE HE PUESTO ANTES QUE SON EQUIVALENTES.\\
+
+\begin{center}
+	\subsubsection{Trenzas Markov-equivalentes:}
+\end{center}
+Es claro que si tenemos dos trenzas que son equivalentes, sus trenzas cerradas nos darán nudos que serán equivalentes. Pero...¿puede darse el caso de tener dos trenzas no sean equivalentes y que sus trenzas cerradas sí lo sean?Veamos, mediante el ejemplo de la figura //PONER ENLACE, que sí es posible:\\
+//CREAR TRENZAS NO EQUIVALENTES PERO QUE AL CERRAR SI LO SEAN!!!!!!!!\\
+
+\underline{\textit{Definición:}}\\
+Se dice que dos trenzas son \textbf{Markov-equivalentes} si sus cierres producen el mismo enlace. En este caso tendremos que los nudos representados por las trenzas son equivalentes. \\
+
+\begin{teo} \textbf{Teorema de Markov.} \\
+	Dos trenzas son Markov-equivalentes si y solo si podemos pasar de una trenza a otra mediante una secuencia de las tres operaciones que hemos visto en la subsección \ref{trenzasequi} y los movimientos de Markov.
+\end{teo}
+
+Veamos los movimientos de Markov:\\
+\begin{enumerate}
+	\item \underline{Conjugación - Mv1:} \\
+	Las palabras $\beta$ y $+\sigma(i) \beta -\sigma(i)$ son equivalentes.Se puede ver en la figura //PONER ENLACE!!\\
+	//PONER FIGURA DEL PRIMER MOVIMIENTO!!!!!!!
+	
+	\item \underline{Estabilización - Mv2:} \\
+	Esta operación nos permite modificar el número de cadenas de las trenzas. 
+	Sea la palabra $\beta$ de n cadenas. Esta palabra es equivalente a $\beta \sigma(n)$ o bien $\sigma(n) \beta $. Se puede ver en la figura //PONER ENLACE!!\\
+	//PONER FIGURA DEL SEGUNDO MOVIMIENTO!!!!!!! 
+	
+\end{enumerate}
+	Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura //PONER ENLACE!!!\\
+	//CREAR IMAGENES FINALES DE MI RESUMEN 
+
+
+
+
+\subsection{El grupo de las trenzas.}
+
+
+\subsection{Algunos invariantes.}
+
+
+\subsection{El problema de las palabras.}
 
 
 
