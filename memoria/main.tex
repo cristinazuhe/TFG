@@ -10,6 +10,7 @@
 \usepackage{subfigure}
 \usepackage{ amssymb }
 \usepackage{amsthm}
+\usepackage{ mathrsfs }
 \usepackage[hidelinks]{hyperref}
 \usepackage[vmargin=3cm,hmargin=2cm]{geometry}
 
@@ -255,7 +256,7 @@ Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del 
 
 \begin{teo} \textbf{Teorema de Reidemeister.} Sean P1 y P2 las proyecciones que representan a dos nudos K1 y K2, respectivamente. Entonces, K1 $\thicksim$ K2 si, y solo si, P1 y P2 están conectados por una secuencia finita de movimientos de Reidemeister e isotopías planas.
 \end{teo}
-//PENDIENTE DEMOSTRACIÓN. NO ESTÁ EN LOS LIBROS.\\
+//AUN PENDIENTE DEMOSTRACIÓN.\\
 
 Veamos un ejemplo en el que vemos la equivalencia de dos proyecciones, que en un primer momento podrían no parecernos equivalentes:
   \begin{figure}[h!]
@@ -489,7 +490,7 @@ Podemos ver estos nuevos cruces en la figura \ref{alex1}.\\
 \end{itemize}
 
 Veamos cómo se calcularía el polinomio de Alexander con el nudo trébol:\\
-Como el nudo de partir tiene más de un cruce, tenemos que aplicarle la segunda regla. Consideraremos como cruce a cambiar el que nos encontramos más a la izquierda aunque podríamos considerar cualquier otro cruce. Generamos los tres nuevos enlaces haciendo el cambio en el cruce. Sus proyección se pueden ver en la figura \ref{alex2}. Las llamamos A, B y C por comodidad. 
+Como el nudo de partida tiene más de un cruce, tenemos que aplicarle la segunda regla. Consideraremos como cruce a cambiar el que nos encontramos más a la izquierda aunque podríamos considerar cualquier otro cruce. Generamos los tres nuevos enlaces haciendo el cambio en el cruce. Sus proyección se pueden ver en la figura \ref{alex2}. Las llamamos A, B y C por comodidad. 
    \begin{figure}[h!]
    	\centering
    	\subfigure[A]{\includegraphics[width=4cm]{inudos/3fcon1.png}}
@@ -507,7 +508,7 @@ Al aplicar la segunda regla tendremos:\\
 \begin{equation}
 \vartriangle(A) +  (t^{\frac{1}{2}} - t^{\frac{-1}{2}}) \vartriangle(C)  = 1.
 \end{equation}
-Ahora necesitamos conocer el valor de $\vartriangle(C)$. Al igual que ocurría anteriormente, la proyección de este nuevo nudo tiene más de un cruce de modo que vamos a aplicarle la segunda regla. Esta vez seleccionamos el cruce superior como cruce que modifica a los nuevos nudos. Obtenemos las proyecciones que vemos en la figura \ref{alex3}, a las que llamaremos D y E. 
+Ahora necesitamos conocer el valor de $\vartriangle(C)$. Al igual que ocurría anteriormente, la proyección de este nuevo nudo tiene más de un cruce de modo que vamos a aplicarle la segunda regla. Esta vez seleccionamos el cruce superior como cruce que se modifica en los nuevos nudos. Obtenemos las proyecciones que vemos en la figura \ref{alex3}, a las que llamaremos D y E. 
    \begin{figure}[h!]
    	\centering
    	\subfigure[D]{\includegraphics[width=4cm]{inudos/doble2b.png}}
@@ -700,20 +701,39 @@ Al conjunto de puntos V se se llama conjunto de vértices y al conjunto A le lla
 \underline{\textbf{Definición:}}\\
 Un \textbf{grafo plano} $ G $ es un grafo que permanece en el plano.\\
 
-Podemos ver varios ejemplos en la figura //PONER REFERENCIA!!!!!!!!!!!!!!!!\\
-//CREAR ALGUNOS GRAFOS!!!!!!!!!!!1
+Podemos ver varios ejemplos en la figura \ref{graf1}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=3.5cm]{inudos/grafo.png}
+	\includegraphics[width=4cm]{inudos/pgrafo.png}
+	\caption{Ejemplos de grafos planos.}
+	\label{graf1} 
+\end{figure}
 
 A partir de la proyección de un nudo (o de un enlace en general) podemos crear un grafo plano correspondiente. Para ello tendremos que realizar el siguiente proceso:\\
 
-Sombreamos las regiones de la proyección que estén de modo que la región externa al nudo se quede sin sombrear y situamos un vértice en cada zona. Unimos los vértices con aristas que pasan por los cruces de la proyección. Ya tendríamos el grafo plano. Podemos ver un ejemplo en la figura //PONER ENLACE!!!!!!!!!!!!!!!!!!!!!!1
-//CREAR PROYECCION, PROYECCION SOBREADA Y GRAFO!!!! \\
-
-Además, si el nudo tiene asignada una orientación, podremos asignarle el tipo de cruce (positivo o negativo) a cada arista. \\
+Sombreamos las regiones de la proyección que estén de modo que la región externa al nudo se quede sin sombrear y situamos un vértice en cada zona. Unimos los vértices con aristas que pasan por los cruces de la proyección. Ya tendríamos el grafo plano. Además, si el nudo tiene asignada una orientación, podremos asignarle el tipo de cruce (positivo o negativo) a cada arista. Podemos ver un ejemplo en la figura \ref{graf2}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=5cm]{inudos/pgrafo3.png}
+	\includegraphics[width=5cm]{inudos/pgrafo2.png}
+	\includegraphics[width=5cm]{inudos/pgrafo1.png}
+	\caption{De proyección a grafo}
+	\label{graf2} 
+\end{figure}
 
 Finalmente, para ver que los problemas de nudos se pueden ver como problemas de grafos y viceversa, vamos a ver el procedimiento inverso. Dado un grafo plano, podremos obtener la proyección del nudo asociado. Veamos cuál sería el procedimiento:\\
 
-Partiendo del grafo plano con los signos asociados en cada vértice, marcamos cada uno de las aristas. Uniremos cada una de estas marcas con aquellas marcas que estén en las aristas que conectan con los vértices de la arista que tiene la marca. A continuación, sombreamos las zonas que contienen a cada vértice. Finalmente, establecemos los cruces conforme a los signos del grafo plano. Podemos ver un ejemplo en la figura //PONER ENLACE"!!!!!!!!!!!!!!!!
-//CREAR LAS 5 FIGURAS DE THE KNOT BOOK! DE MI RESUMEN. \\
+Partiendo del grafo plano con los signos asociados en cada vértice, marcamos cada una de las aristas. Uniremos cada una de estas marcas con aquellas marcas que estén en las aristas que conectan con los vértices de la arista que tiene la marca. A continuación, sombreamos las zonas que contienen a cada vértice. Finalmente, establecemos los cruces conforme a los signos del grafo plano. Podemos ver un ejemplo en la figura \ref{graf3}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=4.5cm]{inudos/grafo1.png}
+	\includegraphics[width=4.5cm]{inudos/grafo2.png}
+	\includegraphics[width=4.5cm]{inudos/grafo3.png}
+	\includegraphics[width=4.5cm]{inudos/grafo4.png}
+	\caption{De grafo a proyección.}
+	\label{graf3} 
+\end{figure}
 
 
 
@@ -722,7 +742,7 @@ Partiendo del grafo plano con los signos asociados en cada vértice, marcamos ca
 \end{center}
 En esta sección vamos a introducir la relación que hay entre teoría de nudos y teoría de trenzas, teoría que estudiaremos con mayor detalle en el próximo tema.\\
 
-Vamos a ver la idea general de lo que se entiende por el término trenza y veremos una definición más precisa más adelante. Podemos pensar en una trenza como un conjunto de $n$ cadenas que son atadas horizontalmente a un tope imaginario arriba y abajo. Podemos ver algunos ejemplos de trenzas en la figura \ref{ntren1}.\\
+Vamos a ver la idea general de lo que se entiende por el término trenza y veremos una definición más precisa más adelante. Podemos pensar en una trenza como un conjunto de $n$ cadenas que son atadas a un tope imaginario arriba y abajo. Podemos ver algunos ejemplos de trenzas en la figura \ref{ntren1}.\\
    \begin{figure}[h!]
    	\centering
    	\includegraphics[width=3.5cm]{itrenzas/t4.png}
@@ -734,7 +754,7 @@ Vamos a ver la idea general de lo que se entiende por el término trenza y verem
 
 A partir de una trenza, podemos obtener su nudo o enlace correspondiente. Simplemente tendremos que unir en orden  los topes superiores de las cadenas con los inferiores. Esta trenza cerrada será el nudo al que representa la trenza. Podemos ver algunos ejemplos en la sección \ref{t2sec1}.\\
 
-Para ver el proceso inverso haremos uso del siguiente teorema:\\
+Para ver el proceso inverso haremos uso del siguiente teorema:
 \begin{teo}Teorema de Alexander.\\
 	Todo nudo puede ser representado como una trenza cerrada.
 \end{teo}
@@ -746,7 +766,7 @@ Para ver el proceso inverso haremos uso del siguiente teorema:\\
 \subsection{Nudos y trenzas.}\label{t2sec1}
 En la sección \ref{seccion7} dimos una idea general de lo que se entiende por una trenza. Veamos su definición más formal:\\
 
-\underline{\textbf{Definición:}}
+\underline{\textbf{Definición:}}\\
 Consideremos el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$ y situamos $A_{i}$ puntos en su cara superior y $B_{i}$ puntos en la cara inferior, siendo $i \in \mathds{N}$. Unimos cada punto $A_{i}$ con un punto $B_{i}$ mediante segmentos $d_{i}$ de modo que:
 \begin{enumerate}
 	\item $ d_{1}, d_{2},...,d_{n} $ sean disjuntos.
@@ -758,9 +778,9 @@ A cada uno de estos segmentos $ d_{i} $ les llamaremos cadenas y al conjunto de 
 Podemos ver algunos ejemplos de trenzas en la figura \ref{tren1}.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1-\sigma3$]{\includegraphics[width=5cm]{itrenzas/t1cubo.png}}
+   	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1+\sigma3$]{\includegraphics[width=5cm]{itrenzas/t1cubo.png}}
    	\space
-   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2$]{\includegraphics[width=5cm]{itrenzas/t2cubo.png}}
+   	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2$]{\includegraphics[width=5cm]{itrenzas/t2cubo.png}}
    	\caption{Ejemplos de trenzas}
    	\label{tren1} 
    \end{figure} 
@@ -768,40 +788,34 @@ Podemos ver algunos ejemplos de trenzas en la figura \ref{tren1}.\\
 Al igual que hacíamos con los nudos, podremos representar una trenza en el plano visualizando su proyección. En la figura \ref{tren2} se pueden ver las proyección de las trenzas representadas en la figura \ref{tren1}.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1-\sigma3$]{\includegraphics[width=3cm]{itrenzas/t1pro.png}}
+   	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1+\sigma3$]{\includegraphics[width=3cm]{itrenzas/t1pro.png}}
    	\space
-   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2$]{\includegraphics[width=2.5cm]{itrenzas/t2pro.png}}
+   	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2$]{\includegraphics[width=2.5cm]{itrenzas/t2pro.png}}
    	\caption{Proyección de trenzas}
    	\label{tren2} 
    \end{figure}  
 
 Anteriormente vimos que a cada trenza le corresponde un nudo o un enlace particular. Se obtendrá uniendo los extremos superiores con los extremos inferiores de las cadenas en el mismo orden. A este nudo se le conocerá como \textbf{trenza cerrada}. \\
 
-Intuitivamente diremos que dos trenzas son equivalentes si podemos deformar las cadenas de las trenzas de forma que ambas trenzas se vean iguales. Las trenzas de la figura \ref{tren3} son equivalentes.\\
-   \begin{figure}[h!]
-   	\centering
-   	\subfigure[$+\sigma1-\sigma2+\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t3.png}}
-   	\space
-   	\subfigure[$+\sigma1+\sigma2-\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t4.png}}
-   	\caption{Trenzas equivalentes.}
-   	\label{tren3} 
-   \end{figure} 
+Denotaremos como $\mathscr{B}_{n}$ al conjunto de todas las trenzas de n cadenas.\\
 
+ 
+\bigskip
 \begin{center}
 	\subsubsection{Notación de trenzas:}
 \end{center}
-Para poder trabajar de forma cómodo con las trenzas vamos a darle la siguiente notación:\\
+Para poder trabajar de forma cómoda con las trenzas vamos a darle la siguiente notación:\\
 Sean las cadenas que se encuentran en las posiciones $i$ e $i+1$. Al producir un intercambio de posiciones de estas cadenas se producirá un \textbf{cruce}. Este cruce puede realizarse de dos formas: 
 \begin{itemize}
-	\item La cadena que se encuentra en la posición $i$ cruza por delante de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$.
-	\item La cadena que se encuentra en la posición $i$ cruza por detrás de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$.
+	\item La cadena que se encuentra en la posición $i$ cruza por delante de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$.
+	\item La cadena que se encuentra en la posición $i$ cruza por detrás de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$.
 \end{itemize}
 Podemos verlo más claro en la figura \ref{tren4}.\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[$+\sigma(i)$]{\includegraphics[width=3.1cm]{itrenzas/t5.png}}
+   	\subfigure[$-\sigma(i)$]{\includegraphics[width=3.5cm]{itrenzas/t5.png}}
    	\space
-   	\subfigure[$+\sigma(i)$]{\includegraphics[width=3cm]{itrenzas/t6.png}}
+   	\subfigure[$+\sigma(i)$]{\includegraphics[width=3.4cm]{itrenzas/t6.png}}
    	\caption{Signo cruce.}
    	\label{tren4} 
    \end{figure}
@@ -809,34 +823,89 @@ Podemos verlo más claro en la figura \ref{tren4}.\\
 Cualquier trenza no trivial tendrá de una serie de cruces. En cada plano horizontal podremos tener como mucho un cruce. Notaremos a la trenza con la secuencia de cruces que tenga, empezando por la parte superior de la trenza. A esta secuencia se le conoce como \textbf{palabra} que representa a la trenza. Podemos ver un ejemplo en la figura \ref{tren5}.\\
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=8cm]{itrenzas/t7.png}
-   	\caption{Trenza $-\sigma3+\sigma2-\sigma4$.}
+   	\includegraphics[width=6cm]{itrenzas/t7.png}
+   	\caption{Trenza $+\sigma3-\sigma2+\sigma4$.}
    	\label{tren5} 
    \end{figure}
 
 \bigskip
 \begin{center}
-	\subsubsection{Trenzas equivalentes:}\label{trenzasequi}
+	\subsubsection{Equivalencia de trenzas:}
 \end{center}
+Intuitivamente diremos que dos trenzas son equivalentes si podemos deformar las cadenas de las trenzas de forma que ambas trenzas se vean iguales. Las trenzas de la figura \ref{tren3} son equivalentes.\\
+\begin{figure}[h!]
+	\centering
+	\subfigure[$-\sigma1+\sigma2-\sigma2$]{\includegraphics[width=3.9cm]{itrenzas/t3.png}}
+	\space
+	\subfigure[$-\sigma1-\sigma2+\sigma2$]{\includegraphics[width=3.9cm]{itrenzas/t4.png}}
+	\caption{Trenzas equivalentes.}
+	\label{tren3} 
+\end{figure}
+
+\textbf{\underline{Definición:}}\\
+Consideremos la cadena $d$ de una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Sea AB un segmento de dicha cadena y C un punto en el cubo de forma que el triángulo $\triangle ABC$ no corta a ninguna otra cadena de la trenza y sólo toca a la cadena $d$ en el segmento AB. Supongamos además que los segmentos AC y CB cortar a cualquier plano horizontal del cubo en un sólo punto como mucho. Podemos visualizar estas condiciones en la primera imagen de la figura //PONER ENLACE!.\\
+Bajo estas condiciones definimos un \textbf{movimiento elemental} como la operación $ \Omega $ que intercambia el segmento AB por los segmentos AC $ \cup $ CB.\\
+
+La operación inversa $ \Omega^{-1} $ que intercambia los segmentos AC $\cup$  CB, que formen parte de una cadena, por el segmento AB de forma que el triángulo $\triangle ABC$ no corte a ninguna otra cadena, también es considerada un movimiento elemental. \\
+Podemos ver la representación de ambos movimientos en la figura //PONER ENLACE!.\\
+
+//PONER FIGURA cadena d y ABC!!!!!!!!!!!!!!!!!!!!!!!! y operacion omega.\\
+
+
+\textbf{\underline{Definición:}}\\
+Sean dos trenzas $\beta$, $\beta'$. Diremos que son \textbf{equivalentes} ($\beta \sim \beta'$) si existe una cadena finita de trenzas $ \beta = \beta_{0}$, $\beta_{1},...,\beta_{m}=\beta'$ tal que cada par de trenzas $ \beta_{i}, \beta_{i+1}, i=0,..,m-1, $ está relacionada por un movimiento elemental. \\
+
+Si dos trenzas $\beta$, $\beta'$ no son equivalentes, lo denotaremos como $\beta \not \sim \beta'$.\\
+
+Denotaremos como $ \textbf{B}_{n} $ al conjunto de todas las trenzas de n cadenas no equivalentes entre sí. Es decir, ${B}_{n}$ = $\mathscr{B}_{n}$/$ \sim $.\\
+
+\newpage
+\subsection{El grupo de las trenzas.}
+Hemos visto una definición que nos permite saber cuándo dos trenzas son equivalentes, pero a la hora de la práctica esta definición no nos aporta 
+
+\subsection{Algunos invariantes.}
+
+
+\subsection{El problema de las palabras.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\newpage
+	\subsubsection{Trenzas equivalentes:}\label{trenzasequi}
+
 Para analizar cuándo dos trenzas son equivalentes tendremos que ver cuándo las palabras que representan a dichas trenzas son equivalentes. Dos palabras representarán la misma trenza si y sólo si podemos pasar de una palabra a otra por un secuencia de estas tres operaciones:
 \begin{enumerate}
 	\item \underline{Primer movimiento - M1:} \\
 	Podemos añadir o eliminar $+\sigma(i) -\sigma(i)$ o $-\sigma(i) +\sigma(i)$ en cualquier palabra. Es claro que la palabra inicial y la palabra final representan a la misma trenza. Podemos verlo en la figura \ref{tren6}.
-   \begin{figure}[h!]
-   	\centering
-   	\includegraphics[width=10cm]{itrenzas/M1.png}
-   	\caption{Primer movimiento.}
-   	\label{tren6} 
-   \end{figure}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=10cm]{itrenzas/M1.png}
+		\caption{Primer movimiento.}
+		\label{tren6} 
+	\end{figure}
 	
 	\item \underline{Segundo movimiento - M2:} \\
 	Las palabras $+\sigma(i) +\sigma(i+1) +\sigma(i)$ y $+\sigma(i+1) +\sigma(i) +\sigma(i+1)$ son equivalentes. Se puede ver en la figura \ref{tren7}.
-   \begin{figure}[h!]
-   	\centering
-   	\includegraphics[width=16cm]{itrenzas/M2.png}
-   	\caption{Segundo movimiento.}
-   	\label{tren7} 
-   \end{figure}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=16cm]{itrenzas/M2.png}
+		\caption{Segundo movimiento.}
+		\label{tren7} 
+	\end{figure}
 	
 	
 	\item \underline{Tercer movimiento - M3:} \\
@@ -850,12 +919,12 @@ Para analizar cuándo dos trenzas son equivalentes tendremos que ver cuándo las
 	
 \end{enumerate}
 En la figura \ref{tren9} podemos ver los movimientos que nos demuestran que dos trenzas dadas más complejas son equivalentes. Aplicamos M3 y posteriormente M2.\\
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=10cm]{itrenzas/movi.png}
-		\caption{Trenzas equivalentes.}
-		\label{tren9} 
-	\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=10cm]{itrenzas/movi.png}
+	\caption{Trenzas equivalentes.}
+	\label{tren9} 
+\end{figure}
 
 \begin{center}
 	\subsubsection{Trenzas Markov-equivalentes:}
@@ -902,31 +971,19 @@ Veamos los movimientos de Markov:
 	
 \end{enumerate}
 
-	Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren13}.
-   \begin{figure}[h!]
-   	\centering
-   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1+\sigma3$]{\includegraphics[width=3.5cm]{itrenzas/t1probien.png}}
-   	\subfigure[Mv2]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-   	\subfigure[$+\sigma2-\sigma1+\sigma2-\sigma1$]{\includegraphics[width=3.5cm]{itrenzas/t3probien.png}}
-   	\subfigure[Mv1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2-\sigma1+\sigma1$]{\includegraphics[width=2.4cm]{itrenzas/t4probien.png}}
-   	\subfigure[M1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-   	\subfigure[$-\sigma1+\sigma2-\sigma1+\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t2probien.png}}
-   	\caption{Signo cruce.}
-   	\label{tren13} 
-   \end{figure}
-
-
-
-\subsection{El grupo de las trenzas.}
-
-
-\subsection{Algunos invariantes.}
-
-
-\subsection{El problema de las palabras.}
-
-
+Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren13}.
+\begin{figure}[h!]
+	\centering
+	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1+\sigma3$]{\includegraphics[width=3.5cm]{itrenzas/t1probien.png}}
+	\subfigure[Mv2]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
+	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1$]{\includegraphics[width=3.5cm]{itrenzas/t3probien.png}}
+	\subfigure[Mv1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
+	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2+\sigma1-\sigma1$]{\includegraphics[width=2.4cm]{itrenzas/t4probien.png}}
+	\subfigure[M1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
+	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t2probien.png}}
+	\caption{Signo cruce.}
+	\label{tren13} 
+\end{figure}
 
 
 
