@@ -22,7 +22,8 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Notaci\IeC {\'o}n de trenzas:}{38}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Equivalencia de trenzas:}{39}{subsubsection.2.1.2}
 \contentsline {subsection}{\numberline {2.2}El grupo de las trenzas.}{41}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Algunos invariantes.}{43}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}El problema de las palabras.}{43}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Trenzas equivalentes:}{44}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Trenzas Markov-equivalentes:}{45}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Estructura de grupo no abeliano:}{41}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Trenzas equivalentes:}{45}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Algunos invariantes.}{47}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}El problema de las palabras.}{47}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Trenzas Markov-equivalentes:}{48}{subsubsection.2.4.1}
