@@ -10,6 +10,7 @@
 \usepackage{subfigure}
 \usepackage{ amssymb }
 \usepackage{amsthm}
+\usepackage{amsmath}
 \usepackage{ mathrsfs }
 \usepackage[hidelinks]{hyperref}
 \usepackage[vmargin=3cm,hmargin=2cm]{geometry}
@@ -1218,6 +1219,90 @@ Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren
 
 
 \subsection{Algunos invariantes.}
+//PONER INTRODUCCIÓN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\bigskip
+\subsubsection{Exponente:}\label{invtren1}
+\textbf{\underline{Definición:}}\\
+Sea $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ donde $e_{i} = \pm 1$.\\
+Llamamos \textbf{exponente} de $\beta$ al entero $ \sum_{i=1}^{m} e_{i} $. Se denotará como exp($\beta$).\\
+
+El exponente de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \ref{exp1} es $+1-1-1=-1$.\\
+   \begin{figure}[h!]
+   	\centering
+   	\includegraphics[width=5.2cm]{itrenzas/4c3.png}
+   	\caption{$+\sigma3-\sigma2-\sigma3$}
+   	\label{exp1} 
+   \end{figure}
+
+\begin{pro}
+	El exponente de una trenza $\beta \in B_{n}$ es un invariante. 
+	\begin{proof}
+		Veamos que dadas las trenzas $\beta1,\beta2 \in B_{n}$ tales que $\beta1 \sim \beta2$, se verifica que exp($\beta1$)=exp($\beta2$).\\
+		
+		Al ser $\beta1 \sim \beta2$, por la definición \ref{defequi}, sabemos que existe la secuencia de trenzas equivalentes tal que: 
+		\begin{center}
+			$ \beta1 = \beta1_{0} \rightarrow \beta1_{1} \rightarrow ... \rightarrow \beta1_{m}=\beta2$ 
+		\end{center}
+	    donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Estos movimientos elementales se pueden reducir a las relaciones las  \ref{rel1} y \ref{rel2} que definen al grupo $ B_{n} $ . Por tanto,para verificar que el exponente de cada par $ \beta_{j}, \beta_{j+1}$ es igual, tenemos que ver que estas relaciones de igualdad tienen el mismo exponente:
+	    
+	    \begin{enumerate}
+	    \item $\sigma(i+1)\sigma(i)\sigma(i+1) =\sigma(i)\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $:\\
+	    exp($ +\sigma(i+1)+\sigma(i)+\sigma(i+1))$ = exp$(+\sigma(i)+\sigma(i+1)+\sigma(i) $).
+	    \item $\sigma(i)\sigma(j)=\sigma(j)\sigma(i)$ siendo $1 \le i < j \le n-1 $, $j-i \geq 2$:\\
+	    exp($+\sigma(i)+\sigma(j))$ = exp$(+\sigma(j)+\sigma(i)$).  	
+	    \end{enumerate}
+	\end{proof}
+\end{pro}
+
+Haciendo uso de este invariante podremos ver muy fácilmente si dos trenzas dadas tienen distintos exponente y por tanto no son equivalentes. Podemos ver un ejemplo de dos trenzas no equivalentes en la figura \ref{exp2}. La trenza $\beta1 = +\sigma2+\sigma1-\sigma2$ tiene exponente +1, mientras que la trenza $\beta1 = -\sigma2-\sigma1+\sigma2$ tiene exponente -1. Si tuviesen igual exponente tendríamos que estudiar otros invariantes para ver si las trenzas son iguales. \\
+	\begin{figure}[h!]
+		\centering
+		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=4cm]{itrenzas/6c1.png}}
+		\subfigure[exp($ \beta2 $) = -1]{\includegraphics[width=3.8cm]{itrenzas/6c4.png}}
+		\caption{Trenzas no equivalentes.}
+		\label{exp2} 
+	\end{figure}
+
+
+\bigskip
+\subsubsection{Permutación:}\label{invtren2}
+\textbf{\underline{Definición:}}\\
+Sea $\beta \in B_{n}$. Consideramos la cuerda i que conecta el punto inicial $ A_{i}$ con el punto final $B_{j_{i}}$. Llamaremos \textbf{permutación} asociada a la trenza a la matriz:\\
+\[\pi(\beta)=\begin{bmatrix}
+1 & 2 & .. & n\\
+j_{1} & j_{2} & .. & j_{n} \\
+\end{bmatrix}\]
+Por simplicidad podremos denotar la permutación de la trenza como el vector $j_{1} j_{2} ... j_{n}$.\\
+
+La permutación de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \ref{perm1} es \[\pi(\beta)=\begin{bmatrix}
+1 & 2 & 3 & 4\\
+1 & 4 & 3 & 2 \\
+\end{bmatrix}\] o bien directamente la permutación: 1 4 3 2.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=5.2cm]{itrenzas/4c3.png}
+	\caption{$+\sigma3-\sigma2-\sigma3$}
+	\label{perm1} 
+\end{figure}
+
+\begin{pro}
+    La permutación de una trenza $\beta \in B_{n}$ es un invariante. 
+    \begin{proof}
+    	Veamos que dadas las trenzas $\beta1,\beta2 \in B_{n}$ tales que $\beta1 \sim \beta2$, se verifica que $\pi(\beta1$)=$\pi(\beta2$).\\
+    	
+    	Por la definición \ref{defequi}, existirá la secuencia de trenzas equivalentes tal que: 
+    	\begin{center}
+    		$ \beta1 = \beta1_{0} \rightarrow \beta1_{1} \rightarrow ... \rightarrow \beta1_{m}=\beta2$ 
+    	\end{center}
+    	donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Los movimientos elementales, por definición, no permiten intercambiar los extremos a los que están sujetas las cuerdas de las trenzas. Por este motivo las permutaciones tienen que ser iguales. 
+    \end{proof}
+\end{pro}
+
+Haciendo uso de este invariante podemos ver un ejemplo de dos trenzas que no son equivalentes en la figura //PONER ENLACE!!. 
+
+\bigskip
+\subsubsection{Polinomio de Alexander:}\label{invtren3}
+
 
 \subsection{El problema de las palabras.}
 

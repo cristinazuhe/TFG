@@ -26,4 +26,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Trenzas equivalentes:}{48}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Trenzas Markov-equivalentes:}{52}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}Algunos invariantes.}{55}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}El problema de las palabras.}{55}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.3.1}Exponente:}{55}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Permutaci\IeC {\'o}n:}{57}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Polinomio de Alexander:}{58}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}El problema de las palabras.}{58}{subsection.2.4}
