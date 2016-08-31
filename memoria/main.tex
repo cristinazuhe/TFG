@@ -846,17 +846,21 @@ Intuitivamente diremos que dos trenzas son equivalentes si podemos deformar las 
 \end{figure}
 
 \textbf{\underline{Definición:}}\\
-Consideremos la cadena $d$ de una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Sea AB un segmento de dicha cadena y C un punto en el cubo de forma que el triángulo $\triangle ABC$ no corta a ninguna otra cadena de la trenza y sólo toca a la cadena $d$ en el segmento AB. Supongamos además que los segmentos AC y CB cortar a cualquier plano horizontal del cubo en un sólo punto como mucho. Podemos visualizar estas condiciones en la primera imagen de la figura //PONER ENLACE!.\\
+Consideremos la cadena $d$ de una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Sea AB un segmento de dicha cadena y C un punto en el cubo de forma que el triángulo $\triangle ABC$ no corta a ninguna otra cadena de la trenza y sólo toca a la cadena $d$ en el segmento AB. Supongamos además que los segmentos AC y CB cortar a cualquier plano horizontal del cubo en un sólo punto como mucho. Podemos visualizar estas condiciones en la primera imagen de la figura \ref{elem}.\\
 Bajo estas condiciones definimos un \textbf{movimiento elemental} como la operación $ \Omega $ que intercambia el segmento AB por los segmentos AC $ \cup $ CB.\\
 
 La operación inversa $ \Omega^{-1} $ que intercambia los segmentos AC $\cup$  CB, que formen parte de una cadena, por el segmento AB de forma que el triángulo $\triangle ABC$ no corte a ninguna otra cadena, también es considerada un movimiento elemental. \\
-Podemos ver la representación de ambos movimientos en la figura //PONER ENLACE!.\\
-
-//PONER FIGURA cadena d y ABC!!!!!!!!!!!!!!!!!!!!!!!! y operacion omega.\\
+Podemos ver la representación de ambos movimientos en la figura \ref{elem}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=7.5cm]{itrenzas/elemental.png}
+	\caption{}
+	\label{elem} 
+\end{figure}
 
 
 \textbf{\underline{Definición 2.1:}}\label{defequi}\\
-Sean dos trenzas $\beta$, $\beta'$. Diremos que son \textbf{equivalentes} ($\beta \sim \beta'$) si existe una cadena finita de trenzas $ \beta = \beta_{0}$, $\beta_{1},...,\beta_{m}=\beta'$ tal que cada par de trenzas $ \beta_{i}, \beta_{i+1}, i=0,..,m-1, $ está relacionada por un movimiento elemental. A esta cadena de trenzas equivalentes le representaremos del siguiente modo:
+Sean dos trenzas $\beta$, $\beta'$. Diremos que son \textbf{equivalentes} ($\beta \sim \beta'$) si existe una cadena finita de trenzas $ \beta = \beta_{0}$, $\beta_{1},...,\beta_{m}=\beta'$ tal que cada par de trenzas $ \beta_{i}, \beta_{i+1}, i=0,..,m-1, $ está relacionado por un movimiento elemental. A esta cadena de trenzas equivalentes la representaremos del siguiente modo:
 \begin{center}
 	$ \beta = \beta_{0} \rightarrow \beta_{1} \rightarrow ... \rightarrow \beta_{m}=\beta'$
 \end{center}
@@ -867,22 +871,22 @@ Denotaremos como $ \textbf{B}_{n} $ al conjunto de todas las trenzas de n cadena
 
 \newpage
 \subsection{El grupo de las trenzas.}
-Hemos visto una definición que nos permite saber cuándo dos trenzas son equivalentes, pero es demasiado general como para poder llevarla a la práctica. En esta sección vamos a hacer un estudio más profundo de la teoría de trenzas para poder trabajar con ellas. Para ello tenemos que empezar viendo que el conjunto ${B}_{n}$, dotado del producto de trenzas que veremos a continuación, tiene estructura de grupo no abeliano.
+Hemos visto una definición que nos permite saber cuándo dos trenzas son equivalentes, pero es demasiado general como para poder llevarla a la práctica. En esta sección vamos a hacer un estudio más profundo de la teoría de trenzas. Para ello tenemos que empezar viendo que el conjunto ${B}_{n}$, dotado del producto de trenzas que veremos a continuación, tiene estructura de grupo no abeliano.
 
 \begin{center}
      \subsubsection{Estructura de grupo no abeliano:}
 \end{center}
 
 \textbf{\underline{Definición 2.2:}}\label{defpro}\\
-Sean las trenzas $\beta$, $\beta' \in \mathscr{B}_{n}$. Definimos su \textbf{producto} $\beta \beta'$ como la n-trenza yuxtaposición que se crea al unir los extremos finales de las cuerdas de $\beta$ con los extremos iniciales de las cuerdas de $\beta'$.\\
+Sean las trenzas $\beta$, $\beta' \in \mathscr{B}_{n}$. Definimos su \textbf{producto} $\beta \beta'$ como la n-trenza que se crea al unir los extremos finales de las cuerdas de $\beta$ con los extremos iniciales de las cuerdas de $\beta'$.\\
 
 En la figura \ref{grupo0} se puede ver un ejemplo del producto de dos trenzas: la trenza (c) es el producto de las trenzas (a) y (b).\\
    \begin{figure}[h!]
    	\centering
-   	\subfigure[$-\sigma3+\sigma1$]{\includegraphics[width=5cm]{itrenzas/1c1.png}}
-   	\subfigure[$+\sigma2+\sigma3$]{\includegraphics[width=5cm]{itrenzas/1c2.png}}
+   	\subfigure[$-\sigma3+\sigma1$]{\includegraphics[width=5.5cm]{itrenzas/1c1.png}}
+   	\subfigure[$+\sigma2+\sigma3$]{\includegraphics[width=5.5cm]{itrenzas/1c2.png}}
    	\space
-   	\subfigure[$-\sigma3+\sigma1+\sigma2+\sigma3$]{\includegraphics[width=4cm]{itrenzas/1c3.png}}  	
+   	\subfigure[$-\sigma3+\sigma1+\sigma2+\sigma3$]{\includegraphics[width=5cm]{itrenzas/1c3.png}}  	
    	\caption{}
    	\label{grupo0} 
    \end{figure}
@@ -913,7 +917,7 @@ En la figura \ref{grupo0} se puede ver un ejemplo del producto de dos trenzas: l
 				
 	\end{proof}
 \end{pro}
-Veamos el ejemplo de la figura \ref{grupo1}: Las trenzas (a) y (b) son equivalentes luego la parte superior de las trenzas (e) y (f) es equivalente. Las trenzas (c) y (d) son equivalentes, luego la parte inferior de las trenzas (e) y (f) es equivalente. La unión de estas dos partes que mencionamos en las trenzas (e) y (f) no supone la pérdida de equivalencia. \\
+
    \begin{figure}[h!]
    	\centering
    	\subfigure[$-\sigma3-\sigma2-\sigma3$]{\includegraphics[width=3.4cm]{itrenzas/3c1.png}}
@@ -923,18 +927,18 @@ Veamos el ejemplo de la figura \ref{grupo1}: Las trenzas (a) y (b) son equivalen
    	\includegraphics[width=1.2cm]{itrenzas/flechac.png}
    	\subfigure[$+\sigma1-\sigma3-\sigma3$]{\includegraphics[width=3.1cm]{itrenzas/3c4.png}}
 
-	\subfigure[$-\sigma3-\sigma2-\sigma3-\sigma3+\sigma1-\sigma3$]{\includegraphics[width=3.6cm]{itrenzas/3c5.png}}
+	\subfigure[$-\sigma3-\sigma2-\sigma3-\sigma3+\sigma1-\sigma3$]{\includegraphics[width=4.6cm]{itrenzas/3c5.png}}
 	\includegraphics[width=1.5cm]{itrenzas/flechac.png}
-	\subfigure[$-\sigma2-\sigma3-\sigma2+\sigma1-\sigma3-\sigma3$]{\includegraphics[width=3cm]{itrenzas/3c6.png}}   	
+	\subfigure[$-\sigma2-\sigma3-\sigma2+\sigma1-\sigma3-\sigma3$]{\includegraphics[width=3.8cm]{itrenzas/3c6.png}}   	
    	\caption{}
    	\label{grupo1} 
    \end{figure}
+   
+   Veamos el ejemplo de la figura \ref{grupo1}: Las trenzas (a) y (b) son equivalentes luego la parte superior de las trenzas (e) y (f) es equivalente. Las trenzas (c) y (d) son equivalentes, luego la parte inferior de las trenzas (e) y (f) es equivalente. La unión de estas dos partes que mencionamos en las trenzas (e) y (f) no supone la pérdida de equivalencia. \\
 
 \begin{pro} Producto de trenzas \textbf{asociativo}.\label{prodaso}\\
-	Sean las trenzas $\beta1$, $\beta2$, $\beta3 \in \mathscr{B}_{n}$. Se verifica:
-	\begin{center}
-		 $(\beta1 \beta2) \beta3 \sim \beta1 (\beta2 \beta3)$.
-\end{center}
+	Sean las trenzas $\beta1$, $\beta2$, $\beta3 \in \mathscr{B}_{n}$. Se verifica $(\beta1 \beta2) \beta3 \sim \beta1 (\beta2 \beta3)$.
+
 	\begin{proof}	
 		
 		Por la definición \ref{defpro} sabemos que el producto $(\beta1 \beta2) \beta3$ une los extremos finales $ \beta1 $ con los extremos iniciales de $\beta2 $ y posteriormente une los extremos finales de $\beta2 $ con los extremos iniciales de $ \beta3 $. \\
@@ -945,18 +949,19 @@ Veamos el ejemplo de la figura \ref{grupo1}: Las trenzas (a) y (b) son equivalen
 	\end{proof}
 \end{pro}
 
-En la figura \ref{grupo2} podemos ver que, efectivamente, el producto de las trenzas $\beta1, \beta2 y \beta3$ es asociativo: las trenzas (e) y (g) son iguales.\\
+En la figura \ref{grupo2} podemos ver que, efectivamente, el producto de las trenzas dadas $\beta1, \beta2 y \beta3$ es asociativo: las trenzas (e) y (g) son iguales.\\
+
    \begin{figure}[h!]
    	\centering
-	\subfigure[$\beta1 = -\sigma3+\sigma1$]{\includegraphics[width=5cm]{itrenzas/1c1.png}}
-	\subfigure[$\beta2 = +\sigma2+\sigma3$]{\includegraphics[width=5cm]{itrenzas/1c2.png}}  
-	\subfigure[$\beta3 = +\sigma3$]{\includegraphics[width=3.2cm]{itrenzas/2c1.png}}  	
+	\subfigure[$\beta1 = -\sigma3+\sigma1$]{\includegraphics[width=3.5cm]{itrenzas/1c1.png}}
+	\subfigure[$\beta2 = +\sigma2+\sigma3$]{\includegraphics[width=3.5cm]{itrenzas/1c2.png}}  
+	\subfigure[$\beta3 = +\sigma3$]{\includegraphics[width=2.2cm]{itrenzas/2c1.png}}  	
 	
-	\subfigure[$\beta1\beta2$]{\includegraphics[width=4.8cm]{itrenzas/1c3.png}}  	
-	\subfigure[$(\beta1\beta2)\beta3$]{\includegraphics[width=4cm]{itrenzas/2c2.png}} 
+	\subfigure[$\beta1\beta2$]{\includegraphics[width=4cm]{itrenzas/1c3.png}}  	
+	\subfigure[$(\beta1\beta2)\beta3$]{\includegraphics[width=3.3cm]{itrenzas/2c2.png}} 
 	
-	\subfigure[$\beta2\beta3$]{\includegraphics[width=5.5cm]{itrenzas/2c3.png}}  	
-	\subfigure[$\beta1(\beta2\beta3$)]{\includegraphics[width=4cm]{itrenzas/2c2.png}} 
+	\subfigure[$\beta2\beta3$]{\includegraphics[width=4.6cm]{itrenzas/2c3.png}}  	
+	\subfigure[$\beta1(\beta2\beta3$)]{\includegraphics[width=3.3cm]{itrenzas/2c2.png}} 
    	\caption{}
    	\label{grupo2} 
    \end{figure}
@@ -974,8 +979,20 @@ En la figura \ref{grupo2} podemos ver que, efectivamente, el producto de las tre
 	    Es claro que las trenzas resultantes no tienen porqué ser equivalentes.
 	\end{proof}
 \end{pro}
-Podemos ver un ejemplo de dos trenzas no conmutativas en la figura //PONER ENLACE!!!\\
-//PONER EJEMPLO DE DOS TRENZAS NO CONMUTATIVAS!!!!!!!!!!!!!!!\\
+Podemos ver un ejemplo de dos trenzas no conmutativas en la figura \ref{grupo3}. Efectivamente las trenzas (c) y (e) no son iguales.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$\beta1 = +\sigma3-\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/4c1.png}}
+   	\subfigure[$\beta2 = -\sigma3$]{\includegraphics[width=4.5cm]{itrenzas/4c2.png}} 
+   	
+   	\subfigure[$\beta1\beta2$]{\includegraphics[width=5.2cm]{itrenzas/4c3.png}}
+   	\space
+   	\subfigure[$\beta2\beta1$]{\includegraphics[width=4.5cm]{itrenzas/4c4.png}} 
+   	\includegraphics[width=1.2cm]{itrenzas/flechac.png}
+   	\subfigure[$\beta2\beta1$]{\includegraphics[width=5.5cm]{itrenzas/4c5.png}} 
+   	\caption{}
+   	\label{grupo3} 
+   \end{figure}
 
 \begin{pro}  \textbf{Elemento neutro}.\label{prodneutro}\\
 	Sea la trenza $\beta \in \mathscr{B}_{n}$. Se verifica:
@@ -998,7 +1015,7 @@ Podemos ver un ejemplo de dos trenzas no conmutativas en la figura //PONER ENLAC
 	\begin{proof} 
 		Sea la trenza $\beta$ a la que notamos como $\beta = \pm \sigma(i_{1}) \pm \sigma(i_{2}) ... \pm \sigma(i_{m})$, $ i=1,2,..,m. $\\
 
-		 Construimos la trenza $\beta'$ a la que notamos como $\beta' = \mp \sigma(i_{m}) ...\mp \sigma(i_{2}) \mp \sigma(i_{1})$. Veamos que esta trenza es la trenza inversa:\\
+		 Construimos la trenza $\beta'$ a la que notamos como $\beta' = \mp \sigma(i_{m}) ...\mp \sigma(i_{2}) \mp \sigma(i_{1})$. Veamos que esta trenza es la trenza inversa:
 			\begin{center}
 			 Por una parte, $\beta \beta'$ = $\pm \sigma(i_{1}) \pm \sigma(i_{2}) ... \pm \sigma(i_{m}) \mp \sigma(i_{m}) ...\mp \sigma(i_{2}) \mp \sigma(i_{1})$ = $\pm \sigma(i_{1}) \pm \sigma(i_{2}) ... \pm \sigma(i_{m-1}) \mp \sigma(i_{m-1}) ...\mp \sigma(i_{2}) \mp \sigma(i_{1})$ = $ 1_{n} $. Luego $\beta \beta' \sim 1_{n}$.\\
 			\end{center}		 
@@ -1018,8 +1035,22 @@ Podemos ver un ejemplo de dos trenzas no conmutativas en la figura //PONER ENLAC
 	\end{proof}
 \end{pro}
 
-En la figura //PONER ENLACE!!!! podemos ver un ejemplo de una trenza y su trenza inversa.\\
-//CREAR IMAGEN DE UNA TRENZA Y SU INVERSA. CREAR IMAGEN DE LA TRENZA TRIVIAL CORRESPONDIENTE. \\
+En la figura \ref{grupo4} podemos ver un ejemplo de una trenza (a) y su trenza inversa (b). En la secuencia de trenzas (c)-(f) vemos que efectivamente su producto genera la trenza trivial.\\
+   \begin{figure}[h!]
+   	\centering
+   	\subfigure[$\beta = -\sigma4-\sigma1+\sigma2$]{\includegraphics[width=5cm]{itrenzas/5c1.png}}
+   	\subfigure[$\beta^{-1} = -\sigma2+\sigma1+\sigma4$]{\includegraphics[width=4.7cm]{itrenzas/5c2.png}}
+   	
+   	\subfigure[$\beta\beta^{-1}$]{\includegraphics[width=2cm]{itrenzas/5c3.png}}
+   	\includegraphics[width=1.2cm]{itrenzas/flechac.png}
+   	\subfigure[$\beta\beta^{-1}$]{\includegraphics[width=2cm]{itrenzas/5c4.png}} 
+   	\includegraphics[width=1.2cm]{itrenzas/flechac.png}
+   	\subfigure[$\beta\beta^{-1}$]{\includegraphics[width=2cm]{itrenzas/5c5.png}} 
+   	\includegraphics[width=1.2cm]{itrenzas/flechac.png}
+   	\subfigure[$\beta\beta^{-1}$]{\includegraphics[width=2cm]{itrenzas/5c6.png}} 
+   	\caption{}
+   	\label{grupo4} 
+   \end{figure}
 
 \begin{teo}
 	El conjunto ${B}_{n}$, dotado del producto de trenzas, es un grupo. El grupo se conoce como el grupo de n-trenzas o el \textbf{grupo de n-trenzas de Artin}. 
@@ -1080,7 +1111,9 @@ En la figura //PONER ENLACE!!!! podemos ver un ejemplo de una trenza y su trenza
 		\end{figure}
 		
 	\end{enumerate}
-	En la figura \ref{tren9} podemos ver los movimientos que nos demuestran que dos trenzas dadas más complejas son equivalentes. Aplicamos M3 y posteriormente M2.\\
+	En la figura \ref{tren9} podemos ver los movimientos que nos demuestran que dos trenzas dadas más complejas son equivalentes. \\
+	Partimos de la trenza $-\sigma3+\sigma1-\sigma2-\sigma3$ y aplicamos M3 a los dos primeros cruces obteniendo la trenza $+\sigma1-\sigma3-\sigma2-\sigma3$ que vemos en la segunda imagen. \\
+	Por último, aplicamos el movimiento M2 a los tres últimos cruces obteniendo la trenza $+\sigma1-\sigma2-\sigma3-\sigma2$ que vemos en la última imagen.\\
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=10cm]{itrenzas/movi.png}
@@ -1107,31 +1140,21 @@ En la figura //PONER ENLACE!!!! podemos ver un ejemplo de una trenza y su trenza
 		\item $ \sigma(i+1)\sigma(i)-\sigma(i+1) =-\sigma(i)\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $		
 		\item $ \sigma(i+1)-\sigma(i)-\sigma(i+1) =-\sigma(i)-\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $
 	\end{enumerate}
-	En la figura //PONER ENLACE!!! podemos ver que efectivamente son equivalencias ciertas.\\
-	//PONER LAS 4 TRENZAS EQUIVALENTES QUE SE VEA BIEN LA EQUIVALENCIA!!!!!!!!!!!!! \\
-	
-
-\subsection{Algunos invariantes.}
-
-
-\subsection{El problema de las palabras.}
-
-
-
-
-
-
-
+	En la figura \ref{tren14} podemos ver que efectivamente son equivalencias ciertas.\\
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=4cm]{itrenzas/6c1.png}
+		\includegraphics[width=0.7cm]{itrenzas/flechac.png}
+		\includegraphics[width=3.4cm]{itrenzas/6c2.png}
+		\space	
+		\includegraphics[width=3.7cm]{itrenzas/6c3.png}
+		\includegraphics[width=0.7cm]{itrenzas/flechac.png}
+		\includegraphics[width=3.8cm]{itrenzas/6c4.png}
+		\caption{Trenzas equivalentes.}
+		\label{tren14} 
+	\end{figure}
 
 
-
-
-
-
-
-
-
-\newpage
 \newpage
 \begin{center}
 	\subsubsection{Trenzas Markov-equivalentes:}
@@ -1158,7 +1181,7 @@ Se dice que dos trenzas son \textbf{Markov-equivalentes} si sus cierres producen
 Veamos los movimientos de Markov:
 \begin{enumerate}
 	\item \underline{Conjugación - Mv1:} \\
-	Las palabras $\beta$ y $+\sigma(i) \beta -\sigma(i)$ generan trenzas cerradas equivalentes. Se puede ver en la figura \ref{tren11}.
+	Las palabras $\beta$ y $+\sigma(i) \beta -\sigma(i)$ (o bien  $-\sigma(i) \beta +\sigma(i)$) generan trenzas cerradas equivalentes. Se puede ver en la figura \ref{tren11}.
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=10cm]{itrenzas/M4.png}
@@ -1191,6 +1214,12 @@ Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren
 	\caption{Signo cruce.}
 	\label{tren13} 
 \end{figure}
+
+
+
+\subsection{Algunos invariantes.}
+
+\subsection{El problema de las palabras.}
 
 
 
