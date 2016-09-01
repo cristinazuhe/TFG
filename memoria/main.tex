@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{graphicx}
-\usepackage{ dsfont }
+\usepackage{dsfont}
 \usepackage{caption}
 \usepackage{subfigure}
 \usepackage{ amssymb }
@@ -456,7 +456,7 @@ Podemos ver, en la figura \ref{unk1}, que el número uno es el número de desanu
 
 \bigskip
 \begin{center}
-	\item \subsubsection{Polinomio de Alexander:}
+	\item \subsubsection{Polinomio de Alexander:}\label{alenudos}
 \end{center}
 Anteriormente hemos visto algunos invariantes geométricos y numéricos que nos pueden ayudar en la tarea de comprobar si dos proyecciones representan al mismo nudo. Ahora vamos a ver un invariante polinómico que estudiaremos con más detalle pues será uno de los puntos fuertes que implementaremos para resolver, en parte, la cuestión. \\
 
@@ -1175,7 +1175,7 @@ Es claro que si tenemos dos trenzas que son equivalentes, sus trenzas cerradas n
 \underline{\textit{Definición:}}\\
 Se dice que dos trenzas son \textbf{Markov-equivalentes} si sus cierres producen el mismo enlace. En este caso tendremos que los nudos representados por las trenzas son equivalentes. \\
 
-\begin{teo} \textbf{Teorema de Markov.} \\
+\begin{teo} \textbf{Teorema de Markov.} \label{teoMarkov}\\
 	Dos trenzas son Markov-equivalentes si y solo si podemos pasar de una trenza a otra mediante una secuencia de las tres operaciones que hemos visto en la subsección \ref{trenzasequi} y los movimientos de Markov.
 \end{teo}
 
@@ -1219,7 +1219,15 @@ Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren
 
 
 \subsection{Algunos invariantes.}
-//PONER INTRODUCCIÓN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Ya conocemos cuáles son los movimientos básicos que nos permiten determinar si dos trenzas dadas son equivalentes. Pero al igual que ocurría con los nudos, llevar esta idea a la práctica no es factible.\\
+
+En esta sección vamos a ver algunos invariantes de trenzas que nos permitirán determinar de forma relativamente rápida si dos trenzas no son equivalentes.\\
+
+\underline{\textbf{Definición:}} \\
+Un \textbf{invariante} de una trenza es una propiedad que no cambia cuando la trenza sufre deformaciones en el espacio. \\
+
+Vamos a ver algunos invariantes de trenzas que usaremos posteriormente en la práctica.
+
 \bigskip
 \subsubsection{Exponente:}\label{invtren1}
 \textbf{\underline{Definición:}}\\
@@ -1229,7 +1237,7 @@ Llamamos \textbf{exponente} de $\beta$ al entero $ \sum_{i=1}^{m} e_{i} $. Se de
 El exponente de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \ref{exp1} es $+1-1-1=-1$.\\
    \begin{figure}[h!]
    	\centering
-   	\includegraphics[width=5.2cm]{itrenzas/4c3.png}
+   	\includegraphics[width=4.3cm]{itrenzas/4c3.png}
    	\caption{$+\sigma3-\sigma2-\sigma3$}
    	\label{exp1} 
    \end{figure}
@@ -1254,15 +1262,23 @@ El exponente de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \ref{e
 	\end{proof}
 \end{pro}
 
-Haciendo uso de este invariante podremos ver muy fácilmente si dos trenzas dadas tienen distintos exponente y por tanto no son equivalentes. Podemos ver un ejemplo de dos trenzas no equivalentes en la figura \ref{exp2}. La trenza $\beta1 = +\sigma2+\sigma1-\sigma2$ tiene exponente +1, mientras que la trenza $\beta1 = -\sigma2-\sigma1+\sigma2$ tiene exponente -1. Si tuviesen igual exponente tendríamos que estudiar otros invariantes para ver si las trenzas son iguales. \\
+Haciendo uso de este invariante podremos ver muy fácilmente si dos trenzas dadas tienen distintos exponente y por tanto no son equivalentes. Podemos ver un ejemplo de dos trenzas no equivalentes en la figura \ref{exp2}. La trenza $\beta1 = +\sigma2+\sigma1-\sigma2$ tiene exponente +1, mientras que la trenza $\beta1 = -\sigma2-\sigma1+\sigma2$ tiene exponente -1.\\ 
 	\begin{figure}[h!]
 		\centering
-		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=4cm]{itrenzas/6c1.png}}
-		\subfigure[exp($ \beta2 $) = -1]{\includegraphics[width=3.8cm]{itrenzas/6c4.png}}
+		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=4.5cm]{itrenzas/6c1.png}}
+		\subfigure[exp($ \beta2 $) = -1]{\includegraphics[width=4.5cm]{itrenzas/6c4.png}}
 		\caption{Trenzas no equivalentes.}
 		\label{exp2} 
 	\end{figure}
-
+	
+Si tuviesen igual exponente tendríamos que estudiar otros invariantes para ver si las trenzas son iguales. Por ejemplo, en la figura \ref{exp3} vemos que las trenzas $\beta1 = +\sigma2+\sigma2-\sigma3$ y $\beta2 = -\sigma3+\sigma2+\sigma1$ tienen el mismo exponente (+1) luego no podremos saber si son o no equivalentes. Al estudiar el invariante de la seguiente sección veremos que no lo son.  \\
+	\begin{figure}[h!]
+		\centering
+		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=4.5cm]{itrenzas/7c1.png}}
+		\subfigure[exp($ \beta2 $) = +1]{\includegraphics[width=4.9cm]{itrenzas/7c2.png}}
+		\caption{Trenzas con mismo exponente.}
+		\label{exp3} 
+	\end{figure}
 
 \bigskip
 \subsubsection{Permutación:}\label{invtren2}
@@ -1280,7 +1296,7 @@ La permutación de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \re
 \end{bmatrix}\] o bien directamente la permutación: 1 4 3 2.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=5.2cm]{itrenzas/4c3.png}
+	\includegraphics[width=5.5cm]{itrenzas/4c3.png}
 	\caption{$+\sigma3-\sigma2-\sigma3$}
 	\label{perm1} 
 \end{figure}
@@ -1294,16 +1310,128 @@ La permutación de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \re
     	\begin{center}
     		$ \beta1 = \beta1_{0} \rightarrow \beta1_{1} \rightarrow ... \rightarrow \beta1_{m}=\beta2$ 
     	\end{center}
-    	donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Los movimientos elementales, por definición, no permiten intercambiar los extremos a los que están sujetas las cuerdas de las trenzas. Por este motivo las permutaciones tienen que ser iguales. 
+    	donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Los movimientos elementales, por definición, no permiten intercambiar los extremos a los que están sujetas las cuerdas de las trenzas. Por este motivo las permutaciones tienen que ser iguales. \\
     \end{proof}
 \end{pro}
 
-Haciendo uso de este invariante podemos ver un ejemplo de dos trenzas que no son equivalentes en la figura //PONER ENLACE!!. 
+Haciendo uso de este invariante podemos ver un ejemplo de dos trenzas que no son equivalentes en la figura \ref{perm2}: la trenza $\beta1 = +\sigma2+\sigma2-\sigma3$ tiene permutación 1 2 4 3 mientras que la trenza $\beta2 = -\sigma3+\sigma2+\sigma1$ tiene permutación 2 3 4 1.\\ 
+	\begin{figure}[h!]
+		\centering
+		\subfigure[$\pi( \beta1 $) = 1 2 4 3]{\includegraphics[width=4.4cm]{itrenzas/7c1.png}}
+		\subfigure[$\pi( \beta2 $) = 2 3 4 1]{\includegraphics[width=4.8cm]{itrenzas/7c2.png}}
+		\caption{Trenzas con mismo exponente.}
+		\label{perm2} 
+	\end{figure}
+
 
 \bigskip
 \subsubsection{Polinomio de Alexander:}\label{invtren3}
+En la sección \ref{alenudos} estudiamos el polinomio de Alexander como un invariante para nudos. Por el teorema \ref{teoMarkov}, podremos hacer uso de las trenzas como una base para obtener los invariantes de nudos, en concreto, para estudiar este invariante que implementaremos posteriormente. \\
+
+Para poder obtener el polinomio de Alexander de una trenza, tendremos que ver unos conceptos previos:\\
+
+\textbf{\underline{Definición:}}\\
+Sea la trenza $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ siendo $e_{i} = \pm 1$, 1 $\le i_{1}, i{2},..,i_{k} \le$ n-1. Podemos definir el homomorfismo
+\begin{center}
+	 $ \phi_{n} : B_{n}  \rightarrow  M(n,\mathds{Z}[t,t^{-1}])$	 
+\end{center}
+\[ \phi_{n} ( +\sigma (i)) = \begin{bmatrix}
+I_{i-1} &  &  & \\
+ & 1-t & t &  \\
+ & 1 & 0 &  \\
+ &  &  & I_{n-i-1} \\
+\end{bmatrix}\]
+donde $ I_{i} $ representa a la matriz $ ixi $ identidad y los espacios en blanco representan matrices nulas. LLamaremos a esta representación como \textbf{representación de Burau}.\\
+//POSIBLE DEMOSTRACION DE HOMOMORFISMO EN STUDY OF BRAIDS!!!!!!!\\
+
+\begin{pro}
+	En las mismas condiciones anteriores tenemos:\\
+	\[ \phi_{n} ( -\sigma (i)) = \begin{bmatrix}
+	I_{i-1} &  &  & \\
+	& 0 & 1 &  \\
+	& t^{-1} & 1-t^{-1} &  \\	
+	&  &  & I_{n-i-1} \\
+	\end{bmatrix}\]
+\end{pro}
+
+Veamos la matriz de Burau de la trenza $\beta \in B_{n}$ representada como $\beta = +\sigma2-\sigma3$.\\
+Matriz Burau de $ +\sigma2 $:
+	\[ \phi_{4} ( +\sigma (2)) = \begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1-t & 1 & 0  \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 \\
+	\end{bmatrix}\]
+
+Matriz Burau de $ -\sigma3 $:
+\[ \phi_{4} ( -\sigma (3)) = \begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1  \\	
+	0 & 0 & t^{-1} & 1-t^{-1} \\
+\end{bmatrix}\]
+ 
+ Por tanto, la matriz Burau de $\beta = +\sigma2-\sigma3$ es:
+ \[ \phi_{4} (+\sigma2-\sigma3) = \phi_{4} (+\sigma2) \phi_{4}(-\sigma3) = \begin{bmatrix}
+ 1 & 0 & 0 & 0 \\
+ 0 & 1-t & 0 & t \\
+ 0 & 1 & 0 & 0  \\	
+ 0 & 0 & t^{-1} & 1-t^{-1} \\
+ \end{bmatrix}\]\\
+ 
+ 
+\begin{teo}
+	Sea la trenza $\beta \in B_{n}$ con representación de Burau $\phi_{n}(\beta)$. Supongamos que su trenza cerrada genera al nudo K.\\
+	Se verifica que el polinomio ($ \pm $ $ t^{k} $)det[$\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K (siendo k un entero). A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t)\\
+	//POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
+\end{teo}
+
+Gracias a este teorema podemos afirmar que si dos trenzas $\beta1 \in B_{n}, \beta2 \in B_{m}$ cerradas generan el mismo nudo entonces se verificará la igualdad:\\
+det[$\phi_{n}(\beta1)$ - $ I_{n} $$ ]_{1,1}$ = $ \pm t^{k} $det[$\phi_{m}(\beta2)$ - $ I_{m} $$ ]_{1,1}$.\\
+
+De este modo, el polinomio de Alexander de la trenza $\beta1 = +\sigma1$ se obtendría del siguiente modo:\\
+Por definición tenemos que  
+\[ \phi_{2} (\beta1) = \begin{bmatrix}
+1-t & t  \\
+1 & 0 \\
+\end{bmatrix}\]
+luego 
+\[ \phi_{2} (\beta1) - I_{2}= \begin{bmatrix}
+-t & t  \\
+1 & -1 \\
+\end{bmatrix}\]
+Finalmente tenemos 
+\[ det(\phi_{2} (\beta1) - I_{2})_{1,1} = det(\begin{bmatrix}
+-1 \\
+\end{bmatrix}) = -1\].
+
+Veamos ahora el polinomio de Alexander de la trenza más compleja, en concreto de la trenza $\beta2 = +\sigma2-\sigma3$. Ya sabemos que 
+ \[ \phi_{4} (\beta2) = \begin{bmatrix}
+ 1 & 0 & 0 & 0 \\
+ 0 & 1-t & 0 & t \\
+ 0 & 1 & 0 & 0  \\	
+ 0 & 0 & t^{-1} & 1-t^{-1} \\
+ \end{bmatrix}\]
+ luego
+  \[ \phi_{4} (\beta2) - I_{4} = \begin{bmatrix}
+  0 & 0 & 0 & 0 \\
+  0 & -t & 0 & t \\
+  0 & 1 & -1 & 0  \\	
+  0 & 0 & t^{-1} & t^{-1} \\
+  \end{bmatrix}\].
+  
+  Finalmente tenemos 
+    \[ det(\phi_{4} (\beta2) - I_{n})_{1,1} = det(\begin{bmatrix}
+    -t & 0 & t \\
+     1 & -1 & 0  \\	
+     0 & t^{-1} & t^{-1} \\
+    \end{bmatrix}) = -1+1 = 0.\].
+    
+Por tanto tenemos que las trenzas $\beta1$ y $\beta2$ no pueden generar nudos equivalentes pues sus polinomios de Alexander son distintos.\\
+    
 
 
+\newpage
 \subsection{El problema de las palabras.}
 
 
