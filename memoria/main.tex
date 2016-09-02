@@ -711,7 +711,7 @@ Podemos ver varios ejemplos en la figura \ref{graf1}.\\
 	\label{graf1} 
 \end{figure}
 
-A partir de la proyección de un nudo (o de un enlace en general) podemos crear un grafo plano correspondiente. Para ello tendremos que realizar el siguiente proceso:\\
+A partir de la proyección de un nudo (o de un enlace en general) podemos generar su grafo plano asociado. Para ello tendremos que realizar el siguiente proceso:\\
 
 Sombreamos las regiones de la proyección que estén de modo que la región externa al nudo se quede sin sombrear y situamos un vértice en cada zona. Unimos los vértices con aristas que pasan por los cruces de la proyección. Ya tendríamos el grafo plano. Además, si el nudo tiene asignada una orientación, podremos asignarle el tipo de cruce (positivo o negativo) a cada arista. Podemos ver un ejemplo en la figura \ref{graf2}.\\
 \begin{figure}[h!]
@@ -768,13 +768,13 @@ Para ver el proceso inverso haremos uso del siguiente teorema:
 En la sección \ref{seccion7} dimos una idea general de lo que se entiende por una trenza. Veamos su definición más formal:\\
 
 \underline{\textbf{Definición:}}\\
-Consideremos el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$ y situamos $A_{i}$ puntos en su cara superior y $B_{i}$ puntos en la cara inferior, siendo $i \in \mathds{N}$. Unimos cada punto $A_{i}$ con un punto $B_{i}$ mediante segmentos $d_{i}$ de modo que:
+Consideremos el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$ y situamos $A_{i}$ puntos en su cara superior y $B_{i}$ puntos en la cara inferior, siendo $i \in \mathds{N}$. Unimos cada punto $A_{i}$ con un cierto punto $B_{k}$, $i \geq k \in \mathds{N}$, mediante arcos simples $d_{i}$ de modo que:
 \begin{enumerate}
 	\item $ d_{1}, d_{2},...,d_{n} $ sean disjuntos.
-	\item Los segmentos $ d_{i} $ no pueden conectar puntos $A_{i}$ o $B_{i}$ entre sí.
-	\item Al cortar por cualquier plano horizontal, cada segmento $ d_{i} $ toca en un sólo punto al plano. 
+	\item Los arcos $ d_{i} $ no pueden conectar puntos $A_{i}$ o $B_{i}$ entre sí.
+	\item Al cortar por cualquier plano horizontal, cada arco $ d_{i} $ toca en un sólo punto al plano. 
 \end{enumerate}
-A cada uno de estos segmentos $ d_{i} $ les llamaremos cadenas y al conjunto de las n-cadenas se le conoce como \textbf{trenza}.\\
+A cada uno de estos arcos simples $ d_{i} $ les llamaremos cadenas y al conjunto de las n-cadenas se le conoce como \textbf{trenza}.\\
 
 Podemos ver algunos ejemplos de trenzas en la figura \ref{tren1}.\\
    \begin{figure}[h!]
@@ -806,10 +806,10 @@ Denotaremos como $\mathscr{B}_{n}$ al conjunto de todas las trenzas de n cadenas
 	\subsubsection{Notación de trenzas:}
 \end{center}
 Para poder trabajar de forma cómoda con las trenzas vamos a darle la siguiente notación:\\
-Sean las cadenas que se encuentran en las posiciones $i$ e $i+1$. Al producir un intercambio de posiciones de estas cadenas se producirá un \textbf{cruce}. Este cruce puede realizarse de dos formas: 
+Sean los segmentos que unen las posiciones $i$ con la $i+1$ y las posiciones $i+1$ con la $i$. Al producir un intercambio de posiciones de estos segmentos se producirá un \textbf{cruce}. Este cruce puede realizarse de dos formas: 
 \begin{itemize}
-	\item La cadena que se encuentra en la posición $i$ cruza por delante de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$.
-	\item La cadena que se encuentra en la posición $i$ cruza por detrás de la cadena que inicialmente se encuentra en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$.
+	\item El segmento que parte de la posición $i$ cruza por delante al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$.
+	\item  El segmento que parte de la posición $i$ cruza por detrás al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$.
 \end{itemize}
 Podemos verlo más claro en la figura \ref{tren4}.\\
    \begin{figure}[h!]
@@ -847,14 +847,14 @@ Intuitivamente diremos que dos trenzas son equivalentes si podemos deformar las 
 \end{figure}
 
 \textbf{\underline{Definición:}}\\
-Consideremos la cadena $d$ de una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Sea AB un segmento de dicha cadena y C un punto en el cubo de forma que el triángulo $\triangle ABC$ no corta a ninguna otra cadena de la trenza y sólo toca a la cadena $d$ en el segmento AB. Supongamos además que los segmentos AC y CB cortar a cualquier plano horizontal del cubo en un sólo punto como mucho. Podemos visualizar estas condiciones en la primera imagen de la figura \ref{elem}.\\
+Consideremos la cadena $d$ de una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Sea AB un segmento de dicha cadena y C un punto en el cubo de forma que el triángulo $\triangle ABC$ no corta a ninguna otra cadena de la trenza y sólo toca a la cadena $d$ en el segmento AB. Supongamos además que los segmentos AC y CB cortar a cualquier plano horizontal del cubo en un sólo punto como mucho. Podemos quedarnos con una representación poligonal de las cadenas. Visualizamos estas condiciones en la primera imagen de la figura \ref{elem}.\\
 Bajo estas condiciones definimos un \textbf{movimiento elemental} como la operación $ \Omega $ que intercambia el segmento AB por los segmentos AC $ \cup $ CB.\\
 
 La operación inversa $ \Omega^{-1} $ que intercambia los segmentos AC $\cup$  CB, que formen parte de una cadena, por el segmento AB de forma que el triángulo $\triangle ABC$ no corte a ninguna otra cadena, también es considerada un movimiento elemental. \\
 Podemos ver la representación de ambos movimientos en la figura \ref{elem}.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=7.5cm]{itrenzas/elemental.png}
+	\includegraphics[width=6.5cm]{itrenzas/elemental.png}
 	\caption{}
 	\label{elem} 
 \end{figure}
@@ -1283,7 +1283,7 @@ Si tuviesen igual exponente tendríamos que estudiar otros invariantes para ver 
 \bigskip
 \subsubsection{Permutación:}\label{invtren2}
 \textbf{\underline{Definición:}}\\
-Sea $\beta \in B_{n}$. Consideramos la cuerda i que conecta el punto inicial $ A_{i}$ con el punto final $B_{j_{i}}$. Llamaremos \textbf{permutación} asociada a la trenza a la matriz:\\
+Sea $\beta \in B_{n}$. Consideramos la cadena i que conecta el punto inicial $ A_{i}$ con el punto final $B_{j_{i}}$. Llamaremos \textbf{permutación} asociada a la trenza a la matriz:\\
 \[\pi(\beta)=\begin{bmatrix}
 1 & 2 & .. & n\\
 j_{1} & j_{2} & .. & j_{n} \\

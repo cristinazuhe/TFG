@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  1 SEP 2016 03:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  2 SEP 2016 02:29
 entering extended mode
 **main.tex
 (main.tex
@@ -3084,7 +3084,7 @@ File: itrenzas/elemental.png Graphic file (type png)
 
 <use itrenzas/elemental.png>
 Package pdftex.def Info: itrenzas/elemental.png used on input line 857.
-(pdftex.def)             Requested size: 213.39566pt x 126.9827pt.
+(pdftex.def)             Requested size: 184.9429pt x 110.0518pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 869--870
 
@@ -4363,7 +4363,7 @@ Here is how much of TeX's memory you used:
  13756 multiletter control sequences out of 15000+200000
  14192 words of font info for 59 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,8n,39p,571b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,39p,600b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
@@ -4380,7 +4380,7 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9
 1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/rsfs/rsfs10.pfb>
-Output written on main.pdf (63 pages, 3625518 bytes).
+Output written on main.pdf (63 pages, 3625887 bytes).
 PDF statistics:
  958 PDF objects out of 1000 (max. 8388607)
  298 named destinations out of 1000 (max. 500000)
