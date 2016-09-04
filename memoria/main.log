@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  2 SEP 2016 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  4 SEP 2016 03:03
 entering extended mode
 **main.tex
 (main.tex
@@ -4402,53 +4402,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 1471--1472
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1477--1479
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1482
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1486.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1486.
+(babel)             in language  on input line 1482.
 [64 <./itrenzas/deh1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1486.
+Underfull \hbox (badness 10000) in paragraph at lines 1487--1489
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1490--1492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1493--1495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1496--1497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1507--1508
+
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1511.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1511.
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1519--1520
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1529--1531
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1532--1534
+
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1534.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1534.
+[66]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1541.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1541.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1541.
+ [67]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1541.
  (main.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1486.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1486.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1541.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1541.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF522A2CBE03A6A272D2548DCDA80EA1;2453.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1486.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1541.
  ) 
 Here is how much of TeX's memory you used:
- 10976 strings out of 493673
- 162087 string characters out of 3143963
+ 10981 strings out of 493673
+ 162130 string characters out of 3143963
  251273 words of memory out of 3000000
- 13763 multiletter control sequences out of 15000+200000
+ 13764 multiletter control sequences out of 15000+200000
  14192 words of font info for 59 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  36i,8n,39p,600b,661s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4468,9 +4601,9 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9
 1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/rsfs/rsfs10.pfb>
-Output written on main.pdf (64 pages, 3657960 bytes).
+Output written on main.pdf (67 pages, 3665651 bytes).
 PDF statistics:
- 972 PDF objects out of 1000 (max. 8388607)
- 304 named destinations out of 1000 (max. 500000)
+ 987 PDF objects out of 1000 (max. 8388607)
+ 308 named destinations out of 1000 (max. 500000)
  854 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1470,6 +1470,9 @@ Diremos que una palabra $\beta \in B_{n}$ es \textbf{reducida} si se cumple algu
  
 Por ejemplo, la palabra $+\sigma2-\sigma1-\sigma3+\sigma1$ no es reducida pues el generador principal (1) se encuentra en un cruce positivo y en un cruce negativo. La palabra $+\sigma2+\sigma1-\sigma3+\sigma1$ si sería reducida pues el generador principal (1) se presenta sólo como cruces positivos.\\
 
+Si tenemos una palabra no reducida con generador principal $ \sigma(i) $, podemos considerar ocurrencias de la palabra de la forma $ \pm \sigma(i) ... \mp \sigma(i) $ que no contengan cruces $ \sigma(i) $, es decir, entre los cruces de signo opuesto del generador $ \sigma(i) $ sólo encontramos generadores $ \sigma(k) $, $ k>i $. Podemos visualizar la idea en la figua !!PONER ENLACE. En este caso diremos que la cadena i+1 forma un tirador.\\
+//CREAR FIGURA 1.1.
+
 \begin{pro}
 	Una palabra reducida no vacía no puede ser equivalente a la cadena vacía.
 \end{pro}
@@ -1480,6 +1483,58 @@ Si la palabra $\beta1$ reducida es equivalente a la palabra $\beta2$, entonces $
 \begin{pro}
 	Cualquier palabra admite una palabra reducida. 
 \end{pro}
+
+Para ver una demostración de esta proposición, vamos ir viendo el método que realizaremos para transformar una palabra cualquiera en su palabra reducida.\\ 
+Con este método tratamos de eliminar los tiradores de la trenza, pero para no entrar en bucles infinitos en el algoritmo, vamos a tener que considerar tiradores generados por cualquier generador y no sólo por el generador principal.\\
+
+\underline{\textbf{Definición:}}\\
+ Un $ \sigma(j) $-tirador de una palabra es una sub-palabra de la forma $ \pm \sigma(j) v \mp \sigma(j) $ donde la sub-palabra $v$ sólo contiene generadores $ \pm (\mp) \sigma(k) $ con k $<$ j-1 o k $>$j. Si el generador $sigma(j)$ es el generador principal de la palabra, a dicho $ \sigma(j) $-tirador se conocerá como tirador principal.\\
+ 
+ Podemos ver un $ \sigma(j) $-tirador en la figura \\PONER ENLACE!!!\\
+ CREAR FIGURA 1.2!!!!!!!!!!!!!!!!!!!!!\\
+ 
+ Supongamos que tenemos la palabra $ +\sigma3-\sigma1+\sigma2-\sigma4-\sigma2-\sigma4+\sigma1 $. La sub-palabra $ -\sigma1+\sigma2-\sigma4-\sigma2-\sigma4+\sigma1  $ es un tirador principal mientras que $ +\sigma2-\sigma4-\sigma2 $ es un $ \sigma2 $-tirador.\\
+ 
+\underline{\textbf{ Definición:}}\\
+Sea $ e \sigma(j)$ $v$ $-e \sigma(j) $ un $\sigma(j)$-tirador de una palabra $\beta$, donde $e \in$ \{-1,1\}. En particular, podemos denotar dicho $\sigma(j)$-tirador como la siguiente sub-palabra:
+\begin{center}
+	$ e \sigma(j) $ $ v_{0} $ $s_{1} \sigma(j+1) $ $ v_{1}...v_{m-1} $ $s_{2} \sigma(j+1) $ $ v_{m} $ $ -e \sigma(j) $
+\end{center} donde $v_{0},...,v_{m}$ no contienen generadores $\sigma(k)$ con $ j-1 \le k \le j+1 $.\\
+Podemos aplicarle una \textbf{reducción local} quedando la sub-palabra equivalente:
+\begin{center}
+ $ v_{0} $ $-e \sigma(j+1) s_{1} \sigma(j) e \sigma(j+1)$ $ v_{1}...v_{m-1} $ $-e \sigma(j+1) s_{2} \sigma(j) e \sigma(j+1)$ $ v_{m} $
+\end{center}
+En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:\\
+\begin{center}
+	$\pm \sigma(j) \rightarrow \epsilon$\\
+	$\pm \sigma(j+1) \rightarrow -e \sigma(j+1) \pm \sigma(j) e \sigma(j+1)$\\
+	$\pm \sigma(k) \rightarrow \pm \sigma(k),$ siendo k!=j,j+1.\\
+\end{center}
+
+Podemos ver esta transformación en la figura //PONER ENLACE!!!\\
+CREAR FIGURA 1.4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
+
+Sea la palabra $+\sigma2-\sigma1+\sigma2+\sigma3+\sigma1$. Podemos aplicar una reducción local al tirador principal $-\sigma1+\sigma2+\sigma3+\sigma1$ quedando la palabra $+\sigma2+\sigma2+\sigma1-\sigma2+\sigma3$.\\
+
+Pero antes de hacer una reducción local a un $\sigma(j)$-tirador, tendremos que asegurarnos que no tener ningún $\sigma(j+1)$-tirador en el $\sigma(j)$-tirador. En el caso de tenerlo, tendríamos que aplicar la reducción local a esta $\sigma(j+1)$-tirador y posteriormente aplicar la reducción local al $\sigma(j)$-tirador inicial. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
+
+Supongamos que queremos obtener la palabra reducida de la palabra $+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1$. El generador principal es 1 y tenemos un tirador principal (que, en este caso, es toda la palabra en sí misma). Aplicamos una reducción local a este tirador principal quedando: \\
+$-\sigma2+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1+\sigma2$.
+Vemos que volvemos a tener un tirador principal y entraremos en bucle infinito. Veamos cómo aplicaríamos la solución que hemos comentado:\\
+
+Supongamos de nuevo que queremos obtener la palabra reducida de la palabra $+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1$. Tenemos un tirador principal pero dicho tirador principal consta de una sub-palabra 2-tirador. Aplicamos una reducción local a este 2-tirador quedando:\\
+$+\sigma1-\sigma3+\sigma2+\sigma3-\sigma1$. Ahora sí podemos aplicar una reducción local al tirador principal quedando la palabra reducida: \\
+$-\sigma3-\sigma2+\sigma1+\sigma2+\sigma3$.\\
+
+\underline{\textbf{Definición:}} \\
+Diremos que un  $\sigma(j)$-tirador está permitido si no contiene ningún $\sigma(j+1)$-tirador.\\
+
+\underline{\textbf{Definición:}} \\
+Diremos que una palabra $\beta'$ es deducida de una palabra $\beta$ usando una \textbf{reducción de tirador} si $\beta'$ se obtiene a partir de una reducción local de un $\sigma(j)$-tirador permitido de $\beta$.\\
+
+\begin{teo}
+	Cualquier palabra puede ser reducida por una secuencia finita de reducciones de tirador hasta llegar a su palabra reducida.
+\end{teo}
 
 
 
