@@ -1231,7 +1231,7 @@ Vamos a ver algunos invariantes de trenzas que usaremos posteriormente en la pr�
 \bigskip
 \subsubsection{Exponente:}\label{invtren1}
 \textbf{\underline{Definición:}}\\
-Sea $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ donde $e_{i} = \pm 1$.\\
+Sea $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ donde $e_{i} \in \{-1,1\}$.\\
 Llamamos \textbf{exponente} de $\beta$ al entero $ \sum_{i=1}^{m} e_{i} $. Se denotará como exp($\beta$).\\
 
 El exponente de la trenza $\beta = +\sigma3-\sigma2-\sigma3$ de la figura \ref{exp1} es $+1-1-1=-1$.\\
@@ -1319,7 +1319,7 @@ Haciendo uso de este invariante podemos ver un ejemplo de dos trenzas que no son
 		\centering
 		\subfigure[$\pi( \beta1 $) = 1 2 4 3]{\includegraphics[width=4.4cm]{itrenzas/7c1.png}}
 		\subfigure[$\pi( \beta2 $) = 2 3 4 1]{\includegraphics[width=4.8cm]{itrenzas/7c2.png}}
-		\caption{Trenzas con mismo exponente.}
+		\caption{Trenzas no equivalentes.}
 		\label{perm2} 
 	\end{figure}
 
@@ -1331,7 +1331,7 @@ En la sección \ref{alenudos} estudiamos el polinomio de Alexander como un invar
 Para poder obtener el polinomio de Alexander de una trenza, tendremos que ver unos conceptos previos:\\
 
 \textbf{\underline{Definición:}}\\
-Sea la trenza $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ siendo $e_{i} = \pm 1$, 1 $\le i_{1}, i{2},..,i_{k} \le$ n-1. Podemos definir el homomorfismo
+Sea la trenza $\beta \in B_{n}$ representada como $\beta = e_{1} \sigma(i_{1}) e_{2} \sigma(i_{2}) ... e_{m} \sigma(i_{m}) $ siendo $e_{i} \in \{-1,1\}$, 1 $\le i_{1}, i_{2},..,i_{m} \le$ n-1. Podemos definir el homomorfismo
 \begin{center}
 	 $ \phi_{n} : B_{n}  \rightarrow  M(n,\mathds{Z}[t,t^{-1}])$	 
 \end{center}
@@ -1354,7 +1354,7 @@ donde $ I_{i} $ representa a la matriz $ ixi $ identidad y los espacios en blanc
 	\end{bmatrix}\]
 \end{pro}
 
-Veamos la matriz de Burau de la trenza $\beta \in B_{n}$ representada como $\beta = +\sigma2-\sigma3$.\\
+Veamos la matriz de Burau de la trenza $\beta \in B_{4}$ representada como $\beta = +\sigma2-\sigma3$.\\
 Matriz Burau de $ +\sigma2 $:
 	\[ \phi_{4} ( +\sigma (2)) = \begin{bmatrix}
 	1 & 0 & 0 & 0 \\
@@ -1382,7 +1382,7 @@ Matriz Burau de $ -\sigma3 $:
  
 \begin{teo}
 	Sea la trenza $\beta \in B_{n}$ con representación de Burau $\phi_{n}(\beta)$. Supongamos que su trenza cerrada genera al nudo K.\\
-	Se verifica que el polinomio ($ \pm $ $ t^{k} $)det[$\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K (siendo k un entero). A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t)\\
+	Se verifica que el polinomio ($ \pm $ $ t^{k} )det[\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K (siendo k un entero). A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t)\\
 	//POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
 \end{teo}
 
@@ -1442,7 +1442,7 @@ Dadas dos palabras de trenzas $\beta1, \beta2 \in B_{n}$ tratamos de encontrar a
 
 Ver si dos palabras (de trenzas) dadas $\beta1, \beta2 \in B_{n}$ son equivalentes se pude ver cómo el problema de ver si la palabra $\beta1\beta2^{-1}$ es equivalente a la palabra vacía (trenza trivial). Por tanto el problema de las palabras se puede reducir a distinguir si una palabra es equivalente o no a la palabra vacía. \\
 
-En este proyecto vamos a ver un método que nos permite reducir las palabras de trenzas dadas hasta una forma específica que nos permitirá ver si la palabra es igual a la cadena vacía. Para verlo con más detalle necesitamos ver algunas ideas previas.\\
+En este proyecto vamos a ver el método de Patrick Dehornoy que nos permite reducir las palabras de trenzas dadas hasta una forma específica que nos permitirá ver si la palabra es igual a la cadena vacía. Para verlo con más detalle necesitamos ver algunas ideas previas.\\
 
 \underline{\textbf{Definición:}}\\
 Diremos que una palabra es \textbf{libremente reducida} sino contiene palabras de la forma $ -\sigma(i)+\sigma(i) $ ni $+\sigma(i)-\sigma(i)$.\\
@@ -1468,7 +1468,7 @@ Diremos que una palabra $\beta \in B_{n}$ es \textbf{reducida} si se cumple algu
 	\item El generador principal de $\beta$ se presenta sólo positiva o negativamente. 
 \end{enumerate}
  
-Por ejemplo, la palabra $+\sigma2-\sigma1-\sigma3+\sigma1$ no es reducida pues el generador principal (1) se encuentra en un cruce positivo y en un cruce negativo. La palabra $+\sigma2+\sigma1-\sigma3+\sigma1$ si sería reducida pues el generador principal (1) se presenta sólo como cruces positivos.\\
+Por ejemplo, la palabra $+\sigma2-\sigma1-\sigma3+\sigma1$ no es reducida pues el generador principal (1) se encuentra en un cruce negativo y en un cruce positivo. La palabra $+\sigma2+\sigma1-\sigma3+\sigma1$ si sería reducida pues el generador principal (1) se presenta sólo como cruces positivos.\\
 
 Si tenemos una palabra no reducida con generador principal $ \sigma(i) $, podemos considerar ocurrencias de la palabra de la forma $ \pm \sigma(i) ... \mp \sigma(i) $ que no contengan cruces $ \sigma(i) $, es decir, entre los cruces de signo opuesto del generador $ \sigma(i) $ sólo encontramos generadores $ \sigma(k) $, $ k>i $. Podemos visualizar la idea en la figura \ref{h1}. En este caso diremos que la cadena i+1 forma un tirador.\\
 \begin{figure}[h!]
@@ -1493,7 +1493,7 @@ Para ver una demostración de esta proposición, vamos ir viendo el método que 
 Con este método tratamos de eliminar los tiradores de la trenza, pero para no entrar en bucles infinitos en el algoritmo, vamos a tener que considerar tiradores generados por cualquier generador y no sólo por el generador principal.\\
 
 \underline{\textbf{Definición:}}\\
- Un $ \sigma(j) $-tirador de una palabra es una sub-palabra de la forma $ \pm \sigma(j) v \mp \sigma(j) $ donde la sub-palabra $v$ sólo contiene generadores $ \pm (\mp) \sigma(k) $ con k $<$ j-1 o k $>$j. Si el generador $sigma(j)$ es el generador principal de la palabra, a dicho $ \sigma(j) $-tirador se conocerá como tirador principal.\\
+ Un \textbf{$ \sigma(j) $-tirador} de una palabra es una sub-palabra de la forma $ \pm \sigma(j) v \mp \sigma(j) $ donde la sub-palabra $v$ sólo contiene generadores $ \pm (\mp) \sigma(k) $ con k $<$ j-1 o k $>$j. Si el generador $\sigma(j)$ es el generador principal de la palabra, a dicho $ \sigma(j) $-tirador se conocerá como \textbf{tirador principal}.\\
  
  Podemos ver un $ \sigma(j) $-tirador en la figura \ref{h2}.\\
  \begin{figure}[h!]
@@ -1529,9 +1529,11 @@ Podemos ver esta transformación en la figura \ref{h3}.\\
 	\label{h3} 
 \end{figure}
 
-Sea la palabra $+\sigma2-\sigma1+\sigma2+\sigma3+\sigma1$. Podemos aplicar una reducción local al tirador principal $-\sigma1+\sigma2+\sigma3+\sigma1$ quedando la palabra $+\sigma2+\sigma2+\sigma1-\sigma2+\sigma3$.\\
+Es importante destacar que antes de realizar una reducción local a una palabra, tendremos que asegurarnos de que dicha palabra sea libremente reducida para evitar una mayor complejidad.\\
 
-Pero antes de hacer una reducción local a un $\sigma(j)$-tirador, tendremos que asegurarnos que no tener ningún $\sigma(j+1)$-tirador en el $\sigma(j)$-tirador. En el caso de tenerlo, tendríamos que aplicar la reducción local a esta $\sigma(j+1)$-tirador y posteriormente aplicar la reducción local al $\sigma(j)$-tirador inicial. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
+Sea la palabra $+\sigma2-\sigma1+\sigma2+\sigma3+\sigma1$. Podemos aplicar una reducción local al tirador principal $-\sigma1+\sigma2+\sigma3+\sigma1$ quedando la palabra $+\sigma2+\sigma2+\sigma1-\sigma2+\sigma3$. Esta sería su palabra reducida.\\
+
+Pero antes de hacer una reducción local a un $\sigma(j)$-tirador, tendremos que asegurarnos que no tener ningún $\sigma(j+1)$-tirador en el $\sigma(j)$-tirador. En el caso de tenerlo, tendríamos que aplicar la reducción local a este $\sigma(j+1)$-tirador y posteriormente aplicar la reducción local al $\sigma(j)$-tirador inicial. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
 
 Supongamos que queremos obtener la palabra reducida de la palabra $+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1$. El generador principal es 1 y tenemos un tirador principal (que, en este caso, es toda la palabra en sí misma). Aplicamos una reducción local a este tirador principal quedando: \\
 $-\sigma2+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1+\sigma2$.
@@ -1544,6 +1546,10 @@ $-\sigma3-\sigma2+\sigma1+\sigma2+\sigma3$.\\
 \underline{\textbf{Definición:}} \\
 Diremos que un  $\sigma(j)$-tirador está permitido si no contiene ningún $\sigma(j+1)$-tirador.\\
 
+Por ejemplo el tirador principal $+\sigma1+\sigma2+\sigma3-\sigma2-\sigma1$ no está permitido porque incluye al 2-tirador $+\sigma2+\sigma3-\sigma2$. Este 2-tirador sí estaría permitido porque no incluye ningún 3-tirador. \\
+
+Si un $\sigma(j)$-tirador no está permitido, le aplicaremos reducciones locales, como hemos hecho en el ejemplo, hasta que pase a estar permitido.\\
+
 \underline{\textbf{Definición:}} \\
 Diremos que una palabra $\beta'$ es deducida de una palabra $\beta$ usando una \textbf{reducción de tirador} si $\beta'$ se obtiene a partir de una reducción local de un $\sigma(j)$-tirador permitido de $\beta$.\\
 
@@ -1551,6 +1557,53 @@ Diremos que una palabra $\beta'$ es deducida de una palabra $\beta$ usando una \
 	Cualquier palabra puede ser reducida por una secuencia finita de reducciones de tirador hasta llegar a su palabra reducida.
 \end{teo}
 
+\bigskip
+Para poner en uso todas estas ideas vamos a ver un ejemplo en el que demostraremos que dos palabras dadas son equivalentes:\\
+Supongamos que tenemos las palabras $\beta1=+\sigma2-\sigma3+\sigma1-\sigma2+\sigma3$ y $\beta2=+\sigma1+\sigma2-\sigma3+\sigma1-\sigma2$ que representan a las trenzas que la figura \ref{h4}.\\
+
+\begin{figure}[h!]
+	\centering
+	\subfigure[$\beta1$]{\includegraphics[width=2.5cm]{itrenzas/deho2.png}}
+	\subfigure[$\beta2$]{\includegraphics[width=2.4cm]{itrenzas/deho1.png}}
+	\caption{Trenzas equivalentes.}
+	\label{h4} 
+\end{figure}
+
+A simple vista es difícil saber si las palabras son o no equivalentes. Para ver que las palabras son equivalentes ($\beta1 \sim \beta2$), tenemos que ver que se verifica $\beta1 \beta2^{-1} \sim \epsilon$, donde $\epsilon$ representa a la cadena vacía.\\
+
+En primer lugar vamos a considerar la palabra con la que vamos a trabajar:\\
+$\beta1 \beta2^{-1} =+\sigma2-\sigma3+\sigma1-\sigma2+\sigma3+\sigma2-\sigma1+\sigma3-\sigma2-\sigma1$.\\
+
+Nos encontramos el tirador principal $ +\sigma1-\sigma2+\sigma3+\sigma2-\sigma1 $. Vamos a aplicarle una reducción local, pero vemos que contiene al 2-tirador $-\sigma2+\sigma3+\sigma2$. Por tanto aplicamos una reducción local a este 2-tirador:\\
+$-\sigma2+\sigma3+\sigma2$ $\rightarrow$ $+\sigma3+\sigma2-\sigma3$, obteniendo la palabra:\\
+$\beta1 \beta2^{-1} =+\sigma2-\sigma3+\sigma1+\sigma3+\sigma2-\sigma3-\sigma1+\sigma3-\sigma2-\sigma1$.\\
+
+Nos encontramos el tirador principal permitido $+\sigma1+\sigma3+\sigma2-\sigma3-\sigma1$. Le aplicamos una reducción local:\\ 
+$+\sigma1+\sigma3+\sigma2-\sigma3-\sigma1$ $\rightarrow$ $+\sigma3-\sigma2+\sigma1+\sigma2-\sigma3$, obteniendo la palabra:\\
+$\beta1 \beta2^{-1} =+\sigma2-\sigma3+\sigma3-\sigma2+\sigma1+\sigma2-\sigma3+\sigma3-\sigma2-\sigma1$.\\
+
+Esta palabra no es libremente reducida porque nos encontramos un par de veces la sub-palabra $ -\sigma3+\sigma3 $. Las eliminamos y obtenemos la palabra:\\
+$\beta1 \beta2^{-1} =+\sigma2-\sigma2+\sigma1+\sigma2-\sigma2-\sigma1$.\\
+
+De nuevo nos encontramos con una palabra que no es libremente reducida porque nos encontramos un par de veces la sub-palabra $ +\sigma2-\sigma2 $. Las eliminamos y obtenemos la palabra:\\
+$\beta1 \beta2^{-1} =+\sigma1-\sigma1$.\\
+
+Otra vez nos encontramos con una palabra no libremente reducida. Eliminamos la sub-palabra $+\sigma1-\sigma1$ quedando la cadena vacía, es decir:\\
+$\beta1 \beta2^{-1} =\epsilon$.\\
+
+Concluimos que ambas trenzas son equivalentes, luego las trenzas a las que representan son equivalentes. Sus trenzas cerradas serán equivalentes y por tanto los nudos a los que se está representando son también equivalentes.\\
+
+\newpage
+\subsection{Conclusiones}
+Para estudiar si dos nudos dados son o no equivalentes, tratamos de estudiar si las palabras que representan a las trenzas cerradas que generan dichos nudos son equivalentes. \\
+
+El método que acabamos de ver (al que nos referiremos como método de Dehornoy) nos permite confirmar si dos palabras dadas representan a una misma trenza, y por tanto los nudos que generan sus trenzas cerradas serán equivalentes.\\
+
+El problema es que podemos tener dos palabras de trenzas que no sean equivalentes, pero puede ser que sus trenzas cerradas sí que sean equivalentes dando lugar a nudos equivalentes. En este caso, podremos estudiar el polinomio de Alexander para comprobar si las dos palabras dadas generan trenzas cerradas que no son equivalentes o que sí podrían serlo (que no quiere decir que lo sean).\\
+
+Por tanto, nos queda una serie de palabras que generan trenzas cerradas que no sabremos si son equivalentes entre sí. Se trata de un problema que sigue abierto. Por tanto, no es posible determinar con toda seguridad si dos nudos dados son o no equivalentes. \\
+
+El uso de invariantes como el exponente o la permutación de una palabra nos van a permitir determinar si dos palabras dadas representan a trenzas que no son equivalentes de una forma más rápida que el método de Dehornoy, pero con el uso de estos invariantes no podremos confirmar que dos palabras sean equivalentes.\\ 
 
 
 \end{document}

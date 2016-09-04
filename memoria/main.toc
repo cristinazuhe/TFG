@@ -30,3 +30,4 @@
 \contentsline {subsubsection}{\numberline {2.3.2}Permutaci\IeC {\'o}n:}{58}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Polinomio de Alexander:}{60}{subsubsection.2.3.3}
 \contentsline {subsection}{\numberline {2.4}El problema de las palabras.}{63}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Conclusiones}{70}{subsection.2.5}
