@@ -1451,7 +1451,7 @@ Por ejemplo, la palabra $+\sigma2-\sigma1+\sigma1-\sigma3$ que representa a la t
 
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=4cm]{itrenzas/deh1.png}
+		\includegraphics[width=3cm]{itrenzas/deh1.png}
 		\caption{Trenza no libremente reducida.}
 		\label{deh1} 
 	\end{figure}
@@ -1470,8 +1470,13 @@ Diremos que una palabra $\beta \in B_{n}$ es \textbf{reducida} si se cumple algu
  
 Por ejemplo, la palabra $+\sigma2-\sigma1-\sigma3+\sigma1$ no es reducida pues el generador principal (1) se encuentra en un cruce positivo y en un cruce negativo. La palabra $+\sigma2+\sigma1-\sigma3+\sigma1$ si sería reducida pues el generador principal (1) se presenta sólo como cruces positivos.\\
 
-Si tenemos una palabra no reducida con generador principal $ \sigma(i) $, podemos considerar ocurrencias de la palabra de la forma $ \pm \sigma(i) ... \mp \sigma(i) $ que no contengan cruces $ \sigma(i) $, es decir, entre los cruces de signo opuesto del generador $ \sigma(i) $ sólo encontramos generadores $ \sigma(k) $, $ k>i $. Podemos visualizar la idea en la figua !!PONER ENLACE. En este caso diremos que la cadena i+1 forma un tirador.\\
-//CREAR FIGURA 1.1.
+Si tenemos una palabra no reducida con generador principal $ \sigma(i) $, podemos considerar ocurrencias de la palabra de la forma $ \pm \sigma(i) ... \mp \sigma(i) $ que no contengan cruces $ \sigma(i) $, es decir, entre los cruces de signo opuesto del generador $ \sigma(i) $ sólo encontramos generadores $ \sigma(k) $, $ k>i $. Podemos visualizar la idea en la figura \ref{h1}. En este caso diremos que la cadena i+1 forma un tirador.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=4.5cm]{itrenzas/h11.png}
+	\caption{Tirador principal.}
+	\label{h1} 
+\end{figure}
 
 \begin{pro}
 	Una palabra reducida no vacía no puede ser equivalente a la cadena vacía.
@@ -1490,8 +1495,13 @@ Con este método tratamos de eliminar los tiradores de la trenza, pero para no e
 \underline{\textbf{Definición:}}\\
  Un $ \sigma(j) $-tirador de una palabra es una sub-palabra de la forma $ \pm \sigma(j) v \mp \sigma(j) $ donde la sub-palabra $v$ sólo contiene generadores $ \pm (\mp) \sigma(k) $ con k $<$ j-1 o k $>$j. Si el generador $sigma(j)$ es el generador principal de la palabra, a dicho $ \sigma(j) $-tirador se conocerá como tirador principal.\\
  
- Podemos ver un $ \sigma(j) $-tirador en la figura \\PONER ENLACE!!!\\
- CREAR FIGURA 1.2!!!!!!!!!!!!!!!!!!!!!\\
+ Podemos ver un $ \sigma(j) $-tirador en la figura \ref{h2}.\\
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[width=9cm]{itrenzas/h12.png}
+ 	\caption{Un tirador general.}
+ 	\label{h2} 
+ \end{figure}
  
  Supongamos que tenemos la palabra $ +\sigma3-\sigma1+\sigma2-\sigma4-\sigma2-\sigma4+\sigma1 $. La sub-palabra $ -\sigma1+\sigma2-\sigma4-\sigma2-\sigma4+\sigma1  $ es un tirador principal mientras que $ +\sigma2-\sigma4-\sigma2 $ es un $ \sigma2 $-tirador.\\
  
@@ -1511,8 +1521,13 @@ En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:\\
 	$\pm \sigma(k) \rightarrow \pm \sigma(k),$ siendo k!=j,j+1.\\
 \end{center}
 
-Podemos ver esta transformación en la figura //PONER ENLACE!!!\\
-CREAR FIGURA 1.4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
+Podemos ver esta transformación en la figura \ref{h3}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{itrenzas/h14.png}
+	\caption{Reducción local.}
+	\label{h3} 
+\end{figure}
 
 Sea la palabra $+\sigma2-\sigma1+\sigma2+\sigma3+\sigma1$. Podemos aplicar una reducción local al tirador principal $-\sigma1+\sigma2+\sigma3+\sigma1$ quedando la palabra $+\sigma2+\sigma2+\sigma1-\sigma2+\sigma3$.\\
 
