@@ -11,7 +11,7 @@ function [p0,p1,p2,p3 ] = representar_braid(indices_braid, N_cortes, Radio )
             hold on;
             contador = contador +1;
         end
-        if(cruce < 0)
+        if(cruce > 0)
             [p1,p2] = braid_neg(abs(cruce)+contador,inicio,fin,N_cortes,Radio); 
             hold on;
         else   
