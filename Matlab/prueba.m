@@ -2,58 +2,67 @@
 [x_cil,y_cil,z_cil] = cilindro_base();
 N_cortes = 20;
 Radio = 0.5;
-indices_braid=[-2 +3 -5 +3 -4 +2];
+indices_braid=[+2 +3 +5 +3 -4 +2];
 
-contador = 0;
-cadena_actual = 2;
-n_cadena = cadena_actual;
-if(abs(indices_braid(1)) == n_cadena)
-    if(sign(indices_braid(1)) == 1)
-        x = fliplr(x_giro); y = abs(y_giro); z = z_giro;
-    else
-        x = fliplr(x_giro); y = y_giro; z = z_giro;   
-    end
-    n_cadena = n_cadena+1;
-    contador = contador+1;
-elseif(abs(indices_braid(1)) == n_cadena-1)
-    if(sign(indices_braid(1)) == 1)
-        x = x_giro; y = y_giro; z = z_giro;
-    else
-        x = x_giro; y = abs(y_giro); z = z_giro;   
-    end
-    n_cadena = n_cadena-1;
-else
-    x = x_cil; y = y_cil; z = z_cil;
-end
-for i=2:1:length(indices_braid)
-    if(abs(indices_braid(i)) == n_cadena)
-        contador = contador+1;
-        if(sign(indices_braid(i)) == 1)
-            siguiente_x = fliplr(x_giro)+2*(contador-1); siguiente_y = abs(y_giro); siguiente_z = z_giro-3*pi*(i-1);
+for cadena_actual=1:1:(max(abs(indices_braid))+1)
+        contador = 0;
+        n_cadena = cadena_actual;
+        if(abs(indices_braid(1)) == n_cadena)
+            if(sign(indices_braid(1)) == 1)
+                x = fliplr(x_giro)+2*(cadena_actual-1); y = abs(y_giro); z = z_giro;
+            else
+                x = fliplr(x_giro)+2*(cadena_actual-1); y = y_giro; z = z_giro;   
+            end
+            n_cadena = n_cadena+1;
+            contador = contador+1;
+        elseif(abs(indices_braid(1)) == n_cadena-1)
+            if(sign(indices_braid(1)) == 1)
+                x = x_giro+2*(cadena_actual-1); y = y_giro; z = z_giro;
+            else
+                x = x_giro+2*(cadena_actual-1); y = abs(y_giro); z = z_giro;   
+            end
+            n_cadena = n_cadena-1;
         else
-            siguiente_x = fliplr(x_giro)+2*(contador-1); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);   
+            x = x_cil+2*(cadena_actual-1); y = y_cil; z = z_cil;
         end
-        n_cadena = n_cadena+1;
-    elseif(abs(indices_braid(i)) == n_cadena-1)
-        contador = contador-1;
-        if(sign(indices_braid(i)) == 1)
-            siguiente_x = x_giro+2*(contador); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);
-        else
-            siguiente_x = x_giro+2*(contador); siguiente_y = abs(y_giro); siguiente_z = z_giro-3*pi*(i-1);   
+        for i=2:1:length(indices_braid)
+            if(abs(indices_braid(i)) == n_cadena)
+                contador = contador+1;
+                if(sign(indices_braid(i)) == 1)
+                    siguiente_x = fliplr(x_giro)+2*(contador-1)+2*(cadena_actual-1); siguiente_y = abs(y_giro); siguiente_z = z_giro-3*pi*(i-1);
+                else
+                    siguiente_x = fliplr(x_giro)+2*(contador-1)+2*(cadena_actual-1); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);   
+                end
+                n_cadena = n_cadena+1;
+            elseif(abs(indices_braid(i)) == n_cadena-1)
+                contador = contador-1;
+                if(sign(indices_braid(i)) == 1)
+                    siguiente_x = x_giro+2*(contador)+2*(cadena_actual-1); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);
+                else
+                    siguiente_x = x_giro+2*(contador)+2*(cadena_actual-1); siguiente_y = abs(y_giro); siguiente_z = z_giro-3*pi*(i-1);   
+                end
+                n_cadena = n_cadena-1;
+            else
+                siguiente_x = x_cil+2*(contador)+2*(cadena_actual-1); siguiente_y = y_cil; siguiente_z = z_cil-3*pi*(i-1);
+            end
+            x = [siguiente_x,x]; 
+            y = [siguiente_y,y];
+            z = [siguiente_z,z];
         end
-        n_cadena = n_cadena-1;
-    else
-        siguiente_x = x_cil+2*(contador); siguiente_y = y_cil; siguiente_z = z_cil-3*pi*(i-1);
-    end
-    x = [siguiente_x,x]; 
-    y = [siguiente_y,y];
-    z = [siguiente_z,z];
+  if(cadena_actual ==1)
+      matriz_x = x;matriz_y = y; matriz_z =z;
+  else
+      matriz_x =  vertcat(matriz_x,x);
+      matriz_y =  vertcat(matriz_y,y);
+      matriz_z =  vertcat(matriz_z,z);
+  end
 end
-    
  
-
-plot3(x,y,z);
-tubep(x,y,z,N_cortes,Radio);
+    for i=1:1:3%size(matriz_z,1)
+        plot3(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:));
+        tubep(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:),20,0.5);
+        hold on;
+    end
     
 % a_x1 = fliplr(x);
 % a_y1 = abs(y);
