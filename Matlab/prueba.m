@@ -2,12 +2,12 @@
 [x_cil,y_cil,z_cil] = cilindro_base();
 N_cortes = 20;
 Radio = 0.5;
-indices_braid=[+2 +3 +5 +3 +4 +2];
+indices_braid=[-2 +3 -5 +3 -4 +2];
 
 contador = 0;
-cadena_actual = 1;
+cadena_actual = 2;
 n_cadena = cadena_actual;
-if(indices_braid(1) == n_cadena)
+if(abs(indices_braid(1)) == n_cadena)
     if(sign(indices_braid(1)) == 1)
         x = fliplr(x_giro); y = abs(y_giro); z = z_giro;
     else
@@ -15,7 +15,7 @@ if(indices_braid(1) == n_cadena)
     end
     n_cadena = n_cadena+1;
     contador = contador+1;
-elseif(indices_braid(1) == n_cadena-1)
+elseif(abs(indices_braid(1)) == n_cadena-1)
     if(sign(indices_braid(1)) == 1)
         x = x_giro; y = y_giro; z = z_giro;
     else
@@ -25,8 +25,8 @@ elseif(indices_braid(1) == n_cadena-1)
 else
     x = x_cil; y = y_cil; z = z_cil;
 end
-for i=2:1:6
-    if(indices_braid(i) == n_cadena)
+for i=2:1:length(indices_braid)
+    if(abs(indices_braid(i)) == n_cadena)
         contador = contador+1;
         if(sign(indices_braid(i)) == 1)
             siguiente_x = fliplr(x_giro)+2*(contador-1); siguiente_y = abs(y_giro); siguiente_z = z_giro-3*pi*(i-1);
@@ -34,7 +34,7 @@ for i=2:1:6
             siguiente_x = fliplr(x_giro)+2*(contador-1); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);   
         end
         n_cadena = n_cadena+1;
-    elseif(indices_braid(i) == n_cadena-1)
+    elseif(abs(indices_braid(i)) == n_cadena-1)
         contador = contador-1;
         if(sign(indices_braid(i)) == 1)
             siguiente_x = x_giro+2*(contador); siguiente_y = y_giro; siguiente_z = z_giro-3*pi*(i-1);
@@ -93,25 +93,3 @@ tubep(x,y,z,N_cortes,Radio);
 
 
 
-%estas son las otras 3 combinaciones posibles
-%     hold on;
-%     x0 = fliplr(x);
-%     y0 = abs(y);
-%     z0 = z;
-%     plot3(x0,y0,z0);
-%     tubep(x0,y0,z0,20,0.5);
-%     
-%     hold on;
-%     x1 = fliplr(x);
-%     y1 = y;
-%     z1 = z-3*pi;
-%     plot3(x1,y1,z1);
-%     tubep(x1,y1,z1,20,0.5);
-%     
-%     hold on;
-%     x2 = x;
-%     y2 = abs(y);
-%     z2 = z-3*pi;
-%     plot3(x2,y2,z2);
-%     tubep(x2,y2,z2,20,0.5);
-    
