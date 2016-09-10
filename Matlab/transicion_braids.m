@@ -14,7 +14,7 @@ function [ ] = transicion_braids( indices_braid1, indices_braid2, N_cortes, Radi
           matriz_z2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_z2(i,dim_actual_2) ; 
        end
     elseif (size(matriz_x1,2) < size(matriz_x2,2))
-       for i=1:1:size(matriz_x2,1)
+       for i=1:1:size(matriz_x1,1)
           matriz_x1(i,dim_actual_1+1:size(matriz_x2,2))= matriz_x1(i,dim_actual_1) ;   
           matriz_y1(i,dim_actual_1+1:size(matriz_x2,2))= matriz_y1(i,dim_actual_1) ; 
           matriz_z1(i,dim_actual_1+1:size(matriz_x2,2))= matriz_z1(i,dim_actual_1) ; 
