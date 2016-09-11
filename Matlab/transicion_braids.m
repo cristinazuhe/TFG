@@ -23,22 +23,22 @@ function [ ] = transicion_braids( indices_braid1, indices_braid2, N_cortes, Radi
     
     %Si eliminamos trenzas, tendremos que tener el mismo tamanio de
     %matrices.
-     if(size(matriz_x1,1) > size(matriz_x2,1))
+    if(size(matriz_x1,1) > size(matriz_x2,1))
        for i=size(matriz_x2,1)+1:1:size(matriz_x1,1)
           matriz_x2(i,1:size(matriz_x1,2))= matriz_x1(i,size(matriz_x1,2)) ;   
           matriz_y2(i,1:size(matriz_x1,2))= matriz_y1(i,size(matriz_y1,2)) ; 
-          matriz_z2(i,1:size(matriz_x1,2))= matriz_z1(i,size(matriz_z1,2)) ; 
+          matriz_z2(i,1:size(matriz_x1,2))= matriz_z1(i,1:size(matriz_z1,2)) ; 
        end
        if(size(indices_braid2)==0)
             matriz_x2(1,1:size(matriz_x1,2))= matriz_x1(1,size(matriz_x1,2)) ;  
             matriz_y2(1,1:size(matriz_x1,2))= matriz_y1(1,size(matriz_y1,2)) ; 
-            matriz_z2(1,1:size(matriz_x1,2))= matriz_z1(1,size(matriz_z1,2)) ; 
+            matriz_z2(1,1:size(matriz_x1,2))= matriz_z1(1,1:size(matriz_z1,2)) ; 
         end
      elseif (size(matriz_x1,1) < size(matriz_x2,1))
         for i=size(matriz_x1,1)+1:1:size(matriz_x2,1)
             matriz_x1(i,1:size(matriz_x2,2))= matriz_x2(i,size(matriz_x2,2)) ;   
             matriz_y1(i,1:size(matriz_x2,2))= matriz_y2(i,size(matriz_y2,2)) ; 
-            matriz_z1(i,1:size(matriz_x2,2))= matriz_z2(i,size(matriz_z2,2)) ; 
+            matriz_z1(i,1:size(matriz_x2,2))= matriz_z2(i,1:size(matriz_z2,2)) ; 
         end
         if(size(indices_braid1)==0)
             matriz_x1(1,1:size(matriz_x2,2))= matriz_x2(1,size(matriz_x2,2)) ;  
@@ -71,5 +71,6 @@ function [ ] = transicion_braids( indices_braid1, indices_braid2, N_cortes, Radi
             clear aux1;clear aux2;
         end
     end
+  
 end
 
