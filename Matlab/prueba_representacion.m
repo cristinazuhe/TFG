@@ -1,32 +1,19 @@
+clear all;
 N_cortes = 20;
 Radio = 0.5;
 indices_braid=[+3 -3 -2 -1 -2 +1 +2 +1];
 
 indices_partida= indices_braid;
 dim_max = length(indices_partida);
-matriz_braid = indices_partida;
+matriz_braid{1} = indices_partida;
 encontrado = true;
     while(encontrado)
 
             %elimino tantos movimientos de tipo1 como pueda -+simga +-simga
             [braid_aux, indices_braid,simplificado] = Simplifica(indices_braid);
-             if(simplificado)
-                    aux_braid = braid_aux;
-                    if(length(indices_braid) < dim_max)
-                     aux_braid(size(aux_braid,2)+1:dim_max) = 0;
-                    elseif(length(indices_braid) > dim_max)
-                        dim_max = length(indices_braid);
-                        tam = size(matriz_braid,2);
-                        for i=tam+1:1:length(indices_braid)
-                            for j=1:1:size(matriz_braid,1)
-                                matriz_braid(j,i) = 0; 
-                            end
-                        end
-                end
-                if(~isequal(aux_braid,matriz_braid(size(matriz_braid,1),:)))
-                    matriz_braid = [matriz_braid; aux_braid];
-                end
-             end
+            if(simplificado)
+                 matriz_braid{length(matriz_braid)+1} = braid_aux;
+            end
             
             if(~simplificado)
                     %obtengo el indice de la trenza de menor valor 
@@ -62,22 +49,8 @@ encontrado = true;
             end
             
             %Creo una matriz con la secuencia de trenzas generada.
- 
-            aux_braid = indices_braid;
-          
-            if(length(indices_braid) < dim_max)
-                aux_braid(size(aux_braid,2)+1:dim_max) = 0;
-            elseif(length(indices_braid) > dim_max)
-                dim_max = length(indices_braid);
-                tam = size(matriz_braid,2);
-                for i=tam+1:1:length(indices_braid)
-                   for j=1:1:size(matriz_braid,1)
-                      matriz_braid(j,i) = 0; 
-                   end
-                end
-            end
-            if(~isequal(aux_braid,matriz_braid(size(matriz_braid,1),:)))
-                matriz_braid = [matriz_braid; aux_braid];
+            if(~isequal(indices_braid,matriz_braid{length(matriz_braid)}))
+                 matriz_braid{length(matriz_braid)+1} = indices_braid;
             end
             
     end
@@ -85,9 +58,12 @@ encontrado = true;
     
     %voy a representar los movimientos de las trenzas que llegan a
     %anularse:
-    if(matriz_braid(size(matriz_braid,1),:) == 0)
-       for j=1:1:size(matriz_braid,1)-1
+    if(isequal([],matriz_braid{length(matriz_braid)}))
+       for j=1:1:length(matriz_braid)-2
            hold off;
-           transicion_braids(matriz_braid(j,:),matriz_braid(j+1,:),20,0.5);
+           transicion_braids(matriz_braid{j},matriz_braid{j+1},20,0.5);
        end
     end
+
+    
+    
