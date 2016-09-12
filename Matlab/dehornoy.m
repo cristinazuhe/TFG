@@ -59,8 +59,6 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
                hold off;
                transicion_braids(matriz_braid{j},matriz_braid{j+1},N_cortes,Radio);
            end
-        else
-            disp('La trenza dada no es equivalente a la trenza trivial.');
         end
     end
   
