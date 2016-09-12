@@ -19,21 +19,21 @@ indices_braid2=[ -1 ];
                fin = true;
             end
         end
-        if(primer0 < 1)
+        if(primer0 > 1)
         auxx = []; auxy = []; auxz=[];
            for i=1:1:size(matriz_x2,1)
-                nuevox(i,1:190) = matriz_x1(i,(primer0-1)*95);
-                auxx = vertcat(auxx,[matriz_x2(i,1:(primer0-1)*95),nuevox(i,:),matriz_x2(i,(primer0-1)*95+1:size(matriz_x2,2))]);            
-
-                nuevoy(i,1:190) = matriz_y1(i,(primer0-1)*95);
-                auxy = vertcat(auxy,[matriz_y2(i,1:(primer0-1)*95),nuevoy(i,:),matriz_y2(i,(primer0-1)*95+1:size(matriz_y2,2))]);
-
-                nuevoz(i,1:190) = matriz_z1(i,(primer0-1)*95);
-                auxz = vertcat(auxz,[matriz_z2(i,1:(primer0-1)*95),nuevoz(i,:),matriz_z2(i,(primer0-1)*95+1:size(matriz_z2,2))]); 
+                 nuevox(i,1:190) = matriz_x2(i,1);
+                 auxx = vertcat(auxx,[nuevox(i,:),matriz_x2(i,1:size(matriz_x2,2))]);            
+ 
+                 nuevoy(i,1:190) = matriz_y2(i,1);
+                 auxy = vertcat(auxy,[nuevoy(i,:),matriz_y2(i,1:size(matriz_y2,2))]);
+ 
+                 nuevoz(i,1:190) = matriz_z2(i,1);
+                 auxz = vertcat(auxz,[nuevoz(i,:),matriz_z2(i,1:size(matriz_z2,2))]); 
            end
-             matriz_x2 = auxx;
-             matriz_y2 = auxy;
-             matriz_z2 = auxz;
+           matriz_x2 = auxx;
+           matriz_y2 = auxy;
+           matriz_z2 = auxz;
         else
            for i=1:1:size(matriz_x2,1)
               matriz_x2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_x2(i,dim_actual_2) ;
@@ -79,7 +79,7 @@ indices_braid2=[ -1 ];
 %     
 %     
     %Representamos el movimiento de las dos trenzas. 
-    for t=0:0.01:1          
+    for t=0:0.1:1          
         for j=1:1:size(matriz_x1,1)
             x_tran = (1-t)*matriz_x1(j,:) + (t)*matriz_x2(j,:);
             y_tran = (1-t)*matriz_y1(j,:) + (t)*matriz_y2(j,:);
