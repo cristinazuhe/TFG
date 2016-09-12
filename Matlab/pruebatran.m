@@ -1,7 +1,7 @@
 N_cortes = 20;
 Radio = 0.5;
-indices_braid1=[ -1 0 0];
-indices_braid2=[ -1 ];
+indices_braid1=[ -1  -2 -3  0 0 -5];
+indices_braid2=[ -1 -2 -3 -5];
 
 %Obtenemos las parametrizaciones de las cuerdas. 
     [matriz_x1,matriz_y1,matriz_z1] = param_cadenas(indices_braid1);
@@ -19,8 +19,8 @@ indices_braid2=[ -1 ];
                fin = true;
             end
         end
-        if(primer0 > 1)
-        auxx = []; auxy = []; auxz=[];
+        if(primer0 > 1 && (primer0 +1 == length(indices_braid1)))
+           auxx = []; auxy = []; auxz=[];
            for i=1:1:size(matriz_x2,1)
                  nuevox(i,1:190) = matriz_x2(i,1);
                  auxx = vertcat(auxx,[nuevox(i,:),matriz_x2(i,1:size(matriz_x2,2))]);            
@@ -34,12 +34,30 @@ indices_braid2=[ -1 ];
            matriz_x2 = auxx;
            matriz_y2 = auxy;
            matriz_z2 = auxz;
-        else
+        elseif (primer0 ==1)
            for i=1:1:size(matriz_x2,1)
               matriz_x2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_x2(i,dim_actual_2) ;
               matriz_y2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_y2(i,dim_actual_2) ; 
               matriz_z2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_z2(i,dim_actual_2) ; 
            end
+        else 
+            auxx = []; auxy = []; auxz=[];
+            for i=1:1:size(matriz_x2,1)
+                  nuevox(i,1:190) = matriz_x2(i,95*(length(indices_braid1)-primer0-1)+1);
+                  auxx = vertcat(auxx,[matriz_x2(i,1:95*(length(indices_braid1)-primer0-1)),nuevox(i,:),...
+                                       matriz_x2(i,95*(length(indices_braid1)-primer0-1)+1:size(matriz_x2,2))]);            
+  
+                  nuevoy(i,1:190) = matriz_y2(i,95*(length(indices_braid1)-primer0-1)+1);
+                  auxy = vertcat(auxy,[matriz_y2(i,1:95*(length(indices_braid1)-primer0-1)),nuevoy(i,:),...
+                                       matriz_y2(i,95*(length(indices_braid1)-primer0-1)+1:size(matriz_y2,2))]);
+  
+                  nuevoz(i,1:190) = matriz_z2(i,95*(length(indices_braid1)-primer0-1)+1);
+                  auxz = vertcat(auxz,[matriz_z2(i,1:95*(length(indices_braid1)-primer0-1)),nuevoz(i,:)...
+                                      matriz_z2(i,95*(length(indices_braid1)-primer0-1)+1:size(matriz_z2,2))]); 
+            end
+            matriz_x2 = auxx;
+            matriz_y2 = auxy;
+            matriz_z2 = auxz;
         end
 %     elseif (size(matriz_x1,2) < size(matriz_x2,2))
 %        for i=1:1:size(matriz_x1,1)
