@@ -62,6 +62,7 @@ function [ ] = transicion_braids( indices_braid1, indices_braid2, N_cortes, Radi
                 matriz_z2 = auxz;
             end   
         else %esta transicion no se ve clara...
+                dips('4');
                for i=1:1:size(matriz_x2,1)
                   matriz_x2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_x2(i,dim_actual_2) ;
                   matriz_y2(i,dim_actual_2+1:size(matriz_x1,2))= matriz_y2(i,dim_actual_2) ; 
