@@ -3,7 +3,7 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
     encontrado = true;
     while(encontrado)
 
-            %elimino tantos movimientos de tipo1 como pueda -+simga +-simga
+            %elimino tantos movimientos de tipo1 como pueda -+sigma +-sigma
             [braid_aux, indices_braid,simplificado] = Simplifica(indices_braid);
             if(simplificado)
                  matriz_braid{length(matriz_braid)+1} = braid_aux;
