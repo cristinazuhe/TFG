@@ -36,4 +36,6 @@ clearvars i n_aux_cruces;
 % [es_trivial, final_braid] = dehornoy(indices_braid, true, 20, 0.5);
 % disp('Reduced braid:'); disp(final_braid);
 
-
+%Exponente de la trenza.
+% valor_exp = exponente(indices_braid);
+% disp(strcat('El exponente es: ', num2str(valor_exp)));
