@@ -3,7 +3,7 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
     encontrado = true;
     while(encontrado)
 
-            %elimino tantos movimientos de tipo1 como pueda -+sigma +-sigma
+            %elimino movimiento de tipo1 como pueda -+sigma +-sigma
             [braid_aux, indices_braid,simplificado] = Simplifica(indices_braid);
             if(simplificado)
                  matriz_braid{length(matriz_braid)+1} = braid_aux;
@@ -36,7 +36,12 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
                         %Ahora ya tengo marcado con pos1 y pos2 el subvector con el que voy a hacer
                         %la reduccion de dehornoy.E sta reduccion es para cuando ya tengo el handle en condiciones para
                         %reducir. 
-                        indices_braid = reduccion_base(indices_braid, minimo, pos1, pos2); 
+                        %en braid_aux tengo una trenza auxiliar con ceros
+                        %para facilitar la visualizacion
+                        [braid_aux2,indices_braid, simplificado2] = reduccion_base(indices_braid, minimo, pos1, pos2); 
+                        if(simplificado2)
+                                 matriz_braid{length(matriz_braid)+1} = braid_aux2;
+                        end
                     end  
                     clearvars pos1_sig pos2_sig haysubhandle pos1 pos2 minimo
                     
@@ -50,8 +55,7 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
     end
     
     
-    %voy a representar los movimientos de las trenzas que llegan a
-    %anularse:
+    %voy a representar los movimientos de las trenzas
     es_trivial = isequal([],matriz_braid{length(matriz_braid)});
     if(representar)
         if(es_trivial)
@@ -59,8 +63,12 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
                hold off;
                transicion_braids(matriz_braid{j},matriz_braid{j+1},N_cortes,Radio);
            end
+        else
+           for j=1:1:length(matriz_braid)-1
+               hold off;
+               transicion_braids(matriz_braid{j},matriz_braid{j+1},N_cortes,Radio);
+           end
         end
     end
   
-    
 end
