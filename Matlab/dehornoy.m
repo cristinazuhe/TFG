@@ -1,4 +1,4 @@
-function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
+function [es_trivial, final_braid] = dehornoy( indices_braid, representar, N_cortes, Radio)
     matriz_braid{1} = indices_braid;
     encontrado = true;
     while(encontrado)
@@ -55,6 +55,7 @@ function es_trivial = dehornoy( indices_braid, representar, N_cortes, Radio)
     end
     
     
+    final_braid = matriz_braid{length(matriz_braid)};
     %voy a representar los movimientos de las trenzas
     es_trivial = isequal([],matriz_braid{length(matriz_braid)});
     if(representar)

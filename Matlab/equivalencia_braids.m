@@ -7,7 +7,7 @@ indices_braid2 =[-1 -2 1];
 inversa_braid2 = fliplr(-indices_braid2);
 indices_braid = [indices_braid1,inversa_braid2];
  
-es_trivial =  dehornoy(indices_braid,true, N_cortes, Radio);
+[es_trivial, final_braid] =  dehornoy(indices_braid,true, N_cortes, Radio);
 
 if(~es_trivial)
     disp('Las trenzas dadas no son equivalentes.');
