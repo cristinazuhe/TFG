@@ -20,6 +20,8 @@
 \begin{document}
 \newtheorem{teo}{Teorema}[section]
 \newtheorem{pro}{Proposición}[section]
+\newtheorem{lem}{Lema}[section]
+\newtheorem{cor}{Corolario}[section]
 \maketitle
 
 \tableofcontents
@@ -1380,14 +1382,228 @@ Matriz Burau de $ -\sigma3 $:
  \end{bmatrix}\]\\
  
  
-\begin{teo}
+\begin{teo}\label{teoalex}
 	Sea la trenza $\beta \in B_{n}$ con representación de Burau $\phi_{n}(\beta)$. Supongamos que su trenza cerrada genera al nudo K.\\
-	Se verifica que el polinomio ($ \pm $ $ t^{k} )det[\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K (siendo k un entero). A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t)\\
-	//POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
+	Se verifica que el polinomio ($ \pm $ $ t^{k} )det[\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K (siendo k un entero). A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t).
 \end{teo}
 
 Gracias a este teorema podemos afirmar que si dos trenzas $\beta1 \in B_{n}, \beta2 \in B_{m}$ cerradas generan el mismo nudo entonces se verificará la igualdad:\\
 det[$\phi_{n}(\beta1)$ - $ I_{n} $$ ]_{1,1}$ = $ \pm t^{k} $det[$\phi_{m}(\beta2)$ - $ I_{m} $$ ]_{1,1}$.\\
+
+Para ver la demostración de este teorema necesitamos un lema previo y los siguientes conceptos:\\
+
+Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B_{n}$. Definimos las siguientes matrices de dimensión nxn:\\
+  \[ S = \begin{bmatrix}
+  1 & 1 & 1 &... & 1 & 1 \\
+  0 & 1 & 1 &... & 1 & 1\\
+  0 & 0 & 1 &... & 1 & 1 \\
+  ... & ... & ...& ... & 1 & 1 \\	
+  0 & 0 & 0 & ... & 1 & 1\\	
+  0 & 0 & 0 & ... & 0 & 1\\
+  \end{bmatrix} 
+  S^{-1} = \begin{bmatrix}
+  1 & -1 & 0 & ... & 0 & 0 \\
+  0 & 1 & -1 & ... & 0 & 0\\
+  0 & 0 & 1 & ... & 0  & 0\\
+  ... & ... & ...& ... & 0 & 0  \\	
+  0 & 0 & 0 &...& 1 & -1  \\	
+  0 & 0 & 0 & ... & 0 & 1 \\
+  \end{bmatrix}\]\\
+  
+ Podemos considerar el producto de matrices $S^{-1}MS$
+   \[ M S = \begin{bmatrix}
+   a_{1,1} & a_{1,2} & a_{1,3} &... & a_{1,n} \\
+   a_{2,1} & a_{2,2} & a_{2,3} &...  & a_{2,n}\\
+   ... & ... & ...& ... & ... \\		
+   a_{n,1} & a_{n,2} & a_{n,3} & ... & a_{n,n}\\
+   \end{bmatrix} 
+   \begin{bmatrix}
+   1 & 1 & 1 &... & 1  \\
+   0 & 1 & 1 &... & 1 \\
+   ... & ... & ...& ... & ... \\	
+   0 & 0 & 0 & ... & 1\\
+   \end{bmatrix}\]
+   
+   \[= \begin{bmatrix}
+   a_{1,1} & a_{1,1}+a_{1,2} & ... & a_{1,1} + a_{1,2}+...+a_{1,n} = 1  \\
+   a_{2,1} & a_{2,1}+a_{2,2} &... & a_{2,1} + a_{2,2}+...+a_{2,n} = 1  \\
+   ... & ... & ... & ... \\	
+   a_{n,1} & a_{n,1}+a_{n,2} & ... & a_{n,1} + a_{n,2}+...+a_{n,n} = 1 \\
+   \end{bmatrix}\]\\
+  
+  Luego la matriz  $S^{-1}MS$ tendrá la siguiente forma:\\
+     \[ S^{-1}MS = \begin{bmatrix}
+     1 & -1 & 0 &... & 0 \\
+     0 & 1 & -1 &...  & 0\\
+     ... & ... & ...& ... & ... \\		
+     0 & 0 & 0 & ... & 1\\
+     \end{bmatrix} 
+     \begin{bmatrix}
+     a_{1,1} & a_{1,1}+a_{1,2} & ... & a_{1,1} + a_{1,2}+...+a_{1,n} = 1  \\
+     a_{2,1} & a_{2,1}+a_{2,2} &... & a_{2,1} + a_{2,2}+...+a_{2,n} = 1  \\
+     ... & ... & ... & ... \\	
+     a_{n,1} & a_{n,1}+a_{n,2} & ... & a_{n,1} + a_{n,2}+...+a_{n,n} = 1 \\
+     \end{bmatrix}\]
+     
+     \[= \begin{bmatrix}
+     a_{1,1}-a_{2,1} & a_{1,1}+a_{1,2}-a_{2,1}-a_{2,2} & ... & 1-1 = 0  \\
+     a_{2,1}-a_{3,1} & a_{2,1}+a_{2,2}-a_{3,1}-a_{3,2}&... & 1 - 1=0  \\
+     ... & ... & ... & ... \\	
+     a_{n,1} & a_{n,1}+a_{n,2} & ... & 1 \\
+     \end{bmatrix}\]\\
+     
+     De un modo más simple, vamos a denotar a dicha matriz del siguiente modo:\\
+     \[ S^{-1}MS = \left[\begin{array}{r|r}
+     \Lambda (t) & 0 \\ \hline	
+     * ... * & 1\\
+     \end{array}\right]\]\\
+  
+ \begin{lem}
+ 	Se verifica la siguiente igualdad:
+	 \begin{center}
+ 		det $(\Lambda(t) - I_{n-1})$ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $
+	 \end{center}
+	 \begin{proof}
+	 	Consideramos la matriz de dimensión (n-1)x(n-1):
+	            \begin{center}
+	            	$ \Lambda(t) - I_{n-1}= $ 
+	            \end{center}	           
+	           \[\begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,1}+a_{1,2}-a_{2,1}-a_{2,2} & ... &  a_{1,1}+...+a_{1,n-1}-a_{2,1}-...-a_{2,n-1} \\
+	           a_{2,1}-a_{3,1} & a_{2,1}+a_{2,2}-a_{3,1}-a_{3,2}-1&... & a_{2,1}+...+a_{2,n-1}-a_{3,1}-...-a_{3,n-1}  \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,1}+a_{n-1,2}-a_{n,1}-a_{n,2} & ... & a_{n-1,1}+...+a_{n-1,n-1}-a_{n,1}-...-a_{n,n-1} \\
+	           \end{bmatrix}\]\\
+	           
+	           Es claro que det $(\Lambda(t) - I_{n-1})$ = det$(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$ donde $S^{T}$ es la matriz traspuesta de dimensión (n-1)x(n-1) de la matriz $S$. Por tanto, vamos a trabajar con la matriz $(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$:
+	           
+	           \[ (\Lambda(t) - I_{n-1})S^{-1} = (\Lambda(t) - I_{n-1}) \begin{bmatrix}
+	           1 & -1 & 0 &... & 0 \\
+	           0 & 1 & -1 &...  & 0\\
+	           ... & ... & ...& ... & ... \\		
+	           0 & 0 & 0 & ... & 1\\
+	           \end{bmatrix}=\]
+	                
+	           \[= \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{2,1}-a_{3,1} & a_{2,2}-a_{3,2}-1&... &  a_{2,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,2}-a_{n,2}&... &  a_{n-1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix}\]\\
+	           
+	           Luego:	          
+	           \begin{center}
+	            	$  S^{T}(\Lambda(t) - I_{n-1})S^{-1} =$
+	           \end{center}
+	           \[ = \begin{bmatrix}
+	           1 & 0 & 0 &... & 0 \\
+	           1 & 1 & 0 &...  & 0\\
+	           ... & ... & ...& ... & ... \\		
+	           1 & 1 & 1 & ... & 1\\
+	           \end{bmatrix}
+	           \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{2,1}-a_{3,1} & a_{2,2}-a_{3,2}-1&... &  a_{2,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,2}-a_{n,2}&... &  a_{n-1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix}=\]\\
+	           
+	           \[ = \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{1,1}-a_{3,1}-1 & a_{1,2}-a_{3,2}&... &  a_{1,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{1,1}-a_{n,1}-1 & a_{1,2}-a_{n,2}&... &  a_{1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix} =
+	           \begin{bmatrix}
+	           A_{1} - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix}\]\\
+	           
+	           Donde los vectores $A_{i} $ $ 1 \le i \le n $ son las filas de la matriz $[M-I_{n}]_{0,n}$, es decir, tienen la siguiente forma:
+			   \begin{center}
+		           $ A_{1} = [a_{1,1}-1, a_{1,2},...,a_{1,n-1}] $\\
+	               $ A_{2} = [a_{2,1}, a_{2,2}-1,...,a_{2,n-1}] $\\
+	               ...\\
+	               $ A_{n} = [a_{n,1}, a_{n,2},...,a_{n,n-1}] $\\
+		       \end{center}
+	           
+	           Por tanto det $(\Lambda(t) - I_{n-1})$ = det$(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$ = 
+	           \[=det\begin{bmatrix}
+	           A_{1} - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix}=\]
+	           
+	           \[=det\begin{bmatrix}
+	           A_{1}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}+det\begin{bmatrix}
+	           -A_{2}  \\
+	           A_{1} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}+...+det\begin{bmatrix}
+	           -A_{2}  \\
+	           -A_{3} \\
+	           ... \\
+	           -A_{k}\\
+	           A_{1}\\
+	           -A_{k+2}
+	           ...\\	
+	           - A_{n} \\
+	           \end{bmatrix}+...+det\begin{bmatrix}
+	           -A_{2}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n-1} \\
+	           A_{1}\\
+	           \end{bmatrix}+det\begin{bmatrix}
+	           - A_{2}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}\]\\
+	           
+	           Para obtener el valor de estos determinantes vamos a hacer uso de la siguiente igualdad:
+	           \begin{center}
+	           	$ det[M-I_{n}]_{p,q} = (-1)^{p-q}t^{p-1}det[M-I_{n}]_{1,1}	 $ $1\le p,q \le n$  
+	           \end{center}         
+	           
+	           \[det\begin{bmatrix}
+	           -A_{2}  \\
+	           -A_{3} \\
+	           ... \\
+	           -A_{k}\\
+	           A_{1}\\
+	           -A_{k+2}
+	           ...\\	
+	           - A_{n} \\
+	           \end{bmatrix}=(-1)^{n-k-1}det[M-I_{n}]_{k+1,n} = t^{k}det[M-I_{n}]_{1,1}\]
+	           
+	           Por tanto, det $(\Lambda(t) - I_{n-1})$ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $.
+	 \end{proof}
+ \end{lem}
+ 
+ Es claro que $ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $, luego podemos establecer el siguiente corolario:\\
+ \begin{cor}
+ 		Se verifica la siguiente igualdad:
+ 		\begin{center}
+ 			$ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $
+ 		\end{center}
+ \end{cor}
+ 
+ \bigskip
+ Ya estamos en condiciones de demostrar el teorema \ref{teoalex}:
+ \begin{proof}
+ 	
+ \end{proof}
+
+//POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
 
 De este modo, el polinomio de Alexander de la trenza $\beta1 = +\sigma1$ se obtendría del siguiente modo:\\
 Por definición tenemos que  
