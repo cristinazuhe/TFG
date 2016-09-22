@@ -1344,7 +1344,6 @@ I_{i-1} &  &  & \\
  &  &  & I_{n-i-1} \\
 \end{bmatrix}\]
 donde $ I_{i} $ representa a la matriz $ ixi $ identidad y los espacios en blanco representan matrices nulas. LLamaremos a esta representación como \textbf{representación de Burau}.\\
-//POSIBLE DEMOSTRACION DE HOMOMORFISMO EN STUDY OF BRAIDS!!!!!!!\\
 
 \begin{pro}
 	En las mismas condiciones anteriores tenemos:\\
@@ -1356,11 +1355,12 @@ donde $ I_{i} $ representa a la matriz $ ixi $ identidad y los espacios en blanc
 	\end{bmatrix}\]
 \end{pro}
 
+\bigskip
 Veamos la matriz de Burau de la trenza $\beta \in B_{4}$ representada como $\beta = +\sigma2-\sigma3$.\\
 Matriz Burau de $ +\sigma2 $:
 	\[ \phi_{4} ( +\sigma (2)) = \begin{bmatrix}
 	1 & 0 & 0 & 0 \\
-	0 & 1-t & 1 & 0  \\
+	0 & 1-t & t & 0  \\
 	0 & 1 & 0 & 0 \\
 	0 & 0 & 0 & 1 \\
 	\end{bmatrix}\]
@@ -1567,7 +1567,7 @@ Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B
 	           - A_{3} \\
 	           ... \\	
 	           - A_{n} \\
-	           \end{bmatrix}\]\\
+	           \end{bmatrix}\]
 	           
 	           Para obtener el valor de estos determinantes vamos a hacer uso de la siguiente igualdad:
 	           \begin{center}
@@ -1590,7 +1590,7 @@ Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B
  \end{lem}
  
  Es claro que $ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $, luego podemos establecer el siguiente corolario:\\
- \begin{cor}
+ \begin{cor}\label{corlem}
  		Se verifica la siguiente igualdad:
  		\begin{center}
  			$ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $
@@ -1600,7 +1600,176 @@ Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B
  \bigskip
  Ya estamos en condiciones de demostrar el teorema \ref{teoalex}:
  \begin{proof}
- 	
+ 	Por el teorema \ref{teoMarkov} sabemos que es suficiente con probar las siguientes igualdades, donde $ \gamma, \beta \in B_{n} $ :
+ 	\begin{itemize}
+ 		\item Movimiento elemental M1: \\
+ 		$ det[\phi_{n}(+\sigma_{i}-\sigma_{i}) - I_{n}]_{1,1} = det[\phi_{n}(-\sigma_{i}+\sigma_{i}) - I_{n}]_{1,1}$, siendo $i<n$
+ 		\item Movimiento elemental M2: \\
+ 		$ det[\phi_{n}(\sigma_{i}\sigma_{i+1}\sigma_{i}) - I_{n}]_{1,1} = det[\phi_{n}(\sigma_{i+1}\sigma_{i}\sigma_{i+1}) - I_{n}]_{1,1}$, siendo $ i+1<n $.
+ 		\item Movimiento elemental M3:\\
+ 		$ det[\phi_{n}(\sigma_{i}\sigma_{j}) - I_{n}]_{1,1} = det[\phi_{n}(\sigma_{j}\sigma_{i}) - I_{n}]_{1,1}$, siendo $i<n, |i-j| > 1$
+ 		\item Verificando conjugación Mv1: $ det[\phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$ 
+ 		\item Verificando estabilización Mv2: $ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$   
+  	\end{itemize}
+	 Para demostrar las igualdades referentes a los movimientos elementales basta con probar las siguientes igualdades:
+	 \begin{itemize}
+	 	 \item Para el movimiento elemental M1: \\
+	 	 $ \phi_{n}(+\sigma_{i}-\sigma_{i}) = \phi_{n}(-\sigma_{i}+\sigma_{i})$, siendo $i<n$.\\
+	 	 Esta igualdad es clara pues por definición $-\sigma_{i}$ es la matriz inversa de $\sigma_{i}$  luego $ \phi_{n}(+\sigma_{i}-\sigma_{i}) = \phi_{n}(+\sigma_{i})\phi_n(-\sigma_{i}) = \phi_{n}(-\sigma_{i})\phi_n(+\sigma_{i}) = \phi_{n}(-\sigma_{i}+\sigma_{i})$
+	 	 
+	 	 \item Para el movimiento elemental M2: \\
+	  	 $ \phi_{n}(\sigma_{i}\sigma_{i+1}\sigma_{i}) = \phi_{n}(\sigma_{i+1}\sigma_{i}\sigma_{i+1})$, siendo $ i+1<n $.\\
+	  	 Sin pérdida de generalidad podemos suponer $i=1, n=3$ de modo que:
+	  	 	\[ \phi_{3}(\sigma_{1}\sigma_{2}\sigma_{1}) = 
+	  	 	\begin{bmatrix}
+	  	 	  1-t & t & 0  \\
+	  	 	  1 & 0 & 0 \\
+	  	 	  0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}=\]
+	  	 	
+	  	 	\[ = 
+	  	 	\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1-t & 0 & t \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix}=
+	  	 	\begin{bmatrix}
+	  	 	(1-t)^{2}+(1-t)t = 1-t & (1-t)t & t^{2}  \\
+	  	 	1-t & t & 0 \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix}=\]
+	  	 	
+	  	 	\[\begin{bmatrix}
+	  	 	1-t& (1-t)t & t^{2}  \\
+	  	 	1-t & t & 0 \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix} = 
+	  	 	\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & (1-t)t & t^{2}  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}= \]
+	  	 	\[\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}= \phi_{3}(\sigma_{2}\sigma_{1}\sigma_{2})\]
+	  	 	
+	  	 
+	 	 \item Para el movimiento elemental M3:\\
+	 	 $ \phi_{n}(\sigma_{i}\sigma_{j} = \phi_{n}(\sigma_{j}\sigma_{i})$, siendo $i<n, |i-j| > 1$\\
+	 	 Sin pérdida de generalidad podemos suponer $ i+1<j $ de modo que:
+	 	 \[ \phi_{n} (\sigma_{i}) \phi_{n} (\sigma_{j}) = \begin{bmatrix}
+	 	 I_{i-1} &  &  & \\
+	 	 & 1-t & t &  \\
+	 	 & 1 & 0 &  \\
+	 	 &  &  & I_{j-i-2} \\
+	 	 & & & & 1-t & t &  \\
+	 	 & & & & 1 & 0 &  \\
+	 	 & & & & & & I_{n-j-1}  \\
+	 	 \end{bmatrix}= \phi_{n} (\sigma_{j}) \phi_{n} (\sigma_{i})\]
+ 	 \end{itemize}
+ 	 
+ 	 Veamos ahora que se verifican las igualdades referentes a los movimientos de Markov.
+ 	 \begin{itemize}
+ 	 	\item 
+ 	 Veamos que se verifica la igualdad para el primer movimiento de Markov, es decir, veamos que se verifica $ det[\phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$:\\
+ 	 Consideramos las matrices $ S $ y $ S^{-1} $ que definimos anteriormente y definimos los productos de matrices     
+ 	 \[S^{-1}\phi_{n}(\gamma)S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma) & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right];
+ 	 S^{-1}\phi_{n}(\beta)S = \left[\begin{array}{r|r}
+ 	 \Lambda (\beta) & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right];
+ 	 S^{-1}\phi_{n}(\gamma^{-1})S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma)^{-1} & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right]\]\\
+ 	 
+ 	 De modo que  	 
+ 	 \[ S^{-1}\phi_{n}(\gamma\beta\gamma^{-1})S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma)\Lambda (\beta)\Lambda (\gamma)^{-1} & 0 \\ \hline	
+ 	 * ...................... * & 1\\
+ 	 \end{array}\right]\]\\
+	 Por el corolario \ref{corlem} sabemos que \\
+	 $ (1+t+..+ t^{n-1} ) det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = det[S^{-1}(\phi_{n}(\gamma\beta\gamma^{-1}))S-I_{n}]_{n,n}$\\
+	 
+	 Desarrollando este segundo término tenemos:
+	 \[det[S^{-1}(\phi_{n}(\gamma\beta\gamma^{-1}))S-I_{n}]_{n,n} = det[\Lambda (\gamma)\Lambda (\beta)\Lambda (\gamma)^{-1}-I_{n-1}] =\]
+	 \[
+	 det[\Lambda (\gamma)(\Lambda (\beta)-I_{n-1})\Lambda (\gamma)^{-1}] =
+	 det[\Lambda (\beta)-I_{n-1}] \]
+	 
+	 Aplicando de nuevo el corolario \ref{corlem} tenemos la siguiente igualdad\\
+	 $det[\Lambda (\beta)-I_{n-1}]  = (1+t+..+ t^{n-1} ) det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	 
+	 Luego obtenemos la igualdad:\\
+	  $ (1+t+..+ t^{n-1} ) det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = (1+t+..+ t^{n-1} ) det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	  
+	  y podemos concluir
+	  $ det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	  
+	  \item 
+	  Por último vamos a ver que se verifica la igualdad para el segundo movimiento de Markov, es decir, veamos que se verifica $ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$ .\\
+	  
+	  Llamemos $ M = \phi_{n}(\beta) $ de modo que 
+ 	 \[ \phi_{n+1}(\beta) = \left[\begin{array}{r|r}
+ 	  M & 0 \\ \hline	
+ 	  0 & 1\\
+ 	 \end{array}\right]\]\\	  
+ 	 
+ 	 Por otra parte sabemos que 
+ 	 \[ \phi_{n+1} (\sigma_{n}) = \begin{bmatrix}
+ 	 I_{n-1} &  &  \\
+ 	 & 1-t & t  \\
+ 	 & 1 & 0  \\
+ 	 \end{bmatrix}\]\\
+ 	 
+ 	 Por tanto, 
+ 	 \[ \phi_{n+1} (\beta\sigma_{n}) = \begin{bmatrix}
+ 	 & & & a_{1,n}(1-t) & a_{1,n}t\\
+ 	 & M_{n-1,n-1} & & ... & ...\\
+ 	 & & & a_{n-1,n}(1-t) & a_{n-1,n}t\\
+ 	 a_{n,1}& ... & a_{n,n-1} & a_{n,n}(1-t) & a_{n,n}t\\
+ 	 & & & 1 & 0\\
+ 	 \end{bmatrix}\]\\
+	  
+	 De este modo se tiene 
+ 	 \[det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{n,n} = det \left[\begin{array}{r|r}
+    	M_{n-1,n-1} - I_{n-1} & \\ \hline	
+ 	    & -1\\
+ 	 \end{array}\right]\] 
+ 	 \begin{center}
+ 	 	$ = -det[M_{n-1,n-1}-I_{n-1}] = -det[\phi_{n}(\beta)-I_{n}]_{n,n} $ 
+ 	 \end{center} 
+	  //ME FALTA EL ÚLTIMO DETALLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      \end{itemize}
  \end{proof}
 
 //POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
