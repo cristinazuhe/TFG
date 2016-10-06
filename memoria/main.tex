@@ -259,7 +259,6 @@ Nos permite deslizar una hebra del nudo de un lado de un cruce al otro lado del 
 
 \begin{teo} \textbf{Teorema de Reidemeister.} Sean P1 y P2 las proyecciones que representan a dos nudos K1 y K2, respectivamente. Entonces, K1 $\thicksim$ K2 si, y solo si, P1 y P2 están conectados por una secuencia finita de movimientos de Reidemeister e isotopías planas.
 \end{teo}
-//AUN PENDIENTE DEMOSTRACIÓN.\\
 
 Veamos un ejemplo en el que vemos la equivalencia de dos proyecciones, que en un primer momento podrían no parecernos equivalentes:
   \begin{figure}[h!]
@@ -1681,7 +1680,7 @@ Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B
 	  	 	
 	  	 
 	 	 \item Para el movimiento elemental M3:\\
-	 	 $ \phi_{n}(\sigma_{i}\sigma_{j} = \phi_{n}(\sigma_{j}\sigma_{i})$, siendo $i<n, |i-j| > 1$\\
+	 	 $ \phi_{n}(\sigma_{i}\sigma_{j}) = \phi_{n}(\sigma_{j}\sigma_{i})$, siendo $i<n, |i-j| > 1$\\
 	 	 Sin pérdida de generalidad podemos suponer $ i+1<j $ de modo que:
 	 	 \[ \phi_{n} (\sigma_{i}) \phi_{n} (\sigma_{j}) = \begin{bmatrix}
 	 	 I_{i-1} &  &  & \\
@@ -1768,11 +1767,14 @@ Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B
  	 \begin{center}
  	 	$ = -det[M_{n-1,n-1}-I_{n-1}] = -det[\phi_{n}(\beta)-I_{n}]_{n,n} $ 
  	 \end{center} 
-	  //ME FALTA EL ÚLTIMO DETALLE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 	 
+ 	 Obteniendo la igualdad
+ 	  	 \begin{center}
+ 	  	 	$ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta)-I_{n}]_{1,1} $ 
+ 	  	 \end{center}
       \end{itemize}
  \end{proof}
 
-//POSIBLE DEMOSTRACION EN A STUDY OF BRAIDS!!!\\
 
 De este modo, el polinomio de Alexander de la trenza $\beta1 = +\sigma1$ se obtendría del siguiente modo:\\
 Por definición tenemos que  
@@ -1790,7 +1792,7 @@ Finalmente tenemos
 -1 \\
 \end{bmatrix}) = -1\].
 
-Veamos ahora el polinomio de Alexander de la trenza más compleja, en concreto de la trenza $\beta2 = +\sigma2-\sigma3$. Ya sabemos que 
+Veamos ahora el polinomio de Alexander de una trenza más compleja, en concreto de la trenza $\beta2 = +\sigma2-\sigma3$. Ya sabemos que 
  \[ \phi_{4} (\beta2) = \begin{bmatrix}
  1 & 0 & 0 & 0 \\
  0 & 1-t & 0 & t \\
@@ -1899,7 +1901,7 @@ Podemos aplicarle una \textbf{reducción local} quedando la sub-palabra equivale
 \begin{center}
  $ v_{0} $ $-e \sigma(j+1) s_{1} \sigma(j) e \sigma(j+1)$ $ v_{1}...v_{m-1} $ $-e \sigma(j+1) s_{2} \sigma(j) e \sigma(j+1)$ $ v_{m} $
 \end{center}
-En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:\\
+En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:
 \begin{center}
 	$\pm \sigma(j) \rightarrow \epsilon$\\
 	$\pm \sigma(j+1) \rightarrow -e \sigma(j+1) \pm \sigma(j) e \sigma(j+1)$\\
@@ -1909,7 +1911,7 @@ En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:\\
 Podemos ver esta transformación en la figura \ref{h3}.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=12cm]{itrenzas/h14.png}
+	\includegraphics[width=13cm]{itrenzas/h14.png}
 	\caption{Reducción local.}
 	\label{h3} 
 \end{figure}

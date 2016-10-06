@@ -1,4 +1,9 @@
 function [braid_aux2,nuevo,simplificado2] = reduccion_base( indices_braid, minimo, pos1, pos2 )
+%REDUCCION_BASE
+%Aplico reducción local al handle indicado de la trenza
+%Entrada: cadena de enteros que representa los cruces de una trenza, valor
+%minimo y posiciones incial y final del handle.
+%Salida: trenza equivalente tras la reducción local. 
     braid_aux2 = [];
     vector = [];
     signo_anterior = sign(indices_braid(pos1));

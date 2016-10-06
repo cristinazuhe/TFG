@@ -1,4 +1,6 @@
 function [x,y,z] = giro_base() 
+%GIRO_BASE
+%Obtengo las coordenadas x, y ,z del giro base de una trenza. 
     alpha=0:0.1:3*pi;
     l=zeros([1 length(alpha)]);
 

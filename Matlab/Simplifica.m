@@ -1,4 +1,7 @@
 function [braid_aux, nueva_braid,encontrado] = Simplifica( indices_braid )
+%SIMPLIFICA
+%ENTRADA: cadena de enteros que representa los cruces de una trenza.
+%SALIDA: trenza libremente reducida de la trenza de entrada. 
      encontrado = false;
      nueva_braid =indices_braid;
      braid_aux = [];

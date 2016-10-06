@@ -1,4 +1,7 @@
 function dowker = DowkerNotation( indices_braid )
+%DOWKERNOTATION
+%Entrada: cadena de enteros que representa los cruces de una trenza.
+%Salida: notacion Dowker de la trenza.
     num_terms = length(indices_braid);
 
     %Este será mi vector auxiliar para establecer pares/impares de cada crossing

@@ -1,3 +1,7 @@
+% EQUIVALENCIA_BRAIDS.
+% Solicitamos dos trenzas al usuario
+% Vemos si las trenzas dadas son o no equivalentes. 
+% See also LEER_TRENZA, EXPONENTE, PERMUTACION, DEHORNOY.
 N_cortes = 20;
 Radio = 0.5;
 
@@ -15,7 +19,7 @@ if(vector_e1 ~= vector_e2)
     fin = true;
 end
 
-%A continuación vemos si las permutaciones son distintas
+%A continuacion vemos si las permutaciones son distintas
 if(~fin)
     vector_p1 = permutacion(indices_braid1);
     vector_p2 = permutacion(indices_braid2);
@@ -25,9 +29,9 @@ if(~fin)
     end
 end
 
-%Ya hemos probado invariantes básicos, vamos con el algoritmo de Dehornoy. 
+%Ya hemos probado invariantes bï¿½sicos, vamos con el algoritmo de Dehornoy.
 if(~fin)
-    %obtengo la trenza inversa de la segunda trenza. 
+    %obtengo la trenza inversa de la segunda trenza.
     inversa_braid2 = fliplr(-indices_braid2);
     indices_braid = [indices_braid1,inversa_braid2];
 
@@ -36,6 +40,6 @@ if(~fin)
     if(~es_trivial)
         disp('Las trenzas dadas no son equivalentes.');
     else
-        disp('Las trenzas dadas sí son equivalentes.');
+        disp('Las trenzas dadas sï¿½ son equivalentes.');
     end
 end

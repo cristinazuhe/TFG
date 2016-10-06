@@ -1,4 +1,6 @@
 function [ indices_braid ] = leer_trenza( )
+%LEER_TRENZA
+%Se solicita una trenza al usuario tipo +s2-s1.
     braid_cad_char = input('Inserte braid (ej: +s2-s1+s1) ','s');
     n_aux_cruces=1;
     indices_braid = zeros(1,length(braid_cad_char)/3);

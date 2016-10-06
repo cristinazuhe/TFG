@@ -1,25 +1,30 @@
-%Lectura de una trenza.
+% PROBANDOFUNCIONES.
+% Solicitamos una trenza al usuario
+% Obtenemos su Notacion de Dowker, Matriz de Burau, Polinomio de Alexander,
+% representacion 3D, representacion Dehornoy, exponente y permutacion.
+% See also LEER_TRENZA, DOWKERNOTATION, BURAU_MATRIX, ALEXANDER_POL, REPRESENTAR_BRAID2,
+% DEHORNOY, EXPONENTE, PERMUTACION.
 indices_braid = leer_trenza();
 
 %Dowker Notation
-%dowker = DowkerNotation(indices_braid); 
+%dowker = DowkerNotation(indices_braid);
 
-%Burau Matriz de la trenza. 
+%Burau Matriz de la trenza.
 % m_burau = burau_matrix(indices_braid);
 % disp('Burau Matrix:');
 % disp(m_burau);
 
-%Polinomio de Alexander de la trenza. 
+%Polinomio de Alexander de la trenza.
 % pol_Alexander = alexander_pol(indices_braid); %Hace internamente burau_matrix
 % disp('Alexander polynomial');
 % disp(pol_Alexander);
 
-% Representación 3D de la trenza.
+% Representacion 3D de la trenza.
 % N_cortes=20;
 % Radio=0.7;
 % representar_braid2(indices_braid, N_cortes, Radio);
 
-%Representación Dehornoy de la trenza.
+%Representacion Dehornoy de la trenza.
 % disp('Initial braid:'); disp(indices_braid);
 % [es_trivial, final_braid] = dehornoy(indices_braid, true, 20, 0.5);
 % disp('Reduced braid:'); disp(final_braid);

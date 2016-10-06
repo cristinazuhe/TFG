@@ -1,8 +1,9 @@
 function [matriz_x1, matriz_y1, matriz_z1, matriz_x2, matriz_y2, matriz_z2] = aniade_cilindros( indices_braid1, matriz_x1, matriz_y1, matriz_z1, matriz_x2, matriz_y2, matriz_z2 )
-        %Con esta funcion consigo que las matrices de las trenzas (que se
-        %diferencian en ceros) tenga la misma dimension y la transicion de
-        %una trenza a otra se haga suavemente de forma que la visualizacion
-        %sea lo mejor posible. 
+%ANIADE_CILINDROS       
+%Con esta funcion hago que las matrices de las trenzas (que se
+%diferencian en ceros) tenga la misma dimension y la transicion de
+%una trenza a otra se haga suavemente de forma que la visualizacion
+%sea lo mejor posible. 
         
         dim_actual_2 = size(matriz_x2,2);
     

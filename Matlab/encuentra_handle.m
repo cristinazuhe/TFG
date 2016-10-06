@@ -1,4 +1,9 @@
 function [pos1,pos2] = encuentra_handle( indices_braid, minimo )
+%ENCUENTRA_HANDLE
+%Encuentra minimo-handle de la trenza. 
+%Entrada: cadena de enteros que representa los cruces de una trenza y valor
+%minimo.
+%Salida: posiciones inicial y final del handle
     primero = true;
     encontrado = false;
     for i=1:length(indices_braid)

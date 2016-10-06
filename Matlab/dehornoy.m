@@ -1,4 +1,11 @@
 function [es_trivial, final_braid] = dehornoy( indices_braid, representar, N_cortes, Radio)
+%DEHORNOY 
+%Entrada: cadena de enteros que representa los cruces de una trenza, bool
+%para representar o no las transformaciones, número de cortes y radio del
+%tubo de la trenza. 
+%Salida: bool que indica si la trenza es trivial y reducción dehornoy de la
+%trenza. 
+%See also SIMPLIFICA, ENCUENTRA_HANDLE, REDUCCION_BASE, TRANSICION_BRAIDS
     matriz_braid{1} = indices_braid;
     encontrado = true;
     while(encontrado)

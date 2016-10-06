@@ -1,4 +1,7 @@
 function vector_p = permutacion( indices_braid )
+%PERMUTACION
+%Entrada: cadena de enteros que representa los cruces de una trenza
+%Salida: permutacion de la trenza. 
     maximo = max(abs(indices_braid))+1;
     vector_p = 1:maximo;
 

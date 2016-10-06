@@ -1,4 +1,11 @@
 function [ ] = transicion_braids( indices_braid1, indices_braid2, N_cortes, Radio )
+%TRANSION_BRAIDS
+%Representamos el movimiento 3D de las trenzas1 y trenzas2 de entrada. 
+%Entrada: cadena de enteros que representa los cruces de trenza1, cadena de
+%enteros que representa los cruces de trenza2, número de cortes y radio del
+%tubo de las trenzas.
+%See also PARAM_CADENAS, ANIADE_CILINDROS, TUBEP
+
     %Obtenemos las parametrizaciones de las cuerdas.
     [matriz_x1,matriz_y1,matriz_z1] = param_cadenas(indices_braid1);
     [matriz_x2,matriz_y2,matriz_z2] = param_cadenas(indices_braid2);

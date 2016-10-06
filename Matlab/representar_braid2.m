@@ -1,4 +1,9 @@
 function [ ] = representar_braid2( indices_braid, N_cortes, Radio )
+%REPRESENTAR_BRAID2
+%Entrada: cadena de enteros que representa los cruces de una trenza, numero
+%de cortes y radio de la trenza.
+%Salida: representacion 3D de la trenza. 
+%See also PARAM_CADENAS, TUBEP
     [matriz_x,matriz_y,matriz_z] = param_cadenas(indices_braid);
    
     for i=1:1:size(matriz_z,1)
