@@ -8,7 +8,6 @@ classdef braid<handle
     methods
         %Contructor
         function br = braid(braid_cad_char, n_cadenas)
-            if nargin == 0, return; end;
             if(isempty(braid_cad_char))  %Introducimos la trenza trivial como ''
                 br.indices_braid=[];
                 br.n = 0;
@@ -24,18 +23,8 @@ classdef braid<handle
                        n_aux_cruces = n_aux_cruces+1;
                     end
                 end
-                
-                switch nargin
-                case 2
-                    if(n_cadenas <= max(abs(br.indices_braid))) 
-                       br.n = max(abs(br.indices_braid)) +1;
-                    else
-                        br.n = n_cadenas;
-                    end
-                case 1
-                    br.n = max(abs(br.indices_braid)) +1;
-                end
-                        
+                if(n_cadenas > 
+                br.n = max(abs(br.indices_braid)) +1;
             end
         end
         
