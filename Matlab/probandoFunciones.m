@@ -20,19 +20,21 @@ indices_braid = leer_trenza();
 % disp(pol_Alexander);
 
 % Representacion 3D de la trenza.
-% N_cortes=20;
-% Radio=0.7;
-% representar_braid2(indices_braid, N_cortes, Radio);
+%  N_cortes=20;
+%  Radio=0.7;
+%  n=7;
+%  representar_braid2(indices_braid,n, N_cortes, Radio);
 
 %Representacion Dehornoy de la trenza.
-% disp('Initial braid:'); disp(indices_braid);
-% [es_trivial, final_braid] = dehornoy(indices_braid, true, 20, 0.5);
-% disp('Reduced braid:'); disp(final_braid);
+ disp('Initial braid:'); disp(indices_braid);
+ [es_trivial, final_braid] = dehornoy(indices_braid, 4, true, 20, 0.5);
+ disp('Reduced braid:'); disp(final_braid);
 
 %Exponente de la trenza.
 % valor_exp = exponente(indices_braid);
 % disp(strcat('El exponente es: ', num2str(valor_exp)));
 
 %Permutacion de la trenza
-% vector_p = permutacion(indices_braid);
-% disp(strcat('La permutacion de la trenza es: ', num2str(vector_p)));
+%  n=7;
+%  vector_p = permutacion(indices_braid,n);
+%  disp(strcat('La permutacion de la trenza es: ', num2str(vector_p)));

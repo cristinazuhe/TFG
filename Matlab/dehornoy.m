@@ -1,12 +1,25 @@
-function [es_trivial, final_braid] = dehornoy( indices_braid, representar, N_cortes, Radio)
+function [es_trivial, final_braid] = dehornoy( indices_braid,n, representar, N_cortes, Radio)
 %DEHORNOY 
-%Entrada: cadena de enteros que representa los cruces de una trenza, bool
+%Entrada: cadena de enteros que representa los cruces de una trenza, numero de cadenas de la trenza inicial, bool
 %para representar o no las transformaciones, número de cortes y radio del
 %tubo de la trenza. 
 %Salida: bool que indica si la trenza es trivial y reducción dehornoy de la
 %trenza. 
 %See also SIMPLIFICA, ENCUENTRA_HANDLE, REDUCCION_BASE, TRANSICION_BRAIDS
-    matriz_braid{1} = indices_braid;
+
+%TENGO QUE ARREGLAR ESTE TROZO QUE ESTA COMENTADO   
+    if(n <= max(abs(indices_braid))+1 )
+         matriz_braid{1} = indices_braid;
+    else %La trenza de partida tiene cadenas finales triviales
+        auxiliar = indices_braid;
+        for i=length(indices_braid)+1:1:n
+            auxiliar(i) = 0;
+        end
+        matriz_braid{1}=auxiliar;
+        matriz_braid{2}=indices_braid;
+    end
+    
+    n = max(abs(indices_braid));
     encontrado = true;
     while(encontrado)
 
@@ -65,16 +78,17 @@ function [es_trivial, final_braid] = dehornoy( indices_braid, representar, N_cor
     final_braid = matriz_braid{length(matriz_braid)};
     %voy a representar los movimientos de las trenzas
     es_trivial = isequal([],matriz_braid{length(matriz_braid)});
+    n=max(abs(indices_braid));
     if(representar)
         if(es_trivial)
            for j=1:1:length(matriz_braid)-2
                hold off;
-               transicion_braids(matriz_braid{j},matriz_braid{j+1},N_cortes,Radio);
+               transicion_braids(matriz_braid{j},matriz_braid{j+1},n, N_cortes,Radio);
            end
         else
            for j=1:1:length(matriz_braid)-1
                hold off;
-               transicion_braids(matriz_braid{j},matriz_braid{j+1},N_cortes,Radio);
+               transicion_braids(matriz_braid{j},matriz_braid{j+1},n, N_cortes,Radio);
            end
         end
     end
