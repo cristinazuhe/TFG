@@ -6,8 +6,9 @@ classdef braid<handle
     end
     
     methods
-        %Contructor
+        
         function br = braid(braid_cad_char, n_cadenas)
+            %Contructor de la clase braid. 
             if nargin == 0, return; end;
             if(isempty(braid_cad_char))  %Introducimos la trenza trivial como ''
                 br.indices_braid=[];
@@ -39,15 +40,50 @@ classdef braid<handle
             end
         end
         
-%         function obj = set.n(braid_cad_char, nuevos_indices)
-%         end
+        function set_n(braid_cad_char, nuevo_numero_cadenas)
+        %Establecer el numero de cadenas de una trenza dada.
+            disp('se hace');
+            if(max(abs(braid_cad_char.indices_braid)) < nuevo_numero_cadenas)
+                 braid_cad_char.n = nuevo_numero_cadenas;
+            else
+                disp('No es posible que dicha trenza tenga ese numero de cadenas');
+                disp('Se establecera al numero minimo de cadenas necesarias');
+                braid_cad_char.n = max(abs(braid_cad_char.indices_braid))+1;
+            end
+        end
         
-%         Trenza inversa de una trenza dada
-%         function binv = inv(brai)
-%             binv = braid('');
-%             binv.indices_braid=-fliplr(brai.indices_braid);
-%             binv.n = brai.n;
-%         end
+        function set_indices(braid_cad_char, nuevos_indices, nuevo_numero_cadenas)
+        %Establecer nuevos indices y numero de cadenas a la trenza dada. 
+            braid_cad_char.indices_braid = nuevos_indices;
+            switch nargin
+                case 3
+                    set_n(braid_cad_char, nuevo_numero_cadenas);
+                case 2
+                    set_n(braid_cad_char, max(abs(braid_cad_char.indices_braid))+1);
+            end
+        end
+        
+        function valor_n = get_n(braid_cad_char)
+        %Obtener el numero de cadenas de una trenza dada.
+            valor_n = braid_cad_char.n;
+        end
+        
+        function valor_indices = get_indices(braid_cad_char)
+        %Obtener los indices de una trenza dada. 
+            valor_indices = braid_cad_char.indices_braid;
+        end
+        
+        function asignar_trenza(braid1, braid2)
+        %Asigno los valores de la trenza braid2 a la trenza braid1. 
+            set_indices(braid1, braid2.indices_braid, braid2.n);
+        end
+        
+        function binv = inver(braid_cad_char)
+        %Trenza inversa de una trenza dada
+            binv = braid('');
+            binv.indices_braid=-fliplr(braid_cad_char.indices_braid);
+            binv.n = braid_cad_char.n;
+        end
         
         
     end
