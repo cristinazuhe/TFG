@@ -10,6 +10,9 @@ indices_braid1 = leer_trenza();
 disp('Segunda trenza a comparar:');
 indices_braid2 = leer_trenza();
 
+n1=5;
+n2=5;
+
 %Primero vemos si los exponentes son distintos.
 vector_e1 = exponente(indices_braid1);
 vector_e2 = exponente(indices_braid2);
@@ -21,8 +24,8 @@ end
 
 %A continuacion vemos si las permutaciones son distintas
 if(~fin)
-    vector_p1 = permutacion(indices_braid1);
-    vector_p2 = permutacion(indices_braid2);
+    vector_p1 = permutacion(indices_braid1,n1);
+    vector_p2 = permutacion(indices_braid2,n2);
     if(vector_p1 ~= vector_p2)
         disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
         fin = true;
@@ -34,12 +37,12 @@ if(~fin)
     %obtengo la trenza inversa de la segunda trenza.
     inversa_braid2 = fliplr(-indices_braid2);
     indices_braid = [indices_braid1,inversa_braid2];
-
-    [es_trivial, final_braid] =  dehornoy(indices_braid,true , N_cortes, Radio);
+    n = max(n1,n2);
+    [es_trivial, final_braid] =  dehornoy(indices_braid,n1,true , N_cortes, Radio);
 
     if(~es_trivial)
         disp('Las trenzas dadas no son equivalentes.');
     else
-        disp('Las trenzas dadas s� son equivalentes.');
+        disp('Las trenzas dadas si son equivalentes.');
     end
 end

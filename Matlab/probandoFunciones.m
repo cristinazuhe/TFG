@@ -10,12 +10,14 @@ indices_braid = leer_trenza();
 %dowker = DowkerNotation(indices_braid);
 
 %Burau Matriz de la trenza.
-% m_burau = burau_matrix(indices_braid);
+% n=5;
+% m_burau = burau_matrix(indices_braid,n);
 % disp('Burau Matrix:');
 % disp(m_burau);
 
 %Polinomio de Alexander de la trenza.
-% pol_Alexander = alexander_pol(indices_braid); %Hace internamente burau_matrix
+% n=5;
+% pol_Alexander = alexander_pol(indices_braid,n); %Hace internamente burau_matrix
 % disp('Alexander polynomial');
 % disp(pol_Alexander);
 
@@ -26,9 +28,10 @@ indices_braid = leer_trenza();
 %  representar_braid2(indices_braid,n, N_cortes, Radio);
 
 %Representacion Dehornoy de la trenza.
- disp('Initial braid:'); disp(indices_braid);
- [es_trivial, final_braid] = dehornoy(indices_braid, 4, true, 20, 0.5);
- disp('Reduced braid:'); disp(final_braid);
+%  disp('Initial braid:'); disp(indices_braid);
+%  n=7;
+%  [es_trivial, final_braid] = dehornoy(indices_braid, n, true, 20, 0.5);
+%  disp('Reduced braid:'); disp(final_braid);
 
 %Exponente de la trenza.
 % valor_exp = exponente(indices_braid);
@@ -38,3 +41,5 @@ indices_braid = leer_trenza();
 %  n=7;
 %  vector_p = permutacion(indices_braid,n);
 %  disp(strcat('La permutacion de la trenza es: ', num2str(vector_p)));
+
+

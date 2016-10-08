@@ -1,12 +1,11 @@
-function m_burau = burau_matrix( indices_braid )
+function m_burau = burau_matrix( indices_braid, n )
 %BURAU_MATRIX
-%Entrada: cadena de enteros que representa los cruces de una trenza.
+%Entrada: cadena de enteros que representa los cruces de una trenza y numero de cadenas de la trenza.
 %Salida: matriz Burau de la trenza. 
     n_cross = length(indices_braid);
-    n_trenzas =  max(abs(indices_braid)) +1;
 
     indice = abs(indices_braid(1));
-    m_burau = sym(eye(n_trenzas));
+    m_burau = sym(eye(n));
     t = sym('t');
     if(indices_braid(1) > 0 )
         m_burau(indice,indice) = 1-t;
@@ -22,7 +21,7 @@ function m_burau = burau_matrix( indices_braid )
 
     for i=2:n_cross
         indice = abs(indices_braid(i));
-        aux = sym(eye(n_trenzas));
+        aux = sym(eye(n));
         if(indices_braid(i) > 0 )
             aux(indice,indice) = 1-t;
             aux(indice,indice+1) = t;
