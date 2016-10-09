@@ -16,7 +16,7 @@
 %   pote - Obtener la trenza potencia de una trenza dada.
 %   exp - Exponente de una trenza dada.
 %   perm - Permutacion de una trenza dada.
-%   pura - Comprobar si una trenza dada es pura.
+%
 
 classdef trenza<handle
 
