@@ -14,9 +14,13 @@
 %   length - Obtener numero de cruces de una trenza dada. 
 %   inver - Obtener trenza inversa de una trenza dada.
 %   pote - Obtener la trenza potencia de una trenza dada.
+%   producto - Obtener la trenza producto de dos trenzas dadas. 
 %   exp - Exponente de una trenza dada.
 %   perm - Permutacion de una trenza dada.
 %   pura - Comprobar si una trenza dada es pura.
+%   representar_trenza - Representacion 3D de la trenza.
+%   dehornoy - Reduccion Dehornoy de una trenza dada. 
+%   equivalentes - Comprobar si dos trenzas dadas son o no.
 
 classdef trenza<handle
 
@@ -137,6 +141,18 @@ classdef trenza<handle
             tpot.n_cadenas = br.n_cadenas;
         end
         
+        function tpro = producto(br1,br2)
+        %PRODUCTO Obtener la trenza producto de dos trenzas dadas.  
+        %Entrada: trenza1 y trenza2. 
+            tpro = trenza('');
+            tpro.indices_trenza = [br1.indices_trenza,br2.indices_trenza];
+            tpro.n_cadenas = max(br1.n_cadenas, br2.n_cadenas);
+            if(br1.n_cadenas ~= br2.n_cadenas)
+                disp('Dichas trenzas tienen distintos numero de cadenas.');
+                disp('Se define la trenza producto con el mayor numero de cadenas de las dos.');
+            end
+        end
+        
         function valor_exp = exp(br)
         %EXPONENTE Exponente de una trenza dada. 
         %Entrada: trenza.
@@ -171,7 +187,209 @@ classdef trenza<handle
         %Entrada: trenza.
              bool_pura = all(perm(br) == 1:br.n_cadenas);
         end
-    end
+        
+        
+        function representar_trenza(br, N_cortes, Radio)
+        %REPRESENTAR_TRENZA Representacion 3D de la trenza.
+        %Entrada: trenza, numero de cortes y radio de la trenza.
+        %See also PARAM_CADENAS, TUBEP
+            [matriz_x,matriz_y,matriz_z] = param_cadenas(br.indices_trenza,br.n_cadenas);
+
+            for i=1:1:size(matriz_z,1)
+                plot3(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:));
+                tubep(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:),N_cortes,Radio);
+                hold on;
+            end 
+        end
+         
+        function [es_trivial, trenza_final] = dehornoy( br, N_cortes, Radio, representar)
+        %DEHORNOY Reduccion Dehornoy de una trenza dada. 
+        %Entrada: trenza, numero de cortes, radio de la trenza y bool
+        %para representar o no las transformaciones.
+        %Salida: bool que indica si la trenza es trivial y reducción dehornoy de la
+        %trenza. 
+        %See also SIMPLIFICA, ENCUENTRA_HANDLE, REDUCCION_BASE, TRANSICION_BRAIDS
+
+            indices_braid = br.indices_trenza;
+            n=br.n_cadenas;
+            if(n>max(abs(indices_braid))+1) %La trenza de partida tiene cadenas finales triviales
+                [matriz_x1,matriz_y1,matriz_z1] = param_cadenas(indices_braid,n);
+                [matriz_x2,matriz_y2,matriz_z2] = param_cadenas(indices_braid,max(abs(indices_braid)));
+                for t=0:0.1:1
+                    for j=1:1:size(matriz_x1,1)
+                        if(j>size(matriz_x2,1))
+                            vector_x(1:size(matriz_x1,2))= matriz_x1(j,size(matriz_x1,2)) ;
+                            vector_y(1:size(matriz_x1,2))= matriz_y1(j,size(matriz_y1,2)) ;
+                            vector_z(1:size(matriz_x1,2))= matriz_z1(j,size(matriz_z1,2)) ;
+
+                            x_tran = (1-t)*matriz_x1(j,:) + (t)*vector_x;
+                            y_tran = (1-t)*matriz_y1(j,:) + (t)*vector_y;
+                            z_tran = (1-t)*matriz_z1(j,:) + (t)*vector_z;
+                        else
+                            x_tran = (1-t)*matriz_x1(j,:) + (t)*matriz_x1(j,:);
+                            y_tran = (1-t)*matriz_y1(j,:) + (t)*matriz_y1(j,:);
+                            z_tran = (1-t)*matriz_z1(j,:) + (t)*matriz_z1(j,:);
+                        end
+                        if j==1
+                            aux1 = plot3(x_tran, y_tran, z_tran);
+                            aux2 = tubep(x_tran,y_tran,z_tran,N_cortes,Radio);
+                            hold on;
+                        else
+                            aux1 = vertcat(aux1, plot3(x_tran, y_tran, z_tran));
+                            aux2 = vertcat(aux2, tubep(x_tran,y_tran,z_tran,N_cortes,Radio));
+                        end
+                    end
+
+                    pause(0.1);
+                    if(t~=1)
+                        delete(aux1);delete(aux2);
+                        clear aux1;clear aux2;
+                    end
+                end
+            end
+
+            matriz_braid{1}=indices_braid;
+            n = max(abs(indices_braid));
+            encontrado = true;
+            while(encontrado)
+
+                    %elimino movimiento de tipo1 como pueda -+sigma +-sigma
+                    [braid_aux, indices_braid,simplificado] = Simplifica(indices_braid);
+                    if(simplificado)
+                         matriz_braid{length(matriz_braid)+1} = braid_aux;
+                    end
+
+                    if(~simplificado)
+                            %obtengo el indice de la trenza de menor valor 
+                            minimo = min(abs(indices_braid));
+                            %busco posiciones de handle con dicho indice
+                            [pos1,pos2] = encuentra_handle(indices_braid, minimo);
+                            if(pos1==0 && pos2==0)
+                                encontrado = false;
+                            else
+                                encontrado = true;
+                            end
+
+                            %Busco subhandle en el handle en cuestion para evitar que se produzcan
+                            %ciclos infinitos. 
+                            haysubhandle = true;
+                            if(encontrado)
+                                while(haysubhandle)
+                                   [pos1_sig, pos2_sig] = encuentra_handle(indices_braid(pos1+1:pos2-1),minimo+1);
+                                   if(pos1_sig~=0 && pos2_sig~=0)
+                                       pos2 = pos2_sig + pos1; pos1 = pos1_sig + pos1; minimo = minimo+1;
+                                       haysubhandle = true;
+                                   else
+                                       haysubhandle = false;
+                                   end
+                                end
+                                %Ahora ya tengo marcado con pos1 y pos2 el subvector con el que voy a hacer
+                                %la reduccion de dehornoy.E sta reduccion es para cuando ya tengo el handle en condiciones para
+                                %reducir. 
+                                %en braid_aux tengo una trenza auxiliar con ceros
+                                %para facilitar la visualizacion
+                                [braid_aux2,indices_braid, simplificado2] = reduccion_base(indices_braid, minimo, pos1, pos2); 
+                                if(simplificado2)
+                                         matriz_braid{length(matriz_braid)+1} = braid_aux2;
+                                end
+                            end  
+                            clearvars pos1_sig pos2_sig haysubhandle pos1 pos2 minimo
+
+                    end
+
+                    %Creo una matriz con la secuencia de trenzas generada.
+                    if(~isequal(indices_braid,matriz_braid{length(matriz_braid)}))
+                         matriz_braid{length(matriz_braid)+1} = indices_braid;
+                    end
+
+            end
+
+
+            trenza_final = matriz_braid{length(matriz_braid)};
+            %voy a representar los movimientos de las trenzas
+            es_trivial = isequal([],matriz_braid{length(matriz_braid)});
+            n=max(abs(indices_braid));
+            if(representar)
+                if(es_trivial)
+                   for j=1:1:length(matriz_braid)-2
+                       hold off;
+                       transicion_braids(matriz_braid{j},matriz_braid{j+1},n, N_cortes,Radio);
+                   end
+                else
+                   for j=1:1:length(matriz_braid)-1
+                       hold off;
+                       transicion_braids(matriz_braid{j},matriz_braid{j+1},n, N_cortes,Radio);
+                   end
+                end
+            end
+  
+
+        end
+
+        function equivalentes(br1,br2)
+        % EQUIVALENCIA_BRAIDS. Comprobar si dos trenzas dadas son o no.
+        % equivalentes. 
+        % Entrada: trenza1 y trenza2. 
+        % See also EXPONENTE, PERMUTACION, DEHORNOY.
+            
+            %Primero vemos si los exponentes son distintos.
+            vector_e1 = exp(br1);
+            vector_e2 = exp(br2);
+            fin = false;
+            if(vector_e1 ~= vector_e2)
+                disp('Las trenzas dadas no son equivalentes pues sus exponentes son distintos.');
+                fin = true;
+            end
+            
+            %A continuacion vemos si las permutaciones son distintas
+            if(~fin)
+                vector_p1 = perm(br1);
+                vector_p2 = perm(br2);
+                
+                if(length(vector_p1)>length(vector_p2))
+                    vector_aux = vector_p1(1:length(vector_p2));
+                    if(~isequal(vector_aux,vector_p2))
+                        disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        fin = true;
+                    end
+                elseif(length(vector_p2)>length(vector_p1))
+                    vector_aux = vector_p2(1:length(vector_p1));
+                    if(~isequal(vector_aux,vector_p1))
+                        disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        fin = true;
+                    end
+                elseif(~isequal(vector_p1,vector_p2))
+                    disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                    fin = true;
+                end
+            end
+            
+            %Ya hemos probado invariantes basicos, vamos con el algoritmo de Dehornoy. 
+            if(~fin)
+                %obtengo la trenza inversa de la segunda trenza.
+                trenza_aux = producto(br1,inver(br2));
+                disp(trenza_aux);
+                [es_trivial, final_braid] =  dehornoy(trenza_aux, 20, 0.5, false);
+                
+                if(~es_trivial)
+                    disp('Las trenzas dadas no son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
+                else
+                    disp('Las trenzas dadas si son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
+                    respuesta = input('¿Desea ver la transformacion de las trenzas? (s/n)','s');
+                    if(respuesta == 's')
+                        disp('Las trenzas dadas br1 y br2 son equivalentes, luego la trenza compuesta br1inv(br2) es equivalente a la trenza trivial.');
+                        res_n_cortes = input('Indique el numero que cortes que tendrá la trenza compuesta:','s');
+                        N_cortes = str2double(res_n_cortes);
+                        res_radio = input('Indique el radio que tendrá la trenza compuesta:','s');
+                        Radio = str2double(res_radio);
+                        dehornoy(trenza_aux, N_cortes, Radio, true);
+                    end
+                end
+            end     
+        end
+        
+    end % fin metodos
+    
     
 end
 

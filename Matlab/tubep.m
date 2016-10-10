@@ -1,7 +1,7 @@
 function traceplot = tubep(x,y,z,N,R)
 %TUBEP
 %Representación de un tubo con centro la funcion de entrada. 
-%Entrada: coordenadas x, y, z de una función, número de cortes y Radio del
+%Entrada: coordenadas x, y, z de una función, número de cortes y radio del
 %tubo. 
 
     %Convert all vectors to column
