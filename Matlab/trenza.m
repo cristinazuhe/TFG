@@ -34,17 +34,16 @@ classdef trenza<handle
         %trenza Contructor de la clase trenza. 
         %Entrada: cadena que representa a una trenza y numero de
         %cadenas de la trenza.
-        %Ejemplo: trenza([+s1-s2],4)
+        %Ejemplo: trenza('+s1-s2',4) o trenza([1 -2],4)
         %trenza('cadena_representativa'): crea una trenza con los cruces
         %de la cadena_representativa y el numero de cadenas minimo
         %necesario.
         %trenza('cadena_representativa',n_cadenas): crea una trenza con
         %los cruces de la cadena_representatita y n_cadenas. 
             if nargin == 0, return; end;
-            if(isempty(trenza_cad_char))  %Introducimos la trenza trivial como ''
-                br.indices_trenza=[];
-                br.n_cadenas = 0;
-            else                         %para trenzas no triviales 
+            if(~ischar(trenza_cad_char))  %Introducimos la trenza a partir de los indices entre []
+                br.indices_trenza=trenza_cad_char;
+            else                         %Introducimos la trenza a partir de una secuencia '+-si'
                 n_aux_cruces=1;
                 br.indices_trenza = zeros(1,length(trenza_cad_char)/3);
                 for i=1:length(trenza_cad_char)
@@ -56,19 +55,19 @@ classdef trenza<handle
                        n_aux_cruces = n_aux_cruces+1;
                     end
                 end
-                
-                switch nargin
-                case 2
-                    if(n_cad <= max(abs(br.indices_trenza))) 
-                       br.n_cadenas = max(abs(br.indices_trenza)) +1;
-                    else
-                        br.n_cadenas = n_cad;
-                    end
-                case 1
-                    br.n_cadenas = max(abs(br.indices_trenza)) +1;
-                end
-                        
             end
+
+            switch nargin
+            case 2
+                if(n_cad <= max(abs(br.indices_trenza))) 
+                   br.n_cadenas = max(abs(br.indices_trenza)) +1;
+                else
+                    br.n_cadenas = n_cad;
+                end
+            case 1
+                br.n_cadenas = max(abs(br.indices_trenza)) +1;
+            end
+                
         end
         
         function set_n(br, nuevo_numero_cadenas)
