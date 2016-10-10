@@ -29,7 +29,29 @@ classdef trenza_cerrada<trenza
         function valor = get.n_enlaces(br_c)   %trenza.n_enlaces Obtengo el numero de enlaces de trenza
             valor = br_c.private_n_enlaces;
         end
-    end
+        
+        function pol_Alexander = Alexander(br_c)
+        %ALEXANDER_POL Polinomio de Alexander de una trenza dada. 
+        %ENTRADA: trenza.
+        %See also TRENZA.MATRIZ_BURAU
+            m_burau = matriz_burau(br_c);
+            N = m_burau - sym(eye(length(m_burau)));
+            N_11 = N(2:length(N),2:length(N));
+            pol_Alexander = det(N_11); 
+        end
+        
+        %si dos trenzas no son equivalentes, puede que sus cierres sí lo
+        %sean. Necesito hacer algun metodo para esto. Sobreescribir metodo
+        %equivalente.
+        
+        %Ademas la representacion va a ser distinta. Sobreescribir metodo
+        %representar. 
+        
+        %Calcular el numero de enlaces de una trenza cerrada.
+        
+        %Poner la notacion de Dowker.
+        
+    end %fin metodos
     
 end
 

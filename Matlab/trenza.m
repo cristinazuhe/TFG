@@ -21,6 +21,7 @@
 %   representar_trenza - Representacion 3D de la trenza.
 %   dehornoy - Reduccion Dehornoy de una trenza dada. 
 %   equivalentes - Comprobar si dos trenzas dadas son o no.
+%   matriz_burau - Matriz Burau de una trenza dada. 
 
 classdef trenza<handle
 
@@ -385,6 +386,47 @@ classdef trenza<handle
                     end
                 end
             end     
+        end
+        
+        function m_burau = matriz_burau(br)
+        %BURAU_MATRIX Matriz Burau de una trenza dada. 
+        %Entrada: trenza.
+            indices_braid = get_indices(br);
+            n = get_n(br);
+            n_cross = length(indices_braid);
+
+            indice = abs(indices_braid(1));
+            m_burau = sym(eye(n));
+            t = sym('t');
+            if(indices_braid(1) > 0 )
+                m_burau(indice,indice) = 1-t;
+                m_burau(indice,indice+1) = t;
+                m_burau(indice+1,indice) = 1;
+                m_burau(indice+1,indice+1) = 0;
+            else
+                m_burau(indice,indice) = 0;
+                m_burau(indice,indice+1) = 1;
+                m_burau(indice+1,indice) = t^-1;
+                m_burau(indice+1,indice+1) = 1-t^-1;
+            end
+
+            for i=2:n_cross
+                indice = abs(indices_braid(i));
+                aux = sym(eye(n));
+                if(indices_braid(i) > 0 )
+                    aux(indice,indice) = 1-t;
+                    aux(indice,indice+1) = t;
+                    aux(indice+1,indice) = 1;
+                    aux(indice+1,indice+1) = 0;
+                else
+                    aux(indice,indice) = 0;
+                    aux(indice,indice+1) = 1;
+                    aux(indice+1,indice) = t^-1;
+                    aux(indice+1,indice+1) = 1-t^-1;
+                end
+                m_burau = m_burau*aux;
+            end
+            m_burau = simplify(m_burau);
         end
         
     end % fin metodos
