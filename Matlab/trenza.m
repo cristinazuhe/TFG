@@ -21,6 +21,8 @@
 %   representar_trenza - Representacion 3D de la trenza.
 %   dehornoy - Reduccion Dehornoy de una trenza dada. 
 %   equivalentes - Comprobar si dos trenzas dadas son o no.
+%   es_trivial - Comprobar si una trenza dada es o no equivalente a la
+        %trenza trivial.
 %   matriz_burau - Matriz Burau de una trenza dada. 
 
 classdef trenza<handle
@@ -326,7 +328,7 @@ classdef trenza<handle
 
         end
 
-        function equivalentes(br1,br2)
+        function fin = equivalentes(br1,br2)
         % EQUIVALENCIA_BRAIDS. Comprobar si dos trenzas dadas son o no.
         % equivalentes. 
         % Entrada: trenza1 y trenza2. 
@@ -337,7 +339,11 @@ classdef trenza<handle
             vector_e2 = exp(br2);
             fin = false;
             if(vector_e1 ~= vector_e2)
-                disp('Las trenzas dadas no son equivalentes pues sus exponentes son distintos.');
+                if(isempty(get_n(br2)))
+                    disp('La trenza dada no es equivalente a la trenza trivial. Su exponente no es nulo.');
+                else
+                    disp('Las trenzas dadas no son equivalentes pues sus exponentes son distintos.');
+                end
                 fin = true;
             end
             
@@ -349,17 +355,29 @@ classdef trenza<handle
                 if(length(vector_p1)>length(vector_p2))
                     vector_aux = vector_p1(1:length(vector_p2));
                     if(~isequal(vector_aux,vector_p2))
-                        disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        if(isempty(get_n(br2)))
+                            disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
+                        else
+                            disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        end
                         fin = true;
                     end
                 elseif(length(vector_p2)>length(vector_p1))
                     vector_aux = vector_p2(1:length(vector_p1));
                     if(~isequal(vector_aux,vector_p1))
-                        disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        if(isempty(get_n(br2)))
+                            disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
+                        else
+                            disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        end
                         fin = true;
                     end
                 elseif(~isequal(vector_p1,vector_p2))
-                    disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        if(isempty(get_n(br2)))
+                            disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
+                        else
+                            disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
+                        end
                     fin = true;
                 end
             end
@@ -372,20 +390,37 @@ classdef trenza<handle
                 [es_trivial, final_braid] =  dehornoy(trenza_aux, 20, 0.5, false);
                 
                 if(~es_trivial)
-                    disp('Las trenzas dadas no son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
+                   if(isempty(get_n(br2)))
+                      disp('La trenza dada no es equivalente a la trenza trivial. Hemos aplicado el algoritmo de Dehornoy.');
+                   else
+                      disp('Las trenzas dadas no son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
+                   end
                 else
-                    disp('Las trenzas dadas si son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
-                    respuesta = input('¿Desea ver la transformacion de las trenzas? (s/n)','s');
-                    if(respuesta == 's')
-                        disp('Las trenzas dadas br1 y br2 son equivalentes, luego la trenza compuesta br1inv(br2) es equivalente a la trenza trivial.');
-                        res_n_cortes = input('Indique el numero que cortes que tendrá la trenza compuesta:','s');
-                        N_cortes = str2double(res_n_cortes);
-                        res_radio = input('Indique el radio que tendrá la trenza compuesta:','s');
-                        Radio = str2double(res_radio);
-                        dehornoy(trenza_aux, N_cortes, Radio, true);
-                    end
+                   if(isempty(get_n(br2)))
+                        disp('La trenza dada si es equivalente a la trenza trivial. Hemos aplicado el algoritmo de Dehornoy.');
+                   else
+                        disp('Las trenzas dadas si son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
+                        respuesta = input('¿Desea ver la transformacion de las trenzas? (s/n)','s');
+                        if(respuesta == 's')
+                            disp('Las trenzas dadas br1 y br2 son equivalentes, luego la trenza compuesta br1inv(br2) es equivalente a la trenza trivial.');
+                            res_n_cortes = input('Indique el numero que cortes que tendrá la trenza compuesta:','s');
+                            N_cortes = str2double(res_n_cortes);
+                            res_radio = input('Indique el radio que tendrá la trenza compuesta:','s');
+                            Radio = str2double(res_radio);
+                            dehornoy(trenza_aux, N_cortes, Radio, true);
+                        end
+                   end
                 end
-            end     
+            end 
+            fin = ~fin;
+        end
+        
+        function es_trivial(br)
+        %ES_TRIVIAL Comprobar si una trenza dada es o no equivalente a la
+        %trenza trivial.
+        %Entrada: trenza. 
+            br_2 = trenza();
+            equivalentes(br,br_2);
         end
         
         function m_burau = matriz_burau(br)

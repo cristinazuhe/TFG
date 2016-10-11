@@ -82,10 +82,14 @@ classdef trenza_cerrada<trenza
         %ALEXANDER_POL Polinomio de Alexander de una trenza dada. 
         %ENTRADA: trenza cerrada.
         %See also TRENZA.MATRIZ_BURAU
-            m_burau = matriz_burau(br_c);
-            N = m_burau - sym(eye(length(m_burau)));
-            N_11 = N(2:length(N),2:length(N));
-            pol_Alexander = det(N_11); 
+            if(isempty(br_c.get_indices))
+                pol_Alexander = 0;
+            else
+                m_burau = matriz_burau(br_c);
+                N = m_burau - sym(eye(length(m_burau)));
+                N_11 = N(2:length(N),2:length(N));
+                pol_Alexander = det(N_11); 
+            end
         end
         
         function not_Dowker = Dowker(br_c)
@@ -158,7 +162,22 @@ classdef trenza_cerrada<trenza
 
         end
 
-
+        function equivalentes(br1,br2)
+            fin = equivalentes@trenza(br1,br2);
+            if(fin==1)
+                disp('Por tanto, las trenzas cerradas tambien son equivalentes');
+            else
+                disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
+                %Vamos a usar el polinomio de Alexander para ver si las
+                %trenzas NO son equivalentes. 
+                %Si los polinomios de Alexander son dintintos, las trenzas
+                %cerradas seran distintas. 
+                %HACERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+                pol1 = Alexander(br1);
+                pol2 = Alexander(br2);
+                disp(pol1);disp(pol2);
+            end
+        end
         
         %si dos trenzas no son equivalentes, puede que sus cierres sí lo
         %sean. Necesito hacer algun metodo para esto. Sobreescribir metodo
