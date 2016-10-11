@@ -32,9 +32,9 @@ classdef trenza<handle
     
     methods    
         function br = trenza(trenza_cad_char, n_cad)
-        %trenza Contructor de la clase trenza. 
+        %TRENZA Contructor de la clase trenza. 
         %Entrada: cadena que representa a una trenza y numero de
-        %cadenas de la trenza.
+        %cadenas de la trenza (este parametro se puede omitir).
         %Ejemplo: trenza('+s1-s2',4) o trenza([1 -2],4)
         %trenza('cadena_representativa'): crea una trenza con los cruces
         %de la cadena_representativa y el numero de cadenas minimo
