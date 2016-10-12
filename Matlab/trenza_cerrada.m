@@ -3,9 +3,10 @@
 %    n_enlaces - % numero de enlaces de una trenza cerrada.
 % trenza_cerrada Methods:
 %   trenza_cerrada - Contructor de la clase trenza_cerrada.
-%   get.n_enlaces - Obtener el numero de enlaces de una trenza dada.
 %   Alexander - Polinomio de Alexander de una trenza dada.
 %   Dowker - Notacion Dowker de una trenza cerrada dada.
+%   equivalentes - Comprobar si dos trenzas cerradas dadas son o no equivalentes. 
+%   es_trivial - Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
 
 classdef trenza_cerrada<trenza
     
@@ -162,26 +163,64 @@ classdef trenza_cerrada<trenza
 
         end
 
-        function equivalentes(br1,br2)
-            fin = equivalentes@trenza(br1,br2);
-            if(fin==1)
-                disp('Por tanto, las trenzas cerradas tambien son equivalentes');
+        function equivalentes(br1,br2)     
+        % EQUIVALENTES. Comprobar si dos trenzas cerradas dadas son o no
+        % equivalentes. 
+        % Entrada: trenza cerrada 1 y trenza cerrada 2. 
+        % See also TRENZA.EQUIVALENTES.
+            equi = equivalentes@trenza(br1,br2);
+            if(equi==1)
+                if(isempty(get_n(br2)))
+                    disp('Por tanto, la trenza cerrada es equivalente a la trivial.');
+                else
+                    disp('Por tanto, las trenzas cerradas tambien son equivalentes');
+                end
             else
-                disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
+                if(isempty(get_n(br2)))
+                    disp('Pero es posible que la trenza cerrada si sea equivalente a la trivial.');
+                else
+                    disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
+                end
                 %Vamos a usar el polinomio de Alexander para ver si las
                 %trenzas NO son equivalentes. 
                 %Si los polinomios de Alexander son dintintos, las trenzas
                 %cerradas seran distintas. 
-                %HACERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
                 pol1 = Alexander(br1);
                 pol2 = Alexander(br2);
-                disp(pol1);disp(pol2);
+                nu1=0;nu2=0;
+                if(pol1~=0)
+                   nu1=numden(pol1);
+                end
+                if(pol2~=0)
+                   nu2=numden(pol2);
+                end
+                disp('Comparando los polinomios de Alexander obtenemos que...');
+                
+                 if(nu1==nu2 || nu1==(-1)*nu2)
+                     if(isempty(get_n(br2)))
+                        disp('No sabemos si la trenza cerrada dadas es equivalente a la trivial.');
+                     else
+                        disp('No sabemos si las trenzas cerradas dadas son equivalentes. ');
+                     end
+                 else
+                     if(isempty(get_n(br2)))
+                        disp('La trenza cerrada no es equivalente a la trivial.');
+                     else
+                        disp('Las trenzas cerradas no son equivalentes.');
+                     end
+                 end
             end
         end
         
-        %si dos trenzas no son equivalentes, puede que sus cierres sí lo
-        %sean. Necesito hacer algun metodo para esto. Sobreescribir metodo
-        %equivalente.
+        function es_trivial(br_c)
+        %ES_TRIVIAL Comprobar si una trenza cerrada dada es o no equivalente a la
+        %trenza trivial.
+        %Entrada: trenza cerrada. 
+            br_2 = trenza_cerrada(trenza());
+            equivalentes(br_c,br_2);
+        end
+        
+        
         
         %Ademas la representacion va a ser distinta. Sobreescribir metodo
         %representar. 
