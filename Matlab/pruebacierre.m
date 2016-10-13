@@ -1,27 +1,43 @@
-alpha=0:0.01:pi;
-l=zeros([1 length(alpha)]);
-    
-x=-cos(alpha)-1;y=l;z=-sin(alpha);
 
-plot3(x,y,z);
-tubep(x,y,z,20,0.5);
-hold on;
-
-
-plot3(3*x+2,3*y,2*z);
-tubep(3*x+2,3*y,2*z,20,0.5);
-
-
-plot3(5*x+4,5*y,3*z);
-tubep(5*x+4,5*y,3*z,20,0.5);
-a=trenza([2]);
+a=trenza([4 -2 -6 +2]);
 representar_trenza(a);
 
-[x_cil,y_cil,z_cil] = cilindro_base();
-plot3(x_cil-2,y_cil,z_cil);
-tubep(x_cil-2,y_cil,z_cil,20,0.5);
+%Cierres superiores
+alpha=0:0.01:pi;
+l=zeros([1 length(alpha)]);
+x_cierre=cos(alpha)-1;y_cierre=l;z_cierre=sin(alpha);
+contador=1; distancia=0;
+for i=1:1:a.get_n
+    x_cierre_n = contador*x_cierre + distancia; y_cierre_n = contador*y_cierre; z_cierre_n = i*z_cierre +3*pi;
+    plot3(x_cierre_n,y_cierre_n,z_cierre_n);
+    tubep(x_cierre_n,y_cierre_n,z_cierre_n,20,0.5);
+    contador=contador+2;
+    distancia=distancia+2;
+end
 
-
-x1 = x_cil-4; y1 = y_cil; z1 = z_cil;  
-plot3(x1,y1,z1);
-tubep(x1,y1,z1,20,0.5);
+%Cilindros de los cierres
+ [x_cil,y_cil,z_cil] = cilindro_base();
+ distancia = 2;
+ limite = length(a.get_indices)-1;
+ for i=1:1:a.get_n
+     x_cil_n = x_cil - distancia;
+     for j=0:1:limite
+        plot3(x_cil_n,y_cil,z_cil-j*(3*pi));
+        tubep(x_cil_n,y_cil,z_cil-j*(3*pi),20,0.5);
+     end
+     distancia = distancia+2;
+ end
+ 
+%Cierres inferiores
+alpha=0:0.01:pi;
+l=zeros([1 length(alpha)]);
+x_cierre=-cos(alpha)-1;y_cierre=l;z_cierre=-sin(alpha);
+contador=1; distancia=0;
+for i=1:1:a.get_n
+    x_cierre_n = contador*x_cierre + distancia; y_cierre_n = contador*y_cierre; z_cierre_n = i*z_cierre -limite*(3*pi);
+    plot3(x_cierre_n,y_cierre_n,z_cierre_n);
+    tubep(x_cierre_n,y_cierre_n,z_cierre_n,20,0.5);
+    contador=contador+2;
+    distancia=distancia+2;
+end
+  

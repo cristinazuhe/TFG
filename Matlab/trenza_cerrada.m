@@ -7,6 +7,8 @@
 %   Dowker - Notacion Dowker de una trenza cerrada dada.
 %   equivalentes - Comprobar si dos trenzas cerradas dadas son o no equivalentes. 
 %   es_trivial - Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
+%   representar_trenza - Representacion 3D de la trenza cerrada.
+%   asignar_trenza - Asigno los valores de la trenza cerrada 2 a la trenza cerrada 1. 
 
 classdef trenza_cerrada<trenza
     
@@ -220,10 +222,68 @@ classdef trenza_cerrada<trenza
             equivalentes(br_c,br_2);
         end
         
+        function representar_trenza(br_c, N_cortes, Radio)
+        %REPRESENTAR_TRENZA Representacion 3D de la trenza cerrada.
+        %Entrada: trenza cerrada, numero de cortes y radio de la trenza.
+        %See also TRENZA.REPRESENTAR_TRENZA     
+            if(nargin == 1)
+                N_cortes = 20;
+                Radio=0.5;
+            end
+            representar_trenza@trenza(br_c,N_cortes, Radio);
+
+            %Cierres superiores
+            alpha=0:0.01:pi;
+            l=zeros([1 length(alpha)]);
+            x_cierre=cos(alpha)-1;y_cierre=l;z_cierre=sin(alpha);
+            contador=1; distancia=0;
+            for i=1:1:br_c.get_n
+                x_cierre_n = contador*x_cierre + distancia; y_cierre_n = contador*y_cierre; z_cierre_n = i*z_cierre +3*pi;
+                plot3(x_cierre_n,y_cierre_n,z_cierre_n);
+                tubep(x_cierre_n,y_cierre_n,z_cierre_n,N_cortes,Radio);
+                contador=contador+2;
+                distancia=distancia+2;
+            end
+            
+            %Cilindros de los cierres
+             [x_cil,y_cil,z_cil] = cilindro_base();
+             distancia = 2;
+             limite = length(br_c)-1;
+             for i=1:1:br_c.get_n
+                 x_cil_n = x_cil - distancia;
+                 for j=0:1:limite
+                    plot3(x_cil_n,y_cil,z_cil-j*(3*pi));
+                    tubep(x_cil_n,y_cil,z_cil-j*(3*pi),N_cortes,Radio);
+                 end
+                 distancia = distancia+2;
+             end
+
+            %Cierres inferiores
+            alpha=0:0.01:pi;
+            l=zeros([1 length(alpha)]);
+            x_cierre=-cos(alpha)-1;y_cierre=l;z_cierre=-sin(alpha);
+            contador=1; distancia=0;
+            for i=1:1:br_c.get_n
+                x_cierre_n = contador*x_cierre + distancia; y_cierre_n = contador*y_cierre; z_cierre_n = i*z_cierre -limite*(3*pi);
+                plot3(x_cierre_n,y_cierre_n,z_cierre_n);
+                tubep(x_cierre_n,y_cierre_n,z_cierre_n,N_cortes,Radio);
+                contador=contador+2;
+                distancia=distancia+2;
+            end
+  
+        end
+        
+        function asignar_trenza(br1_c, br2_c)  
+        %ASIGNAR_TRENZA Asigno los valores de la trenza cerrada 2 a la trenza cerrada 1. 
+        %Entrada: trenza cerrada 1 y trenza cerrada 2.
+        %See also TRENZA.ASIGNAR_TRENZA.
+            asignar_trenza@trenza(br1_c, br2_c);
+            br1_c.private_n_enlaces = br2_c.n_enlaces;
+            
+        end
         
         
-        %Ademas la representacion va a ser distinta. Sobreescribir metodo
-        %representar. ¿DEHORNOY?
+        %Sobreescribir metodo representar. ¿DEHORNOY?
         
         
     end %fin metodos
