@@ -223,7 +223,7 @@ classdef trenza_cerrada<trenza
         
         
         %Ademas la representacion va a ser distinta. Sobreescribir metodo
-        %representar. 
+        %representar. ¿DEHORNOY?
         
         
     end %fin metodos

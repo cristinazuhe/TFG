@@ -194,6 +194,10 @@ classdef trenza<handle
         %REPRESENTAR_TRENZA Representacion 3D de la trenza.
         %Entrada: trenza, numero de cortes y radio de la trenza.
         %See also PARAM_CADENAS, TUBEP
+            if(nargin == 1)
+                N_cortes = 20;
+                Radio=0.5;
+            end
             [matriz_x,matriz_y,matriz_z] = param_cadenas(br.indices_trenza,br.n_cadenas);
 
             for i=1:1:size(matriz_z,1)
@@ -210,7 +214,11 @@ classdef trenza<handle
         %Salida: bool que indica si la trenza es trivial y reducción dehornoy de la
         %trenza. 
         %See also SIMPLIFICA, ENCUENTRA_HANDLE, REDUCCION_BASE, TRANSICION_BRAIDS
-
+            if(nargin == 1)
+                N_cortes = 20;
+                Radio=0.5;
+                representar=true;
+            end
             indices_braid = br.indices_trenza;
             n=br.n_cadenas;
             if(n>max(abs(indices_braid))+1) %La trenza de partida tiene cadenas finales triviales
