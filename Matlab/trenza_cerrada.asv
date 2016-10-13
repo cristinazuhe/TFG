@@ -2,17 +2,14 @@
 % trenza_cerrada Properties:
 %    n_enlaces - % numero de enlaces de una trenza cerrada.
 % trenza_cerrada Methods:
+%   trenza_cerrada - Contructor de la clase trenza_cerrada.
 %   Alexander - Polinomio de Alexander de una trenza dada.
-%   asignar_trenza - Asigno los valores de la trenza cerrada 2 a la trenza cerrada 1. 
 %   Dowker - Notacion Dowker de una trenza cerrada dada.
 %   equivalentes - Comprobar si dos trenzas cerradas dadas son o no equivalentes. 
 %   es_trivial - Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
-%   inver - Obtener trenza inversa de una trenza cerrda dada.
-%   pote - Obtener la trenza cerrada potencia de una trenza cerrada dada.
-%   producto - Obtener la trenza cerrada producto de dos trenzas cerradas dadas.  
 %   representar_trenza - Representacion 3D de la trenza cerrada.
-%   set_indices - Establece nuevos indices y numero de cadenas a la trenza cerrada dada. 
-%   trenza_cerrada - Contructor de la clase trenza_cerrada.
+%   asignar_trenza - Asigno los valores de la trenza cerrada 2 a la trenza cerrada 1. 
+%   inver - Obtener trenza inversa de una trenza cerrda dada.
 
 classdef trenza_cerrada<trenza
     
@@ -267,7 +264,7 @@ classdef trenza_cerrada<trenza
         
         function set_indices(br_c, nuevos_indices, nuevo_numero_cadenas)
         %SET_INDICES Establece nuevos indices y numero de cadenas a la trenza cerrada dada. 
-        %Entrada: trenza cerrada, nuevos cruces de la trenza cerrada y numero de cadenas que le establecemos. 
+        %Entrada: trenza cerrada, nuevos cruces de la trenza cerrada y numero de cadenas que establecemos a dicha trenza. 
             if (nargin==2)
                 set_indices@trenza(br_c, nuevos_indices);
             elseif (nargin==3)
@@ -276,27 +273,12 @@ classdef trenza_cerrada<trenza
                 br_c.private_n_enlaces = calcular_enlaces(br_c);            
             
         end
-                
-        function tpot = pote(br_c,exp)
-        %POTE Obtener la trenza cerrada potencia de una trenza cerrada dada. 
-        %Entrada: trenza cerrada y exponente de la potencia.
-            aux = pote@trenza(br_c,exp);
-            tpot = trenza_cerrada(aux);
-            tpot.private_n_enlaces = calcular_enlaces(tpot);
-        end
-        
-        function tpro = producto(br1_c,br2_c)  
-        %PRODUCTO Obtener la trenza cerrada producto de dos trenzas cerradas dadas.  
-        %Entrada: trenza cerrada 1 y trenza cerrada 2. 
-            aux = producto@trenza(br1_c,br2_c);
-            tpro = trenza_cerrada(aux);
-            tpro.private_n_enlaces = calcular_enlaces(tpro);
-        end
         
         
-        %Sobreescribir... ¿DEHORNOY?
+        %Sobreescribir metodo representar. ¿DEHORNOY?
         
-    end 
+        
+    end %fin metodos
     
     methods (Access=private)
          function numero_enlaces = calcular_enlaces(br_c)

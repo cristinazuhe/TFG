@@ -22,6 +22,7 @@
 %   representar_trenza - Representacion 3D de la trenza.
 %   set_indices - Establece nuevos indices y numero de cadenas a la trenza dada.
 %   set_n - Establece el numero de cadenas de una trenza dada.
+
 %   trenza - Contructor de la clase trenza.
 
 classdef trenza<handle
