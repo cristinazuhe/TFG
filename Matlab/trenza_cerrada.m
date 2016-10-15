@@ -1,6 +1,6 @@
 %TRENZA_CERRADA clase trenza_cerrada, hereda de clase trenza.
 % trenza_cerrada Properties:
-%    n_enlaces - % numero de enlaces de una trenza cerrada.
+%    n_enlaces - numero de enlaces de una trenza cerrada.
 % trenza_cerrada Methods:
 %   Alexander - Polinomio de Alexander de una trenza dada.
 %   asignar_trenza - Asigno los valores de la trenza cerrada 2 a la trenza cerrada 1. 
@@ -61,7 +61,7 @@ classdef trenza_cerrada<trenza
         %ENTRADA: trenza cerrada.
         %See also TRENZA.MATRIZ_BURAU
             if(isempty(br_c.get_indices))
-                pol_Alexander = 0;
+                pol_Alexander = sym('1');
             else
                 m_burau = matriz_burau(br_c);
                 N = m_burau - sym(eye(length(m_burau)));
@@ -140,11 +140,25 @@ classdef trenza_cerrada<trenza
 
         end
 
-        function equivalentes(br1,br2)     
+        function equi = equivalentes(br1,br2)     
         % EQUIVALENTES. Comprobar si dos trenzas cerradas dadas son o no
         % equivalentes. 
         % Entrada: trenza cerrada 1 y trenza cerrada 2. 
         % See also TRENZA.EQUIVALENTES.
+            if(br1.n_enlaces ~= br2.n_enlaces)
+                equi=0;
+                if(isempty(get_n(br2)))
+                    disp('La trenza cerrada no es equivalente a la trivial porque tiene mas de un enlace.');
+                else
+                    disp('Las trenzas cerradas no son equivalentes porque tienen distinto numero de enlaces.');
+                end
+                return;
+            end
+            if(length(br1.get_indices) == 1)
+                equi=0;
+                 disp('La trenza cerrada es equivalente a la trivial porque tiene un sólo cruce.');
+                 return;
+            end
             equi = equivalentes@trenza(br1,br2);
             if(equi==1)
                 if(isempty(get_n(br2)))
@@ -174,12 +188,14 @@ classdef trenza_cerrada<trenza
                 disp('Comparando los polinomios de Alexander obtenemos que...');
                 
                  if(nu1==nu2 || nu1==(-1)*nu2)
+                     equi=2;
                      if(isempty(get_n(br2)))
-                        disp('No sabemos si la trenza cerrada dadas es equivalente a la trivial.');
+                        disp('No sabemos si la trenza cerrada dada es equivalente a la trivial.');
                      else
                         disp('No sabemos si las trenzas cerradas dadas son equivalentes. ');
                      end
                  else
+                     equi=0;
                      if(isempty(get_n(br2)))
                         disp('La trenza cerrada no es equivalente a la trivial.');
                      else
@@ -189,12 +205,12 @@ classdef trenza_cerrada<trenza
             end
         end
         
-        function es_trivial(br_c)
+        function equi = es_trivial(br_c)
         %ES_TRIVIAL Comprobar si una trenza cerrada dada es o no equivalente a la
         %trenza trivial.
         %Entrada: trenza cerrada. 
             br_2 = trenza_cerrada(trenza());
-            equivalentes(br_c,br_2);
+            equi = equivalentes(br_c,br_2);
         end
         
         function representar_trenza(br_c, N_cortes, Radio)
@@ -298,7 +314,7 @@ classdef trenza_cerrada<trenza
         
     end 
     
-    methods (Access=private)
+    methods (Access=private)  %tengo que arreglar este metodo 
          function numero_enlaces = calcular_enlaces(br_c)
         %Obtengo el numero de enlaces de la trenza.
             indice = 1; auxiliar = 1;numero_enlaces = 0;seguir = true;
@@ -308,6 +324,7 @@ classdef trenza_cerrada<trenza
                     if(seguir)
                        en_vector = v_perm(indice);
                        if(sum(find(auxiliar==en_vector))~=0)
+                           disp('entro');
                           seguir = false;
                           numero_enlaces = numero_enlaces+1;
                        else
@@ -329,7 +346,11 @@ classdef trenza_cerrada<trenza
                    end
                 end
             end
-             end
+            
+            if(isempty(br_c.get_indices))
+                numero_enlaces = 1;
+            end
+         end
     end
     
 end
