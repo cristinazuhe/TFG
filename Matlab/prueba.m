@@ -1,65 +1,57 @@
-a=trenza_cerrada([-2 2 2 1 -2 2]);
-equi = es_trivial(a);
+% clear all;
+% a=trenza_cerrada([2 3]);
+% explicacion=true;
+% equi = es_trivial(a,explicacion);
+% contador=0;
+% 
+% while(contador<5 && equi==2)
+%     disp(contador);
+%     if(contador~=0)
+%         asignar_trenza(a,a3);
+%     end
+%     Veo si es trivial o no la trenza tras aplicar dehornoy
+%     if(equi==2)
+%       [e, final] = dehornoy(a,20,0.5,false);
+%       a1 = trenza_cerrada(final);
+%       equi = es_trivial(a1,explicacion);
+%     end
+% 
+%     Aplico movimiento 2 de Markov tantas veces como sea posible
+%     if(equi==2)
+%        disp('Hago MV2');
+%         [a2,equi] = MV2(a1);
+%         equi = es_trivial(a2);
+%     end
+%     Aplico movimiento 1 de Markov. 
+%     if(equi==2)
+%        disp('Hago MV1');
+%         [a3,equi]=MV1(a2);
+%         equi = es_trivial(a3);
+%     end
+%     contador=contador+1;
+% end
+% 
+% if(equi==0)
+%     disp('No es trivial');
+% elseif(equi==1)
+%     disp('Si es trivial');
+% else
+%     disp('NO SE SABE');
+% end
+% 
+% 
+n=2;
+v = -n:1:n;
+centro = (length(v)+1)/2;
+v(centro)=[];
+n_v = repmat(v,1,length(v)/2);
+C = nchoosek(n_v,(length(v)/2));
+todas = unique(C,'rows');
 
-%Veo si es trivial o no la trenza tras aplicar dehornoy
-if(equi==2)
-  [e, final] = dehornoy(a,20,0.5,false);
-  a2 = trenza_cerrada(final);
-  equi = es_trivial(a2);
+%las meto en el archivo
+fi = fopen('ejemplos.txt', 'wt');
+for i=1:1:length(todas)
+    fprintf(fi,'%i ',todas(i,:));
+    fprintf(fi,'\n');
 end
-
-
-%Aplico movimiento 2 de Markov tantas veces como sea posible
-repite = true;
-vale_d=true; vale_i=true;
-if(equi==2)
-    while(repite)
-        if(length(a2.get_indices)==1)
-            equi = 1;
-            return;
-        end
-        m=max(abs(a2.get_indices));
-        aux = a2.get_indices;
-        apariciones = find(abs(aux)==m);
-        if(length(apariciones) == 1)
-            if(apariciones == 1 || apariciones == length(a2)) %El mayor cruce esta al principio o al final. Borro directo
-                aux(apariciones)=[];
-            else
-                for i=1:1:apariciones
-                    if(vale_i)
-                        if(aux(i) == m-1)
-                            vale_i = false;
-                        end
-                    end
-                end
-                if(vale_i)
-                    aux(apariciones)=[];
-                    vale_d=false;
-                else   
-                    for i=apariciones:1:length(aux)
-                        if(vale_d)
-                            if(aux(i) == m-1)
-                                vale_d = false;
-                            end
-                        end
-                    end
-                    if(vale_d)
-                        aux(apariciones)=[];
-                    end
-                end
-
-            end
-        end
-
-        a3 = trenza_cerrada(aux);
-        equi = es_trivial(a3);
-        if(length(a3.get_indices) ~= length(a2.get_indices))
-            repite=true;
-            a2=a3;
-        else
-            repite=false;
-        end
-    end
-end
-
 

@@ -140,37 +140,48 @@ classdef trenza_cerrada<trenza
 
         end
 
-        function equi = equivalentes(br1,br2)     
+        function equi = equivalentes(br1,br2, explicacion)     
         % EQUIVALENTES. Comprobar si dos trenzas cerradas dadas son o no
         % equivalentes. 
         % Entrada: trenza cerrada 1 y trenza cerrada 2. 
         % See also TRENZA.EQUIVALENTES.
+            if(nargin==2)
+                explicacion=false;
+            end
             if(br1.n_enlaces ~= br2.n_enlaces)
                 equi=0;
-                if(isempty(get_n(br2)))
-                    disp('La trenza cerrada no es equivalente a la trivial porque tiene mas de un enlace.');
-                else
-                    disp('Las trenzas cerradas no son equivalentes porque tienen distinto numero de enlaces.');
+                if(explicacion)
+                    if(isempty(get_n(br2)))
+                        disp('La trenza cerrada no es equivalente a la trivial porque tiene mas de un enlace.');
+                    else
+                        disp('Las trenzas cerradas no son equivalentes porque tienen distinto numero de enlaces.');
+                    end
                 end
                 return;
             end
             if(length(br1.get_indices) == 1)
-                equi=0;
-                 disp('La trenza cerrada es equivalente a la trivial porque tiene un sólo cruce.');
-                 return;
+                equi=1;
+                if(explicacion)
+                   disp('La trenza cerrada es equivalente a la trivial porque tiene un sólo cruce.');
+                end
+                return;
             end
-            equi = equivalentes@trenza(br1,br2);
+            equi = equivalentes@trenza(br1,br2,explicacion);
             if(equi==1)
-                if(isempty(get_n(br2)))
-                    disp('Por tanto, la trenza cerrada es equivalente a la trivial.');
-                else
-                    disp('Por tanto, las trenzas cerradas tambien son equivalentes');
+                if(explicacion)
+                    if(isempty(get_n(br2)))
+                        disp('Por tanto, la trenza cerrada es equivalente a la trivial.');
+                    else
+                        disp('Por tanto, las trenzas cerradas tambien son equivalentes');
+                    end
                 end
             else
-                if(isempty(get_n(br2)))
-                    disp('Pero es posible que la trenza cerrada si sea equivalente a la trivial.');
-                else
-                    disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
+                if(explicacion)
+                    if(isempty(get_n(br2)))
+                        disp('Pero es posible que la trenza cerrada si sea equivalente a la trivial.');
+                    else
+                        disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
+                    end
                 end
                 %Vamos a usar el polinomio de Alexander para ver si las
                 %trenzas NO son equivalentes. 
@@ -185,32 +196,41 @@ classdef trenza_cerrada<trenza
                 if(pol2~=0)
                    nu2=numden(pol2);
                 end
-                disp('Comparando los polinomios de Alexander obtenemos que...');
-                
+                if(explicacion)
+                    disp('Comparando los polinomios de Alexander obtenemos que...');
+                end
+
                  if(nu1==nu2 || nu1==(-1)*nu2)
                      equi=2;
-                     if(isempty(get_n(br2)))
-                        disp('No sabemos si la trenza cerrada dada es equivalente a la trivial.');
-                     else
-                        disp('No sabemos si las trenzas cerradas dadas son equivalentes. ');
+                     if(explicacion)
+                         if(isempty(get_n(br2)))
+                            disp('No sabemos si la trenza cerrada dada es equivalente a la trivial.');
+                         else
+                            disp('No sabemos si las trenzas cerradas dadas son equivalentes. ');
+                         end
                      end
                  else
                      equi=0;
-                     if(isempty(get_n(br2)))
-                        disp('La trenza cerrada no es equivalente a la trivial.');
-                     else
-                        disp('Las trenzas cerradas no son equivalentes.');
+                     if(explicacion)
+                         if(isempty(get_n(br2)))
+                            disp('La trenza cerrada no es equivalente a la trivial.');
+                         else
+                            disp('Las trenzas cerradas no son equivalentes.');
+                         end
                      end
                  end
             end
         end
         
-        function equi = es_trivial(br_c)
+        function equi = es_trivial(br_c, explicacion)
         %ES_TRIVIAL Comprobar si una trenza cerrada dada es o no equivalente a la
         %trenza trivial.
-        %Entrada: trenza cerrada. 
+        %Entrada: trenza cerrada.     
+            if(nargin==1)
+                explicacion=false;
+            end
             br_2 = trenza_cerrada(trenza());
-            equi = equivalentes(br_c,br_2);
+            equi = equivalentes(br_c,br_2, explicacion);
         end
         
         function representar_trenza(br_c, N_cortes, Radio)
