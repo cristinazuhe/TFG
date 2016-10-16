@@ -319,12 +319,16 @@ classdef trenza_cerrada<trenza
         %Obtengo el numero de enlaces de la trenza.
             indice = 1; auxiliar = 1;numero_enlaces = 0;seguir = true;
             v_perm = perm(br_c);
+            id=1:1:length(v_perm);
+            if(id==v_perm)
+                numero_enlaces = br_c.n_cadenas;
+                return;
+            end
             while(indice < length(v_perm))
                 for i=1:1:length(v_perm)
                     if(seguir)
                        en_vector = v_perm(indice);
                        if(sum(find(auxiliar==en_vector))~=0)
-                           disp('entro');
                           seguir = false;
                           numero_enlaces = numero_enlaces+1;
                        else
