@@ -1,0 +1,17 @@
+-2 -2: No es trivial.
+ -2 -1: Si es trivial.
+ -2  1: Si es trivial.
+ -2  2: No es trivial.
+ -1 -2: Si es trivial.
+ -1 -1: No es trivial.
+ -1  1: No es trivial.
+ -1  2: Si es trivial.
+ 1 -2: Si es trivial.
+ 1 -1: No es trivial.
+ 1  1: No es trivial.
+ 1  2: Si es trivial.
+ 2 -2: No es trivial.
+ 2 -1: Si es trivial.
+ 2  1: Si es trivial.
+ 2  2: No es trivial.
+ Numero de trenzas cerradas sin clasificar:0 

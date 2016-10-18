@@ -7,7 +7,7 @@
 %   Dowker - Notacion Dowker de una trenza cerrada dada.
 %   equivalentes - Comprobar si dos trenzas cerradas dadas son o no equivalentes. 
 %   es_trivial - Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
-%   inver - Obtener trenza inversa de una trenza cerrda dada.
+%   inver - Obtener trenza inversa de una trenza cerrada dada.
 %   pote - Obtener la trenza cerrada potencia de una trenza cerrada dada.
 %   producto - Obtener la trenza cerrada producto de dos trenzas cerradas dadas.  
 %   representar_trenza - Representacion 3D de la trenza cerrada.
@@ -329,8 +329,7 @@ classdef trenza_cerrada<trenza
             tpro.private_n_enlaces = calcular_enlaces(tpro);
         end
         
-        
-        %Sobreescribir... ¿DEHORNOY?
+       
         
     end 
     

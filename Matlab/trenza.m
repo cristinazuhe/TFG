@@ -402,12 +402,10 @@ classdef trenza<handle
                     equi=false;
                 end
             end
-            
             %Ya hemos probado invariantes basicos, vamos con el algoritmo de Dehornoy. 
             if(~fin)
                 %obtengo la trenza inversa de la segunda trenza.
                 trenza_aux = producto(br1,inver(br2));
-                disp(trenza_aux);
                 [es_trivial, final_braid] =  dehornoy(trenza_aux, 20, 0.5, false);
                 
                 if(~es_trivial)
