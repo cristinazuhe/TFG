@@ -41,7 +41,7 @@ function [ a3, equi ] = MV2( br_c )
             end
         end
         a3 = trenza_cerrada(aux);
-        equi = es_trivial(a3);
+        equi = es_trivial_base(a3);
         if(length(a3.get_indices) ~= length(a2.get_indices))
             repite=true;
             a2=a3;

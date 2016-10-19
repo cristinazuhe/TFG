@@ -11,6 +11,7 @@ function [ a2,equi ] = MV1( br_c, completo )
         aux(l)=[];aux(1)=[];   
         if(length(aux)==1)
            equi = 1;
+           a2= trenza_cerrada(aux);
            return;
         end
     else
