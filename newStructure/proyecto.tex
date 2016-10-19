@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{book}
+
+\usepackage{mystyle}
+\usepackage{cite}
+\usepackage{chapterbib}
+
+\begin{document}
+	\newtheorem{teo}{Teorema}[section]
+	\newtheorem{pro}{Proposición}[section]
+	\newtheorem{lem}{Lema}[section]
+	\newtheorem{cor}{Corolario}[section]
+\selectlanguage{spanish}
+\pagenumbering{gobble}
+\include{tex/portada}
+
+\frontmatter
+\pagenumbering{gobble}
+\include{tex/prefacio}
+
+\tableofcontents
+\listoffigures
+
+\mainmatter
+\chapter{Introducción}
+\label{ch0}
+\input{tex/introduccion}
+
+\chapter{Teoría de nudos.}
+\label{ch1}
+\input{tex/nudos/nudos}
+\input{tex/nudos/historia}
+\input{tex/nudos/composicion}
+\input{tex/nudos/equivalencia}
+\input{tex/nudos/invariantes}
+\input{tex/nudos/notacion}
+\input{tex/nudos/conexionteo}
+
+\chapter{Teoría de trenzas.}
+\label{ch2}
+\input{tex/trenzas/trenzas}
+
+\end{document}

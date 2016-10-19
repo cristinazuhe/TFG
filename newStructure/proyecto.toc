@@ -1,0 +1,32 @@
+\gdef \the@ipfilectr {@-1}
+\select@language {USenglish}
+\select@language {spanish}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
+\select@language {USenglish}
+\select@language {spanish}
+\gdef \the@ipfilectr {}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivos}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Teor\IeC {\'\i }a de nudos.}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Motivaci\IeC {\'o}n y primeras definiciones.}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Sobre su historia y aplicaciones.}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Componiendo nudos.}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Equivalencia de nudos: movimientos de Reidemeister.}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Algunos invariantes.}{12}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}N\IeC {\'u}mero de componentes:}{12}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Crossing number:}{13}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Tricolorabilidad:}{13}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Unknotting number:}{17}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Polinomio de Alexander:}{18}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Notaci\IeC {\'o}n de nudos.}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Notaci\IeC {\'o}n de Dowker:}{21}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Notaci\IeC {\'o}n de Gauss:}{22}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Notaci\IeC {\'o}n de Conway:}{23}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.7}Conexi\IeC {\'o}n con distintas teor\IeC {\'\i }as.}{26}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Teor\IeC {\'\i }a de grafos:}{26}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Teor\IeC {\'\i }a de trenzas:}{27}{subsection.2.7.2}
+\contentsline {chapter}{\numberline {3}Teor\IeC {\'\i }a de trenzas.}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Nudos y trenzas.}{29}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Notaci\IeC {\'o}n de trenzas:}{31}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Equivalencia de trenzas:}{31}{subsection.3.1.2}

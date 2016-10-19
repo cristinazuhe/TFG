@@ -1,0 +1,104 @@
+\gdef \the@ipfilectr {@-1}
+\select@language {USenglish}
+\select@language {spanish}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
+\select@language {USenglish}
+\select@language {spanish}
+\gdef \the@ipfilectr {}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces De izquierda a derecha: nudo trivial, nudo tr\IeC {\'e}bol, nudo de ocho.\relax }}{3}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Proyecciones del nudo trivial, nudo tr\IeC {\'e}bol, nudo de ocho.\relax }}{4}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Nudo tr\IeC {\'e}bol y nudo de ocho.\relax }}{6}{figure.caption.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {J}}}{6}{figure.caption.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {K}}}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Composici\IeC {\'o}n de nudo tr\IeC {\'e}bol y nudo de ocho.\relax }}{6}{figure.caption.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Haciendo la composici\IeC {\'o}n}}}{6}{figure.caption.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {J\#K}}}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Nudo tr\IeC {\'e}bol y nudo trivial.\relax }}{6}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {J}}}{6}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {K}}}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Composici\IeC {\'o}n de nudo tr\IeC {\'e}bol y nudo trivial.\relax }}{7}{figure.caption.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Haciendo la composici\IeC {\'o}n}}}{7}{figure.caption.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {J\#K}}}{7}{figure.caption.9}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Composici\IeC {\'o}n de nudo tr\IeC {\'e}bol y nudo trivial.\relax }}{8}{figure.caption.10}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ambas orientaciones del nudo tr\IeC {\'e}bol.\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Nudo factor J y K.\relax }}{9}{figure.caption.12}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Las composiciones no son equivalentes.\relax }}{9}{figure.caption.13}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Primer movimiento Reidemeister.\relax }}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Segundo movimiento de Reidemeister.\relax }}{10}{figure.caption.15}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Tercer movimiento de Reidemeister.\relax }}{10}{figure.caption.16}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Equivalencia de dos proyecciones de nudos.\relax }}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {P1}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {R1}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {R3}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Isotopia}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {R3}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {R1}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Isotopia}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Isotopia}}}{11}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {P2}}}{11}{figure.caption.17}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Enlace con dos componentes.\relax }}{12}{figure.caption.18}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Crossing number del nudo tr\IeC {\'e}bol.\relax }}{13}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {4 cruces}}}{13}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {3 cruces}}}{13}{figure.caption.19}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Tipo de cruce.\relax }}{14}{figure.caption.20}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces \relax }}{14}{figure.caption.21}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces \relax }}{15}{figure.caption.22}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces \relax }}{15}{figure.caption.23}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces \relax }}{16}{figure.caption.24}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Dos nudos no equivalentes.\relax }}{17}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No tricolorable}}}{17}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Tricolorable}}}{17}{figure.caption.25}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Unknotting number tr\IeC {\'e}bol.\relax }}{17}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Nudo de partida}}}{17}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Nudo modificado}}}{17}{figure.caption.26}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Tipos de cruces.\relax }}{18}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$ L_{+} $}}}{18}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$ L_{-} $}}}{18}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$ L_{0} $}}}{18}{figure.caption.27}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces \relax }}{19}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {A}}}{19}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {B}}}{19}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {C}}}{19}{figure.caption.28}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces \relax }}{19}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {D}}}{19}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {E}}}{19}{figure.caption.29}
+\contentsline {figure}{\numberline {2.27}{\ignorespaces \IeC {\'A}rbol de resoluci\IeC {\'o}n del nudo tr\IeC {\'e}bol.\relax }}{21}{figure.caption.30}
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Numeraci\IeC {\'o}n de cruces-Dowker.\relax }}{22}{figure.caption.31}
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Numeraci\IeC {\'o}n de cruces-Gauss.\relax }}{22}{figure.caption.32}
+\contentsline {figure}{\numberline {2.30}{\ignorespaces \relax }}{23}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enredo general}}}{23}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ejemplo de enredo}}}{23}{figure.caption.33}
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Tipos b\IeC {\'a}sicos de enredos.\relax }}{24}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enredo $\infty $}}}{24}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Enredo 0}}}{24}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Enredo 4}}}{24}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Enredo -4}}}{24}{figure.caption.34}
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Operaciones con enredos.\relax }}{24}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Operacion suma}}}{24}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Operacion multiplicacion}}}{24}{figure.caption.35}
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Enlace -2 3 2\relax }}{24}{figure.caption.36}
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Enlaces equivalentes\relax }}{25}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enlace -2 3 2}}}{25}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Enlace 3 -2 3}}}{25}{figure.caption.37}
+\contentsline {figure}{\numberline {2.35}{\ignorespaces Ejemplos de grafos planos.\relax }}{26}{figure.caption.38}
+\contentsline {figure}{\numberline {2.36}{\ignorespaces De proyecci\IeC {\'o}n a grafo\relax }}{26}{figure.caption.39}
+\contentsline {figure}{\numberline {2.37}{\ignorespaces De grafo a proyecci\IeC {\'o}n.\relax }}{27}{figure.caption.40}
+\contentsline {figure}{\numberline {2.38}{\ignorespaces Ejemplos de trenzas\relax }}{28}{figure.caption.41}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplos de trenzas\relax }}{30}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$-\sigma 2+\sigma 1-\sigma 2+\sigma 1+\sigma 3$}}}{30}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$+\sigma 1-\sigma 2+\sigma 1-\sigma 2$}}}{30}{figure.caption.42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Proyecci\IeC {\'o}n de trenzas\relax }}{30}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$-\sigma 2+\sigma 1-\sigma 2+\sigma 1+\sigma 3$}}}{30}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$+\sigma 1-\sigma 2+\sigma 1-\sigma 2$}}}{30}{figure.caption.43}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Signo cruce.\relax }}{31}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$-\sigma (i)$}}}{31}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$+\sigma (i)$}}}{31}{figure.caption.44}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Trenza $+\sigma 3-\sigma 2+\sigma 4$.\relax }}{32}{figure.caption.45}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Trenzas equivalentes.\relax }}{32}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$-\sigma 1+\sigma 2-\sigma 2$}}}{32}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$-\sigma 1-\sigma 2+\sigma 2$}}}{32}{figure.caption.46}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \relax }}{33}{figure.caption.47}
