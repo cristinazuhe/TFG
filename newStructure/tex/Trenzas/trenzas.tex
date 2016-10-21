@@ -67,14 +67,21 @@ Denotaremos como $ \textbf{B}_{n} $ al conjunto de todas las trenzas de n cadena
 \end{center}
 Consideremos una trenza situada en el cubo $\mathds{D} = \{(x,y,z) / 0 \leq x,y,z \leq 1\}$. Podemos obtener la proyección de la trenza sobre el plano-yz haciendo la proyección  p(x,y,z) = p(0,y,z) de cada uno de los puntos de la misma. De este modo visualizaremos las cadenas como curvas poligonales simples sobre el plano-yz.\\
 
-Haciendo uso de movimientos elementales, podemos obtener trenzas equivalentes a la inicial de modo que cualquier intersección que vemos en su proyección sea producida por sólo dos cadenas en un sólo punto. \\ 
+Haciendo uso de movimientos elementales, podemos obtener trenzas equivalentes a la inicial de modo que cualquier intersección que vemos en su proyección sea producida por sólo dos cadenas y en un sólo punto. Además podemos obtener trenzas equivalentes tales que las intersecciones de las cadenas se sitúen en distintos niveles. De modo que dada una trenza cualquiera, nos quedaremos con su trenza equivalente cuya proyección cumpla estas condiciones. Podemos ver un ejemplo de cómo obtener una proyección de una trenza en la figura \ref{impers}.\\ 
+
+\begin{figure}[h!]
+	\centering
+    \includegraphics[width=15cm]{itrenzas/pers.png}
+	\caption{Proyección de una trenza}
+	\label{impers} 
+\end{figure}
 
 En la figura \ref{tren2} se pueden ver las proyecciones de las trenzas representadas en la figura \ref{tren1}.\\
 \begin{figure}[h!]
 	\centering
-	\subfigure[]{\includegraphics[width=3cm]{itrenzas/t1pro.png}}
+	\subfigure[]{\includegraphics[width=2.7cm]{itrenzas/t1pro.png}}
 	\space
-	\subfigure[]{\includegraphics[width=2.5cm]{itrenzas/t2pro.png}}
+	\subfigure[]{\includegraphics[width=2.3cm]{itrenzas/t2pro.png}}
 	\caption{Proyección de trenzas}
 	\label{tren2} 
 \end{figure} 
@@ -84,17 +91,21 @@ En la figura \ref{tren2} se pueden ver las proyecciones de las trenzas represent
 	\subsection{Notación de trenzas:}
 \end{center}
 Para poder trabajar de forma cómoda con las trenzas vamos a darle la siguiente notación:\\
-Sean los segmentos que unen las posiciones $i$ con la $i+1$ y las posiciones $i+1$ con la $i$. Al producir un intercambio de posiciones de estos segmentos se producirá un \textbf{cruce}. Este cruce puede realizarse de dos formas: 
+
+Supongamos que disponemos de una trenza y de su proyección. Recordemos que modificamos la trenza con movimientos elementales de modo que en cada plano horizontal que corta imaginariamente a la trenza sólo podemos tener dos cadenas que intercambien sus posiciones generando así la intersección que vemos a cierto nivel en la proyección. Vamos a quedarnos con estas secciones de cadenas que producen la intersección en la proyección.\\  
+
+Consideremos que estos segmentos de cadenas unen las posiciones $i$ con la $i+1$ y las posiciones $i+1$ con la $i$. Al producir un intercambio de posiciones de estos segmentos se producirá un \textbf{cruce}, que se verá como la intersección de cadenas en la proyección de la trenza.\\
+Este cruce puede realizarse de dos formas: 
 \begin{itemize}
-	\item El segmento que parte de la posición $i$ cruza por delante al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $-\sigma(i)$ y se conoce como un cruce negativo.
-	\item  El segmento que parte de la posición $i$ cruza por detrás al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $+\sigma(i)$ y se conoce como un cruce positivo.
+	\item El segmento que parte de la posición $i$ cruza por delante al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $\sigma_{i}^{-1}$ y se conoce como un cruce negativo.
+	\item  El segmento que parte de la posición $i$ cruza por detrás al segmento que inicialmente parte en la posición $i+1$. En este caso el cruce se denota como $\sigma_{i}^{+1}$ o simplemente $\sigma_{i}$ y se conoce como un cruce positivo.
 \end{itemize}
 Podemos verlo más claro en la figura \ref{tren4}.\\
 \begin{figure}[h!]
 	\centering
-	\subfigure[$-\sigma(i)$]{\includegraphics[width=3.5cm]{itrenzas/t5.png}}
+	\subfigure[$\sigma_{i}^{-1}$]{\includegraphics[width=2cm]{itrenzas/t5.png}}
 	\space
-	\subfigure[$+\sigma(i)$]{\includegraphics[width=3.4cm]{itrenzas/t6.png}}
+	\subfigure[$\sigma_{i}$]{\includegraphics[width=2cm]{itrenzas/t6.png}}
 	\caption{Signo cruce.}
 	\label{tren4} 
 \end{figure}
@@ -104,8 +115,8 @@ La \textbf{n-trenza trivial} se define como la n-trenza que no realiza ningún c
 Cualquier trenza no trivial tendrá de una serie de cruces. En cada plano horizontal podremos tener como mucho un cruce. Notaremos a la trenza con la secuencia de cruces que tenga, empezando por la parte superior de la trenza. A esta secuencia se le conoce como \textbf{palabra} que representa a la trenza. Podemos ver un ejemplo en la figura \ref{tren5}.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=6cm]{itrenzas/t7.png}
-	\caption{Trenza $+\sigma3-\sigma2+\sigma4$.}
+	\includegraphics[width=5cm]{itrenzas/t7.png}
+	\caption{Trenza $\sigma3\sigma2^{-1}\sigma4$.}
 	\label{tren5} 
 \end{figure}
 

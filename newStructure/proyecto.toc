@@ -31,3 +31,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Equivalencia de trenzas:}{30}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Proyecci\IeC {\'o}n de una trenza.}{31}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Notaci\IeC {\'o}n de trenzas:}{32}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}El grupo de las trenzas.}{34}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Estructura de grupo no abeliano:}{34}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Trenzas equivalentes:}{40}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Trenzas Markov-equivalentes:}{43}{subsection.3.2.3}
