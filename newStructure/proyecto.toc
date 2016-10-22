@@ -35,3 +35,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Estructura de grupo no abeliano:}{34}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Trenzas equivalentes:}{40}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Trenzas Markov-equivalentes:}{43}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Algunos invariantes.}{45}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Exponente:}{46}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Permutaci\IeC {\'o}n:}{48}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Polinomio de Alexander:}{49}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}El problema de las palabras.}{57}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusiones}{63}{section.3.5}

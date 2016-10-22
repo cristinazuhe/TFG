@@ -135,18 +135,36 @@
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\beta \beta ^{-1}$}}}{39}{figure.caption.54}
 \contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\beta \beta ^{-1}$}}}{39}{figure.caption.54}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Primer movimiento.\relax }}{40}{figure.caption.55}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Segundo movimiento.\relax }}{41}{figure.caption.56}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Segundo movimiento.\relax }}{40}{figure.caption.56}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Tercer movimiento.\relax }}{41}{figure.caption.57}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Trenzas equivalentes.\relax }}{42}{figure.caption.58}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Trenzas equivalentes.\relax }}{43}{figure.caption.59}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Trenzas Markov-equivalentes.\relax }}{44}{figure.caption.60}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Conjugaci\IeC {\'o}n Markov.\relax }}{45}{figure.caption.61}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Estabilizaci\IeC {\'o}n Markov.\relax }}{45}{figure.caption.62}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Signo cruce.\relax }}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$-\sigma 2+\sigma 1-\sigma 2+\sigma 1+\sigma 3$}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mv2}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$-\sigma 2+\sigma 1-\sigma 2+\sigma 1$}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Mv1}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$+\sigma 1-\sigma 2+\sigma 1-\sigma 2+\sigma 1-\sigma 1$}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {M1}}}{46}{figure.caption.63}
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$+\sigma 1-\sigma 2+\sigma 1-\sigma 2$}}}{46}{figure.caption.63}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Trenzas equivalentes.\relax }}{41}{figure.caption.58}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Trenzas equivalentes.\relax }}{42}{figure.caption.59}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Trenzas Markov-equivalentes.\relax }}{43}{figure.caption.60}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Conjugaci\IeC {\'o}n Markov.\relax }}{44}{figure.caption.61}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Estabilizaci\IeC {\'o}n Markov.\relax }}{44}{figure.caption.62}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Trenzas Markov-equivalentes.\relax }}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\sigma 2^{-1}\sigma 1\sigma 2^{-1}\sigma 1\sigma 3$}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mv2}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\sigma 2^{-1}\sigma 1\sigma 2^{-1}\sigma 1$}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Mv1}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\sigma 1\sigma 2^{-1}\sigma 1$ $\sigma 2^{-1}\sigma 1\sigma 1^{-1}$}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {M1}}}{45}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\sigma 1\sigma 2^{-1}\sigma 1\sigma 2^{-1}$}}}{45}{figure.caption.63}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces $\sigma 3\sigma 2^{-1}\sigma 3^{-1}$\relax }}{46}{figure.caption.64}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Trenzas no equivalentes.\relax }}{47}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {exp($ \beta 1 $) = +1}}}{47}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {exp($ \beta 2 $) = -1}}}{47}{figure.caption.65}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Trenzas con mismo exponente.\relax }}{47}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {exp($ \beta 1 $) = +1}}}{47}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {exp($ \beta 2 $) = +1}}}{47}{figure.caption.66}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces $\sigma 3\sigma 2^{-1}\sigma 3^{-1}$\relax }}{48}{figure.caption.67}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Trenzas no equivalentes.\relax }}{49}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\pi ( \beta 1 $) = 1 2 4 3}}}{49}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\pi ( \beta 2 $) = 2 3 4 1}}}{49}{figure.caption.68}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Trenza no libremente reducida.\relax }}{58}{figure.caption.69}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces main handle.\relax }}{58}{figure.caption.70}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces A handle.\relax }}{59}{figure.caption.71}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Reducci\IeC {\'o}n local.\relax }}{60}{figure.caption.72}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Trenzas equivalentes.\relax }}{61}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta 1$}}}{61}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta 2$}}}{61}{figure.caption.73}

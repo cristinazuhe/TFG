@@ -140,14 +140,14 @@ Podemos ver un ejemplo de dos trenzas no conmutativas en la figura \ref{grupo3}.
 	A esta trenza $\beta^{-1}$ se le conoce como trenza inversa.
 	
 	\begin{proof} 
-		Sea la trenza $\beta$ a la que notamos como $\beta = \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n}}^{\pm 1}$\\
+		Sea la trenza $\beta$ a la que notamos como $\beta = \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m}}^{\pm 1}$\\
 
-		 Construimos la trenza $\beta'$ a la que notamos como $\beta' = \sigma_{i_{n}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$. Veamos que esta trenza es la trenza inversa:
+		 Construimos la trenza $\beta'$ a la que notamos como $\beta' = \sigma_{i_{m}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$. Veamos que esta trenza es la trenza inversa:
 			\begin{center}
-			 Por una parte, $\beta \beta'$ = $\sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n}}^{\pm 1} \sigma_{i_{n}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$ = $\sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n-1}}^{\pm 1} \sigma_{i_{n-1}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$ = $ 1_{n} $. Luego $\beta \beta' \sim 1_{n}$.\\
+			 Por una parte, $\beta \beta'$ = $\sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m}}^{\pm 1} \sigma_{i_{m}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$ = $\sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m-1}}^{\pm 1} \sigma_{i_{m-1}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1}$ = $ 1_{n} $. Luego $\beta \beta' \sim 1_{n}$.\\
 			\end{center}		 
 			\begin{center}
-			 Por otra parte, $ 1_{n} = \sigma_{i_{n}}^{\mp 1} \sigma_{i_{n}}^{\pm 1} = \sigma_{i_{n}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n}}^{\pm 1} = \sigma_{i_{n}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1} \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n}}^{\pm 1} = \beta' \beta$. Luego $1_{n} \sim \beta \beta'$.\\
+			 Por otra parte, $ 1_{n} = \sigma_{i_{m}}^{\mp 1} \sigma_{i_{m}}^{\pm 1} = \sigma_{i_{m}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m}}^{\pm 1} = \sigma_{i_{m}}^{\mp 1} ...\sigma_{i_{2}}^{\mp 1} \sigma_{i_{1}}^{\mp 1} \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m}}^{\pm 1} = \beta' \beta$. Luego $1_{n} \sim \beta \beta'$.\\
 			\end{center}
 		 Por tanto $\beta' = \beta^{-1}$.\\
 		 
@@ -200,7 +200,7 @@ En la figura \ref{grupo4} podemos ver un ejemplo de una trenza (a) y su trenza i
 	
 	Hemos definido $\mathscr{B}_{n}$ como el conjunto de todas las n-trenzas, siendo estas n-trenzas representadas por palabras. En concreto si tenemos la trenza $\beta \in \mathscr{B}_{n}$, que consta de m-cruces, la podremos representar como:
     \begin{center}
-    	$\beta = \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{n}}^{\pm 1} $
+    	$\beta = \sigma_{i_{1}}^{\pm 1} \sigma_{i_{2}}^{\pm 1} ... \sigma_{i_{m}}^{\pm 1} $, 1 $\le i_{1}, i_{2},..,i_{m} \le$ n-1.
     \end{center}
 	
 	Además, hemos visto que el conjunto $B_{n} $ = $\mathscr{B}_{n}$/$ \sim $, de todas las n-trenzas no equivalentes entre sí, tiene estructura de grupo al dotarle del producto de trenzas.\\
@@ -210,37 +210,37 @@ En la figura \ref{grupo4} podemos ver un ejemplo de una trenza (a) y su trenza i
 	Para analizar cuándo dos trenzas son equivalentes tendremos que ver cuándo las palabras que representan a dichas trenzas son equivalentes. Dos palabras serán equivalentes si y sólo si podemos pasar de una palabra a otra mediante un secuencia de estos tres movimientos:
 	\begin{enumerate}
 		\item \underline{Primer movimiento - M1:} \\
-		Podemos añadir o eliminar $+\sigma(i) -\sigma(i)$ o $-\sigma(i) +\sigma(i)$ en cualquier palabra. Es claro que la palabra inicial y la palabra final representan a la misma trenza. Podemos verlo en la figura \ref{tren6}.
+		Podemos añadir o eliminar $\sigma_{i}\sigma_{i}^{-1}$ o $\sigma_{i}^{-1}\sigma_{i}$ en cualquier palabra. Es claro que la palabra inicial y la palabra final representan a la misma trenza. Podemos verlo en la figura \ref{tren6}.
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=8cm]{itrenzas/M1.png}
+			\includegraphics[width=5.1cm]{itrenzas/M1.png}
 			\caption{Primer movimiento.}
 			\label{tren6} 
 		\end{figure}
 		
 		\item \underline{Segundo movimiento - M2:} \\
-		Las palabras $+\sigma(i) +\sigma(i+1) +\sigma(i)$ y $+\sigma(i+1) +\sigma(i) +\sigma(i+1)$ son equivalentes (o bien con cruces negativos). Se puede ver en la figura \ref{tren7}.
+		Las palabras $\sigma_{i} \sigma_{i+1} \sigma_{i}$ y $\sigma_{i+1} \sigma_{i} \sigma_{i+1}$ son equivalentes (o bien con cruces negativos). Se puede ver en la figura \ref{tren7}.
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=13cm]{itrenzas/M2.png}
+			\includegraphics[width=8cm]{itrenzas/M2.png}
 			\caption{Segundo movimiento.}
 			\label{tren7} 
 		\end{figure}
 		
 		
 		\item \underline{Tercer movimiento - M3:} \\
-		Las palabras $+\sigma(i) +\sigma(j)$ y $+\sigma(j) +\sigma(i)$ son equivalentes si se verifica que $|i-j| > 1$ (o bien con cruces negativos). Se ve claro en la figura \ref{tren8}.
+		Las palabras $\sigma_{i} \sigma_{j}$ y $\sigma_{j} \sigma_{i}$ son equivalentes si se verifica que $|i-j| > 1$ (o bien con cruces negativos). Se ve claro en la figura \ref{tren8}.
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=9cm]{itrenzas/M3.png}
+			\includegraphics[width=10cm]{itrenzas/M3.png}
 			\caption{Tercer movimiento.}
 			\label{tren8} 
 		\end{figure}
 		
 	\end{enumerate}
 	En la figura \ref{tren9} podemos ver los movimientos que nos demuestran que dos trenzas dadas más complejas son equivalentes. \\
-	Partimos de la trenza $-\sigma3+\sigma1-\sigma2-\sigma3$ y aplicamos M3 a los dos primeros cruces obteniendo la trenza $+\sigma1-\sigma3-\sigma2-\sigma3$ que vemos en la segunda imagen. \\
-	Por último, aplicamos el movimiento M2 a los tres últimos cruces obteniendo la trenza $+\sigma1-\sigma2-\sigma3-\sigma2$ que vemos en la última imagen.\\
+	Partimos de la trenza $\sigma3^{-1}\sigma1\sigma2^{-1}\sigma3^{-1}$ y aplicamos M3 a los dos primeros cruces obteniendo la trenza $\sigma1\sigma3^{-1}\sigma2^{-1}\sigma3^{-1}$ que vemos en la segunda imagen. \\
+	Por último, aplicamos el movimiento M2 a los tres últimos cruces obteniendo la trenza $\sigma1\sigma2^{-1}\sigma3^{-1}\sigma2^{-1}$ que vemos en la última imagen.\\
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=10cm]{itrenzas/movi.png}
@@ -251,32 +251,39 @@ En la figura \ref{grupo4} podemos ver un ejemplo de una trenza (a) y su trenza i
 	\begin{teo}	    \label{teoBn}
 	    Defino las relaciones:
 	    \begin{enumerate}
-	    	\item $ \sigma(i+1)\sigma(i)\sigma(i+1) =\sigma(i)\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $ \label{rel1}
-	    	\item $ \sigma(i)\sigma(j)=\sigma(j)\sigma(i) $ siendo $1 \le i < j \le n-1 $, $j-i \geq 2$	 \label{rel2}   	
+	    	\item $ \sigma_{i+1}\sigma_{i}\sigma_{i+1} =\sigma_{i}\sigma_{i+1}\sigma_{i} $ siendo $i=2,..,n-2 $ \label{rel1}
+	    	\item $ \sigma_{i}\sigma_{j}=\sigma_{j}\sigma_{i} $ siendo $1 \le i < j \le n-1 $, $j-i \geq 2$	 \label{rel2}   	
 	    \end{enumerate}
 	    El grupo $B_{n}$ tiene la siguiente representación:
         \begin{center}
-			$B_{n} = <\sigma1, \sigma2,..,\sigma(n-1) /$ las relaciones \ref{rel1} y \ref{rel2} se verifican$>$
+			$B_{n} = <\sigma1, \sigma2,..,\sigma_{n-1} /$ las relaciones \ref{rel1} y \ref{rel2} se verifican$>$
         \end{center}
 	   
 	\end{teo}
-	//POSIBLE DEMOSTRACIÓN PENDIENTE. EN A STUDY OF BRAIDS!!!!!!!!!!!\\
 	
 	A partir de estas relaciones de equivalencia base podremos construir nuevas relaciones de equivalencia. Vamos a mostrar algunas relaciones de equivalencia que usaremos posteriormente:
 	\begin{enumerate}
-		\item $ \sigma(i+1)\sigma(i)-\sigma(i+1) =-\sigma(i)\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $		
-		\item $ \sigma(i+1)-\sigma(i)-\sigma(i+1) =-\sigma(i)-\sigma(i+1)\sigma(i) $ siendo $i=2,..,n-2 $
+		\item $ \sigma_{i+1}\sigma_{i}\sigma_{i+1}^{-1} =\sigma_{i}^{-1}\sigma_{i+1}\sigma_{i} $ siendo $i=2,..,n-2 $		
+		\item $ \sigma_{i+1}\sigma_{i}^{-1}\sigma_{i+1}^{-1} =\sigma_{i}^{-1}\sigma_{i+1}^{-1}\sigma_{i} $ siendo $i=2,..,n-2 $
 	\end{enumerate}
-	En la figura \ref{tren14} podemos ver que efectivamente son equivalencias ciertas.\\
+	
+    \underline{	Demostración:}
+    \begin{enumerate}
+    	\item $ \sigma_{i+1}\sigma_{i}\sigma_{i+1}^{-1} = \sigma_{i}^{-1}\sigma_{i}\sigma_{i+1}\sigma_{i}\sigma_{i+1}^{-1} = \sigma_{i}^{-1}\sigma_{i+1}\sigma_{i}\sigma_{i+1}\sigma_{i+1}^{-1} =  \sigma_{i}^{-1}\sigma_{i+1}\sigma_{i} $ 		
+    	\item $ \sigma_{i+1}\sigma_{i}^{-1}\sigma_{i+1}^{-1} = \sigma_{i+1}\sigma_{i}^{-1}\sigma_{i+1}^{-1}\sigma_{i}^{-1}\sigma_{i}=\sigma_{i+1}\sigma_{i+1}^{-1}\sigma_{i}^{-1}\sigma_{i+1}^{-1}\sigma_{i} = \sigma_{i}^{-1}\sigma_{i+1}^{-1}\sigma_{i}$
+    \end{enumerate}
+	
+
+	En la figura \ref{tren14} podemos visualizar las equivalencias.\\
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=4cm]{itrenzas/6c1.png}
+		\includegraphics[width=3cm]{itrenzas/6c1.png}
 		\includegraphics[width=0.7cm]{itrenzas/flechac.png}
-		\includegraphics[width=3.4cm]{itrenzas/6c2.png}
+		\includegraphics[width=2.6cm]{itrenzas/6c2.png}
 		\space	
-		\includegraphics[width=3.7cm]{itrenzas/6c3.png}
+		\includegraphics[width=2.7cm]{itrenzas/6c3.png}
 		\includegraphics[width=0.7cm]{itrenzas/flechac.png}
-		\includegraphics[width=3.8cm]{itrenzas/6c4.png}
+		\includegraphics[width=2.9cm]{itrenzas/6c4.png}
 		\caption{Trenzas equivalentes.}
 		\label{tren14} 
 	\end{figure}
@@ -289,8 +296,8 @@ En la figura \ref{grupo4} podemos ver un ejemplo de una trenza (a) y su trenza i
 Es claro que si tenemos dos trenzas que son equivalentes, sus trenzas cerradas nos darán nudos que serán equivalentes. Pero...¿puede darse el caso de tener dos trenzas no sean equivalentes y que sus trenzas cerradas sí lo sean? Veamos, mediante el ejemplo de la figura \ref{tren10} que sí es posible: las trenzas de partida no son equivalentes (tenemos distinto número de cadenas), sin embargo sus trenzas cerradas sí lo son. Lo demostraremos en la figura \ref{tren13}.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=2.5cm]{itrenzas/t1pro.png}
-	\includegraphics[width=2.1cm]{itrenzas/t2pro.png}
+	\includegraphics[width=3cm]{itrenzas/t1pro.png}
+	\includegraphics[width=2.5cm]{itrenzas/t2pro.png}
 	
 	\includegraphics[width=3.5cm]{itrenzas/t1probien.png}
 	\includegraphics[width=3.5cm]{itrenzas/t2probien.png}
@@ -308,20 +315,20 @@ Se dice que dos trenzas son \textbf{Markov-equivalentes} si sus cierres producen
 Veamos los movimientos de Markov:
 \begin{enumerate}
 	\item \underline{Conjugación - Mv1:} \\
-	Las palabras $\beta$ y $+\sigma(i) \beta -\sigma(i)$ (o bien  $-\sigma(i) \beta +\sigma(i)$) generan trenzas cerradas equivalentes. Se puede ver en la figura \ref{tren11}.
+	Las palabras $\beta$ y $\sigma_{i} \beta \sigma_{i}^{-1}$ (o bien  $\sigma_{i}^{-1} \beta \sigma_{i}$) generan trenzas cerradas equivalentes. Se puede ver en la figura \ref{tren11}.
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=10cm]{itrenzas/M4.png}
+		\includegraphics[width=8cm]{itrenzas/M4.png}
 		\caption{Conjugación Markov.}
 		\label{tren11} 
 	\end{figure}
 	
 	\item \underline{Estabilización - Mv2:} \\
 	Esta operación nos permite modificar el número de cadenas de las trenzas. 
-	Sea la palabra $\beta$ de n cadenas. Esta palabra genera una trenza cerrada equivalente a $\beta \sigma(n)$ o bien $\sigma(n) \beta $. Se puede ver en la figura \ref{tren12}.
+	Sea la palabra $\beta$ de n cadenas. Esta palabra genera una trenza cerrada equivalente a $\beta \sigma_{n}$ o bien $\sigma_{n} \beta $. Se puede ver en la figura \ref{tren12}.
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=7.5cm]{itrenzas/M5.png}
+		\includegraphics[width=7cm]{itrenzas/M5.png}
 		\caption{Estabilización Markov.}
 		\label{tren12} 
 	\end{figure}
@@ -331,13 +338,13 @@ Veamos los movimientos de Markov:
 Podemos ver un ejemplo de dos trenzas Markov-equivalentes en la figura \ref{tren13}.
 \begin{figure}[h!]
 	\centering
-	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1+\sigma3$]{\includegraphics[width=3.5cm]{itrenzas/t1probien.png}}
+	\subfigure[$\sigma2^{-1}\sigma1\sigma2^{-1}\sigma1\sigma3$]{\includegraphics[width=3.5cm]{itrenzas/t1probien.png}}
 	\subfigure[Mv2]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-	\subfigure[$-\sigma2+\sigma1-\sigma2+\sigma1$]{\includegraphics[width=3.5cm]{itrenzas/t3probien.png}}
+	\subfigure[$\sigma2^{-1}\sigma1\sigma2^{-1}\sigma1$]{\includegraphics[width=3.5cm]{itrenzas/t3probien.png}}
 	\subfigure[Mv1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2+\sigma1-\sigma1$]{\includegraphics[width=2.4cm]{itrenzas/t4probien.png}}
+	\subfigure[$\sigma1\sigma2^{-1}\sigma1$ $\sigma2^{-1}\sigma1\sigma1^{-1}$]{\includegraphics[width=2.4cm]{itrenzas/t4probien.png}}
 	\subfigure[M1]{\includegraphics[width=1cm]{itrenzas/flechac.png}}
-	\subfigure[$+\sigma1-\sigma2+\sigma1-\sigma2$]{\includegraphics[width=3.5cm]{itrenzas/t2probien.png}}
-	\caption{Signo cruce.}
+	\subfigure[$\sigma1\sigma2^{-1}\sigma1\sigma2^{-1}$]{\includegraphics[width=3.5cm]{itrenzas/t2probien.png}}
+	\caption{Trenzas Markov-equivalentes.}
 	\label{tren13} 
 \end{figure}
