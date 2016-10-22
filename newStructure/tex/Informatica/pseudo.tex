@@ -1,6 +1,15 @@
 
 \section{Pseudoalgoritmos.}
+En esta sección vamos a ver algunos pseudoalgoritmos referentes a los algoritmos que hemos implementado. Nos vamos a centrar en aquellos que tienen mayor complejidad e interés, sin entrar en gran detalle. \\
 
+En concreto, vamos a ver los pseudoalgoritmos para el algoritmo de Dehornoy (que se descompone en varios algoritmos auxiliares), el algoritmo que nos permite comprobar si dos trenzas dadas (o sus cierres) son o no equivalentes entre sí y el algoritmo que nos permite comprobar si una trenza dada (o su cierre) es equivalente a la trenza trivial.\\
+
+\begin{center}
+	\textbf{Algoritmo de Dehornoy para trenzas.}
+\end{center} 
+Vamos a ir viendo los algoritmos auxiliares y concluiremos con el propio algoritmo de Dehornoy. Recordemos que este algoritmo se explica con detalle en la sección \ref{deh}.\\
+
+Mediante el algoritmo Simplifica eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}, e \in$ \{-1,1\} de una palabra que representa a cierta trenza. 
 
 \begin{alg}
 	\textbf{Algoritmo Simplifica}(indices\_braid)\\
@@ -33,8 +42,8 @@ Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delim
 \end{lstlisting}
 \end{alg}
 
-\newpage
-Haciendo uso del siguiente algoritmo aplicar una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle.
+\bigskip
+Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle.
 \begin{alg}
 	\textbf{Algoritmo reduccion\_base}(indices\_braid, minimo, pos1, pos2 )\\
 	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
@@ -55,6 +64,7 @@ Haciendo uso del siguiente algoritmo aplicar una reducción local a la trenza re
 \end{lstlisting}
 \end{alg}
 
+Estos algoritmos auxiliares no se proporcionan para uso directo al usuario ya que el realmente interesante es el algoritmo de Dehornoy, pero sí podrían ser usados. Veamos entonces el algoritmo de Dehornoy.\\
 
 \newpage
 \begin{alg}
@@ -64,7 +74,7 @@ Haciendo uso del siguiente algoritmo aplicar una reducción local a la trenza re
 	\hspace*{2.2cm} Radio (radio de las cadenas de la trenza)\\
 	\hspace*{2.2cm} representar (bool para representar las equivalencias de la trenza)\\
 	SALIDA: \hspace{0.4cm} es\_trivial (bool que nos indica si la trenza dada es o no trivial) \\
-	\hspace*{2.2cm} trenza\_final (cadena de enteros que representa a la trenza reducida equivalente a br )
+	\hspace*{2.2cm} trenza\_final (cadena de enteros que representa a la trenza reducida equivalente a br)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, numbersep=-2pt, numberstyle=\color{blue}}
 \begin{lstlisting}
@@ -81,13 +91,13 @@ Haciendo uso del siguiente algoritmo aplicar una reducción local a la trenza re
 			   Actualizo pos1 y pos2
 			   Aplico reduccion_base a dicho subhandle.
 	   Creo matriz con secuencia de palabras generadas en el proceso.
-   Si representar, muestro las trenzas usando dicha matriz.
-			   
-			   
-		
-		   
-			   
+   Si representar, muestro las trenzas usando dicha matriz.			   
 \end{lstlisting}
 \end{alg}
 
-%[es_trivial, trenza_final]
+Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre trenzas cerradas. El proceso que se realizará internamente será exactamente el mismo que para trenzas, ya que el cerrar la trenza no aporta información nueva para el algoritmo de Dehornoy. \\
+
+\bigskip
+\begin{center}
+	\textbf{Algoritmo de equivalencia para trenzas.}
+\end{center} 
