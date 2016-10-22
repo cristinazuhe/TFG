@@ -1,0 +1,93 @@
+
+\section{Pseudoalgoritmos.}
+
+
+\begin{alg}
+	\textbf{Algoritmo Simplifica}(indices\_braid)\\
+	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	SALIDA: \hspace{0.4cm} braid\_aux (cadena auxiliar para mejor representacion visual) \\
+    \hspace*{2.2cm} nueva\_braid (cadena de enteros que representa los cruces de la trenza tras eliminar dos cruces opuestos)\\
+    \hspace*{2.2cm} encontrado (bool para indicar si se produce simplificación)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Recorro los cruces de indices_braid
+   Si hay dos cruces seguidos con signos opuestos, creo una copia de indices_braid y elimino dichos cruces. 
+\end{lstlisting}
+\end{alg}
+
+\newpage
+Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delimitan un $\sigma_{minimo}$-handle.
+\begin{alg}
+	\textbf{Algoritmo encuentra\_handle}(indices\_braid, minimo)\\
+	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	\hspace*{2.2cm} minimo (generador de handle a encontrar) \\
+	SALIDA: \hspace{0.4cm} pos1 (posición inicial del handle encontrado) \\
+	\hspace*{2.2cm} pos2 (posición final del handle encontrado)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Recorro los cruces de indices_braid
+   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Sino fin.
+   Si encuentro un cruce generado por el elemento minimo con signo opuesto, me quedo con esa posicion como pos2.
+\end{lstlisting}
+\end{alg}
+
+\newpage
+Haciendo uso del siguiente algoritmo aplicar una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle.
+\begin{alg}
+	\textbf{Algoritmo reduccion\_base}(indices\_braid, minimo, pos1, pos2 )\\
+	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	\hspace*{2.2cm} minimo (generador de handle) \\
+	\hspace*{2.2cm} pos1 (posición inicial del handle) \\
+	\hspace*{2.2cm} pos2 (posición final del handle)\\
+	SALIDA: \hspace{0.4cm} braid\_aux2 (cadena auxiliar para mejor representación visual) \\
+	\hspace*{2.2cm} nuevo (cadena de enteros que representa los cruces de la trenza tras aplicar la reducción local al $\sigma_{minimo}$-handle entre pos1 y pos2)\\
+	\hspace*{2.2cm} simplificado2 (bool auxiliar para mejor representación visual)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Creo vector_auxiliar
+   Recorro los cruces de indices_braid desde pos1 hasta pos2
+   Si hay un cruce generado por el elemento (minimo+1) aniado al vector_auxiliar los 3 cruces correspondientes. Sino, aniado el mismo cruce. 
+   Creo vector_nuevo con los elementos desde inicio de indices_braid hasta pos1, vector_auxiliar, y los elementos desde pos2 hasta final de indices_braid.
+   Si indices_braid y vector_auxiliar tienen distinto tamanio, asigno a braid_aux2 una cadena con ciertos ceros para mejor visualizacion.
+\end{lstlisting}
+\end{alg}
+
+
+\newpage
+\begin{alg}
+	\textbf{Algoritmo dehornoy}(br, N\_cortes, Radio, representar)\\
+	ENTRADA: br (trenza)\\
+	\hspace*{2.2cm} N\_cortes (numero de cortes de las cadenas de la trenza)\\
+	\hspace*{2.2cm} Radio (radio de las cadenas de la trenza)\\
+	\hspace*{2.2cm} representar (bool para representar las equivalencias de la trenza)\\
+	SALIDA: \hspace{0.4cm} es\_trivial (bool que nos indica si la trenza dada es o no trivial) \\
+	\hspace*{2.2cm} trenza\_final (cadena de enteros que representa a la trenza reducida equivalente a br )
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, numbersep=-2pt, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5, representar=1.
+   indices_braid = cadena de enteros que representa a la trenza
+   Si br tiene cadenas a la derecha triviales, las eliminamos visualmente.
+   Mientras queden handles en la trenza dada...
+	   Obtenemos la palabra libremente reducida de indices_braid.
+	   Si no se produce reduccion...
+		   minimo = generador principal de indices_braid.
+		   [pos1,pos2]=encuentra_handle(indices_braid,minimo)
+		   Si pos1 y pos2 son posiciones validas....
+			   Busco primer subhandle a realizar en el handle.
+			   Actualizo pos1 y pos2
+			   Aplico reduccion_base a dicho subhandle.
+	   Creo matriz con secuencia de palabras generadas en el proceso.
+   Si representar, muestro las trenzas usando dicha matriz.
+			   
+			   
+		
+		   
+			   
+\end{lstlisting}
+\end{alg}
+
+%[es_trivial, trenza_final]

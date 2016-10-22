@@ -18,6 +18,7 @@ function [braid_aux2,nuevo,simplificado2] = reduccion_base( indices_braid, minim
             vector(end+1) = indices_braid(i);
         end
     end
+    
     if(pos1~=1)
        nuevo = indices_braid(1:pos1-1);
     else
