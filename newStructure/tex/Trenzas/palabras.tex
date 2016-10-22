@@ -11,9 +11,9 @@ Ver si dos palabras (de trenzas) dadas $\beta1, \beta2 \in B_{n}$ son equivalent
 En este proyecto vamos a ver el método de Patrick Dehornoy que nos permite reducir las palabras de trenzas dadas hasta una forma específica que nos permitirá ver si la palabra es igual a la cadena vacía. Para verlo con más detalle necesitamos ver algunas ideas previas.\\
 
 \underline{\textbf{Definición:}}\\
-Diremos que una palabra es \textbf{libremente reducida} sino contiene secuencias de la forma $\sigma_{i}^{-1}\sigma_{i} $ ni $\sigma_{i}\sigma_{i}^{-1}$.\\
+Diremos que una palabra es \textbf{libremente reducida} si no contiene secuencias de la forma $\sigma_{i}^{-1}\sigma_{i} $ ni $\sigma_{i}\sigma_{i}^{-1}$.\\
 
-Por ejemplo, la palabra $\sigma2\sigma1^{-1}\sigma1\sigma3^{-1}$ que representa a la trenza de la figura \ref{deh1} es libremente reducida pues contiene la palabra $\sigma1^{-1}\sigma1$.\\
+Por ejemplo, la palabra $\sigma2\sigma1^{-1}\sigma1\sigma3^{-1}$ que representa a la trenza de la figura \ref{deh1} no es libremente reducida pues contiene la palabra $\sigma1^{-1}\sigma1$.\\
 
 	\begin{figure}[h!]
 		\centering
@@ -37,11 +37,11 @@ Diremos que una palabra $\beta \in B_{n}$ es \textbf{reducida} si se cumple algu
  
 Por ejemplo, la palabra $\sigma2\sigma1^{-1}\sigma3^{-1}\sigma1$ no es reducida pues el generador principal (1) se encuentra en un cruce negativo y en un cruce positivo. La palabra $\sigma2\sigma1\sigma3^{-1}\sigma1$ si sería reducida pues el generador principal (1) se presenta sólo como cruces positivos.\\
 
-Si tenemos una palabra no reducida con generador principal $ \sigma_{i} $, podemos considerar ocurrencias de la palabra de la forma $ \sigma_{i}^{\pm} ... \sigma_{i}^{\mp} $ que no contengan cruces $ \sigma_{i} $, es decir, entre los cruces de signo opuesto del generador $ \sigma_{i} $ sólo encontramos generadores $ \sigma_{k} $, $ k>i $. Podemos visualizar la idea en la figura \ref{h1}. En este caso diremos que la cadena i+1 forma a handle.\\
+Si tenemos una palabra no reducida con generador principal $ \sigma_{i} $, podemos considerar ocurrencias de la palabra de la forma $ \sigma_{i}^{\pm} ... \sigma_{i}^{\mp} $ que no contengan cruces $ \sigma_{i} $, es decir, entre los cruces de signo opuesto del generador $ \sigma_{i} $ sólo encontramos generadores $ \sigma_{k} $, $ k>i $. Podemos visualizar la idea en la figura \ref{h1}. En este caso diremos que la cadena i+1 forma a\textbf{ handle}.\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=4.5cm]{itrenzas/h11.png}
-	\caption{main handle.}
+	\caption{Main handle.}
 	\label{h1} 
 \end{figure}
 
@@ -86,7 +86,7 @@ En definitiva hemos aplicado el homomorfismo $\phi_{j,e}$ definido como:
 \begin{center}
 	$\sigma_{j}^{\pm 1} \rightarrow \epsilon$\\
 	$\sigma_{j+1}^{\pm 1} \rightarrow \sigma_{j+1}^{-e} \sigma_{j}^{\pm 1} \sigma_{j+1}^{e}$\\
-	$\sigma_{k}^{\pm 1} \rightarrow \sigma_{k}^{\pm 1},$ siendo k!=j,j+1.\\
+	$\sigma_{k}^{\pm 1} \rightarrow \sigma_{k}^{\pm 1},$ siendo k$ \neq $j,j+1.\\
 \end{center}
 
 Podemos ver esta transformación en la figura \ref{h3}.\\
@@ -101,20 +101,20 @@ Es importante destacar que antes de realizar una reducción local a una palabra,
 
 Sea la palabra $\sigma2\sigma1^{-1}\sigma2\sigma3\sigma1$. Podemos aplicar una reducción local al main handle $\sigma1^{-1}\sigma2\sigma3\sigma1$ quedando la palabra $\sigma2\sigma1\sigma2^{-1}\sigma3$. Esta sería su palabra reducida.\\
 
-Pero antes de hacer una reducción local a un $\sigma_{j}$-hadle, tendremos que asegurarnos que no tener ningún $\sigma_{j+1}$-handle en el $\sigma_{j}$-handle. En el caso de tenerlo, tendríamos que aplicar la reducción local a este $\sigma_{j+1}$-handle y posteriormente aplicar la reducción local al $\sigma_{j}$-main handle. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
+Pero antes de hacer una reducción local a un $\sigma_{j}$-handle, tendremos que asegurarnos que no tenemos ningún $\sigma_{j+1}$-handle en el $\sigma_{j}$-handle. En el caso de tenerlo, tendríamos que aplicar la reducción local a este $\sigma_{j+1}$-handle y posteriormente aplicar la reducción local al $\sigma_{j}$-handle. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
 
 Supongamos que queremos obtener la palabra reducida de la palabra $\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}$. El generador principal es 1 y tenemos un main handle (que, en este caso, es toda la palabra en sí misma). Aplicamos una reducción local a este main handle quedando: \\
 $\sigma2^{-1}\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}\sigma2$.
 Vemos que volvemos a tener un main handle y entraremos en bucle infinito. Veamos cómo aplicaríamos la solución que hemos comentado:\\
 
-Supongamos de nuevo que queremos obtener la palabra reducida de la palabra $\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}$. Tenemos un main handle pero dicho main handle consta de una sub-palabra 2-handle. Aplicamos una reducción local a este 2-handle quedando:\\
+Supongamos de nuevo que queremos obtener la palabra reducida de la palabra $\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}$. Tenemos un main handle pero dicho main handle consta de una sub-palabra $\sigma2$-handle. Aplicamos una reducción local a este $\sigma2$-handle quedando:\\
 $\sigma1\sigma3^{-1}\sigma2\sigma3\sigma1^{-1}$. Ahora sí podemos aplicar una reducción local al main handle quedando la palabra reducida: \\
 $\sigma3^{-1}\sigma2^{-1}\sigma1\sigma2\sigma3$.\\
 
 \underline{\textbf{Definición:}} \\
 Diremos que un  $\sigma_{j}$-handle está permitido si no contiene ningún $\sigma_{j+1}$-handle.\\
 
-Por ejemplo el main handle $\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}$ no está permitido porque incluye al 2-handle $\sigma2\sigma3\sigma2^{-1}$. Este 2-handle sí estaría permitido porque no incluye ningún 3-handle. \\
+Por ejemplo el main handle $\sigma1\sigma2\sigma3\sigma2^{-1}\sigma1^{-1}$ no está permitido porque incluye al $\sigma2$-handle $\sigma2\sigma3\sigma2^{-1}$. Este 2-handle sí estaría permitido porque no incluye ningún $\sigma3$-handle. \\
 
 Si un $\sigma_{j}$-handle no está permitido, le aplicaremos reducciones locales, como hemos hecho en el ejemplo, hasta que pase a estar permitido.\\
 
@@ -127,7 +127,7 @@ Diremos que una palabra $\beta'$ es deducida de una palabra $\beta$ usando una \
 
 \bigskip
 Para poner en uso todas estas ideas vamos a ver un ejemplo en el que demostraremos que dos palabras dadas son equivalentes:\\
-Supongamos que tenemos las palabras $\beta1=\sigma2\sigma3^{-1}\sigma1\sigma2^{-1}\sigma3$ y $\beta2=\sigma1\sigma2\sigma3^{-1}\sigma1\sigma2^{-1}$ que representan a las trenzas que la figura \ref{h4}.\\
+Supongamos que tenemos las palabras $\beta1=\sigma2\sigma3^{-1}\sigma1\sigma2^{-1}\sigma3$ y $\beta2=\sigma1\sigma2\sigma3^{-1}\sigma1\sigma2^{-1}$ que representan a las trenzas de la figura \ref{h4}.\\
 
 \begin{figure}[h!]
 	\centering
@@ -142,15 +142,15 @@ A simple vista es difícil saber si las palabras son o no equivalentes. Para ver
 En primer lugar vamos a considerar la palabra con la que vamos a trabajar:\\
 $\beta1 \beta2^{-1} =\sigma2\sigma3^{-1}\sigma1\sigma2^{-1}\sigma3\sigma2\sigma1^{-1}\sigma3\sigma2^{-1}\sigma1^{-1}$.\\
 
-Nos encontramos el main handle $ \sigma1\sigma2^{-1}\sigma3\sigma2\sigma1^{-1} $. Vamos a aplicarle una reducción local, pero vemos que contiene al 2-handle $\sigma2^{-1}\sigma3\sigma2$. Por tanto aplicamos una reducción local a este 2-handle:\\
+Nos encontramos el main handle $ \sigma1\sigma2^{-1}\sigma3\sigma2\sigma1^{-1} $. Vamos a aplicarle una reducción local, pero vemos que contiene al $\sigma2$-handle $\sigma2^{-1}\sigma3\sigma2$. Por tanto aplicamos una reducción local a este $\sigma2$-handle:\\
 $\sigma2^{-1}\sigma3\sigma2$ $\rightarrow$ $\sigma3\sigma2\sigma3^{-1}$, obteniendo la palabra:\\
 $\beta1 \beta2^{-1} =\sigma2\sigma3^{-1}\sigma1\sigma3\sigma2\sigma3^{-1}\sigma1^{-1}\sigma3\sigma2^{-1}\sigma1^{-1}$.\\
 
 Nos encontramos el main handle permitido $\sigma1\sigma3\sigma2\sigma3^{-1}\sigma1^{-1}$. Le aplicamos una reducción local:\\ 
-$\sigma1\sigma3+\sigma2\sigma3^{-1}\sigma1^{-1}$ $\rightarrow$ $\sigma3\sigma2^{-1}\sigma1\sigma2\sigma3^{-1}$, obteniendo la palabra:\\
+$\sigma1\sigma3\sigma2\sigma3^{-1}\sigma1^{-1}$ $\rightarrow$ $\sigma3\sigma2^{-1}\sigma1\sigma2\sigma3^{-1}$, obteniendo la palabra:\\
 $\beta1 \beta2^{-1} =\sigma2\sigma3^{-1}\sigma3\sigma2^{-1}\sigma1\sigma2\sigma3^{-1}\sigma3\sigma2^{-1}\sigma1^{-1}$.\\
 
-Esta palabra no es libremente reducida porque nos encontramos un par de veces la sub-palabra $ -\sigma3+\sigma3 $. Las eliminamos y obtenemos la palabra:\\
+Esta palabra no es libremente reducida porque nos encontramos un par de veces la sub-palabra $ \sigma3^{-1}\sigma3 $. Las eliminamos y obtenemos la palabra:\\
 $\beta1 \beta2^{-1} =\sigma2\sigma2^{-1}\sigma1\sigma2\sigma2^{-1}\sigma1^{-1}$.\\
 
 De nuevo nos encontramos con una palabra que no es libremente reducida porque nos encontramos un par de veces la sub-palabra $ \sigma2\sigma2^{-1} $. Las eliminamos y obtenemos la palabra:\\
@@ -159,4 +159,4 @@ $\beta1 \beta2^{-1} =\sigma1\sigma1^{-1}$.\\
 Otra vez nos encontramos con una palabra no libremente reducida. Eliminamos la sub-palabra $\sigma1\sigma1^{-1}$ quedando la cadena vacía, es decir:\\
 $\beta1 \beta2^{-1} =\epsilon$.\\
 
-Concluimos que ambas trenzas son equivalentes, luego las trenzas a las que representan son equivalentes. Sus trenzas cerradas serán equivalentes y por tanto los nudos a los que se está representando son también equivalentes.\\
+Concluimos que ambas palabras son equivalentes, luego las trenzas a las que representan son equivalentes. Sus trenzas cerradas serán equivalentes y por tanto los nudos a los que se está representando son también equivalentes.\\
