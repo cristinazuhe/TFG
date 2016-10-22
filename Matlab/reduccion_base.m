@@ -62,7 +62,18 @@ function [braid_aux2,nuevo,simplificado2] = reduccion_base( indices_braid, minim
             end
         end
     end
-
+    %Si en el handle no nos encontramos cruces (minimo+1) tendremos que
+    %crear trenza auxiliar para una mejor representacion visual.
+    if(num_cambios ==0)
+        simplificado2=true;
+       for i=1:1:length(indices_braid)
+           if(abs(indices_braid(i))==minimo)
+               braid_aux2(end+1)=0;
+           else
+               braid_aux2(end+1)=indices_braid(i);
+           end
+       end
+    end
 
 end
 
