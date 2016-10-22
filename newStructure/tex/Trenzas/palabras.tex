@@ -70,10 +70,11 @@ Con este método tratamos de eliminar los handles de la trenza, pero para no ent
  	\label{h2} 
  \end{figure}
  
- Supongamos que tenemos la palabra $ \sigma3\sigma1^{-1}\sigma2\sigma4^{-1}\sigma2^{-1}\sigma4^{-1}\sigma1 $. La sub-palabra $ \sigma1^{-1}\sigma2\sigma4^{-1}\sigma2^{-1}\sigma4^{-1}\sigma1  $ es un main handle mientras que $\sigma2\sigma4^{-1}\sigma2^{-1} $ es un $ \sigma2 $-handle.\\
+ Supongamos que tenemos la palabra $ \sigma3\sigma1^{-1}\sigma2\sigma4^{-1}\sigma2^{-1}\sigma4^{-1}\sigma1 $. \\
+ La sub-palabra $ \sigma1^{-1}\sigma2\sigma4^{-1}\sigma2^{-1}\sigma4^{-1}\sigma1 $ es un main handle mientras que $\sigma2\sigma4^{-1}\sigma2^{-1} $ es un $ \sigma2 $-handle.\\
  
 \underline{\textbf{ Definición:}}\\
-Sea $\sigma_{j}^{e}$ $v$ $\sigma_{j}^{-e} $ un $\sigma_{j}$-tirador de una palabra $\beta$, donde $e \in$ $ \{-1,1\} $. En particular, podemos denotar dicho $\sigma_{j}$-tirador como la siguiente sub-palabra:
+Sea $\sigma_{j}^{e}$ $v$ $\sigma_{j}^{-e} $ un $\sigma_{j}$-handle de una palabra $\beta$, donde $e \in$ $ \{-1,1\} $. En particular, podemos denotar dicho $\sigma_{j}$-handle como la siguiente sub-palabra:
 \begin{center}
 	$ \sigma_{j}^{e} $ $ v_{0} $ $\sigma_{j+1}^{d_{1}} $ $ v_{1}...v_{m-1} $ $\sigma_{j+1}^{d_{m}} $ $ v_{m} $ $ \sigma_{j}^{-e} $
 \end{center} donde $v_{0},...,v_{m}$ no contienen generadores $\sigma_{k}^{(-1)}$ con $ j-1 \le k \le j+1 $, $d_{i} \in$ $ \{-1,1\} $\\
@@ -98,7 +99,7 @@ Podemos ver esta transformación en la figura \ref{h3}.\\
 
 Es importante destacar que antes de realizar una reducción local a una palabra, tendremos que asegurarnos de que dicha palabra sea libremente reducida para evitar una mayor complejidad.\\
 
-Sea la palabra $\sigma2\sigma1^{-1}\sigma2\sigma3\sigma1$. Podemos aplicar una reducción local al main handle $\sigma1^{-1}\sigma2\sigma3\sigma1$ quedando la palabra $\sigma2\sigma2\sigma1\sigma2^{-1}\sigma3$. Esta sería su palabra reducida.\\
+Sea la palabra $\sigma2\sigma1^{-1}\sigma2\sigma3\sigma1$. Podemos aplicar una reducción local al main handle $\sigma1^{-1}\sigma2\sigma3\sigma1$ quedando la palabra $\sigma2\sigma1\sigma2^{-1}\sigma3$. Esta sería su palabra reducida.\\
 
 Pero antes de hacer una reducción local a un $\sigma_{j}$-hadle, tendremos que asegurarnos que no tener ningún $\sigma_{j+1}$-handle en el $\sigma_{j}$-handle. En el caso de tenerlo, tendríamos que aplicar la reducción local a este $\sigma_{j+1}$-handle y posteriormente aplicar la reducción local al $\sigma_{j}$-main handle. De este modo podremos evitar ciclos infinitos. Veámoslo con un ejemplo:\\
 
