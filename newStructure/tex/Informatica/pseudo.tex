@@ -101,3 +101,55 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 \begin{center}
 	\textbf{Algoritmo de equivalencia para trenzas.}
 \end{center} 
+
+\begin{alg}
+	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
+	ENTRADA: br1 (trenza1)\\
+	\hspace*{2.2cm} br2 (trenza2)\\
+	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 y br2 son o no equivalentes)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=2 -> explicacion=0.
+   Obtengo exponente de ambas trenzas.
+   Si son distintos -> No son equivalentes. Finalizo
+   Obtengo permutacion de ambas trenzas.
+   Si son disintas -> No son equivalentes. Finalizo
+   Genero trenza_auxiliar = br1br2^{-1}.
+   Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
+   Si final_braid no es vacia -> No son equivalentes. 
+   Sino -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
+    
+\end{lstlisting}
+\end{alg}
+
+\bigskip
+\begin{center}
+	\textbf{Algoritmo de equivalencia para trenzas cerradas.}
+\end{center} 
+
+\begin{alg}
+	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
+	ENTRADA: br1 (trenza cerrada 1)\\
+	\hspace*{2.2cm} br2 (trenza cerrada 2)\\
+	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 y br2 son o no equivalentes)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\begin{lstlisting}
+	Si numero_argumentos=2 -> explicacion=0.
+	Si le numero de enlaces de br1 y de br2 son disintos -> No son equivalentes. Finalizo
+	Si ...
+	
+	Obtengo exponente de ambas trenzas.
+	Si son distintos -> No son equivalentes. Finalizo
+	Obtengo permutacion de ambas trenzas.
+	Si son disintas -> No son equivalentes. Finalizo
+	Genero trenza_auxiliar = br1br2^{-1}.
+	Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
+	Si final_braid no es vacia -> No son equivalentes. 
+	Sino -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
+	
+	\end{lstlisting}
+\end{alg}

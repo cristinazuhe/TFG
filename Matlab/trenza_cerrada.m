@@ -159,7 +159,8 @@ classdef trenza_cerrada<trenza
                 end
                 return;
             end
-            if(length(br1.get_indices) == 1)
+            %este if me lo quiero llevar al es_trivial 
+            if(length(br1.get_indices) == 1 && isempty(br2.get_indices))
                 equi=1;
                 if(explicacion)
                    disp('La trenza cerrada es equivalente a la trivial porque tiene un sólo cruce.');
