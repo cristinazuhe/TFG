@@ -5,7 +5,7 @@ En esta sección vamos a ver algunos pseudoalgoritmos referentes a los algoritmo
 En concreto, vamos a ver los pseudoalgoritmos para el algoritmo de Dehornoy (que se descompone en varios algoritmos auxiliares), el algoritmo que nos permite comprobar si dos trenzas dadas (o sus cierres) son o no equivalentes entre sí y el algoritmo que nos permite comprobar si una trenza dada (o su cierre) es equivalente a la trenza trivial.\\
 
 \begin{center}
-	\textbf{Algoritmo de Dehornoy para trenzas.}
+	\textbf{Algoritmo Dehornoy para trenzas.}
 \end{center} 
 Vamos a ir viendo los algoritmos auxiliares y concluiremos con el propio algoritmo de Dehornoy. Recordemos que este algoritmo se explica con detalle en la sección \ref{deh}.\\
 
@@ -137,19 +137,52 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 y br2 son o no equivalentes)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=2 -> explicacion=0.
+   Si el numero de enlaces de br1 y de br2 son disintos -> No son equivalentes.    Finalizo
+   Si equivalentes@trenza(br1,br2) son equivalentes -> sus cierres son equivalentes.
+   Sino ->   
+   	Obengo polinomio de Alexander de ambas trenzas.
+	Si son distintos -> No son equivalentes.
+	Sino -> No sabemos si son o no equivalentes. 
+\end{lstlisting}
+\end{alg}
+
+\bigskip
+\begin{center}
+	\textbf{Algoritmo para ver trivialidad de trenza.}
+\end{center} 
+
+\begin{alg}
+	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
+	ENTRADA: br (trenza)\\
+	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 es o no equivalente a la trenza trivial)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=1 -> explicacion=0.
+   Creo br2 = trenza trivial. 
+   Aplico algoritmo equivalentes para br y br2.
+\end{lstlisting}
+\end{alg}
+
+\newpage
+\begin{center}
+	\textbf{Algoritmo para ver trivialidad de trenza cerrada.}
+\end{center} 
+
+//TENGO QUE PONER LOS ALGORITMOS AUXILIARES Y TAL................
+\begin{alg}
+	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
+	ENTRADA: br (trenza)\\
+	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 es o no equivalente a la trenza trivial)
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 	\begin{lstlisting}
-	Si numero_argumentos=2 -> explicacion=0.
-	Si le numero de enlaces de br1 y de br2 son disintos -> No son equivalentes. Finalizo
-	Si ...
-	
-	Obtengo exponente de ambas trenzas.
-	Si son distintos -> No son equivalentes. Finalizo
-	Obtengo permutacion de ambas trenzas.
-	Si son disintas -> No son equivalentes. Finalizo
-	Genero trenza_auxiliar = br1br2^{-1}.
-	Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
-	Si final_braid no es vacia -> No son equivalentes. 
-	Sino -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
-	
+	Si numero_argumentos=1 -> explicacion=0.
+	Creo br2 = trenza trivial. 
+	Aplico algoritmo equivalentes para br y br2.
 	\end{lstlisting}
 \end{alg}
