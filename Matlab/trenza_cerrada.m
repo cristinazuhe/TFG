@@ -242,31 +242,44 @@ classdef trenza_cerrada<trenza
                 end
               % Aplico movimiento 1 de Markov. 
                 if(equi==2)
-                    if(explicacion)
-                        disp('Hago MV1');
-                    end
                     [a1,equi]=MV1(a);
+                    if(explicacion)
+                        disp('Hago MV1 sobre la trenza');
+                        disp(a.get_indices);
+                        disp('Obtengo la trenza');
+                        disp(a1.get_indices);
+                    end
                     equi = es_trivial_base(a1,explicacion);
                 end
               %  Veo si es trivial o no la trenza tras aplicar dehornoy
                 if(equi==2)
                   [e, final] = dehornoy(a1,20,0.5,false);
-                  a2 = trenza_cerrada(final);
+                  a2 = trenza_cerrada(final);    
+                  if(explicacion)
+                        disp('Hago Dehornoy trenza');
+                        disp(a1.get_indices);
+                        disp('Obtengo la trenza');
+                        disp(a2.get_indices);
+                    end
                   equi = es_trivial_base(a2,explicacion);
                 end
 
               %  Aplico movimiento 2 de Markov tantas veces como sea posible
                 if(equi==2)
-                    if(explicacion)
-                        disp('Hago MV2');
-                    end
                     [a3,equi] = MV2(a2);
+                    if(explicacion)
+                        disp('Hago MV2 sobre la trenza');
+                        disp(a2.get_indices);
+                        disp('Obtengo la trenza');
+                        disp(a3.get_indices);
+                    end
                     equi = es_trivial_base(a3,explicacion);
                 end
               % Aplico movimiento 1 de Markov. 
                 if(equi==2)
                     if(explicacion)
-                        disp('Hago MV1');
+                        disp('Hago MV1 sobre la trenza');
+                        disp(a3.get_indices);
                     end
                     [a4,equi]=MV1(a3, true);
                     equi = es_trivial_base(a4,explicacion);
@@ -473,6 +486,7 @@ classdef trenza_cerrada<trenza
         while(repite)
             if(length(a2.get_indices)==1)
                 equi = 1;
+                a3 = trenza_cerrada([]);
                 return;
             end
             m=max(abs(a2.get_indices));

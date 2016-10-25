@@ -1,6 +1,6 @@
 function [ a3, equi ] = MV2( br_c )
     a2=trenza_cerrada([]);
-    asignar_trenza(a2,br_c);
+    asignar_trenza(a2,br_c);MV
     repite = true;
     vale_d=true; vale_i=true;
     while(repite)
