@@ -394,53 +394,7 @@ classdef trenza_cerrada<trenza
             tpro.private_n_enlaces = calcular_enlaces(tpro);
         end
         
-       
-        
-    end 
-    
-    methods (Access=private)  %tengo que arreglar este metodo 
-      function numero_enlaces = calcular_enlaces(br_c)
-        %Obtengo el numero de enlaces de la trenza.
-            indice = 1; auxiliar = 1;numero_enlaces = 0;seguir = true;
-            v_perm = perm(br_c);
-            id=1:1:length(v_perm);
-            if(id==v_perm)
-                numero_enlaces = br_c.n_cadenas;
-                return;
-            end
-            while(indice < length(v_perm))
-                for i=1:1:length(v_perm)
-                    if(seguir)
-                       en_vector = v_perm(indice);
-                       if(sum(find(auxiliar==en_vector))~=0)
-                          seguir = false;
-                          numero_enlaces = numero_enlaces+1;
-                       else
-                          auxiliar(length(auxiliar)+1) = en_vector;
-                          indice= en_vector;
-                       end
-                    end
-                end
-                encontrado=false;
-                for j=1:1:length(v_perm)
-                   if(~encontrado)
-                      if(sum(find(auxiliar==j))==0)
-                          indice = j; 
-                          encontrado=true;
-                          seguir = true;
-                      else
-                          indice=length(v_perm);
-                      end
-                   end
-                end
-            end
-            
-            if(isempty(br_c.get_indices))
-                numero_enlaces = 1;
-            end
-      end
-    
-      function equi = es_trivial_base(br_c, explicacion)    
+             function equi = es_trivial_base(br_c, explicacion)    
             if(nargin==1)
                 explicacion=false;
             end
@@ -535,6 +489,52 @@ classdef trenza_cerrada<trenza
     end
 
   
+        
+    end 
+    
+    methods (Access=private)  %tengo que arreglar este metodo 
+      function numero_enlaces = calcular_enlaces(br_c)
+        %Obtengo el numero de enlaces de la trenza.
+            indice = 1; auxiliar = 1;numero_enlaces = 0;seguir = true;
+            v_perm = perm(br_c);
+            id=1:1:length(v_perm);
+            if(id==v_perm)
+                numero_enlaces = br_c.n_cadenas;
+                return;
+            end
+            while(indice < length(v_perm))
+                for i=1:1:length(v_perm)
+                    if(seguir)
+                       en_vector = v_perm(indice);
+                       if(sum(find(auxiliar==en_vector))~=0)
+                          seguir = false;
+                          numero_enlaces = numero_enlaces+1;
+                       else
+                          auxiliar(length(auxiliar)+1) = en_vector;
+                          indice= en_vector;
+                       end
+                    end
+                end
+                encontrado=false;
+                for j=1:1:length(v_perm)
+                   if(~encontrado)
+                      if(sum(find(auxiliar==j))==0)
+                          indice = j; 
+                          encontrado=true;
+                          seguir = true;
+                      else
+                          indice=length(v_perm);
+                      end
+                   end
+                end
+            end
+            
+            if(isempty(br_c.get_indices))
+                numero_enlaces = 1;
+            end
+      end
+    
+
     end
     
 end
