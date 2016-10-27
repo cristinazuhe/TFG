@@ -12,40 +12,8 @@ for i=1:1:length(A)
     clearvars -except i A contador_t fisol;
     a=trenza_cerrada(A(i,:));
     explicacion=false;
-    equi = es_trivial_base(a,explicacion);
+    equi = es_trivial(a,explicacion);
     contador=0;
-
-    while(contador<4 && equi==2)
-        if(contador~=0)
-            asignar_trenza(a,a4);
-        end
-      % Aplico movimiento 1 de Markov. 
-        if(equi==2)
-            if(explicacion)
-                disp('Hago MV1');
-            end
-            [a1,equi]=MV1(a);
-            [e, final] = dehornoy(a1,20,0.5,explicacion);
-            if(e==1)
-                equi=1;
-            end
-            a2 = trenza_cerrada(final);
-        end
-        
-      %Aplico movimiento 2 de Markov tantas veces como sea posible
-        if(equi==2)
-            if(explicacion)
-                disp('Hago MV2');
-            end
-            [a3,equi] = MV2(a2);
-            [e3, final3] = dehornoy(a3,20,0.5,explicacion);
-             if(e3==1)
-                equi=1;
-             end
-            a4 = trenza_cerrada(final3);
-        end
-        contador=contador+1;
-    end
 
     if(equi==2)
         contador_t = contador_t +1;

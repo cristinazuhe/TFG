@@ -148,10 +148,10 @@ classdef trenza<handle
             tpro = trenza('');
             tpro.indices_trenza = [br1.indices_trenza,br2.indices_trenza];
             tpro.n_cadenas = max(br1.n_cadenas, br2.n_cadenas);
-            if(br1.n_cadenas ~= br2.n_cadenas)
-                disp('Dichas trenzas tienen distintos numero de cadenas.');
-                disp('Se define la trenza producto con el mayor numero de cadenas de las dos.');
-            end
+%             if(br1.n_cadenas ~= br2.n_cadenas)
+%                 disp('Dichas trenzas tienen distintos numero de cadenas.');
+%                 disp('Se define la trenza producto con el mayor numero de cadenas de las dos.');
+%             end
         end
         
         function valor_exp = exp(br)

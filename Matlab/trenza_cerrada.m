@@ -213,91 +213,54 @@ classdef trenza_cerrada<trenza
                      end
                  end
             end
-        end
-        
-        function equi = es_trivial(br_c, explicacion)
-        %ES_TRIVIAL Comprobar si una trenza cerrada dada es o no equivalente a la
-        %trenza trivial.
-        %Entrada: trenza cerrada.     
-            if(nargin==1)
-                explicacion=false;
-            end
-            
-            if(length(br_c) == 1)
-                equi=1;
+            if(equi==2) %Con los invariantes no tenemos una respuesta positiva o negativa de equivalencia.
                 if(explicacion)
-                   disp('La trenza cerrada es equivalente a la trivial porque tiene un sólo cruce.');
+                   disp('Haciendo uso de invariantes no obtenemos respuesta');
+                   disp('Vamos a aplicar los movimientos de Markov junto con el algoritmo de Dehornoy');
                 end
-                return;
-            end
-            
-            a=trenza_cerrada([]);
-            asignar_trenza(a,br_c);
-            equi = es_trivial_base(a,explicacion);
-            contador=0;
+                br2aux= inver(br2);
+                br = producto(br1,br2aux);
+                contador=0;
+                while(contador<3 && equi==2)
+                    if(contador~=0)
+                        asignar_trenza(br,a4);
+                    end
+                  % Aplico movimiento 1 de Markov. 
+                    if(equi==2)
+                        [a1,equi]=MV1(br);
+                        if(explicacion)
+                            disp('Realizo el MV1 sobre la trenza');
+                            disp(br.get_indices);
+                            disp('Obtengo la trenza');
+                            disp(a1.get_indices);
+                        end
+                        [e, final] = dehornoy(a1,20,0.5,false);
+                        if(e==1)
+                            equi=1;
+                        end
+                        a2 = trenza_cerrada(final);
+                    end
 
-            while(contador<ceil(length(br_c)/2) && equi==2)
-                if(contador~=0)
-                    asignar_trenza(a,a4);
-                end
-              % Aplico movimiento 1 de Markov. 
-                if(equi==2)
-                    [a1,equi]=MV1(a);
-                    if(explicacion)
-                        disp('Hago MV1 sobre la trenza');
-                        disp(a.get_indices);
-                        disp('Obtengo la trenza');
-                        disp(a1.get_indices);
+                  %Aplico movimiento 2 de Markov tantas veces como sea posible
+                    if(equi==2)
+                        [a3,equi] = MV2(a2);
+                        if(explicacion)
+                            disp('Realizo el MV2 sobre la trenza');
+                            disp(a2.get_indices);
+                            disp('Obtengo la trenza');
+                            disp(a3.get_indices);
+                        end
+                        [e3, final3] = dehornoy(a3,20,0.5,false);
+                         if(e3==1)
+                            equi=1;
+                         end
+                        a4 = trenza_cerrada(final3);
                     end
-                    equi = es_trivial_base(a1,explicacion);
-                end
-              %  Veo si es trivial o no la trenza tras aplicar dehornoy
-                if(equi==2)
-                  [e, final] = dehornoy(a1,20,0.5,false);
-                  a2 = trenza_cerrada(final);    
-                  if(explicacion)
-                        disp('Hago Dehornoy trenza');
-                        disp(a1.get_indices);
-                        disp('Obtengo la trenza');
-                        disp(a2.get_indices);
-                    end
-                  equi = es_trivial_base(a2,explicacion);
-                end
-
-              %  Aplico movimiento 2 de Markov tantas veces como sea posible
-                if(equi==2)
-                    [a3,equi] = MV2(a2);
-                    if(explicacion)
-                        disp('Hago MV2 sobre la trenza');
-                        disp(a2.get_indices);
-                        disp('Obtengo la trenza');
-                        disp(a3.get_indices);
-                    end
-                    equi = es_trivial_base(a3,explicacion);
-                end
-              % Aplico movimiento 1 de Markov. 
-                if(equi==2)
-                    if(explicacion)
-                        disp('Hago MV1 sobre la trenza');
-                        disp(a3.get_indices);
-                    end
-                    [a4,equi]=MV1(a3, true);
-                    equi = es_trivial_base(a4,explicacion);
-                end
-                contador=contador+1;
-            end
-
-            if(explicacion)
-                if(equi==0)
-                    disp('No es trivial.');
-                elseif(equi==1)      
-                    disp('Si es trivial.');
-                else
-                    disp('NO SABEMOS SI ES O NO TRIVIAL.');
+                    contador=contador+1;
                 end 
             end
         end
-        
+             
         function representar_trenza(br_c, N_cortes, Radio)
         %REPRESENTAR_TRENZA Representacion 3D de la trenza cerrada.
         %Entrada: trenza cerrada, numero de cortes y radio de la trenza.
@@ -394,101 +357,15 @@ classdef trenza_cerrada<trenza
             tpro.private_n_enlaces = calcular_enlaces(tpro);
         end
         
-             function equi = es_trivial_base(br_c, explicacion)    
+        function equi = es_trivial(br_c, explicacion)    
             if(nargin==1)
                 explicacion=false;
             end
-            br_2 = trenza_cerrada(trenza());
+            br_2 = trenza_cerrada([]);
             equi = equivalentes(br_c,br_2, explicacion);
-      end
+        end
       
-      function [ a2,equi ] = MV1( br_c, completo )
-        if(nargin ==1)
-            completo = false;
-        end
-        equi = 2;
-        m=max(abs(br_c.get_indices));
-        aux = br_c.get_indices;
-        apariciones = find(abs(aux)==m);
-        l = length(aux);
-        if(aux(1)+aux(l) ==0)
-            aux(l)=[];aux(1)=[];   
-            if(length(aux)==1)
-               equi = 1;
-               a2= trenza_cerrada(aux);
-               return;
-            end
-        else
-            if(completo)
-                if(apariciones(1)<=l/2)
-                   aux = [-aux(1),aux];
-                   aux(end+1)=-aux(1);
-                else
-                   aux = [aux(end),aux];
-                   aux(end+1) = -aux(1);
-                end
-            end
-        end
-        a2 = trenza_cerrada(aux);
-    end
 
-      function [ a3, equi ] = MV2( br_c )
-        a2=trenza_cerrada([]);
-        asignar_trenza(a2,br_c);
-        repite = true;
-        vale_d=true; vale_i=true;
-        while(repite)
-            if(length(a2.get_indices)==1)
-                equi = 1;
-                a3 = trenza_cerrada([]);
-                return;
-            end
-            m=max(abs(a2.get_indices));
-            aux = a2.get_indices;
-            apariciones = find(abs(aux)==m);
-            if(length(apariciones) == 1)
-                if(apariciones == 1 || apariciones == length(a2)) %El mayor cruce esta al principio o al final. Borro directo
-                    aux(apariciones)=[];
-                else
-                    for i=1:1:apariciones
-                        if(vale_i)
-                            if(aux(i) == m-1)
-                                vale_i = false;
-                            end
-                        end
-                    end
-                    if(vale_i)
-                        aux(apariciones)=[];
-                        vale_d=false;
-                    else   
-                        for i=apariciones:1:length(aux)
-                            if(vale_d)
-                                if(aux(i) == m-1)
-                                    vale_d = false;
-                                end
-                            end
-                        end
-                        if(vale_d)
-                            aux(apariciones)=[];
-                        end
-                    end
-
-                end
-            end
-            a3 = trenza_cerrada(aux);
-            equi = es_trivial_base(a3);
-            if(length(a3.get_indices) ~= length(a2.get_indices))
-                repite=true;
-                a2=a3;
-            else
-                repite=false;
-            end
-        end
-
-
-    end
-
-  
         
     end 
     
@@ -534,7 +411,93 @@ classdef trenza_cerrada<trenza
             end
       end
     
+      function [ a2,equi ] = MV1( br_c, completo )
+        if(nargin ==1)
+            completo = false;
+        end
+        equi = 2;
+        m=max(abs(br_c.get_indices));
+        aux = br_c.get_indices;
+        apariciones = find(abs(aux)==m);
+        l = length(aux);
+        if(aux(1)+aux(l) ==0)
+            aux(l)=[];aux(1)=[];   
+            if(length(aux)==1)
+               equi = 1;
+               a2= trenza_cerrada(aux);
+               return;
+            end
+        else
+            if(completo)
+                if(apariciones(1)<=l/2)
+                   aux = [-aux(1),aux];
+                   aux(end+1)=-aux(1);
+                else
+                   aux = [aux(end),aux];
+                   aux(end+1) = -aux(1);
+                end
+            end
+        end
+        a2 = trenza_cerrada(aux);
+    end
 
+      function [ a3, equi ] = MV2( br_c )
+        a2=trenza_cerrada([]);
+        equi=2;
+        asignar_trenza(a2,br_c);
+        repite = true;
+        vale_d=true; vale_i=true;
+        while(repite)
+            if(length(a2.get_indices)==1)
+                equi = 1;
+                a3 = trenza_cerrada([]);
+                return;
+            end
+            m=max(abs(a2.get_indices));
+            aux = a2.get_indices;
+            apariciones = find(abs(aux)==m);
+            if(length(apariciones) == 1)
+                if(apariciones == 1 || apariciones == length(a2)) %El mayor cruce esta al principio o al final. Borro directo
+                    aux(apariciones)=[];
+                else
+                    for i=1:1:apariciones
+                        if(vale_i)
+                            if(aux(i) == m-1)
+                                vale_i = false;
+                            end
+                        end
+                    end
+                    if(vale_i)
+                        aux(apariciones)=[];
+                        vale_d=false;
+                    else   
+                        for i=apariciones:1:length(aux)
+                            if(vale_d)
+                                if(aux(i) == m-1)
+                                    vale_d = false;
+                                end
+                            end
+                        end
+                        if(vale_d)
+                            aux(apariciones)=[];
+                        end
+                    end
+
+                end
+            end
+            a3 = trenza_cerrada(aux);
+            if(length(a3.get_indices) ~= length(a2.get_indices))
+                repite=true;
+                a2=a3;
+            else
+                repite=false;
+            end
+        end
+
+
+    end
+
+  
     end
     
 end
