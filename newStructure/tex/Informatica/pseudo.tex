@@ -116,7 +116,7 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
    Si son distintos -> No son equivalentes. Finalizo
    Obtengo permutacion de ambas trenzas.
    Si son disintas -> No son equivalentes. Finalizo
-   Genero trenza_auxiliar = br1br2^{-1}.
+   Genero trenza_auxiliar = br1inver(br2).
    Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
    Si final_braid no es vacia -> No son equivalentes. 
    Sino -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
@@ -129,6 +129,34 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	\textbf{Algoritmo de equivalencia para trenzas cerradas.}
 \end{center} 
 
+
+\begin{alg}
+	\textbf{Algoritmo MV1}(br\_c)\\
+	ENTRADA: br\_c (trenza cerrada)\\
+	SALIDA: \hspace{0.4cm} a2 (trenza cerrada tras aplicar Movimiento1 eliminando de Markov.) 
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+    Si el primer cruce de br_c es opuesto al ultimo cruce de br_c -> a2 = br_c sin dichos cruces.
+\end{lstlisting}
+\end{alg}
+
+\begin{alg}
+	\textbf{Algoritmo MV2}(br\_c)\\
+	ENTRADA: br\_c (trenza cerrada)\\
+	SALIDA: \hspace{0.4cm} a3 (trenza cerrada tras aplicar Movimiento2 de Markov.) 
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Mientras br_c cambie de cruces...
+      Si br_c tiene un solo cruce -> a3=trenza cerrada trivial. Finalizo.
+      Obtengo cruce de mayor indice (indice m). 
+      Si se encuentra solo una vez en br_c
+         Si a izquerda o derecha del cruce no tenemos cruces con indice m-1 -> a3=br_c sin dicho cruce.
+         
+\end{lstlisting}
+\end{alg}
+
 \begin{alg}
 	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
 	ENTRADA: br1 (trenza cerrada 1)\\
@@ -139,12 +167,22 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 \begin{lstlisting}
    Si numero_argumentos=2 -> explicacion=0.
-   Si el numero de enlaces de br1 y de br2 son disintos -> No son equivalentes.    Finalizo
+   Si el numero de enlaces de br1 y de br2 son distintos -> No son equivalentes. Finalizo
    Si equivalentes@trenza(br1,br2) son equivalentes -> sus cierres son equivalentes.
    Sino ->   
    	Obengo polinomio de Alexander de ambas trenzas.
-	Si son distintos -> No son equivalentes.
-	Sino -> No sabemos si son o no equivalentes. 
+	Si son iguales salvo signo -> No sabemos si son o no equivalentes. equi <- 2.
+	Sino -> No son equivalentes.
+   Si equi=2
+    Creo trenza cerrada br = br1inver(br2)
+    Mientras numero_iteraciones < limite(establecido a 3)
+	    a1 = Aplico MV1 a br.
+	    [es_trivial2,a2] = Aplico dehornoy a trenza cerrada a1. 
+	    Si es_trivial2 -> Finalizo.
+	    a3 = Aplico MV2 a trenza cerrada a2.
+	    [es_trivial4,a4] = Aplico dehornoy a trenza cerrada a3. 
+	    Si es_trivial4 -> Finalizo.
+	   
 \end{lstlisting}
 \end{alg}
 
@@ -157,7 +195,7 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
 	ENTRADA: br (trenza)\\
 	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
-	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 es o no equivalente a la trenza trivial)
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br es o no equivalente a la trenza trivial)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 \begin{lstlisting}
@@ -167,22 +205,20 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 \end{lstlisting}
 \end{alg}
 
-\newpage
 \begin{center}
 	\textbf{Algoritmo para ver trivialidad de trenza cerrada.}
 \end{center} 
 
-//TENGO QUE PONER LOS ALGORITMOS AUXILIARES Y TAL................
 \begin{alg}
-	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
-	ENTRADA: br (trenza)\\
+	\textbf{Algoritmo es\_trivial}(br\_c,explicacion)\\
+	ENTRADA: br\_c (trenza cerrada)\\
 	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
-	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 es o no equivalente a la trenza trivial)
+	SALIDA: \hspace{0.4cm} equi (bool para indicar si br\_c es o no equivalente a la trenza cerrada trivial)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 	\begin{lstlisting}
 	Si numero_argumentos=1 -> explicacion=0.
-	Creo br2 = trenza trivial. 
-	Aplico algoritmo equivalentes para br y br2.
+	Creo br2_c = trenza cerrada trivial. 
+	Aplico algoritmo equivalentes para br_c y br2_c.
 	\end{lstlisting}
 \end{alg}

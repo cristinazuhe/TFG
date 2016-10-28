@@ -2,11 +2,11 @@
 clear all;
 warning('off','all');
 contador_t=0;
-fu=fopen('ej4.txt','r');
-A=textscan(fu,'%f %f %f %f');
+fu=fopen('ej5.txt','r');
+A=textscan(fu,'%f %f %f %f %f');
 A=cell2mat(A);
 fclose(fu);
-fisol = fopen('ej4o26.txt', 'wt');
+fisol = fopen('ej5new.txt', 'wt');
 
 for i=1:1:length(A)
     clearvars -except i A contador_t fisol;
@@ -39,28 +39,6 @@ fprintf(fisol,'\n');
 fclose(fisol);
 
 
-
-
-
-
-
-
-% 
-% n=2;
-% v = -n:1:n;
-% centro = (length(v)+1)/2;
-% v(centro)=[];
-% n_v = repmat(v,1,length(v)/2);
-% C = nchoosek(n_v,(length(v)/2));
-% todas = unique(C,'rows');
-% 
-% %las meto en el archivo
-% fi = fopen('ej2.txt', 'wt');
-% for i=1:1:length(todas)
-%     fprintf(fi,'%i ',todas(i,:));
-%     fprintf(fi,'\n');
-% end
-% fclose(fi);
 
 
 

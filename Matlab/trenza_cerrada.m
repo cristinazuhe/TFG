@@ -227,7 +227,7 @@ classdef trenza_cerrada<trenza
                     end
                   % Aplico movimiento 1 de Markov. 
                     if(equi==2)
-                        [a1,equi]=MV1(br);
+                        a1=MV1(br);
                         if(explicacion)
                             disp('Realizo el MV1 sobre la trenza');
                             disp(br.get_indices);
@@ -243,7 +243,7 @@ classdef trenza_cerrada<trenza
 
                   %Aplico movimiento 2 de Markov tantas veces como sea posible
                     if(equi==2)
-                        [a3,equi] = MV2(a2);
+                        a3 = MV2(a2);
                         if(explicacion)
                             disp('Realizo el MV2 sobre la trenza');
                             disp(a2.get_indices);
@@ -260,7 +260,15 @@ classdef trenza_cerrada<trenza
                 end 
             end
         end
-             
+      
+        function equi = es_trivial(br_c, explicacion)    
+            if(nargin==1)
+                explicacion=false;
+            end
+            br_2 = trenza_cerrada([]);
+            equi = equivalentes(br_c,br_2, explicacion);
+        end
+      
         function representar_trenza(br_c, N_cortes, Radio)
         %REPRESENTAR_TRENZA Representacion 3D de la trenza cerrada.
         %Entrada: trenza cerrada, numero de cortes y radio de la trenza.
@@ -357,14 +365,7 @@ classdef trenza_cerrada<trenza
             tpro.private_n_enlaces = calcular_enlaces(tpro);
         end
         
-        function equi = es_trivial(br_c, explicacion)    
-            if(nargin==1)
-                explicacion=false;
-            end
-            br_2 = trenza_cerrada([]);
-            equi = equivalentes(br_c,br_2, explicacion);
-        end
-      
+
 
         
     end 
@@ -411,45 +412,41 @@ classdef trenza_cerrada<trenza
             end
       end
     
-      function [ a2,equi ] = MV1( br_c, completo )
-        if(nargin ==1)
-            completo = false;
-        end
-        equi = 2;
-        m=max(abs(br_c.get_indices));
+      function a2 = MV1( br_c)
+%         if(nargin ==1)
+%             completo = false;
+%         end
+%        m=max(abs(br_c.get_indices));
+%        apariciones = find(abs(aux)==m);
         aux = br_c.get_indices;
-        apariciones = find(abs(aux)==m);
         l = length(aux);
         if(aux(1)+aux(l) ==0)
             aux(l)=[];aux(1)=[];   
             if(length(aux)==1)
-               equi = 1;
                a2= trenza_cerrada(aux);
                return;
             end
-        else
-            if(completo)
-                if(apariciones(1)<=l/2)
-                   aux = [-aux(1),aux];
-                   aux(end+1)=-aux(1);
-                else
-                   aux = [aux(end),aux];
-                   aux(end+1) = -aux(1);
-                end
-            end
-        end
+%         else
+%             if(completo)
+%                 if(apariciones(1)<=l/2)
+%                    aux = [-aux(1),aux];
+%                    aux(end+1)=-aux(1);
+%                 else
+%                    aux = [aux(end),aux];
+%                    aux(end+1) = -aux(1);
+%                 end
+%             end
+         end
         a2 = trenza_cerrada(aux);
     end
 
-      function [ a3, equi ] = MV2( br_c )
+      function  a3 = MV2( br_c )
         a2=trenza_cerrada([]);
-        equi=2;
         asignar_trenza(a2,br_c);
         repite = true;
         vale_d=true; vale_i=true;
         while(repite)
             if(length(a2.get_indices)==1)
-                equi = 1;
                 a3 = trenza_cerrada([]);
                 return;
             end
