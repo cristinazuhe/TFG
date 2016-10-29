@@ -1,21 +1,21 @@
 
 \section{Pseudoalgoritmos.}
-En esta sección vamos a ver algunos pseudoalgoritmos referentes a los algoritmos que hemos implementado. Nos vamos a centrar en aquellos que tienen mayor complejidad e interés, sin entrar en gran detalle. \\
+En esta sección vamos a ver algunos pseudoalgoritmos referentes a los algoritmos que hemos implementado. Nos vamos a centrar en aquellos que tienen mayor complejidad e interés, sin entrar en gran detalle. Es importante destacar que estos algoritmos no están establecidos como tales, sino que los hemos implementando intentando reflejar los conceptos matemáticos que hemos ido viendo. \\
 
-En concreto, vamos a ver los pseudoalgoritmos para el algoritmo de Dehornoy (que se descompone en varios algoritmos auxiliares), el algoritmo que nos permite comprobar si dos trenzas dadas (o sus cierres) son o no equivalentes entre sí y el algoritmo que nos permite comprobar si una trenza dada (o su cierre) es equivalente a la trenza trivial.\\
+En concreto, vamos a ver los pseudoalgoritmos para el algoritmo de Dehornoy (que descomponemos en varios algoritmos auxiliares), el algoritmo que nos permite comprobar si dos trenzas dadas (o sus cierres) son o no equivalentes entre sí y el algoritmo que nos permite comprobar si una trenza dada (o su cierre) es equivalente a la trenza trivial.\\
 
 \begin{center}
 	\textbf{Algoritmo Dehornoy para trenzas.}
 \end{center} 
 Vamos a ir viendo los algoritmos auxiliares y concluiremos con el propio algoritmo de Dehornoy. Recordemos que este algoritmo se explica con detalle en la sección \ref{deh}.\\
 
-Mediante el algoritmo Simplifica eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}, e \in$ \{-1,1\} de una palabra que representa a cierta trenza. 
+Creamos el método Simplifica mediante el cuál eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}, e \in$ \{-1,1\} de una palabra que representa a cierta trenza. 
 
 \begin{alg}
 	\textbf{Algoritmo Simplifica}(indices\_braid)\\
 	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
 	SALIDA: \hspace{0.4cm} braid\_aux (cadena auxiliar para mejor representacion visual) \\
-    \hspace*{2.2cm} nueva\_braid (cadena de enteros que representa los cruces de la trenza tras eliminar dos cruces opuestos)\\
+    \hspace*{2.2cm} nueva\_braid (cadena de enteros que representa los cruces de la trenza tras eliminar dos cruces consecuetivos opuestos)\\
     \hspace*{2.2cm} encontrado (bool para indicar si se produce simplificación)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
@@ -37,13 +37,14 @@ Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delim
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 \begin{lstlisting}
    Recorro los cruces de indices_braid
-   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Sino fin.
+   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Sino finalizo.
    Si encuentro un cruce generado por el elemento minimo con signo opuesto, me quedo con esa posicion como pos2.
 \end{lstlisting}
 \end{alg}
 
 \bigskip
-Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle.
+Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle. Este detalle lo controlamos en el algoritmo Dehornoy que veremos posteriormente. \\
+
 \begin{alg}
 	\textbf{Algoritmo reduccion\_base}(indices\_braid, minimo, pos1, pos2 )\\
 	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
@@ -64,9 +65,9 @@ Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la t
 \end{lstlisting}
 \end{alg}
 
+\newpage
 Estos algoritmos auxiliares no se proporcionan para uso directo al usuario ya que el realmente interesante es el algoritmo de Dehornoy, pero sí podrían ser usados. Veamos entonces el algoritmo de Dehornoy.\\
 
-\newpage
 \begin{alg}
 	\textbf{Algoritmo dehornoy}(br, N\_cortes, Radio, representar)\\
 	ENTRADA: br (trenza)\\
@@ -82,25 +83,26 @@ Estos algoritmos auxiliares no se proporcionan para uso directo al usuario ya qu
    indices_braid = cadena de enteros que representa a la trenza
    Si br tiene cadenas a la derecha triviales, las eliminamos visualmente.
    Mientras queden handles en la trenza dada...
-	   Obtenemos la palabra libremente reducida de indices_braid.
-	   Si no se produce reduccion...
-		   minimo = generador principal de indices_braid.
-		   [pos1,pos2]=encuentra_handle(indices_braid,minimo)
-		   Si pos1 y pos2 son posiciones validas....
-			   Busco primer subhandle a realizar en el handle.
-			   Actualizo pos1 y pos2
-			   Aplico reduccion_base a dicho subhandle.
-	   Creo matriz con secuencia de palabras generadas en el proceso.
+	 Obtenemos la palabra libremente reducida de indices_braid.
+	 Si no se produce reduccion...
+	   minimo = generador principal de indices_braid.
+	   [pos1,pos2]=encuentra_handle(indices_braid,minimo)
+	   Si pos1 y pos2 son posiciones validas....
+		   Busco primer subhandle a realizar en el handle.
+		   Actualizo pos1 y pos2
+		   Aplico reduccion_base a dicho subhandle.
+	 Creo matriz con secuencia de palabras generadas en el proceso
    Si representar, muestro las trenzas usando dicha matriz.			   
 \end{lstlisting}
 \end{alg}
 
-Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre trenzas cerradas. El proceso que se realizará internamente será exactamente el mismo que para trenzas, ya que el cerrar la trenza no aporta información nueva para el algoritmo de Dehornoy. \\
+Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre trenzas cerradas. El proceso que se realizará internamente será exactamente el mismo que para trenzas, ya que el cerrar la trenza no aporta información nueva para el algoritmo de Dehornoy. Por este mismo motivo, a la hora de realizar la visualización del algoritmo de Dehornoy sobre una trenza cerrada, veremos las transformaciones sobre la trenza y no sobre la trenza cerrada. \\
 
 \bigskip
 \begin{center}
 	\textbf{Algoritmo de equivalencia para trenzas.}
 \end{center} 
+Para ver si dos trenzas dadas son equivalentes o no entre sí, vamos a implementar algunos de los invariantes que vimos para trenzas. En concreto, vamos a estudiar los invariantes exponente y permutación. Si con estos invariantes no conseguimos analizar la equivalencia de las trenzas, vamos a aplicar el algoritmo de Dehornoy que hemos visto anteriormente. \\
 
 \begin{alg}
 	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
@@ -115,7 +117,7 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
    Obtengo exponente de ambas trenzas.
    Si son distintos -> No son equivalentes. Finalizo
    Obtengo permutacion de ambas trenzas.
-   Si son disintas -> No son equivalentes. Finalizo
+   Si son distintas -> No son equivalentes. Finalizo
    Genero trenza_auxiliar = br1inver(br2).
    Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
    Si final_braid no es vacia -> No son equivalentes. 
@@ -128,16 +130,24 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 \begin{center}
 	\textbf{Algoritmo de equivalencia para trenzas cerradas.}
 \end{center} 
+Para analizar la equivalencia de dos trenzas cerradas, vamos a apoyarnos en el algoritmo de equivalencia de las trenzas sin cerrar que hemos visto anteriormente. Además haremos uso de varios algoritmos auxiliares. En concreto, hemos implementado los movimientos de Markov que vimos en la sección \ref{Markov}.\\
 
+Sabemos que el movimiento 1 de Markov puede eliminar o añadir cruces. Siempre intentaremos eliminar cruces, mientras que para añadir cruces se tiene que solicitar explícitamente. Lo hacemos así para que las trenzas no aumenten en número de cruces salvo que no quede más opción. \\ 
 
 \begin{alg}
-	\textbf{Algoritmo MV1}(br\_c)\\
+	\textbf{Algoritmo MV1}(br\_c, completo)\\
 	ENTRADA: br\_c (trenza cerrada)\\
+	\hspace*{2.2cm} completo (bool para indicar si se desean aniadir cruces)\\
 	SALIDA: \hspace{0.4cm} a2 (trenza cerrada tras aplicar Movimiento1 eliminando de Markov.) 
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 \begin{lstlisting}
-    Si el primer cruce de br_c es opuesto al ultimo cruce de br_c -> a2 = br_c sin dichos cruces.
+   Si numero_argumentos=1 -> completo=0.
+   Si el primer cruce de br_c es opuesto al ultimo cruce de br_c -> a2 = br_c sin dichos cruces.
+   Sino -> Si completo... 
+     Obtengo cruce de mayor indice (indice m).
+     Aniado cruces opuestos de indice m a principio y final de br_c.
+      
 \end{lstlisting}
 \end{alg}
 
@@ -156,6 +166,12 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
          
 \end{lstlisting}
 \end{alg}
+
+Para implementar este algoritmo de equivalencia entre trenzas cerradas hemos analizado en primer lugar los invariantes básicos de ambas trenzas. Si no obtenemos una respuesta de equivalencia  o no equivalencia, pasamos a ver el polinomio de Alexander de ambas trenzas cerradas. Una vez analizados los invariantes que hemos estudiado, vamos a ir realizando transformaciones de equivalencia sobre la trenza cerrada generada por el producto de la trenza inicial y la inversa de la segunda trenza. \\
+
+Ya sabemos que ir haciendo transformaciones de equivalencia sobre una trenza cerrada para ver si es o no equivalente a la trenza cerrada trivial puede conllevar a una serie indefinida de movimientos. \\
+
+La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, el algoritmo de Dehornoy a la trenza cerrada que obtenemos, el Movimiento 2 de Markov y de nuevo el algoritmo de Dehornoy. Si en alguna de estas transformaciones conseguimos saber si la trenza cerrada es o no equivalente a la trivial, finalizamos el proceso. En caso contrario, realizaremos el mismo proceso un número delimitado de veces. \\
 
 \begin{alg}
 	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
@@ -182,14 +198,16 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	    a3 = Aplico MV2 a trenza cerrada a2.
 	    [es_trivial4,a4] = Aplico dehornoy a trenza cerrada a3. 
 	    Si es_trivial4 -> Finalizo.
+	    Si no ha cambiado br, a4 = Aplico MV1 completo a br. 
 	   
 \end{lstlisting}
 \end{alg}
 
-\bigskip
+\newpage
 \begin{center}
 	\textbf{Algoritmo para ver trivialidad de trenza.}
 \end{center} 
+Tanto para ver la trivialidad de una trenza como la trivialidad de una trenza cerrada vamos a usar la misma idea que será hacer uso de los algoritmos de equivalencia entre la trenza dada y la trenza trivial. Veámoslos:
 
 \begin{alg}
 	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
@@ -216,9 +234,9 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br\_c es o no equivalente a la trenza cerrada trivial)
 	
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
-	\begin{lstlisting}
-	Si numero_argumentos=1 -> explicacion=0.
-	Creo br2_c = trenza cerrada trivial. 
-	Aplico algoritmo equivalentes para br_c y br2_c.
-	\end{lstlisting}
+\begin{lstlisting}
+   Si numero_argumentos=1 -> explicacion=0.
+   Creo br2_c = trenza cerrada trivial. 
+   Aplico algoritmo equivalentes para br_c y br2_c.
+\end{lstlisting}
 \end{alg}

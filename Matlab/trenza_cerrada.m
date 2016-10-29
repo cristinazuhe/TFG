@@ -256,6 +256,26 @@ classdef trenza_cerrada<trenza
                          end
                         a4 = trenza_cerrada(final3);
                     end
+                    %Si no se ha producido ningun cambio en la trenza, se
+                    %aplica MV1 aniadiendo cruces
+                    if(equi==2)
+                        if(length(br)==length(a4))
+                            if(br.get_indices == a4.get_indices)
+                                a5=MV1(a4,1);
+                                if(explicacion)
+                                    disp('Realizo el MV1 sobre la trenza');
+                                    disp(a4.get_indices);
+                                    disp('Obtengo la trenza');
+                                    disp(a5.get_indices);
+                                end
+                                [e5, final5] = dehornoy(a5,20,0.5,false);
+                                if(e5==1)
+                                    equi=1;
+                                end
+                                a4 = trenza_cerrada(final5);
+                            end
+                        end
+                    end
                     contador=contador+1;
                 end 
             end
@@ -412,13 +432,13 @@ classdef trenza_cerrada<trenza
             end
       end
     
-      function a2 = MV1( br_c)
-%         if(nargin ==1)
-%             completo = false;
-%         end
-%        m=max(abs(br_c.get_indices));
-%        apariciones = find(abs(aux)==m);
+      function a2 = MV1( br_c, completo)
+        if(nargin ==1)
+            completo = false;
+        end
+        m=max(abs(br_c.get_indices));
         aux = br_c.get_indices;
+        apariciones = find(abs(aux)==m);
         l = length(aux);
         if(aux(1)+aux(l) ==0)
             aux(l)=[];aux(1)=[];   
@@ -426,16 +446,16 @@ classdef trenza_cerrada<trenza
                a2= trenza_cerrada(aux);
                return;
             end
-%         else
-%             if(completo)
-%                 if(apariciones(1)<=l/2)
-%                    aux = [-aux(1),aux];
-%                    aux(end+1)=-aux(1);
-%                 else
-%                    aux = [aux(end),aux];
-%                    aux(end+1) = -aux(1);
-%                 end
-%             end
+        else
+            if(completo)
+                if(apariciones(1)<=l/2)
+                   aux = [-aux(1),aux];
+                   aux(end+1)=-aux(1);
+                else
+                   aux = [aux(end),aux];
+                   aux(end+1) = -aux(1);
+                end
+            end
          end
         a2 = trenza_cerrada(aux);
     end
