@@ -1,11 +1,21 @@
+El objeto principal de estudio de este proyecto es la teoría de nudos. Sin embargo, hemos visto que esta teoría esta estrechamente relacionada con la teoría de trenzas.\\
 
-\section{Pseudoalgoritmos.}
-vamos a ver qué tengo que escribir...
- 
- contar en un comienzo qué he implementando.
- 
- Contar cómo lo he implementado en plan he hecho un toolbox...pues en matlab haciendo uso de dos clases con herencia, haciendo diagrama con la herencia. 
- 
- PSEUDOCODIGO 6pag
- 
- tour por el toolbox
+En este capítulo realizaremos el desarrollo informático sobre teoría de trenzas y trabajaremos con trenzas cerradas, que se pueden ver como si fuesen nudos. El motivo que nos ha llevado a trabajar con teoría de trenzas en lugar de con teoría de nudos se puede resumir en el hecho de que la teoría de trenzas proporciona ciertos atributos con los que podemos desarrollar la teoría de forma más cómoda que en la teoría de nudos. \\
+
+Antes de comenzar a realizar dicho desarrollo hemos investigado y hemos encontrado varios software que permiten trabajar computacionalmente con trenzas y nudos. Algunos de lo más destacados son los siguientes:
+\begin{itemize}
+	\item braidlab: se trata de un paquete Matlab que permite analizar datos usando trenzas. 
+	\item knotilus: nos permite trabajar con nudos, visualizándolos y obteniendo sus notaciones de Dowker y Gauss entre otras herramientas.
+	\item braid program: nos permite trabajar con trenzas. Lo más interesante de este programa es que nos permite obtener, a partir del algoritmo de Vogel, la trenza que genera cierto nudo, aunque no nos permite su visualización. 
+\end{itemize}
+
+Hemos implementado nuestro propio programa libre y gratuito porque estos programas ya existentes no proporcionan unas visualizaciones agradables para el usuario además de que la documentación de algunos de ellos no está muy completa y no resultan intuitivos de usar. Además, la implementación que hemos realizado ha ido pasando por distintas versiones hasta conseguir un diseño lo más simple posible, de modo que es fácil añadir nuevas funcionalidades e incluso mejoras. \\
+
+Un aspecto importante a destacar es el cambio de notación que vamos a hacer sobre las trenzas para que al usuario le resulte mucho más cómodo trabajar:
+\begin{itemize}
+	\item A los cruces negativos de una trenza $ \sigma_{i}^{-1} $ les denotaremos como $ -\sigma_{i}$.
+	\item A los cruces positivos de una trenza $ \sigma_{i}^{1} $, o simplemente $ \sigma_{i} $, les denotaremos como $ +\sigma_{i} $
+\end{itemize}
+
+Por ejemplo, la trenza $\beta = \sigma4^{-1}\sigma1^{-1}\sigma2$ la denotaremos como $\beta = -\sigma4-\sigma1+\sigma2$.\\ 
+

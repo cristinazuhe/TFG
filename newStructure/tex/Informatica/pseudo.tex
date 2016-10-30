@@ -1,4 +1,4 @@
-
+\newpage
 \section{Pseudoalgoritmos.}
 En esta sección vamos a ver algunos pseudoalgoritmos referentes a los algoritmos que hemos implementado. Nos vamos a centrar en aquellos que tienen mayor complejidad e interés, sin entrar en gran detalle. Es importante destacar que estos algoritmos no están establecidos como tales, sino que los hemos implementando intentando reflejar los conceptos matemáticos que hemos ido viendo. \\
 
@@ -25,7 +25,6 @@ Creamos el método Simplifica mediante el cuál eliminamos ocurrencias de tipo $
 \end{lstlisting}
 \end{alg}
 
-\newpage
 Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delimitan un $\sigma_{minimo}$-handle.
 \begin{alg}
 	\textbf{Algoritmo encuentra\_handle}(indices\_braid, minimo)\\
@@ -65,7 +64,7 @@ Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la t
 \end{lstlisting}
 \end{alg}
 
-\newpage
+
 Estos algoritmos auxiliares no se proporcionan para uso directo al usuario ya que el realmente interesante es el algoritmo de Dehornoy, pero sí podrían ser usados. Veamos entonces el algoritmo de Dehornoy.\\
 
 \begin{alg}
@@ -173,6 +172,7 @@ Ya sabemos que ir haciendo transformaciones de equivalencia sobre una trenza cer
 
 La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, el algoritmo de Dehornoy a la trenza cerrada que obtenemos, el Movimiento 2 de Markov y de nuevo el algoritmo de Dehornoy. Si en alguna de estas transformaciones conseguimos saber si la trenza cerrada es o no equivalente a la trivial, finalizamos el proceso. En caso contrario, realizaremos el mismo proceso un número delimitado de veces. \\
 
+\newpage
 \begin{alg}
 	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
 	ENTRADA: br1 (trenza cerrada 1)\\
@@ -203,7 +203,6 @@ La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, 
 \end{lstlisting}
 \end{alg}
 
-\newpage
 \begin{center}
 	\textbf{Algoritmo para ver trivialidad de trenza.}
 \end{center} 
