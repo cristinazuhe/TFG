@@ -18,7 +18,7 @@ function traceplot = tubep(x,y,z,N,R)
     zz=repmat(z,1,N+1);
     traceplot=surface(xx',yy',zz','EdgeColor','none');
     
-    img = imread('./im3.jpg');
+    img = imread('im3.jpg');
     set(traceplot,'CData',img, 'FaceColor','texturemap'); 
     axis equal off;
     %shading interp;
