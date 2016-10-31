@@ -36,3 +36,6 @@
 \BOOKMARK [0][-]{chapter.4}{Desarrollo inform\341tico.}{}% 36
 \BOOKMARK [1][-]{section.4.1}{Teor\355a de trenzas con Matlab.}{chapter.4}% 37
 \BOOKMARK [1][-]{section.4.2}{Pseudoalgoritmos.}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.3}{Usando toxtren}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.3.1}{Clase trenza.}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.2}{Clase trenza\137cerrada.}{section.4.3}% 41
