@@ -207,7 +207,7 @@ Creamos una trenza a partir de los cruces que hemos obtenido al aplicar el algor
 	    n_cadenas: 3
 \end{lstlisting}
 
-Obtivamente al aplicar el algoritmo de equivalencia entre las trenzas a y f tendremos que obtener respuesta afirmativa:
+Obviamente al aplicar el algoritmo de equivalencia entre las trenzas a y f tendremos que obtener respuesta afirmativa:
 \begin{lstlisting}
 >> equivalentes(a,f)
 	ans = 1
@@ -224,3 +224,94 @@ Finalmente podemos comprobar si una trenza dada es o no trivial. En este caso la
 \begin{center}
 	\textbf{Constructor.}
 \end{center}
+Podemos obtener una trenza cerrada a partir de un vector que contiene los cruces o bien indicando la cadena de cruces, al igual que hacíamos con las trenzas. Del mismo modo, podemos indicar el número de cadenas que tendrá la cadena o establecerlo al número mínimo por defecto. Vamos a ver un ejemplo entre estas cuatro opciones posibles:
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{black}}
+\begin{lstlisting}
+>> m=trenza_cerrada([3 -1 2],5)
+\end{lstlisting}
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{blue}}
+\begin{lstlisting}
+	m = trenza_cerrada with properties:
+	    n_enlaces: 1
+	    indices_trenza: [3 -1 2]
+	    n_cadenas: 5
+\end{lstlisting}
+
+Además, podemos crear una trenza cerrada a partir de una trenza dada. Vamos a crear la trenza cerrada a\_c a partir de la trenza a que creamos anteriormente:
+\begin{lstlisting}
+>> a
+	a = trenza with properties:
+	    indices_trenza: [1 -2 2 2 -1]
+	    n_cadenas: 3
+\end{lstlisting}
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{black}}
+\begin{lstlisting}
+>> a_c=trenza_cerrada(a)
+\end{lstlisting}
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{blue}}
+\begin{lstlisting}	    
+	a_c = trenza_cerrada with properties:	    
+	    n_enlaces: 2
+	    indices_trenza: [1 -2 2 2 -1]
+	    n_cadenas: 3
+\end{lstlisting}
+
+Los métodos get/set y los relativos a operaciones e invariantes básicos se llaman del mismo modo que hemos visto para trenzas. Por este motivo, para trenzas cerradas vamos a mostrar solamente la sección de otros métodos destacados. 
+
+\bigskip
+\begin{center}
+	\textbf{Otros métodos destacados. }
+\end{center}
+Podemos obtener la notación de Dowker de una trenza cerrada de un sólo enlace con el siguiente método:
+\begin{lstlisting}
+>> m.Dowker
+	ans = 6    -4     2
+>> a_c.Dowker
+	Se trata de un enlace.
+\end{lstlisting}
+
+Obtenemos el polinomio de Alexander de una trenza cerrada:
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{black}}
+\begin{lstlisting}
+>> aux=trenza_cerrada([ 1 2 3])
+\end{lstlisting}
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{blue}}
+\begin{lstlisting}
+	aux = trenza_cerrada with properties:
+	    n_enlaces: 1
+	    indices_trenza: [1 2 3]
+	    n_cadenas: 4
+>> aux.Alexander
+	ans = -1
+\end{lstlisting}
+
+Podemos ver la representación 3D de una trenza cerrada haciendo uso de representar\_trenza. Aunque para el caso de trenzas no lo comentamos, a dicho método le podemos para el número de cortes que tendrán las cadenas y el radio de las mismas.\\
+Por ejemplo, visualizamos la trenza cerrada m con un radio de 0.4 y 30 cortes por cadena del siguiente modo:
+
+\begin{lstlisting}
+>> representar_trenza(m,30,0.4)
+\end{lstlisting}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=4.3cm]{img/infor4.png}
+	\caption{Representación trenza cerrada Matlab.}
+	\label{inf3} 
+\end{figure}
+
+Podemos ver si dos trenzas cerradas son equivalentes. Además, podemos pedir mensajes explicativos que nos muestren porqué las trenzas cerradas son o no equivalentes. Este detalle también es posible realizarlo para trenzas, simplemente tenemos que indicarlo con un nuevo parámetro.  
+\begin{lstlisting}
+>> equivalentes(a_c,m,1)
+	Las trenzas cerradas no son equivalentes porque tienen distinto numero de enlaces.
+	ans = 0
+\end{lstlisting}
+
+Finalmente podemos ver si una trenza cerrada es equivalente a la trivial, y mostrar o no mensajes de salida explicativos.
+\lstset{emph=[1]{trenza,trenza_cerrada},emphstyle=[1]\color{black}}
+\begin{lstlisting}
+>> es_trivial(m,true)
+	La trenza dada no es equivalente a la trenza trivial. Su exponente no es nulo.
+	Pero es posible que la trenza cerrada si sea equivalente a la trivial.
+	Comparando los polinomios de Alexander obtenemos que...
+	La trenza cerrada no es equivalente a la trivial.
+	ans = 0
+\end{lstlisting}

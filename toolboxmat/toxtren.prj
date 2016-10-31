@@ -1,31 +1,28 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="1098174437" file="C:\Users\Cris\Documents\GitHub\TFG\toolboxmat\toxtren.prj" location="C:\Users\Cris\Documents\GitHub\TFG\toolboxmat" name="toxtren" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="2072030802" file="C:\Users\Cris\Documents\GitHub\TFG\toolboxmat\toxtren.prj" location="C:\Users\Cris\Documents\GitHub\TFG\toolboxmat" name="toxtren" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>toxtren</param.appname>
     <param.authnamewatermark>Cristina Zuheros</param.authnamewatermark>
     <param.email />
     <param.company />
-    <param.summary>toolbos para analizar trenzas y trenzas cerradas.</param.summary>
+    <param.summary>toolbox para analizar trenzas y trenzas cerradas.</param.summary>
     <param.description />
     <param.screenshot>${PROJECT_ROOT}\im.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.output>${PROJECT_ROOT}\toxtren.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
-      <item>Model Predictive Control Toolbox</item>
       <item>Symbolic Math Toolbox</item>
     </param.products.name>
     <param.products.id>
       <item>1</item>
-      <item>22</item>
       <item>15</item>
     </param.products.id>
     <param.products.version>
       <item>8.5</item>
-      <item>5.0.1</item>
       <item>6.2</item>
     </param.products.version>
     <param.platforms />
-    <param.guid>20f0aacb-bd57-4bc7-bb78-288689efc06e</param.guid>
+    <param.guid>ff424744-0cee-4109-b593-021e5a1dd5b1</param.guid>
     <param.exclude.filters />
     <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;examples/&gt;</param.examples>

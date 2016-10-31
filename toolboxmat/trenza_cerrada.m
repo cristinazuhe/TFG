@@ -151,7 +151,7 @@ classdef trenza_cerrada<trenza
             if(br1.n_enlaces ~= br2.n_enlaces)
                 equi=0;
                 if(explicacion)
-                    if(isempty(get_n(br2)))
+                    if(isempty(get_indices(br2)))
                         disp('La trenza cerrada no es equivalente a la trivial porque tiene mas de un enlace.');
                     else
                         disp('Las trenzas cerradas no son equivalentes porque tienen distinto numero de enlaces.');
@@ -162,7 +162,7 @@ classdef trenza_cerrada<trenza
             equi = equivalentes@trenza(br1,br2,explicacion);
             if(equi==1)
                 if(explicacion)
-                    if(isempty(get_n(br2)))
+                    if(isempty(get_indices(br2)))
                         disp('Por tanto, la trenza cerrada es equivalente a la trivial.');
                     else
                         disp('Por tanto, las trenzas cerradas tambien son equivalentes');
@@ -170,7 +170,7 @@ classdef trenza_cerrada<trenza
                 end
             else
                 if(explicacion)
-                    if(isempty(get_n(br2)))
+                    if(isempty(get_indices(br2)))
                         disp('Pero es posible que la trenza cerrada si sea equivalente a la trivial.');
                     else
                         disp('Pero es posible que las trenzas cerradas si sean equivalentes.');
@@ -196,7 +196,7 @@ classdef trenza_cerrada<trenza
                  if(nu1==nu2 || nu1==(-1)*nu2)
                      equi=2;
                      if(explicacion)
-                         if(isempty(get_n(br2)))
+                         if(isempty(get_indices(br2)))
                             disp('No sabemos si la trenza cerrada dada es equivalente a la trivial.');
                          else
                             disp('No sabemos si las trenzas cerradas dadas son equivalentes. ');
@@ -205,7 +205,7 @@ classdef trenza_cerrada<trenza
                  else
                      equi=0;
                      if(explicacion)
-                         if(isempty(get_n(br2)))
+                         if(isempty(get_indices(br2)))
                             disp('La trenza cerrada no es equivalente a la trivial.');
                          else
                             disp('Las trenzas cerradas no son equivalentes.');

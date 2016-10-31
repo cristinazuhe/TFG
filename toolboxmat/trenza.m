@@ -348,7 +348,7 @@ classdef trenza<handle
             vector_e2 = exp(br2);
             if(vector_e1 ~= vector_e2)
                 if(explicacion)
-                    if(isempty(get_n(br2)))
+                    if(isempty(get_indices(br2)))
                         disp('La trenza dada no es equivalente a la trenza trivial. Su exponente no es nulo.');
                     else
                         disp('Las trenzas dadas no son equivalentes pues sus exponentes son distintos.');
@@ -366,7 +366,7 @@ classdef trenza<handle
                 vector_aux = vector_p1(1:length(vector_p2));
                 if(~isequal(vector_aux,vector_p2))
                     if(explicacion)
-                        if(isempty(get_n(br2)))
+                        if(isempty(get_indices(br2)))
                             disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
                         else
                             disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
@@ -379,7 +379,7 @@ classdef trenza<handle
                 vector_aux = vector_p2(1:length(vector_p1));
                 if(~isequal(vector_aux,vector_p1))
                     if(explicacion)
-                        if(isempty(get_n(br2)))
+                        if(isempty(get_indices(br2)))
                             disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
                         else
                             disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
@@ -390,7 +390,7 @@ classdef trenza<handle
                 end
             elseif(~isequal(vector_p1,vector_p2))
                if(explicacion)
-                    if(isempty(get_n(br2)))
+                    if(isempty(get_indices(br2)))
                         disp('La trenza dada no es equivalente a la trenza trivial. Su permutacion no es trivial.');
                     else
                         disp('Las trenzas dadas no son equivalentes pues sus permutaciones son distintas.');
@@ -407,7 +407,7 @@ classdef trenza<handle
 
             if(~es_trivial)
                if(explicacion)
-                   if(isempty(get_n(br2)))
+                   if(isempty(get_indices(br2)))
                       disp('La trenza dada no es equivalente a la trenza trivial. Hemos aplicado el algoritmo de Dehornoy.');
                    else
                       disp('Las trenzas dadas no son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
@@ -417,7 +417,7 @@ classdef trenza<handle
             else
                equi=true;
                if(explicacion)
-                   if(isempty(get_n(br2)))
+                   if(isempty(get_indices(br2)))
                         disp('La trenza dada si es equivalente a la trenza trivial. Hemos aplicado el algoritmo de Dehornoy.');
                    else
                         disp('Las trenzas dadas si son equivalentes. Hemos aplicado el algoritmo de Dehornoy.');
