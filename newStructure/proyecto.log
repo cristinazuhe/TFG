@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  31 OCT 2016 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  4 NOV 2016 21:19
 entering extended mode
 **proyecto.tex
 (proyecto.tex
@@ -623,20 +623,20 @@ LaTeX Info: Redefining \% on input line 29.
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
 \c@lstlisting=\count131
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -658,7 +658,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 8.
+Package hyperref Info: Link coloring OFF on input line 9.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -667,9 +667,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 8.
-LaTeX Info: Redefining \pageref on input line 8.
-LaTeX Info: Redefining \nameref on input line 8.
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
 
 (proyecto.out) (proyecto.out)
 \@outlinefile=\write3
@@ -713,11 +713,11 @@ LaTeX Info: Redefining \nameref on input line 8.
 \c@lem=\count141
 \c@cor=\count142
 \c@alg=\count143
-LaTeX Info: Redefining \. on input line 14.
-LaTeX Info: Redefining \% on input line 14.
+LaTeX Info: Redefining \. on input line 15.
+LaTeX Info: Redefining \% on input line 15.
 (tex/portada.tex
 \centeroffset=\skip56
- <img/logo_ugr.jpg, id=167, 777.90625pt x 231.86626pt>
+ <img/logo_ugr.jpg, id=171, 777.90625pt x 231.86626pt>
 File: img/logo_ugr.jpg Graphic file (type jpg)
 
 <use img/logo_ugr.jpg>
@@ -736,13 +736,13 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 23.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<img/logo_etsiit.png, id=168, 110.814pt x 40.4712pt>
+<img/logo_etsiit.png, id=172, 110.814pt x 40.4712pt>
 File: img/logo_etsiit.png Graphic file (type png)
  <use img/logo_etsiit.png>
 Package pdftex.def Info: img/logo_etsiit.png used on input line 33.
 (pdftex.def)             Requested size: 145.11053pt x 52.99727pt.
 
-<img/logo_ciencias.jpg, id=170, 222.8325pt x 75.28125pt>
+<img/logo_ciencias.jpg, id=174, 222.8325pt x 75.28125pt>
 File: img/logo_ciencias.jpg Graphic file (type jpg)
 
 <use img/logo_ciencias.jpg>
@@ -780,34 +780,34 @@ Package babel Info: Redefining spanish shorthand "?
 {C:/Users/Cris/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/logo_u
 gr.jpg> <./img/logo_etsiit.png> <./img/logo_ciencias.jpg>])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \frontmatter
+l.19 \frontmatter
                   [2
 
 
@@ -905,64 +905,64 @@ LaTeX Info: Redefining \. on input line 41.
 LaTeX Info: Redefining \% on input line 41.
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 21.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 \include{tex/prefacio}
+l.21 \include{tex/prefacio}
                             [3]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 23.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 \tableofcontents
+l.23 \tableofcontents
                       [4
 
 
@@ -1002,37 +1002,37 @@ een already used, duplicate ignored
 l.44 ...ollo inform\IeC {\'a}tico.}{65}{chapter.4}
                                                    [5])
 \tf@toc=\write4
-LaTeX Info: Redefining \. on input line 23.
-LaTeX Info: Redefining \% on input line 23.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 23.
+(babel)             in language  on input line 24.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 \listoffigures
+l.24 \listoffigures
                     [6] (proyecto.lof
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
@@ -1071,51 +1071,51 @@ l.89 ...de trenzas\relax }}{28}{figure.caption.41}
 
 ])
 \tf@lof=\write5
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 26.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 \mainmatter
+l.26 \mainmatter
                  [8]
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 26.
+(babel)             in language  on input line 27.
 (tex/introduccion.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 4.
@@ -1131,75 +1131,75 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 4.
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
  [1
 
 
 ]
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
  [2
 
 ]
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 (tex/nudos/nudos.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
@@ -1226,19 +1226,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<inudos/cubo1.png, id=412, 161.60374pt x 167.62625pt>
+<inudos/cubo1.png, id=417, 161.60374pt x 167.62625pt>
 File: inudos/cubo1.png Graphic file (type png)
  <use inudos/cubo1.png>
 Package pdftex.def Info: inudos/cubo1.png used on input line 10.
 (pdftex.def)             Requested size: 113.81102pt x 118.05118pt.
 
-<inudos/cubo2.png, id=413, 161.60374pt x 167.62625pt>
+<inudos/cubo2.png, id=418, 161.60374pt x 167.62625pt>
 File: inudos/cubo2.png Graphic file (type png)
  <use inudos/cubo2.png>
 Package pdftex.def Info: inudos/cubo2.png used on input line 11.
 (pdftex.def)             Requested size: 113.81102pt x 118.05118pt.
 
-<inudos/cubo3.png, id=414, 161.60374pt x 167.62625pt>
+<inudos/cubo3.png, id=419, 161.60374pt x 167.62625pt>
 File: inudos/cubo3.png Graphic file (type png)
  <use inudos/cubo3.png>
 Package pdftex.def Info: inudos/cubo3.png used on input line 12.
@@ -1253,19 +1253,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<inudos/1.jpg, id=415, 142.5325pt x 142.5325pt>
+<inudos/1.jpg, id=420, 142.5325pt x 142.5325pt>
 File: inudos/1.jpg Graphic file (type jpg)
  <use inudos/1.jpg>
 Package pdftex.def Info: inudos/1.jpg used on input line 26.
 (pdftex.def)             Requested size: 85.35826pt x 85.35703pt.
 
-<inudos/3f.png, id=416, 162.6075pt x 162.6075pt>
+<inudos/3f.png, id=421, 162.6075pt x 162.6075pt>
 File: inudos/3f.png Graphic file (type png)
  <use inudos/3f.png>
 Package pdftex.def Info: inudos/3f.png used on input line 27.
 (pdftex.def)             Requested size: 85.35826pt x 85.36029pt.
 
-<inudos/fig8.jpg, id=417, 142.5325pt x 143.53625pt>
+<inudos/fig8.jpg, id=422, 142.5325pt x 143.53625pt>
 File: inudos/fig8.jpg Graphic file (type jpg)
  <use inudos/fig8.jpg>
 Package pdftex.def Info: inudos/fig8.jpg used on input line 28.
@@ -1304,7 +1304,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 35.
 [3 <./inudos/cubo1.png> <./inudos/cubo2.png> <./inudos/cubo3.png>]
-<inudos/enlace.png, id=424, 193.72375pt x 122.4575pt>
+<inudos/enlace.png, id=429, 193.72375pt x 122.4575pt>
 File: inudos/enlace.png Graphic file (type png)
  <use inudos/enlace.png>
 Package pdftex.def Info: inudos/enlace.png used on input line 40.
@@ -1458,7 +1458,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 4.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 4.
-[5] <inudos/conexion1.jpg, id=439, 149.55875pt x 142.5325pt>
+[5] <inudos/conexion1.jpg, id=444, 149.55875pt x 142.5325pt>
 File: inudos/conexion1.jpg Graphic file (type jpg)
 
 <use inudos/conexion1.jpg>
@@ -1469,14 +1469,14 @@ File: inudos/fig8.jpg Graphic file (type jpg)
 Package pdftex.def Info: inudos/fig8.jpg used on input line 8.
 (pdftex.def)             Requested size: 71.13188pt x 71.63214pt.
 
-<inudos/conexion2.jpg, id=440, 300.12125pt x 156.585pt>
+<inudos/conexion2.jpg, id=445, 300.12125pt x 156.585pt>
 File: inudos/conexion2.jpg Graphic file (type jpg)
 
 <use inudos/conexion2.jpg>
 Package pdftex.def Info: inudos/conexion2.jpg used on input line 16.
 (pdftex.def)             Requested size: 199.16928pt x 103.91745pt.
 
-<inudos/conexion3.jpg, id=441, 300.12125pt x 156.585pt>
+<inudos/conexion3.jpg, id=446, 300.12125pt x 156.585pt>
 File: inudos/conexion3.jpg Graphic file (type jpg)
 
 <use inudos/conexion3.jpg>
@@ -1495,7 +1495,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<inudos/conexion4.jpg, id=442, 300.12125pt x 156.585pt>
+<inudos/conexion4.jpg, id=447, 300.12125pt x 156.585pt>
 File: inudos/conexion4.jpg Graphic file (type jpg)
 
 <use inudos/conexion4.jpg>
@@ -1547,7 +1547,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-<inudos/tableknot.png, id=457, 1284.8pt x 956.57375pt>
+<inudos/tableknot.png, id=462, 1284.8pt x 956.57375pt>
 File: inudos/tableknot.png Graphic file (type png)
 
 <use inudos/tableknot.png>
@@ -1572,13 +1572,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
-<inudos/3fcon1.png, id=459, 162.6075pt x 162.6075pt>
+<inudos/3fcon1.png, id=464, 162.6075pt x 162.6075pt>
 File: inudos/3fcon1.png Graphic file (type png)
  <use inudos/3fcon1.png>
 Package pdftex.def Info: inudos/3fcon1.png used on input line 74.
 (pdftex.def)             Requested size: 99.58464pt x 99.58742pt.
 
-<inudos/3fcon2.png, id=460, 162.6075pt x 162.6075pt>
+<inudos/3fcon2.png, id=465, 162.6075pt x 162.6075pt>
 File: inudos/3fcon2.png Graphic file (type png)
  <use inudos/3fcon2.png>
 Package pdftex.def Info: inudos/3fcon2.png used on input line 75.
@@ -1623,7 +1623,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-<inudos/817con.png, id=468, 195.73125pt x 215.80624pt>
+<inudos/817con.png, id=473, 195.73125pt x 215.80624pt>
 File: inudos/817con.png Graphic file (type png)
  <use inudos/817con.png>
 Package pdftex.def Info: inudos/817con.png used on input line 87.
@@ -1662,13 +1662,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 93.
  [8 <./inudos/tableknot.png> <./inudos/3fcon1.png> <./inudos/3fcon2.png>]
-<inudos/817def1.png, id=475, 363.3575pt x 247.92625pt>
+<inudos/817def1.png, id=480, 363.3575pt x 247.92625pt>
 File: inudos/817def1.png Graphic file (type png)
 
 <use inudos/817def1.png>
 Package pdftex.def Info: inudos/817def1.png used on input line 95.
 (pdftex.def)             Requested size: 199.16928pt x 135.89832pt.
- <inudos/817def2.png, id=476, 365.365pt x 213.79875pt>
+ <inudos/817def2.png, id=481, 365.365pt x 213.79875pt>
 File: inudos/817def2.png Graphic file (type png)
 
 <use inudos/817def2.png>
@@ -1702,13 +1702,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-<inudos/movi1.png, id=478, 455.7025pt x 341.275pt>
+<inudos/movi1.png, id=483, 455.7025pt x 341.275pt>
 File: inudos/movi1.png Graphic file (type png)
  <use inudos/movi1.png>
 Package pdftex.def Info: inudos/movi1.png used on input line 13.
 (pdftex.def)             Requested size: 142.26378pt x 106.54402pt.
 
-<inudos/movi2.png, id=479, 455.7025pt x 341.275pt>
+<inudos/movi2.png, id=484, 455.7025pt x 341.275pt>
 File: inudos/movi2.png Graphic file (type png)
  <use inudos/movi2.png>
 Package pdftex.def Info: inudos/movi2.png used on input line 14.
@@ -1741,25 +1741,25 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 19.
 
 [9 <./inudos/817con.png> <./inudos/817def1.png> <./inudos/817def2.png>]
-<inudos/movi3.png, id=489, 455.7025pt x 341.275pt>
+<inudos/movi3.png, id=494, 455.7025pt x 341.275pt>
 File: inudos/movi3.png Graphic file (type png)
  <use inudos/movi3.png>
 Package pdftex.def Info: inudos/movi3.png used on input line 23.
 (pdftex.def)             Requested size: 199.16928pt x 149.16162pt.
 
-<inudos/movi4.png, id=490, 455.7025pt x 341.275pt>
+<inudos/movi4.png, id=495, 455.7025pt x 341.275pt>
 File: inudos/movi4.png Graphic file (type png)
  <use inudos/movi4.png>
 Package pdftex.def Info: inudos/movi4.png used on input line 24.
 (pdftex.def)             Requested size: 199.16928pt x 149.16162pt.
 
-<inudos/movi5.png, id=492, 455.7025pt x 341.275pt>
+<inudos/movi5.png, id=497, 455.7025pt x 341.275pt>
 File: inudos/movi5.png Graphic file (type png)
  <use inudos/movi5.png>
 Package pdftex.def Info: inudos/movi5.png used on input line 33.
 (pdftex.def)             Requested size: 199.16928pt x 149.16162pt.
 
-<inudos/movi6.png, id=493, 455.7025pt x 341.275pt>
+<inudos/movi6.png, id=498, 455.7025pt x 341.275pt>
 File: inudos/movi6.png Graphic file (type png)
  <use inudos/movi6.png>
 Package pdftex.def Info: inudos/movi6.png used on input line 34.
@@ -1798,13 +1798,13 @@ File: inudos/3f.png Graphic file (type png)
 Package pdftex.def Info: inudos/3f.png used on input line 46.
 (pdftex.def)             Requested size: 85.35826pt x 85.36029pt.
 
-<inudos/flecha.png, id=498, 161.60374pt x 167.62625pt>
+<inudos/flecha.png, id=503, 161.60374pt x 167.62625pt>
 File: inudos/flecha.png Graphic file (type png)
  <use inudos/flecha.png>
 Package pdftex.def Info: inudos/flecha.png used on input line 47.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
 
-<inudos/3fseg.png, id=499, 176.66pt x 227.85126pt>
+<inudos/3fseg.png, id=504, 176.66pt x 227.85126pt>
 File: inudos/3fseg.png Graphic file (type png)
  <use inudos/3fseg.png>
 Package pdftex.def Info: inudos/3fseg.png used on input line 48.
@@ -1814,7 +1814,7 @@ File: inudos/flecha.png Graphic file (type png)
 <use inudos/flecha.png>
 Package pdftex.def Info: inudos/flecha.png used on input line 49.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
- <inudos/fase3.png, id=500, 161.60374pt x 167.62625pt>
+ <inudos/fase3.png, id=505, 161.60374pt x 167.62625pt>
 File: inudos/fase3.png Graphic file (type png)
 
 <use inudos/fase3.png>
@@ -1825,7 +1825,7 @@ File: inudos/flecha.png Graphic file (type png)
 Package pdftex.def Info: inudos/flecha.png used on input line 51.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
 
-<inudos/fase4.png, id=501, 161.60374pt x 167.62625pt>
+<inudos/fase4.png, id=506, 161.60374pt x 167.62625pt>
 File: inudos/fase4.png Graphic file (type png)
  <use inudos/fase4.png>
 Package pdftex.def Info: inudos/fase4.png used on input line 52.
@@ -1835,7 +1835,7 @@ File: inudos/flecha.png Graphic file (type png)
 <use inudos/flecha.png>
 Package pdftex.def Info: inudos/flecha.png used on input line 53.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
- <inudos/fase5.png, id=502, 161.60374pt x 167.62625pt>
+ <inudos/fase5.png, id=507, 161.60374pt x 167.62625pt>
 File: inudos/fase5.png Graphic file (type png)
 
 <use inudos/fase5.png>
@@ -1846,7 +1846,7 @@ File: inudos/flecha.png Graphic file (type png)
 Package pdftex.def Info: inudos/flecha.png used on input line 55.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
 
-<inudos/fase6.png, id=503, 161.60374pt x 167.62625pt>
+<inudos/fase6.png, id=508, 161.60374pt x 167.62625pt>
 File: inudos/fase6.png Graphic file (type png)
  <use inudos/fase6.png>
 Package pdftex.def Info: inudos/fase6.png used on input line 56.
@@ -1856,7 +1856,7 @@ File: inudos/flecha.png Graphic file (type png)
 <use inudos/flecha.png>
 Package pdftex.def Info: inudos/flecha.png used on input line 57.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
- <inudos/fase7.png, id=504, 161.60374pt x 167.62625pt>
+ <inudos/fase7.png, id=509, 161.60374pt x 167.62625pt>
 File: inudos/fase7.png Graphic file (type png)
 
 <use inudos/fase7.png>
@@ -1867,7 +1867,7 @@ File: inudos/flecha.png Graphic file (type png)
 Package pdftex.def Info: inudos/flecha.png used on input line 59.
 (pdftex.def)             Requested size: 56.9055pt x 59.02559pt.
 
-<inudos/fase8.png, id=505, 161.60374pt x 167.62625pt>
+<inudos/fase8.png, id=510, 161.60374pt x 167.62625pt>
 File: inudos/fase8.png Graphic file (type png)
  <use inudos/fase8.png>
 Package pdftex.def Info: inudos/fase8.png used on input line 60.
@@ -2063,7 +2063,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-<inudos/cruce.png, id=529, 299.1175pt x 284.06125pt>
+<inudos/cruce.png, id=534, 299.1175pt x 284.06125pt>
 File: inudos/cruce.png Graphic file (type png)
  <use inudos/cruce.png>
 Package pdftex.def Info: inudos/cruce.png used on input line 66.
@@ -2152,14 +2152,14 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 101.
  [14 <./inudos/cruce.png>]
-<inudos/movi3tri.png, id=542, 455.7025pt x 341.275pt>
+<inudos/movi3tri.png, id=547, 455.7025pt x 341.275pt>
 File: inudos/movi3tri.png Graphic file (type png)
 
 <use inudos/movi3tri.png>
 Package pdftex.def Info: inudos/movi3tri.png used on input line 105.
 (pdftex.def)             Requested size: 236.15796pt x 176.85995pt.
 
-<inudos/movi4tri.png, id=543, 455.7025pt x 341.275pt>
+<inudos/movi4tri.png, id=548, 455.7025pt x 341.275pt>
 File: inudos/movi4tri.png Graphic file (type png)
 
 <use inudos/movi4tri.png>
@@ -2170,28 +2170,28 @@ File: inudos/movi5.png Graphic file (type png)
 Package pdftex.def Info: inudos/movi5.png used on input line 115.
 (pdftex.def)             Requested size: 227.62204pt x 170.47043pt.
 
-<inudos/movi5tri1.png, id=545, 455.7025pt x 341.275pt>
+<inudos/movi5tri1.png, id=550, 455.7025pt x 341.275pt>
 File: inudos/movi5tri1.png Graphic file (type png)
 
 <use inudos/movi5tri1.png>
 Package pdftex.def Info: inudos/movi5tri1.png used on input line 116.
 (pdftex.def)             Requested size: 227.62204pt x 170.47043pt.
 
-<inudos/movi5tri2.png, id=546, 455.7025pt x 341.275pt>
+<inudos/movi5tri2.png, id=551, 455.7025pt x 341.275pt>
 File: inudos/movi5tri2.png Graphic file (type png)
 
 <use inudos/movi5tri2.png>
 Package pdftex.def Info: inudos/movi5tri2.png used on input line 117.
 (pdftex.def)             Requested size: 227.62204pt x 170.47043pt.
 
-<inudos/movi5tri3.png, id=547, 455.7025pt x 341.275pt>
+<inudos/movi5tri3.png, id=552, 455.7025pt x 341.275pt>
 File: inudos/movi5tri3.png Graphic file (type png)
 
 <use inudos/movi5tri3.png>
 Package pdftex.def Info: inudos/movi5tri3.png used on input line 118.
 (pdftex.def)             Requested size: 227.62204pt x 170.47043pt.
 
-<inudos/movi5tri4.png, id=548, 455.7025pt x 341.275pt>
+<inudos/movi5tri4.png, id=553, 455.7025pt x 341.275pt>
 File: inudos/movi5tri4.png Graphic file (type png)
 
 <use inudos/movi5tri4.png>
@@ -2205,7 +2205,7 @@ File: inudos/1.jpg Graphic file (type jpg)
 <use inudos/1.jpg>
 Package pdftex.def Info: inudos/1.jpg used on input line 134.
 (pdftex.def)             Requested size: 113.81102pt x 113.81082pt.
- <inudos/3ftri.png, id=550, 178.6675pt x 187.70125pt>
+ <inudos/3ftri.png, id=555, 178.6675pt x 187.70125pt>
 File: inudos/3ftri.png Graphic file (type png)
 
 <use inudos/3ftri.png>
@@ -2301,14 +2301,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-<inudos/3fcon1start.png, id=561, 162.6075pt x 162.6075pt>
+<inudos/3fcon1start.png, id=566, 162.6075pt x 162.6075pt>
 File: inudos/3fcon1start.png Graphic file (type png)
 
 <use inudos/3fcon1start.png>
 Package pdftex.def Info: inudos/3fcon1start.png used on input line 160.
 (pdftex.def)             Requested size: 96.73918pt x 96.74149pt.
 
-<inudos/3fcon1negstart.png, id=562, 162.6075pt x 162.6075pt>
+<inudos/3fcon1negstart.png, id=567, 162.6075pt x 162.6075pt>
 File: inudos/3fcon1negstart.png Graphic file (type png)
 
 <use inudos/3fcon1negstart.png>
@@ -2371,19 +2371,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-<inudos/pro1.png, id=572, 161.60374pt x 167.62625pt>
+<inudos/pro1.png, id=577, 161.60374pt x 167.62625pt>
 File: inudos/pro1.png Graphic file (type png)
  <use inudos/pro1.png>
 Package pdftex.def Info: inudos/pro1.png used on input line 189.
 (pdftex.def)             Requested size: 113.81102pt x 118.05118pt.
 
-<inudos/pro2.png, id=573, 161.60374pt x 167.62625pt>
+<inudos/pro2.png, id=578, 161.60374pt x 167.62625pt>
 File: inudos/pro2.png Graphic file (type png)
  <use inudos/pro2.png>
 Package pdftex.def Info: inudos/pro2.png used on input line 190.
 (pdftex.def)             Requested size: 113.81102pt x 118.05118pt.
 
-<inudos/pro3.png, id=574, 161.60374pt x 167.62625pt>
+<inudos/pro3.png, id=579, 161.60374pt x 167.62625pt>
 File: inudos/pro3.png Graphic file (type png)
  <use inudos/pro3.png>
 Package pdftex.def Info: inudos/pro3.png used on input line 191.
@@ -2394,14 +2394,14 @@ File: inudos/3fcon1.png Graphic file (type png)
 Package pdftex.def Info: inudos/3fcon1.png used on input line 206.
 (pdftex.def)             Requested size: 142.26378pt x 142.27376pt.
 
-<inudos/3fcon1neg.png, id=576, 162.6075pt x 162.6075pt>
+<inudos/3fcon1neg.png, id=581, 162.6075pt x 162.6075pt>
 File: inudos/3fcon1neg.png Graphic file (type png)
 
 <use inudos/3fcon1neg.png>
 Package pdftex.def Info: inudos/3fcon1neg.png used on input line 207.
 (pdftex.def)             Requested size: 142.26378pt x 142.27376pt.
 
-<inudos/doble1b.png, id=577, 162.6075pt x 162.6075pt>
+<inudos/doble1b.png, id=582, 162.6075pt x 162.6075pt>
 File: inudos/doble1b.png Graphic file (type png)
  <use inudos/doble1b.png>
 Package pdftex.def Info: inudos/doble1b.png used on input line 208.
@@ -2438,13 +2438,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-<inudos/doble2b.png, id=595, 162.6075pt x 162.6075pt>
+<inudos/doble2b.png, id=600, 162.6075pt x 162.6075pt>
 File: inudos/doble2b.png Graphic file (type png)
  <use inudos/doble2b.png>
 Package pdftex.def Info: inudos/doble2b.png used on input line 224.
 (pdftex.def)             Requested size: 142.26378pt x 142.27376pt.
 
-<inudos/doble3b.png, id=596, 162.6075pt x 162.6075pt>
+<inudos/doble3b.png, id=601, 162.6075pt x 162.6075pt>
 File: inudos/doble3b.png Graphic file (type png)
  <use inudos/doble3b.png>
 Package pdftex.def Info: inudos/doble3b.png used on input line 225.
@@ -2506,7 +2506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
-<inudos/arbol.png, id=610, 333.4056pt x 176.3388pt>
+<inudos/arbol.png, id=615, 333.4056pt x 176.3388pt>
 File: inudos/arbol.png Graphic file (type png)
  <use inudos/arbol.png>
 Package pdftex.def Info: inudos/arbol.png used on input line 257.
@@ -2591,7 +2591,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-<inudos/3fcon2dow.png, id=620, 162.6075pt x 162.6075pt>
+<inudos/3fcon2dow.png, id=625, 162.6075pt x 162.6075pt>
 File: inudos/3fcon2dow.png Graphic file (type png)
 
 <use inudos/3fcon2dow.png>
@@ -2660,7 +2660,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-<inudos/3fcon2gaus.png, id=626, 162.6075pt x 162.6075pt>
+<inudos/3fcon2gaus.png, id=631, 162.6075pt x 162.6075pt>
 File: inudos/3fcon2gaus.png Graphic file (type png)
 
 <use inudos/3fcon2gaus.png>
@@ -2714,37 +2714,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
-<inudos/en1.png, id=632, 161.60374pt x 167.62625pt>
+<inudos/en1.png, id=637, 161.60374pt x 167.62625pt>
 File: inudos/en1.png Graphic file (type png)
  <use inudos/en1.png>
 Package pdftex.def Info: inudos/en1.png used on input line 51.
 (pdftex.def)             Requested size: 128.0374pt x 132.8146pt.
 
-<inudos/en2.png, id=633, 161.60374pt x 167.62625pt>
+<inudos/en2.png, id=638, 161.60374pt x 167.62625pt>
 File: inudos/en2.png Graphic file (type png)
  <use inudos/en2.png>
 Package pdftex.def Info: inudos/en2.png used on input line 52.
 (pdftex.def)             Requested size: 128.0374pt x 132.8146pt.
 
-<inudos/en3.png, id=635, 161.60374pt x 167.62625pt>
+<inudos/en3.png, id=640, 161.60374pt x 167.62625pt>
 File: inudos/en3.png Graphic file (type png)
  <use inudos/en3.png>
 Package pdftex.def Info: inudos/en3.png used on input line 60.
 (pdftex.def)             Requested size: 85.35826pt x 88.53966pt.
 
-<inudos/3enrot.png, id=636, 161.60374pt x 167.62625pt>
+<inudos/3enrot.png, id=641, 161.60374pt x 167.62625pt>
 File: inudos/3enrot.png Graphic file (type png)
  <use inudos/3enrot.png>
 Package pdftex.def Info: inudos/3enrot.png used on input line 61.
 (pdftex.def)             Requested size: 85.35826pt x 88.53966pt.
 
-<inudos/en4.png, id=637, 646.415pt x 167.62625pt>
+<inudos/en4.png, id=642, 646.415pt x 167.62625pt>
 File: inudos/en4.png Graphic file (type png)
  <use inudos/en4.png>
 Package pdftex.def Info: inudos/en4.png used on input line 63.
 (pdftex.def)             Requested size: 227.62204pt x 59.02559pt.
 
-<inudos/en4conneg.png, id=638, 646.415pt x 167.62625pt>
+<inudos/en4conneg.png, id=643, 646.415pt x 167.62625pt>
 File: inudos/en4conneg.png Graphic file (type png)
 
 <use inudos/en4conneg.png>
@@ -2754,13 +2754,13 @@ Package pdftex.def Info: inudos/en4conneg.png used on input line 65.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inudos/ensum.png, id=640, 323.2075pt x 167.62625pt>
+<inudos/ensum.png, id=645, 323.2075pt x 167.62625pt>
 File: inudos/ensum.png Graphic file (type png)
  <use inudos/ensum.png>
 Package pdftex.def Info: inudos/ensum.png used on input line 75.
 (pdftex.def)             Requested size: 227.62204pt x 118.05118pt.
 
-<inudos/enmul.png, id=641, 323.2075pt x 167.62625pt>
+<inudos/enmul.png, id=646, 323.2075pt x 167.62625pt>
 File: inudos/enmul.png Graphic file (type png)
  <use inudos/enmul.png>
 Package pdftex.def Info: inudos/enmul.png used on input line 76.
@@ -2769,7 +2769,7 @@ Package pdftex.def Info: inudos/enmul.png used on input line 76.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inudos/en5fin.png, id=643, 161.60374pt x 167.62625pt>
+<inudos/en5fin.png, id=648, 161.60374pt x 167.62625pt>
 File: inudos/en5fin.png Graphic file (type png)
  <use inudos/en5fin.png>
 Package pdftex.def Info: inudos/en5fin.png used on input line 84.
@@ -2864,7 +2864,7 @@ File: inudos/en5fin.png Graphic file (type png)
 <use inudos/en5fin.png>
 Package pdftex.def Info: inudos/en5fin.png used on input line 112.
 (pdftex.def)             Requested size: 113.81102pt x 118.05118pt.
- <inudos/en6fin.png, id=662, 161.60374pt x 167.62625pt>
+ <inudos/en6fin.png, id=667, 161.60374pt x 167.62625pt>
 File: inudos/en6fin.png Graphic file (type png)
 
 <use inudos/en6fin.png>
@@ -2932,13 +2932,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-<inudos/grafo.png, id=675, 302.63063pt x 265.74281pt>
+<inudos/grafo.png, id=680, 302.63063pt x 265.74281pt>
 File: inudos/grafo.png Graphic file (type png)
  <use inudos/grafo.png>
 Package pdftex.def Info: inudos/grafo.png used on input line 19.
 (pdftex.def)             Requested size: 99.58464pt x 87.44398pt.
 
-<inudos/pgrafo.png, id=676, 351.56343pt x 255.95625pt>
+<inudos/pgrafo.png, id=681, 351.56343pt x 255.95625pt>
 File: inudos/pgrafo.png Graphic file (type png)
  <use inudos/pgrafo.png>
 Package pdftex.def Info: inudos/pgrafo.png used on input line 20.
@@ -2948,21 +2948,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<inudos/pgrafo3.png, id=678, 351.56343pt x 261.22594pt>
+<inudos/pgrafo3.png, id=683, 351.56343pt x 261.22594pt>
 File: inudos/pgrafo3.png Graphic file (type png)
 
 <use inudos/pgrafo3.png>
 Package pdftex.def Info: inudos/pgrafo3.png used on input line 30.
 (pdftex.def)             Requested size: 142.26378pt x 105.70424pt.
 
-<inudos/pgrafo2.png, id=679, 350.05782pt x 258.9675pt>
+<inudos/pgrafo2.png, id=684, 350.05782pt x 258.9675pt>
 File: inudos/pgrafo2.png Graphic file (type png)
 
 <use inudos/pgrafo2.png>
 Package pdftex.def Info: inudos/pgrafo2.png used on input line 31.
 (pdftex.def)             Requested size: 142.26378pt x 105.24478pt.
 
-<inudos/pgrafo1.png, id=680, 351.56343pt x 255.95625pt>
+<inudos/pgrafo1.png, id=685, 351.56343pt x 255.95625pt>
 File: inudos/pgrafo1.png Graphic file (type png)
 
 <use inudos/pgrafo1.png>
@@ -3001,25 +3001,25 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 38.
 [26 <./inudos/grafo.png> <./inudos/pgrafo.png> <./inudos/pgrafo3.png> <./inudos
 /pgrafo2.png> <./inudos/pgrafo1.png>]
-<inudos/grafo1.png, id=686, 302.63063pt x 265.74281pt>
+<inudos/grafo1.png, id=691, 302.63063pt x 265.74281pt>
 File: inudos/grafo1.png Graphic file (type png)
  <use inudos/grafo1.png>
 Package pdftex.def Info: inudos/grafo1.png used on input line 42.
 (pdftex.def)             Requested size: 128.0374pt x 112.4303pt.
 
-<inudos/grafo2.png, id=687, 303.38344pt x 267.24844pt>
+<inudos/grafo2.png, id=692, 303.38344pt x 267.24844pt>
 File: inudos/grafo2.png Graphic file (type png)
  <use inudos/grafo2.png>
 Package pdftex.def Info: inudos/grafo2.png used on input line 43.
 (pdftex.def)             Requested size: 128.0374pt x 112.79001pt.
 
-<inudos/grafo3.png, id=688, 303.38344pt x 264.23718pt>
+<inudos/grafo3.png, id=693, 303.38344pt x 264.23718pt>
 File: inudos/grafo3.png Graphic file (type png)
  <use inudos/grafo3.png>
 Package pdftex.def Info: inudos/grafo3.png used on input line 44.
 (pdftex.def)             Requested size: 128.0374pt x 111.51913pt.
 
-<inudos/grafo4.png, id=689, 301.125pt x 261.22594pt>
+<inudos/grafo4.png, id=694, 301.125pt x 261.22594pt>
 File: inudos/grafo4.png Graphic file (type png)
  <use inudos/grafo4.png>
 Package pdftex.def Info: inudos/grafo4.png used on input line 45.
@@ -3041,13 +3041,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-<itrenzas/t4.png, id=691, 215.30438pt x 400.49625pt>
+<itrenzas/t4.png, id=696, 215.30438pt x 400.49625pt>
 File: itrenzas/t4.png Graphic file (type png)
  <use itrenzas/t4.png>
 Package pdftex.def Info: itrenzas/t4.png used on input line 60.
 (pdftex.def)             Requested size: 99.58464pt x 185.24495pt.
 
-<itrenzas/t7.png, id=692, 352.31625pt x 411.78844pt>
+<itrenzas/t7.png, id=697, 352.31625pt x 411.78844pt>
 File: itrenzas/t7.png Graphic file (type png)
  <use itrenzas/t7.png>
 Package pdftex.def Info: itrenzas/t7.png used on input line 62.
@@ -3098,59 +3098,59 @@ EN-TA-CI[]ON!!!!!!!!!!!!!!!!!!!!!
  []
 
 )
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
  [28 <./itrenzas/t4.png> <./itrenzas/t7.png>]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 41.
 (tex/trenzas/trenzas.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-<itrenzas/t1cubo.png, id=705, 240.14719pt x 474.27188pt>
+<itrenzas/t1cubo.png, id=710, 240.14719pt x 474.27188pt>
 File: itrenzas/t1cubo.png Graphic file (type png)
 
 <use itrenzas/t1cubo.png>
 Package pdftex.def Info: itrenzas/t1cubo.png used on input line 15.
 (pdftex.def)             Requested size: 85.35826pt x 168.57394pt.
 
-<itrenzas/t2cubo.png, id=706, 240.14719pt x 474.27188pt>
+<itrenzas/t2cubo.png, id=711, 240.14719pt x 474.27188pt>
 File: itrenzas/t2cubo.png Graphic file (type png)
 
 <use itrenzas/t2cubo.png>
@@ -3213,218 +3213,206 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 27.
 
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 \end{center}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<itrenzas/t3.png, id=717, 219.06844pt x 396.7322pt>
+<itrenzas/t3.png, id=722, 219.06844pt x 396.7322pt>
 File: itrenzas/t3.png Graphic file (type png)
  <use itrenzas/t3.png>
-Package pdftex.def Info: itrenzas/t3.png used on input line 32.
+Package pdftex.def Info: itrenzas/t3.png used on input line 33.
 (pdftex.def)             Requested size: 113.81102pt x 206.11426pt.
 File: itrenzas/t4.png Graphic file (type png)
 
 <use itrenzas/t4.png>
-Package pdftex.def Info: itrenzas/t4.png used on input line 34.
+Package pdftex.def Info: itrenzas/t4.png used on input line 35.
 (pdftex.def)             Requested size: 113.81102pt x 211.70589pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--43
+Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
 
-<itrenzas/elemental.png, id=720, 214.1601pt x 127.4361pt>
+<itrenzas/elemental.png, id=725, 214.1601pt x 127.4361pt>
 File: itrenzas/elemental.png Graphic file (type png)
 
 <use itrenzas/elemental.png>
-Package pdftex.def Info: itrenzas/elemental.png used on input line 48.
+Package pdftex.def Info: itrenzas/elemental.png used on input line 49.
 (pdftex.def)             Requested size: 241.84842pt x 143.91359pt.
-LaTeX Info: Redefining \. on input line 52.
-LaTeX Info: Redefining \% on input line 52.
+LaTeX Info: Redefining \. on input line 53.
+LaTeX Info: Redefining \% on input line 53.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 53.
  [30 <./itrenzas/t3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 67.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
-<itrenzas/pers.png, id=727, 276.5532pt x 160.6803pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+<itrenzas/pers.png, id=732, 276.5532pt x 160.6803pt>
 File: itrenzas/pers.png Graphic file (type png)
  <use itrenzas/pers.png>
-Package pdftex.def Info: itrenzas/pers.png used on input line 74.
+Package pdftex.def Info: itrenzas/pers.png used on input line 75.
 (pdftex.def)             Requested size: 426.79134pt x 247.98781pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<itrenzas/t1pro.png, id=730, 188.95593pt x 422.32782pt>
+<itrenzas/t1pro.png, id=735, 188.95593pt x 422.32782pt>
 File: itrenzas/t1pro.png Graphic file (type png)
 
 <use itrenzas/t1pro.png>
-Package pdftex.def Info: itrenzas/t1pro.png used on input line 82.
+Package pdftex.def Info: itrenzas/t1pro.png used on input line 83.
 (pdftex.def)             Requested size: 76.82234pt x 171.69913pt.
 
-<itrenzas/t2pro.png, id=731, 160.34906pt x 417.05812pt>
+<itrenzas/t2pro.png, id=736, 160.34906pt x 417.05812pt>
 File: itrenzas/t2pro.png Graphic file (type png)
 
 <use itrenzas/t2pro.png>
-Package pdftex.def Info: itrenzas/t2pro.png used on input line 84.
+Package pdftex.def Info: itrenzas/t2pro.png used on input line 85.
 (pdftex.def)             Requested size: 65.44142pt x 170.21219pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 89.
+(babel)             in language  on input line 90.
 [31 <./itrenzas/elemental.png>]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 92.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 99.
+(babel)             in language  on input line 100.
 [32 <./itrenzas/pers.png> <./itrenzas/t1pro.png> <./itrenzas/t2pro.png>]
-<itrenzas/t5.png, id=743, 341.02406pt x 377.15906pt>
+<itrenzas/t5.png, id=748, 341.02406pt x 377.15906pt>
 File: itrenzas/t5.png Graphic file (type png)
  <use itrenzas/t5.png>
-Package pdftex.def Info: itrenzas/t5.png used on input line 106.
+Package pdftex.def Info: itrenzas/t5.png used on input line 107.
 (pdftex.def)             Requested size: 56.9055pt x 62.93066pt.
 
-<itrenzas/t6.png, id=744, 321.45094pt x 374.90062pt>
+<itrenzas/t6.png, id=749, 321.45094pt x 374.90062pt>
 File: itrenzas/t6.png Graphic file (type png)
  <use itrenzas/t6.png>
-Package pdftex.def Info: itrenzas/t6.png used on input line 108.
+Package pdftex.def Info: itrenzas/t6.png used on input line 109.
 (pdftex.def)             Requested size: 56.9055pt x 66.3637pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 File: itrenzas/t7.png Graphic file (type png)
 <use itrenzas/t7.png>
-Package pdftex.def Info: itrenzas/t7.png used on input line 118.
+Package pdftex.def Info: itrenzas/t7.png used on input line 119.
 (pdftex.def)             Requested size: 142.26378pt x 166.27701pt.
 ) (tex/trenzas/grupo.tex
 Package babel Info: Redefining spanish shorthand <<
@@ -3483,19 +3471,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-<itrenzas/1c1.png, id=755, 414.04688pt x 388.45125pt>
+<itrenzas/1c1.png, id=760, 414.04688pt x 388.45125pt>
 File: itrenzas/1c1.png Graphic file (type png)
  <use itrenzas/1c1.png>
 Package pdftex.def Info: itrenzas/1c1.png used on input line 14.
 (pdftex.def)             Requested size: 156.49014pt x 146.81874pt.
 
-<itrenzas/1c2.png, id=756, 412.54124pt x 396.7322pt>
+<itrenzas/1c2.png, id=761, 412.54124pt x 396.7322pt>
 File: itrenzas/1c2.png Graphic file (type png)
  <use itrenzas/1c2.png>
 Package pdftex.def Info: itrenzas/1c2.png used on input line 15.
 (pdftex.def)             Requested size: 156.49014pt x 150.49344pt.
 
-<itrenzas/1c3.png, id=757, 246.1697pt x 399.74344pt>
+<itrenzas/1c3.png, id=762, 246.1697pt x 399.74344pt>
 File: itrenzas/1c3.png Graphic file (type png)
  <use itrenzas/1c3.png>
 Package pdftex.def Info: itrenzas/1c3.png used on input line 17.
@@ -3528,26 +3516,26 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 35.
 
 [34 <./itrenzas/1c1.png> <./itrenzas/1c2.png> <./itrenzas/1c3.png>]
-<itrenzas/3c1.png, id=767, 268.00125pt x 393.72093pt>
+<itrenzas/3c1.png, id=772, 268.00125pt x 393.72093pt>
 File: itrenzas/3c1.png Graphic file (type png)
  <use itrenzas/3c1.png>
 Package pdftex.def Info: itrenzas/3c1.png used on input line 51.
 (pdftex.def)             Requested size: 96.73918pt x 142.1179pt.
 
-<itrenzas/flechac.png, id=768, 74.52844pt x 229.60782pt>
+<itrenzas/flechac.png, id=773, 74.52844pt x 229.60782pt>
 File: itrenzas/flechac.png Graphic file (type png)
 
 <use itrenzas/flechac.png>
 Package pdftex.def Info: itrenzas/flechac.png used on input line 52.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
 
-<itrenzas/3c2.png, id=769, 284.56313pt x 392.96812pt>
+<itrenzas/3c2.png, id=774, 284.56313pt x 392.96812pt>
 File: itrenzas/3c2.png Graphic file (type png)
  <use itrenzas/3c2.png>
 Package pdftex.def Info: itrenzas/3c2.png used on input line 53.
 (pdftex.def)             Requested size: 102.43008pt x 141.45042pt.
 
-<itrenzas/3c3.png, id=770, 287.57437pt x 392.21532pt>
+<itrenzas/3c3.png, id=775, 287.57437pt x 392.21532pt>
 File: itrenzas/3c3.png Graphic file (type png)
  <use itrenzas/3c3.png>
 Package pdftex.def Info: itrenzas/3c3.png used on input line 54.
@@ -3558,13 +3546,13 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 55.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
 
-<itrenzas/3c4.png, id=771, 251.43938pt x 395.97937pt>
+<itrenzas/3c4.png, id=776, 251.43938pt x 395.97937pt>
 File: itrenzas/3c4.png Graphic file (type png)
  <use itrenzas/3c4.png>
 Package pdftex.def Info: itrenzas/3c4.png used on input line 56.
 (pdftex.def)             Requested size: 88.2037pt x 138.903pt.
 
-<itrenzas/3c5.png, id=772, 161.10187pt x 400.49625pt>
+<itrenzas/3c5.png, id=777, 161.10187pt x 400.49625pt>
 File: itrenzas/3c5.png Graphic file (type png)
  <use itrenzas/3c5.png>
 Package pdftex.def Info: itrenzas/3c5.png used on input line 58.
@@ -3586,7 +3574,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 59.
 (pdftex.def)             Requested size: 42.67912pt x 131.48743pt.
 
-<itrenzas/3c6.png, id=773, 135.50626pt x 402.00188pt>
+<itrenzas/3c6.png, id=778, 135.50626pt x 402.00188pt>
 File: itrenzas/3c6.png Graphic file (type png)
  <use itrenzas/3c6.png>
 Package pdftex.def Info: itrenzas/3c6.png used on input line 60.
@@ -3659,7 +3647,7 @@ File: itrenzas/1c2.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/1c2.png used on input line 85.
 (pdftex.def)             Requested size: 99.58464pt x 95.76854pt.
 
-<itrenzas/2c1.png, id=787, 272.51813pt x 404.26031pt>
+<itrenzas/2c1.png, id=792, 272.51813pt x 404.26031pt>
 File: itrenzas/2c1.png Graphic file (type png)
  <use itrenzas/2c1.png>
 Package pdftex.def Info: itrenzas/2c1.png used on input line 86.
@@ -3669,13 +3657,13 @@ File: itrenzas/1c3.png Graphic file (type png)
 <use itrenzas/1c3.png>
 Package pdftex.def Info: itrenzas/1c3.png used on input line 88.
 (pdftex.def)             Requested size: 113.81102pt x 184.81134pt.
- <itrenzas/2c2.png, id=788, 203.25937pt x 395.97937pt>
+ <itrenzas/2c2.png, id=793, 203.25937pt x 395.97937pt>
 File: itrenzas/2c2.png Graphic file (type png)
 
 <use itrenzas/2c2.png>
 Package pdftex.def Info: itrenzas/2c2.png used on input line 89.
 (pdftex.def)             Requested size: 93.89418pt x 182.92007pt.
- <itrenzas/2c3.png, id=789, 280.79906pt x 392.96812pt>
+ <itrenzas/2c3.png, id=794, 280.79906pt x 392.96812pt>
 File: itrenzas/2c3.png Graphic file (type png)
 
 <use itrenzas/2c3.png>
@@ -3716,25 +3704,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
-<itrenzas/4c1.png, id=804, 410.2828pt x 393.72093pt>
+<itrenzas/4c1.png, id=809, 410.2828pt x 393.72093pt>
 File: itrenzas/4c1.png Graphic file (type png)
  <use itrenzas/4c1.png>
 Package pdftex.def Info: itrenzas/4c1.png used on input line 112.
 (pdftex.def)             Requested size: 99.58464pt x 95.56432pt.
 
-<itrenzas/4c2.png, id=805, 542.77782pt x 388.45125pt>
+<itrenzas/4c2.png, id=810, 542.77782pt x 388.45125pt>
 File: itrenzas/4c2.png Graphic file (type png)
  <use itrenzas/4c2.png>
 Package pdftex.def Info: itrenzas/4c2.png used on input line 113.
 (pdftex.def)             Requested size: 128.0374pt x 91.62982pt.
 
-<itrenzas/4c3.png, id=806, 289.83281pt x 405.76593pt>
+<itrenzas/4c3.png, id=811, 289.83281pt x 405.76593pt>
 File: itrenzas/4c3.png Graphic file (type png)
  <use itrenzas/4c3.png>
 Package pdftex.def Info: itrenzas/4c3.png used on input line 115.
 (pdftex.def)             Requested size: 147.95424pt x 207.13602pt.
 
-<itrenzas/4c4.png, id=807, 249.18094pt x 408.77719pt>
+<itrenzas/4c4.png, id=812, 249.18094pt x 408.77719pt>
 File: itrenzas/4c4.png Graphic file (type png)
  <use itrenzas/4c4.png>
 Package pdftex.def Info: itrenzas/4c4.png used on input line 117.
@@ -3745,7 +3733,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 118.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
 
-<itrenzas/4c5.png, id=808, 442.65375pt x 383.93437pt>
+<itrenzas/4c5.png, id=813, 442.65375pt x 383.93437pt>
 File: itrenzas/4c5.png Graphic file (type png)
  <use itrenzas/4c5.png>
 Package pdftex.def Info: itrenzas/4c5.png used on input line 119.
@@ -3788,25 +3776,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-<itrenzas/M1.png, id=821, 719.68875pt x 405.01312pt>
+<itrenzas/M1.png, id=826, 719.68875pt x 405.01312pt>
 File: itrenzas/M1.png Graphic file (type png)
  <use itrenzas/M1.png>
 Package pdftex.def Info: itrenzas/M1.png used on input line 157.
 (pdftex.def)             Requested size: 199.16928pt x 112.08655pt.
 
-<itrenzas/5c1.png, id=823, 371.88937pt x 393.72093pt>
+<itrenzas/5c1.png, id=828, 371.88937pt x 393.72093pt>
 File: itrenzas/5c1.png Graphic file (type png)
  <use itrenzas/5c1.png>
 Package pdftex.def Info: itrenzas/5c1.png used on input line 168.
 (pdftex.def)             Requested size: 142.26378pt x 150.61879pt.
 
-<itrenzas/5c2.png, id=824, 342.5297pt x 390.70969pt>
+<itrenzas/5c2.png, id=829, 342.5297pt x 390.70969pt>
 File: itrenzas/5c2.png Graphic file (type png)
  <use itrenzas/5c2.png>
 Package pdftex.def Info: itrenzas/5c2.png used on input line 169.
 (pdftex.def)             Requested size: 133.72786pt x 152.54309pt.
 
-<itrenzas/5c3.png, id=825, 76.03406pt x 400.49625pt>
+<itrenzas/5c3.png, id=830, 76.03406pt x 400.49625pt>
 File: itrenzas/5c3.png Graphic file (type png)
  <use itrenzas/5c3.png>
 Package pdftex.def Info: itrenzas/5c3.png used on input line 171.
@@ -3817,7 +3805,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 172.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
 
-<itrenzas/5c4.png, id=826, 103.88812pt x 400.49625pt>
+<itrenzas/5c4.png, id=831, 103.88812pt x 400.49625pt>
 File: itrenzas/5c4.png Graphic file (type png)
  <use itrenzas/5c4.png>
 Package pdftex.def Info: itrenzas/5c4.png used on input line 173.
@@ -3828,7 +3816,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 174.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
 
-<itrenzas/5c5.png, id=827, 167.87718pt x 392.96812pt>
+<itrenzas/5c5.png, id=832, 167.87718pt x 392.96812pt>
 File: itrenzas/5c5.png Graphic file (type png)
  <use itrenzas/5c5.png>
 Package pdftex.def Info: itrenzas/5c5.png used on input line 175.
@@ -3838,7 +3826,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 <use itrenzas/flechac.png>
 Package pdftex.def Info: itrenzas/flechac.png used on input line 176.
 (pdftex.def)             Requested size: 34.14322pt x 105.18994pt.
- <itrenzas/5c6.png, id=828, 156.585pt x 360.59718pt>
+ <itrenzas/5c6.png, id=833, 156.585pt x 360.59718pt>
 File: itrenzas/5c6.png Graphic file (type png)
 
 <use itrenzas/5c6.png>
@@ -3933,13 +3921,13 @@ File: itrenzas/M1.png Graphic file (type png)
 <use itrenzas/M1.png>
 Package pdftex.def Info: itrenzas/M1.png used on input line 216.
 (pdftex.def)             Requested size: 145.10922pt x 81.66245pt.
- <itrenzas/M2.png, id=856, 590.95781pt x 386.94562pt>
+ <itrenzas/M2.png, id=861, 590.95781pt x 386.94562pt>
 File: itrenzas/M2.png Graphic file (type png)
 
 <use itrenzas/M2.png>
 Package pdftex.def Info: itrenzas/M2.png used on input line 225.
 (pdftex.def)             Requested size: 227.62204pt x 149.04242pt.
- <itrenzas/M3.png, id=858, 721.19438pt x 414.79968pt>
+ <itrenzas/M3.png, id=863, 721.19438pt x 414.79968pt>
 File: itrenzas/M3.png Graphic file (type png)
 
 <use itrenzas/M3.png>
@@ -3972,7 +3960,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 239.
  [40 <./itrenzas/M2.png>]
-<itrenzas/movi.png, id=866, 471.26062pt x 420.06938pt>
+<itrenzas/movi.png, id=871, 471.26062pt x 420.06938pt>
 File: itrenzas/movi.png Graphic file (type png)
  <use itrenzas/movi.png>
 Package pdftex.def Info: itrenzas/movi.png used on input line 246.
@@ -4012,7 +4000,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 255.
 [41 <./itrenzas/M3.png> <./itrenzas/movi.png>]
-<itrenzas/6c1.png, id=875, 227.34938pt x 408.02437pt>
+<itrenzas/6c1.png, id=880, 227.34938pt x 408.02437pt>
 File: itrenzas/6c1.png Graphic file (type png)
  <use itrenzas/6c1.png>
 Package pdftex.def Info: itrenzas/6c1.png used on input line 280.
@@ -4023,13 +4011,13 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 281.
 (pdftex.def)             Requested size: 19.91684pt x 61.35728pt.
 
-<itrenzas/6c2.png, id=876, 193.47281pt x 402.75468pt>
+<itrenzas/6c2.png, id=881, 193.47281pt x 402.75468pt>
 File: itrenzas/6c2.png Graphic file (type png)
  <use itrenzas/6c2.png>
 Package pdftex.def Info: itrenzas/6c2.png used on input line 282.
 (pdftex.def)             Requested size: 73.97733pt x 154.00092pt.
 
-<itrenzas/6c3.png, id=877, 204.765pt x 396.7322pt>
+<itrenzas/6c3.png, id=882, 204.765pt x 396.7322pt>
 File: itrenzas/6c3.png Graphic file (type png)
  <use itrenzas/6c3.png>
 Package pdftex.def Info: itrenzas/6c3.png used on input line 284.
@@ -4040,7 +4028,7 @@ File: itrenzas/flechac.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/flechac.png used on input line 285.
 (pdftex.def)             Requested size: 19.91684pt x 61.35728pt.
 
-<itrenzas/6c4.png, id=878, 215.30438pt x 393.72093pt>
+<itrenzas/6c4.png, id=883, 215.30438pt x 393.72093pt>
 File: itrenzas/6c4.png Graphic file (type png)
  <use itrenzas/6c4.png>
 Package pdftex.def Info: itrenzas/6c4.png used on input line 286.
@@ -4095,14 +4083,14 @@ File: itrenzas/t2pro.png Graphic file (type png)
 Package pdftex.def Info: itrenzas/t2pro.png used on input line 300.
 (pdftex.def)             Requested size: 71.13188pt x 185.01436pt.
 
-<itrenzas/t1probien.png, id=892, 177.66376pt x 456.95718pt>
+<itrenzas/t1probien.png, id=897, 177.66376pt x 456.95718pt>
 File: itrenzas/t1probien.png Graphic file (type png)
 
 <use itrenzas/t1probien.png>
 Package pdftex.def Info: itrenzas/t1probien.png used on input line 302.
 (pdftex.def)             Requested size: 99.58464pt x 256.1383pt.
 
-<itrenzas/t2probien.png, id=893, 175.40532pt x 476.53032pt>
+<itrenzas/t2probien.png, id=898, 175.40532pt x 476.53032pt>
 File: itrenzas/t2probien.png Graphic file (type png)
 
 <use itrenzas/t2probien.png>
@@ -4140,13 +4128,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 311.
 [43 <./itrenzas/t1probien.png> <./itrenzas/t2probien.png>]
-<itrenzas/M4.png, id=900, 455.45157pt x 393.72093pt>
+<itrenzas/M4.png, id=905, 455.45157pt x 393.72093pt>
 File: itrenzas/M4.png Graphic file (type png)
  <use itrenzas/M4.png>
 Package pdftex.def Info: itrenzas/M4.png used on input line 321.
 (pdftex.def)             Requested size: 227.62204pt x 196.77586pt.
 
-<itrenzas/M5.png, id=902, 426.84468pt x 388.45125pt>
+<itrenzas/M5.png, id=907, 426.84468pt x 388.45125pt>
 File: itrenzas/M5.png Graphic file (type png)
  <use itrenzas/M5.png>
 Package pdftex.def Info: itrenzas/M5.png used on input line 331.
@@ -4168,7 +4156,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--342
 []\OT1/cmr/m/n/10 (b)
  []
 
-<itrenzas/t3probien.png, id=904, 174.6525pt x 475.02469pt>
+<itrenzas/t3probien.png, id=909, 174.6525pt x 475.02469pt>
 File: itrenzas/t3probien.png Graphic file (type png)
 
 <use itrenzas/t3probien.png>
@@ -4183,7 +4171,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 344--344
 []\OT1/cmr/m/n/10 (d)
  []
 
-<itrenzas/t4probien.png, id=905, 119.69719pt x 481.04718pt>
+<itrenzas/t4probien.png, id=910, 119.69719pt x 481.04718pt>
 File: itrenzas/t4probien.png Graphic file (type png)
 
 <use itrenzas/t4probien.png>
@@ -4332,13 +4320,13 @@ Package pdftex.def Info: itrenzas/6c4.png used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<itrenzas/7c1.png, id=931, 227.34938pt x 392.21532pt>
+<itrenzas/7c1.png, id=936, 227.34938pt x 392.21532pt>
 File: itrenzas/7c1.png Graphic file (type png)
  <use itrenzas/7c1.png>
 Package pdftex.def Info: itrenzas/7c1.png used on input line 58.
 (pdftex.def)             Requested size: 99.58464pt x 171.80324pt.
 
-<itrenzas/7c2.png, id=932, 249.18094pt x 396.7322pt>
+<itrenzas/7c2.png, id=937, 249.18094pt x 396.7322pt>
 File: itrenzas/7c2.png Graphic file (type png)
  <use itrenzas/7c2.png>
 Package pdftex.def Info: itrenzas/7c2.png used on input line 59.
@@ -4873,7 +4861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-<itrenzas/deh1.png, id=1004, 231.86626pt x 401.24907pt>
+<itrenzas/deh1.png, id=1009, 231.86626pt x 401.24907pt>
 File: itrenzas/deh1.png Graphic file (type png)
 
 <use itrenzas/deh1.png>
@@ -4924,7 +4912,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
-<itrenzas/h11.png, id=1011, 229.5777pt x 146.2263pt>
+<itrenzas/h11.png, id=1016, 229.5777pt x 146.2263pt>
 File: itrenzas/h11.png Graphic file (type png)
  <use itrenzas/h11.png>
 Package pdftex.def Info: itrenzas/h11.png used on input line 43.
@@ -4970,7 +4958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
-<itrenzas/h12.png, id=1021, 256.5585pt x 161.6439pt>
+<itrenzas/h12.png, id=1026, 256.5585pt x 161.6439pt>
 File: itrenzas/h12.png Graphic file (type png)
  <use itrenzas/h12.png>
 Package pdftex.def Info: itrenzas/h12.png used on input line 68.
@@ -4980,7 +4968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
-<itrenzas/h14.png, id=1023, 469.0323pt x 270.2898pt>
+<itrenzas/h14.png, id=1028, 469.0323pt x 270.2898pt>
 File: itrenzas/h14.png Graphic file (type png)
  <use itrenzas/h14.png>
 Package pdftex.def Info: itrenzas/h14.png used on input line 95.
@@ -5109,14 +5097,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
-<itrenzas/deho2.png, id=1033, 123.46124pt x 412.54124pt>
+<itrenzas/deho2.png, id=1038, 123.46124pt x 412.54124pt>
 File: itrenzas/deho2.png Graphic file (type png)
 
 <use itrenzas/deho2.png>
 Package pdftex.def Info: itrenzas/deho2.png used on input line 134.
 (pdftex.def)             Requested size: 65.44142pt x 218.68358pt.
 
-<itrenzas/deho1.png, id=1034, 118.19156pt x 406.51875pt>
+<itrenzas/deho1.png, id=1039, 118.19156pt x 406.51875pt>
 File: itrenzas/deho1.png Graphic file (type png)
 
 <use itrenzas/deho1.png>
@@ -5253,92 +5241,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 )
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
  [63]
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
  [64
 
 ]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 49.
 (tex/informatica/basico.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -5426,7 +5409,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 19.
-[66] <img/Main.jpg, id=1067, 394.47375pt x 274.77657pt>
+[66] <img/Main.jpg, id=1078, 394.47375pt x 274.77657pt>
 File: img/Main.jpg Graphic file (type jpg)
  <use img/Main.jpg>
 Package pdftex.def Info: img/Main.jpg used on input line 22.
@@ -5754,7 +5737,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 129.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 129.
- [74] <img/infor1.png, id=1251, 244.66406pt x 386.94562pt>
+ [74] <img/infor1.png, id=1262, 244.66406pt x 386.94562pt>
 File: img/infor1.png Graphic file (type png)
 
 <use img/infor1.png>
@@ -5787,13 +5770,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 173.
  [75 <./img/infor1.png>]
-<img/infor2.png, id=1274, 58.71938pt x 395.22656pt>
+<img/infor2.png, id=1285, 58.71938pt x 395.22656pt>
 File: img/infor2.png Graphic file (type png)
  <use img/infor2.png>
 Package pdftex.def Info: img/infor2.png used on input line 192.
 (pdftex.def)             Requested size: 34.14322pt x 229.8105pt.
 
-<img/infor3.png, id=1275, 104.64093pt x 407.27156pt>
+<img/infor3.png, id=1286, 104.64093pt x 407.27156pt>
 File: img/infor3.png Graphic file (type png)
  <use img/infor3.png>
 Package pdftex.def Info: img/infor3.png used on input line 193.
@@ -5865,13 +5848,12 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 290.
  [77]
-<img/infor4.png, id=1338, 161.85469pt x 354.57469pt>
+<img/infor4.png, id=1349, 161.85469pt x 354.57469pt>
 File: img/infor4.png Graphic file (type png)
  <use img/infor4.png>
 Package pdftex.def Info: img/infor4.png used on input line 296.
 (pdftex.def)             Requested size: 122.34692pt x 268.02959pt.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
 LaTeX Info: Redefining \. on input line 55.
 LaTeX Info: Redefining \% on input line 55.
 Package babel Info: Redefining spanish shorthand <<
@@ -5899,8 +5881,112 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 55.
 
-[78 <./img/infor4.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
+[78 <./img/infor4.png>] (proyecto.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 55--1
+
+ []
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+[79]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+ [80
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
+$\OT1/cmtt/m/n/12 com / help / matlab / matlab _ prog / create-[]and-[]share-[]
+custom-[]matlab-[]toolboxes . html #$
+ []
+
+)
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 69.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 69.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 69.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 69.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 69.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 71.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 71.
+ [81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (proyecto.aux (tex/portada.aux)
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
@@ -5908,24 +5994,24 @@ LaTeX Info: Redefining \% on input line 29.
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: FD5343DFCAA75BF78FBB3E6393A5003F;2975.
+(rerunfilecheck)             Checksum: 79F376DBB3AF1CACF321ED8D2F641E40;3029.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 12848 strings out of 493673
- 182937 string characters out of 3143963
- 373893 words of memory out of 3000000
- 15245 multiletter control sequences out of 15000+200000
+ 12888 strings out of 493673
+ 183232 string characters out of 3143963
+ 374367 words of memory out of 3000000
+ 15266 multiletter control sequences out of 15000+200000
  17533 words of font info for 73 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,9n,40p,620b,1998s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,9n,40p,669b,1998s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/M
@@ -5946,13 +6032,14 @@ sy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/dstroke/dsrom12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/rsfs/rsfs10.pfb>
-Output written on proyecto.pdf (88 pages, 4618228 bytes).
+.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/dstroke/dsrom12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsf
+s/rsfs10.pfb>
+Output written on proyecto.pdf (91 pages, 4639049 bytes).
 PDF statistics:
- 1557 PDF objects out of 1728 (max. 8388607)
- 573 named destinations out of 1000 (max. 500000)
- 1004 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1618 PDF objects out of 1728 (max. 8388607)
+ 589 named destinations out of 1000 (max. 500000)
+ 1012 words of extra memory for PDF output out of 10000 (max. 10000000)
 

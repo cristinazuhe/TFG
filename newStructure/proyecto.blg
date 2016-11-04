@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: proyecto.aux
 A level-1 auxiliary file: tex/portada.aux
 A level-1 auxiliary file: tex/prefacio.aux
-I found no \bibdata command---while reading file proyecto.aux
-I found no \bibstyle command---while reading file proyecto.aux
-(There were 2 error messages)
+The style file: apalike.bst
+Database file #1: tex/bibliografia.bib
+Warning--empty journal in 12
+(There was 1 warning)
