@@ -71,7 +71,7 @@ Para ver el proceso inverso haremos uso del siguiente teorema:
 	Todo nudo puede ser representado como una trenza cerrada.
 \end{teo}
 
-Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas. //PONER ENLACES A LIBROS!!!. En este caso vamos a ver el algoritmo de Yamada-Vogel, que transforma un nudo en una trenza cerrada. Este proceso se puede realizar a cualquier nudo y el resultado es siempre una trenza cerrada. 
+Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas \cite{13}, \cite{14}. En este caso vamos a ver el algoritmo de Yamada-Vogel, que transforma un nudo en una trenza cerrada. Este proceso se puede realizar a cualquier nudo y el resultado es siempre una trenza cerrada. 
 \begin{proof}
 	Dada nudo orientado K, realizaremos los siguientes pasos:
 	\begin{enumerate}
@@ -87,7 +87,7 @@ Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas. 
 		
 		
 		Como resultado, vamos a obtener un conjunto de círculos en el plano a los que se les conoce como círculos de Seifert. \\
-		Para no perder el tipo de cruce, vamos a conservar la conexión de los cruces y asignaremos el símbolo + a los cruces positivos y el símbolo - a los cruces negativos. De este modo, conseguimos conservar toda la información sobre la proyección del nudo. \\
+		Para no perder el tipo de cruce, vamos a conservar la conexión de los cruces y asignaremos el símbolo + a los cruces positivos y el símbolo - a los cruces negativos. De este modo, conseguimos conservar toda la información sobre la proyección del nudo. 
 		
 		\item Antes de ver cómo realizar este segundo paso, necesitamos unos conceptos previos. \\
 	
@@ -98,7 +98,7 @@ Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas. 
 		Si h(D)$ > $0, podemos encontrar un arco que una dos pares de círculos de Seifert incoherentes (se conoce como arco de reducción). Se puede de ver cómo representaremos un arco de reducción entre dos círculos de Seifert en la figura \ref{prueale2}.
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=10cm]{inudos/ima10.png}
+			\includegraphics[width=11cm]{inudos/ima10.png}
 			\caption{Arco de reducción.}
 			\label{prueale2} 
 		\end{figure}
@@ -106,7 +106,7 @@ Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas. 
 		 Este arco de reducción nos sirve de guía para realizar un movimiento de reducción sobre ambos círculos de Seifert de modo que obtenemos la primera proyección de la figura \ref{prueale3}. Con las siguientes imágenes de la figura vemos que efectivamente se conservan los círulos de Seifert originales pero hemos conseguido que ahora sean coherentes. 
 		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=10cm]{inudos/ima11.png}
+			\includegraphics[width=13cm]{inudos/ima11.png}
 			\caption{Movimiento de reducción.}
 			\label{prueale3} 
 		\end{figure}
@@ -114,9 +114,24 @@ Para ver la demostración de dicho teorema podemos inspirarnos en varias ideas. 
 		
 		\item Continuamos realizando movimientos de reducción hasta obtener h(D)=0.\\
 		
-		Se puede demostrar //ENLACE A REFERENCIA HANDBOOK que dicho algoritmo finaliza haciendo uso del siguiente lema:\\
+		Se puede demostrar \cite{13} que dicho algoritmo finaliza haciendo uso del siguiente lema:\\
 		Supongamos que realizamos un movimiento de reducción al a proyección D, obteniendo la proyección D'. En ese caso, h(D')=h(D)-1.
 		
 	\end{enumerate}
 \end{proof} 
 
+En la figura \ref{prueale4} aplicamos el algoritmo a un nudo particular. 
+		\begin{figure}[h!]
+			\centering
+			\subfigure[Proyección nudo]{\includegraphics[width=4.5cm]{inudos/ima1.png}}
+			\subfigure[Círculos Seifert]{\includegraphics[width=4cm]{inudos/ima3.png}}
+			\caption{Movimiento de reducción.}		
+			\subfigure[Círculos Seifert]{\includegraphics[width=4cm]{inudos/ima4.png}}
+			\subfigure[Arco reducción]{\includegraphics[width=4cm]{inudos/ima5.png}}
+			
+			\subfigure[Movimiento reducción]{\includegraphics[width=7.8cm]{inudos/ima6.png}}
+			\subfigure[Movimiento reducción]{\includegraphics[width=7.8cm]{inudos/ima7.png}}
+			\subfigure[Final]{\includegraphics[width=4.5cm]{inudos/ima9.png}}
+			\caption{Movimiento de reducción.}
+			\label{prueale4} 
+		\end{figure}

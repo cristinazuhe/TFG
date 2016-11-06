@@ -17,20 +17,14 @@ Dehornoy, P. (1997).
 \newblock A fast method for comparing braids.
 \newblock {\em Advances in Mathematics}, 125(2):200--235.
 
-\bibitem[Fenn, 2016]{7}
-Fenn, R. (2016).
-\newblock Braid programme.
-\newblock \url{http://www.layer8.co.uk/maths/braids/}.
-
 \bibitem[Flapan, 2016]{2}
 Flapan, E. (2016).
 \newblock Knots, molecules, and the universe: An introduction to topology.
 \newblock {\em American Mathematical Society}.
 
-\bibitem[Flint and Rankin, 2003]{8}
-Flint, O. and Rankin, S. (2003).
-\newblock Knotilus.
-\newblock \url{http://knotilus.math.uwo.ca/}.
+\bibitem[Hoberg, 2011]{14}
+Hoberg, R. (2011).
+\newblock knots and braids-paper.
 
 \bibitem[ISIK, 2005]{12}
 ISIK, U. (2005).
@@ -59,9 +53,8 @@ Murasugi, K. and Kurpita, B.~I. (1999).
 \newblock A study of braids. mathematics and its applications.
 \newblock {\em Springer Science+Business Media Dordrecht}, 484.
 
-\bibitem[Thiffeault and Budi\v{s}i\'{c}, 2016]{9}
-Thiffeault, J.-L. and Budi\v{s}i\'{c}, M. (2013--2016).
-\newblock Braidlab: {A} software package for braids and loops.
-\newblock Version 3.2.
+\bibitem[William~Menasco, 2005]{13}
+William~Menasco, M.~T. (2005).
+\newblock Handbook of knot theory.
 
 \end{thebibliography}
