@@ -9,7 +9,7 @@ En concreto, vamos a ver los pseudoalgoritmos para el algoritmo de Dehornoy (que
 \end{center} 
 Vamos a ir viendo los algoritmos auxiliares y concluiremos con el propio algoritmo de Dehornoy. Recordemos que este algoritmo se explica con detalle en la sección \ref{deh}.\\
 
-Creamos el método Simplifica mediante el cuál eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}, e \in$ \{-1,1\} de una palabra que representa a cierta trenza. 
+Creamos el método Simplifica mediante el cuál eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}$, siendo $ e \in$ \{-1,1\}, de una palabra que representa a cierta trenza. 
 
 \begin{alg}
 	\textbf{Algoritmo Simplifica}(indices\_braid)\\
@@ -58,7 +58,7 @@ Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la t
 \begin{lstlisting}
    Creo vector_auxiliar
    Recorro los cruces de indices_braid desde pos1 hasta pos2
-   Si hay un cruce generado por el elemento (minimo+1) aniado al vector_auxiliar los 3 cruces correspondientes. Sino, aniado el mismo cruce. 
+   Si hay un cruce generado por el elemento (minimo+1) aniado a vector_auxiliar los 3 cruces correspondientes del algoritmo. Sino, aniado el mismo cruce. 
    Creo vector_nuevo con los elementos desde inicio de indices_braid hasta pos1, vector_auxiliar, y los elementos desde pos2 hasta final de indices_braid.
    Si indices_braid y vector_auxiliar tienen distinto tamanio, asigno a braid_aux2 una cadena con ciertos ceros para mejor visualizacion.
 \end{lstlisting}
