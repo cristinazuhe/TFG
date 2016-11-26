@@ -36,7 +36,7 @@ Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delim
 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
 \begin{lstlisting}
    Recorro los cruces de indices_braid
-   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Sino finalizo.
+   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Si no finalizo.
    Si encuentro un cruce generado por el elemento minimo con signo opuesto, me quedo con esa posicion como pos2.
 \end{lstlisting}
 \end{alg}
@@ -58,7 +58,7 @@ Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la t
 \begin{lstlisting}
    Creo vector_auxiliar
    Recorro los cruces de indices_braid desde pos1 hasta pos2
-   Si hay un cruce generado por el elemento (minimo+1) aniado a vector_auxiliar los 3 cruces correspondientes del algoritmo. Sino, aniado el mismo cruce. 
+   Si hay un cruce generado por el elemento (minimo+1) aniado a vector_auxiliar los 3 cruces correspondientes del algoritmo. Si no, aniado el mismo cruce. 
    Creo vector_nuevo con los elementos desde inicio de indices_braid hasta pos1, vector_auxiliar, y los elementos desde pos2 hasta final de indices_braid.
    Si indices_braid y vector_auxiliar tienen distinto tamanio, asigno a braid_aux2 una cadena con ciertos ceros para mejor visualizacion.
 \end{lstlisting}
@@ -120,7 +120,7 @@ Para ver si dos trenzas dadas son equivalentes o no entre sí, vamos a implement
    Genero trenza_auxiliar = br1inver(br2).
    Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
    Si final_braid no es vacia -> No son equivalentes. 
-   Sino -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
+   Si no -> Si explicacion=1 -> represento secuencia de trenzas de dehornoy.
     
 \end{lstlisting}
 \end{alg}
@@ -143,7 +143,7 @@ Sabemos que el movimiento 1 de Markov puede eliminar o añadir cruces. Siempre i
 \begin{lstlisting}
    Si numero_argumentos=1 -> completo=0.
    Si el primer cruce de br_c es opuesto al ultimo cruce de br_c -> a2 = br_c sin dichos cruces.
-   Sino -> Si completo... 
+   Si no -> Si completo... 
      Obtengo cruce de mayor indice (indice m).
      Aniado cruces opuestos de indice m a principio y final de br_c.
       
@@ -185,7 +185,7 @@ La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, 
    Si numero_argumentos=2 -> explicacion=0.
    Si el numero de enlaces de br1 y de br2 son distintos -> No son equivalentes. Finalizo
    Si equivalentes@trenza(br1,br2) son equivalentes -> sus cierres son equivalentes.
-   Sino ->   
+   Si no ->   
    	Obengo polinomio de Alexander de ambas trenzas.
 	Si son iguales salvo signo -> No sabemos si son o no equivalentes. equi <- 2.
 	Sino -> No son equivalentes.

@@ -3,8 +3,7 @@ function traceplot = tubep(x,y,z,N,R)
 %Representación de un tubo con centro la funcion de entrada. 
 %Entrada: coordenadas x, y, z de una función, número de cortes y radio del
 %tubo. 
-
-   % i=imread('./im2.jpg'); %quiero poner la imagen de fondo....
+    %i=imread('./im2.jpg'); %quiero poner la imagen de fondo....
 
     %Convert all vectors to column
     x0=reshape(x,[],1);y0=reshape(y,[],1);z=reshape(z,[],1);
@@ -25,8 +24,6 @@ function traceplot = tubep(x,y,z,N,R)
     light;
     lighting phong;
     camlight left;
-    
-    
     
 end
 
