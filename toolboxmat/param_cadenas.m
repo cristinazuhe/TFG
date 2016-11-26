@@ -8,7 +8,7 @@ function [matriz_x, matriz_y, matriz_z ] = param_cadenas( indices_braid,n )
     [x_giro,y_giro,z_giro] = giro_base();
     [x_cil,y_cil,z_cil] = cilindro_base();
     
-    if(size(indices_braid)==0) %esto no se si quitarlo....es para cuando me llega la trenza trivial
+    if(size(indices_braid)==0) %para cuando me llega la trenza trivial
         matriz_x=0;matriz_y=0;matriz_z=0;
     end
 

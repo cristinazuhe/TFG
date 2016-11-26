@@ -5,11 +5,11 @@ function traceplot = tubep(x,y,z,N,R)
 %tubo. 
     %i=imread('./im2.jpg'); %quiero poner la imagen de fondo....
 
-    %Convert all vectors to column
+    %Convierto los vectores en columnas
     x0=reshape(x,[],1);y0=reshape(y,[],1);z=reshape(z,[],1);
-    %Copy x, y 
+    %Copiamos x, y 
     x0=repmat(x0,1,N+1);y0=repmat(y0,1,N+1);
-    %Generate points in circles
+    %Generamos puntos circularmente
     myAng=linspace(0,2*pi,N+1);
     xcir=R*cos(myAng);
     ycir=R*sin(myAng);
@@ -20,7 +20,6 @@ function traceplot = tubep(x,y,z,N,R)
     img = imread('im3.jpg');
     set(traceplot,'CData',img, 'FaceColor','texturemap'); 
     axis equal off;
-    %shading interp;
     light;
     lighting phong;
     camlight left;

@@ -198,7 +198,7 @@ classdef trenza<handle
                 Radio=0.5;
             end
             [matriz_x,matriz_y,matriz_z] = param_cadenas(br.indices_trenza,br.n_cadenas);
-
+            
             for i=1:1:size(matriz_z,1)
                 plot3(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:));
                 tubep(matriz_x(i,:),matriz_y(i,:),matriz_z(i,:),N_cortes,Radio);

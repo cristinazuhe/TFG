@@ -239,3 +239,151 @@ Tanto para ver la trivialidad de una trenza como la trivialidad de una trenza ce
    Aplico algoritmo equivalentes para br_c y br2_c.
 \end{lstlisting}
 \end{alg}
+
+\newpage
+
+Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos matemáticos que hemos ido desarrollando a lo largo de este proyecto, vamos a centrarnos en el algoritmo de representación de trenzas y trenzas cerradas que hemos creado. Cabe comentar que estos algoritmos han ido pasando por distintas versiones hasta obtener una versión con la que poder representar las transiciones de trenzas para el algoritmo de Dehornoy de la forma más elegante e intuitiva posible. 
+
+ \begin{center}
+ 	\textbf{Algoritmo para representar una trenza.}
+ \end{center} 
+ Vamos a ir viendo algunos algoritmos auxiliares que hemos creado y concluiremos con el algoritmo de representación de una trenza. \\
+ En primer lugar, creamos un método que nos permita representar un tubo de ciertas dimensiones (radio y número de cortes) con centro una función dada por las coordenadas x, y, z. Estos tubos formarán las cadenas de la trenza, pero ahora mismo sería un tubo sobre una función cualquiera, veámoslo:
+ 
+ \begin{alg}
+ 	\textbf{Algoritmo tubep}(x,y,z,N,R)\\
+ 	ENTRADA: x (coordenada x de la función)\\
+ 	\hspace*{2.2cm} y (coordenada y de la función)\\
+ 	\hspace*{2.2cm} z (coordenada z de la función)\\
+ 	\hspace*{2.2cm} N (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+ 	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
+ 	
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Obtenemos matrices con puntos circulares con centro la funcion de entrada.
+   Creamos una superficie a partir de dichas matrices.
+   Leemos imagen de textura.
+   Aplicamos la imagen a la superficie.
+   Establecemos puntos de iluminacion.
+   
+\end{lstlisting}
+ \end{alg}
+ 
+ A continuación, vamos a ver el algoritmo que hemos creado para obtener la forma que presenta una sección de una cadena de una trenza al producirse un cruce. Con este algoritmo únicamente obtenemos las coordenadas de la función que tiene dicha forma. Hemos decidido darle esta parametrización a la función para que visualmente quede lo mejor posible. 
+ 
+  \begin{alg}
+  	\textbf{Algoritmo giro\_base}()\\
+  	SALIDA: \hspace{0.4cm} x (vector de coordenadas x de una función para generar una de las dos partes de un cruce)\\
+  	\hspace*{2.2cm} y (vector de coordenadas y de una función para generar una de las dos partes de un cruce)\\
+  	\hspace*{2.2cm} z (vector de coordenadas z de una función para generar una de las dos partes de un cruce)
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   x <- vector con valores nulos de 0 a pi, coseno de pi a 2pi,  valor 2 de 2pi a 3pi.
+   y <- vector con valores nudos de 0 a pi, seno de pi a 2pi, nulos de 2pi a 3pi.
+   z <- vector con valores de 0 a 3pi con frecuencia 0.1.
+\end{lstlisting}
+  \end{alg}
+  
+  De un modo similar creamos otra función para obtener la función que nos permitirá crear secciones de cadenas de las trenzas que no se encuentren cruzadas. 
+ \begin{alg}
+ 	\textbf{Algoritmo cilindro\_base}()\\
+ 	SALIDA: \hspace{0.4cm} x (vector de coordenadas x de una función para generar cilindro)\\
+ 	\hspace*{2.2cm} y (vector de coordenadas y de una función para generar cilindro)\\
+ 	\hspace*{2.2cm} z (vector de coordenadas z de una función para generar cilindro)
+ 	
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   z <- vector con valores de 0 a 3pi con frecuencia 0.1
+   x,y <- vectores nulos de longitud igual a la de z. 
+\end{lstlisting}
+ \end{alg}
+ 
+ Para entender mejor estos tres algoritmos que hemos visto vamos a visualizar algunas secciones de cadenas con las que los explicaremos:\\
+ 
+ El algoritmo giro\_base genera la función azul que vemos dentro del tubo en la imagen de la izquierda en la figura \ref{final1} , aunque el algoritmo en sí no representa la función.  \\
+ 
+ El algoritmo cilindro\_base genera la función azul que vemos dentro del tubo en la imagen derecha.\\
+
+ El algoritmo  tubep genera los tubos alrededor de las funciones indicadas. 
+ 
+ \begin{figure}[h!]
+ 	\centering
+ 	\subfigure[Giro base]{\includegraphics[width=4.5cm]{img/infor5.png}}
+ 	\space
+ 	\subfigure[Cilindro base]{\includegraphics[width=3.8cm]{img/infor6.png}}
+ 	\caption{Funciones base}
+ 	\label{final1} 
+ \end{figure}
+ 
+ \bigskip
+ Ya tenemos la estructura base que podrá tener cada sección de una cadena de una trenza. Tenemos que ser capaces de obtener las funciones que representan a las cadenas de forma completa, y no sólo por secciones. Esto lo conseguimos mediante el siguiente algoritmo:
+ \begin{alg}
+ 	\textbf{Algoritmo param\_cadenas}(indices\_braid, n)\\
+ 	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+ 	\hspace*{2.2cm} n (numero de cadenas de la trenza)\\
+ 	SALIDA: \hspace{0.4cm} matriz\_x (matriz que contiene las coordenadas x de las funciones que representan a las cadenas de la trenza)\\
+ 	\hspace*{2.2cm} matriz\_y (matriz que contiene las coordenadas y de las funciones que representan a las cadenas de la trenza)\\
+ 	\hspace*{2.2cm} matriz\_z (matriz que contiene las coordenadas z de las funciones que representan a las cadenas de la trenza)
+ 	
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Aplico giro_base: obtengo vector con coordenadas x, y, z del giro que representa una de las dos partes del cruce de una trenza. 
+   Aplico cilindro_base: obtengo vector con coordenadas x, y, z de una funcion lineal que representa una cadena sin giro. 
+   Si la trenza no tiene cruces...
+      anulamos las matrices x, y, z 
+   Para cada cadena de la trenza (sera la cadena actual)...
+      Para cada indice de indices_braid...
+         Si |indice|=0 (recordemos que es posible porque lo usamos para visualizaciones mejores)  -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslacion correspondiente.
+         Si |indice|=cadena actual  -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslacion y giro correspondiente.  
+         Si |indice|=cadena actual -1 -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslacion correspondiente.
+         Si no -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslacion correspondiente. 
+      Genero las matrices x,y,z como concatenacion de dichos vectores. 
+   Si la trenza tiene cadenas a la derecha sin cruces...
+      Ani0ado para cada cadena una fila a cada matriz x, y, z con cilindros base con las traslaciones correspondientes. 
+      
+         
+\end{lstlisting}
+ \end{alg}
+ 
+ Finalmente, vemos el algoritmo para representar una trenza cualquiera. 
+\begin{alg}
+  	\textbf{Algoritmo representar\_trenza}(br, N\_cortes, Radio)\\
+  	ENTRADA: br (trenza)\\
+  	\hspace*{2.2cm} N\_cortes (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5
+   Aplico param_cadenas: obtengo 3 matrices con coordenadas x, y, z de las funciones que representan las cadenas de la trenza.
+   Para cada cadena de la trenza (cada fila de las matrices)...
+     Represento la funcion de la cadena (hago un plot de la cadena a partir de la fila correspondiente de la matriz x, y, z)
+     Aplico tubep a dicha cadena con N_cortes y Radio.
+\end{lstlisting}
+\end{alg}
+
+ \begin{center}
+ 	\textbf{Algoritmo para representar una trenza cerrada.}
+ \end{center} 
+ En esta última sección vamos a ver el algoritmo que hemos creado para representar una trenza cerrada cualquiera. Al igual que en la sección anterior, mostramos un pseudocódigo bastante específico para que se entienda bien pues puede resultar complejo a simple vista. 
+\begin{alg}
+	\textbf{Algoritmo representar\_trenza}(br\_c, N\_cortes, Radio)\\
+	ENTRADA: br\_c (trenza cerrada)\\
+	\hspace*{2.2cm} N\_cortes (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
+	
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+\begin{lstlisting}
+   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5.
+   Aplico representar_trenza@trenza.
+   Creo una semicircunferencia en el plano x-z.
+   Aplico cilindro_base: obtengo vector con coordenadas x, y, z de una funcion lineal que representa una cadena sin giro.
+   Para cada cadena de la trenza...
+     Represento la semicircunferencia para los cierres superiores de las cadenas con los escalados y traslaciones correspondientes.
+     Aplico tubep.
+     Represento las cadenas para hacer los cierres a partir de cilindro_base.
+     Aplico tubep.
+     Represento la semicircunferencia para los cierres inferiores de las cadenas con los escalados y traslaciones correspondientes.
+\end{lstlisting}
+\end{alg}
