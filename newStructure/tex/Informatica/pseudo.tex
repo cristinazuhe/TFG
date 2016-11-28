@@ -12,32 +12,43 @@ Vamos a ir viendo los algoritmos auxiliares y concluiremos con el propio algorit
 Creamos el método Simplifica mediante el cuál eliminamos ocurrencias de tipo $\sigma_{i}^{e}\sigma_{i}^{-e}$, siendo $ e \in$ \{-1,1\}, de una palabra que representa a cierta trenza. 
 
 \begin{alg}
-	\textbf{Algoritmo Simplifica}(indices\_braid)\\
-	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	\textbf{Algoritmo Simplifica}(índices\_braid)\\
+	ENTRADA: índices\_braid (cadena de enteros que representa los cruces de una trenza)\\
 	SALIDA: \hspace{0.4cm} braid\_aux (cadena auxiliar para mejor representacion visual) \\
-    \hspace*{2.2cm} nueva\_braid (cadena de enteros que representa los cruces de la trenza tras eliminar dos cruces consecuetivos opuestos)\\
+    \hspace*{2.2cm} nueva\_braid (cadena de enteros que representa los cruces de la trenza tras eliminar dos cruces consecutivos opuestos)\\
     \hspace*{2.2cm} encontrado (bool para indicar si se produce simplificación)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Recorro los cruces de indices_braid
-   Si hay dos cruces seguidos con signos opuestos, creo una copia de indices_braid y elimino dichos cruces. 
+   Recorro los cruces de índices_braid
+   Si hay dos cruces seguidos con signos opuestos, creo una copia de índices_braid y elimino dichos cruces. 
 \end{lstlisting}
 \end{alg}
 
 Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delimitan un $\sigma_{minimo}$-handle.
 \begin{alg}
-	\textbf{Algoritmo encuentra\_handle}(indices\_braid, minimo)\\
-	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
-	\hspace*{2.2cm} minimo (generador de handle a encontrar) \\
+	\textbf{Algoritmo encuentra\_handle}(índices\_braid, mínimo)\\
+	ENTRADA: índices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	\hspace*{2.2cm} mínimo (generador de handle a encontrar) \\
 	SALIDA: \hspace{0.4cm} pos1 (posición inicial del handle encontrado) \\
 	\hspace*{2.2cm} pos2 (posición final del handle encontrado)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ý}{{\'y}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Recorro los cruces de indices_braid
-   Si hay un cruce generado por el elemento minimo, me quedo con esa posicion como pos1 y su signo. Si no finalizo.
-   Si encuentro un cruce generado por el elemento minimo con signo opuesto, me quedo con esa posicion como pos2.
+   Recorro los cruces de índices_braid
+   Si hay un cruce generado por el elemento mínimo, me quedo con esa posición como pos1 y su signo. Si no finalizo.
+   Si encuentro un cruce generado por el elemento mínimo con signo opuesto, me quedo con esa posición como pos2.
 \end{lstlisting}
 \end{alg}
 
@@ -45,22 +56,27 @@ Haciendo uso del siguiente algoritmo podremos encontrar las posiciones que delim
 Haciendo uso del algoritmo reduccion\_base aplicamos una reducción local a la trenza representada por indices\_braid sobre el $\sigma_{minimo}$-handle que está situado entre las posiciones pos1 y pos2. Es importante destacar el hecho de que este $\sigma_{minimo}$-handle  no contiene $\sigma_{minimo+1}$-handle. Este detalle lo controlamos en el algoritmo Dehornoy que veremos posteriormente. \\
 
 \begin{alg}
-	\textbf{Algoritmo reduccion\_base}(indices\_braid, minimo, pos1, pos2 )\\
-	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
-	\hspace*{2.2cm} minimo (generador de handle) \\
+	\textbf{Algoritmo reduccion\_base}(índices\_braid, mínimo, pos1, pos2 )\\
+	ENTRADA: índices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+	\hspace*{2.2cm} mínimo (generador de handle) \\
 	\hspace*{2.2cm} pos1 (posición inicial del handle) \\
 	\hspace*{2.2cm} pos2 (posición final del handle)\\
 	SALIDA: \hspace{0.4cm} braid\_aux2 (cadena auxiliar para mejor representación visual) \\
 	\hspace*{2.2cm} nuevo (cadena de enteros que representa los cruces de la trenza tras aplicar la reducción local al $\sigma_{minimo}$-handle entre pos1 y pos2)\\
 	\hspace*{2.2cm} simplificado2 (bool auxiliar para mejor representación visual)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
    Creo vector_auxiliar
-   Recorro los cruces de indices_braid desde pos1 hasta pos2
-   Si hay un cruce generado por el elemento (minimo+1) aniado a vector_auxiliar los 3 cruces correspondientes del algoritmo. Si no, aniado el mismo cruce. 
-   Creo vector_nuevo con los elementos desde inicio de indices_braid hasta pos1, vector_auxiliar, y los elementos desde pos2 hasta final de indices_braid.
-   Si indices_braid y vector_auxiliar tienen distinto tamanio, asigno a braid_aux2 una cadena con ciertos ceros para mejor visualizacion.
+   Recorro los cruces de índices_braid desde pos1 hasta pos2
+   Si hay un cruce generado por el elemento (mínimo+1) añado a vector_auxiliar los 3 cruces correspondientes del algoritmo. Si no, añado el mismo cruce. 
+   Creo vector_nuevo con los elementos desde inicio de índices_braid hasta pos1, vector_auxiliar, y los elementos desde pos2 hasta final de indices_braid.
+   Si índices_braid y vector_auxiliar tienen distinto tamaño, asigno a braid_aux2 una cadena con ciertos ceros para mejor visualización.
 \end{lstlisting}
 \end{alg}
 
@@ -70,23 +86,28 @@ Estos algoritmos auxiliares no se proporcionan para uso directo al usuario ya qu
 \begin{alg}
 	\textbf{Algoritmo dehornoy}(br, N\_cortes, Radio, representar)\\
 	ENTRADA: br (trenza)\\
-	\hspace*{2.2cm} N\_cortes (numero de cortes de las cadenas de la trenza)\\
+	\hspace*{2.2cm} N\_cortes (número de cortes de las cadenas de la trenza)\\
 	\hspace*{2.2cm} Radio (radio de las cadenas de la trenza)\\
 	\hspace*{2.2cm} representar (bool para representar las equivalencias de la trenza)\\
 	SALIDA: \hspace{0.4cm} es\_trivial (bool que nos indica si la trenza dada es o no trivial) \\
 	\hspace*{2.2cm} trenza\_final (cadena de enteros que representa a la trenza reducida equivalente a br)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, numbersep=-2pt, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, numbersep=-2pt, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5, representar=1.
-   indices_braid = cadena de enteros que representa a la trenza
+   Si número_argumentos=1 -> N_cortes=20, Radio=0.5, representar=1.
+   índices_braid = cadena de enteros que representa a la trenza
    Si br tiene cadenas a la derecha triviales, las eliminamos visualmente.
    Mientras queden handles en la trenza dada...
 	 Obtenemos la palabra libremente reducida de indices_braid.
 	 Si no se produce reduccion...
-	   minimo = generador principal de indices_braid.
-	   [pos1,pos2]=encuentra_handle(indices_braid,minimo)
-	   Si pos1 y pos2 son posiciones validas....
+	   mínimo = generador principal de índices_braid.
+	   [pos1,pos2]=encuentra_handle(índices_braid,mínimo)
+	   Si pos1 y pos2 son posiciones válidas....
 		   Busco primer subhandle a realizar en el handle.
 		   Actualizo pos1 y pos2
 		   Aplico reduccion_base a dicho subhandle.
@@ -104,18 +125,23 @@ Finalmente cabe comentar que el algoritmo de Dehornoy se podrá aplicar sobre tr
 Para ver si dos trenzas dadas son equivalentes o no entre sí, vamos a implementar algunos de los invariantes que vimos para trenzas. En concreto, vamos a estudiar los invariantes exponente y permutación. Si con estos invariantes no conseguimos analizar la equivalencia de las trenzas, vamos a aplicar el algoritmo de Dehornoy que hemos visto anteriormente. \\
 
 \begin{alg}
-	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
+	\textbf{Algoritmo equivalentes}(br1,br2,explicación)\\
 	ENTRADA: br1 (trenza1)\\
 	\hspace*{2.2cm} br2 (trenza2)\\
-	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	\hspace*{2.2cm} explicación (bool para mostrar mensajes explicativos)\\
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 y br2 son o no equivalentes)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=2 -> explicacion=0.
+   Si número_argumentos=2 -> explicación=0.
    Obtengo exponente de ambas trenzas.
    Si son distintos -> No son equivalentes. Finalizo
-   Obtengo permutacion de ambas trenzas.
+   Obtengo permutación de ambas trenzas.
    Si son distintas -> No son equivalentes. Finalizo
    Genero trenza_auxiliar = br1inver(br2).
    Aplico Dehornoy a trenza_auxiliar y obtengo final_braid.
@@ -136,16 +162,21 @@ Sabemos que el movimiento 1 de Markov puede eliminar o añadir cruces. Siempre i
 \begin{alg}
 	\textbf{Algoritmo MV1}(br\_c, completo)\\
 	ENTRADA: br\_c (trenza cerrada)\\
-	\hspace*{2.2cm} completo (bool para indicar si se desean aniadir cruces)\\
+	\hspace*{2.2cm} completo (bool para indicar si se desean añadir cruces)\\
 	SALIDA: \hspace{0.4cm} a2 (trenza cerrada tras aplicar Movimiento1 eliminando de Markov.) 
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> completo=0.
-   Si el primer cruce de br_c es opuesto al ultimo cruce de br_c -> a2 = br_c sin dichos cruces.
+   Si número_argumentos=1 -> completo=0.
+   Si el primer cruce de br_c es opuesto al último cruce de br_c -> a2 = br_c sin dichos cruces.
    Si no -> Si completo... 
-     Obtengo cruce de mayor indice (indice m).
-     Aniado cruces opuestos de indice m a principio y final de br_c.
+     Obtengo cruce de mayor índice (índice m).
+     Añado cruces opuestos de índice m a principio y final de br_c.
       
 \end{lstlisting}
 \end{alg}
@@ -155,13 +186,18 @@ Sabemos que el movimiento 1 de Markov puede eliminar o añadir cruces. Siempre i
 	ENTRADA: br\_c (trenza cerrada)\\
 	SALIDA: \hspace{0.4cm} a3 (trenza cerrada tras aplicar Movimiento2 de Markov.) 
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
    Mientras br_c cambie de cruces...
       Si br_c tiene un solo cruce -> a3=trenza cerrada trivial. Finalizo.
       Obtengo cruce de mayor indice (indice m). 
       Si se encuentra solo una vez en br_c
-         Si a izquerda o derecha del cruce no tenemos cruces con indice m-1 -> a3=br_c sin dicho cruce.
+         Si a izquerda o derecha del cruce no tenemos cruces con índice m-1 -> a3=br_c sin dicho cruce.
          
 \end{lstlisting}
 \end{alg}
@@ -174,16 +210,21 @@ La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, 
 
 \newpage
 \begin{alg}
-	\textbf{Algoritmo equivalentes}(br1,br2,explicacion)\\
+	\textbf{Algoritmo equivalentes}(br1,br2,explicación)\\
 	ENTRADA: br1 (trenza cerrada 1)\\
 	\hspace*{2.2cm} br2 (trenza cerrada 2)\\
-	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	\hspace*{2.2cm} explicacioó (bool para mostrar mensajes explicativos)\\
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br1 y br2 son o no equivalentes)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=2 -> explicacion=0.
-   Si el numero de enlaces de br1 y de br2 son distintos -> No son equivalentes. Finalizo
+   Si número_argumentos=2 -> explicación=0.
+   Si el número de enlaces de br1 y de br2 son distintos -> No son equivalentes. Finalizo
    Si equivalentes@trenza(br1,br2) son equivalentes -> sus cierres son equivalentes.
    Si no ->   
    	Obengo polinomio de Alexander de ambas trenzas.
@@ -191,7 +232,7 @@ La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, 
 	Sino -> No son equivalentes.
    Si equi=2
     Creo trenza cerrada br = br1inver(br2)
-    Mientras numero_iteraciones < limite(establecido a 3)
+    Mientras número_iteraciones < limite(establecido a 3)
 	    a1 = Aplico MV1 a br.
 	    [es_trivial2,a2] = Aplico dehornoy a trenza cerrada a1. 
 	    Si es_trivial2 -> Finalizo.
@@ -209,14 +250,19 @@ La idea que hemos llevado a cabo consiste en aplicar el Movimiento 1 de Markov, 
 Tanto para ver la trivialidad de una trenza como la trivialidad de una trenza cerrada vamos a usar la misma idea que será hacer uso de los algoritmos de equivalencia entre la trenza dada y la trenza trivial. Veámoslos:
 
 \begin{alg}
-	\textbf{Algoritmo es\_trivial}(br,explicacion)\\
+	\textbf{Algoritmo es\_trivial}(br,explicación)\\
 	ENTRADA: br (trenza)\\
-	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	\hspace*{2.2cm} explicación (bool para mostrar mensajes explicativos)\\
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br es o no equivalente a la trenza trivial)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> explicacion=0.
+   Si número_argumentos=1 -> explicación=0.
    Creo br2 = trenza trivial. 
    Aplico algoritmo equivalentes para br y br2.
 \end{lstlisting}
@@ -227,14 +273,19 @@ Tanto para ver la trivialidad de una trenza como la trivialidad de una trenza ce
 \end{center} 
 
 \begin{alg}
-	\textbf{Algoritmo es\_trivial}(br\_c,explicacion)\\
+	\textbf{Algoritmo es\_trivial}(br\_c,explicación)\\
 	ENTRADA: br\_c (trenza cerrada)\\
-	\hspace*{2.2cm} explicacion (bool para mostrar mensajes explicativos)\\
+	\hspace*{2.2cm} explicación (bool para mostrar mensajes explicativos)\\
 	SALIDA: \hspace{0.4cm} equi (bool para indicar si br\_c es o no equivalente a la trenza cerrada trivial)
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+	{í}{{\'i}}1
+	{é}{{\'e}}1
+	{ú}{{\'u}}1
+	{ó}{{\'o}}1
+	{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> explicacion=0.
+   Si número_argumentos=1 -> explicación=0.
    Creo br2_c = trenza cerrada trivial. 
    Aplico algoritmo equivalentes para br_c y br2_c.
 \end{lstlisting}
@@ -255,16 +306,21 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
  	ENTRADA: x (coordenada x de la función)\\
  	\hspace*{2.2cm} y (coordenada y de la función)\\
  	\hspace*{2.2cm} z (coordenada z de la función)\\
- 	\hspace*{2.2cm} N (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+ 	\hspace*{2.2cm} N (número de cortes que tendrá el tubo (cadena de la trenza))\\
  	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
  	
- 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+ 		{í}{{\'i}}1
+ 		{é}{{\'e}}1
+ 		{ú}{{\'u}}1
+ 		{ó}{{\'o}}1
+ 		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Obtenemos matrices con puntos circulares con centro la funcion de entrada.
+   Obtenemos matrices con puntos circulares con centro la función de entrada.
    Creamos una superficie a partir de dichas matrices.
    Leemos imagen de textura.
    Aplicamos la imagen a la superficie.
-   Establecemos puntos de iluminacion.
+   Establecemos puntos de iluminación.
    
 \end{lstlisting}
  \end{alg}
@@ -301,11 +357,11 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
  
  Para entender mejor estos tres algoritmos que hemos visto vamos a visualizar algunas secciones de cadenas con las que los explicaremos:\\
  
- El algoritmo giro\_base genera la función azul que vemos dentro del tubo en la imagen de la izquierda en la figura \ref{final1} , aunque el algoritmo en sí no representa la función.  \\
+ El algoritmo giro\_base genera la función azul que vemos dentro del tubo en la imagen de la izquierda en la figura \ref{final1} , aunque el algoritmo en sí no representa visualmente la función.  \\
  
  El algoritmo cilindro\_base genera la función azul que vemos dentro del tubo en la imagen derecha.\\
 
- El algoritmo  tubep genera los tubos alrededor de las funciones indicadas. 
+ El algoritmo  tubep genera y representa los tubos alrededor de las funciones indicadas. 
  
  \begin{figure}[h!]
  	\centering
@@ -321,26 +377,32 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
  \begin{alg}
  	\textbf{Algoritmo param\_cadenas}(indices\_braid, n)\\
  	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
- 	\hspace*{2.2cm} n (numero de cadenas de la trenza)\\
+ 	\hspace*{2.2cm} n (número de cadenas de la trenza)\\
  	SALIDA: \hspace{0.4cm} matriz\_x (matriz que contiene las coordenadas x de las funciones que representan a las cadenas de la trenza)\\
  	\hspace*{2.2cm} matriz\_y (matriz que contiene las coordenadas y de las funciones que representan a las cadenas de la trenza)\\
  	\hspace*{2.2cm} matriz\_z (matriz que contiene las coordenadas z de las funciones que representan a las cadenas de la trenza)
  	
- 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+ 		{í}{{\'i}}1
+ 		{é}{{\'e}}1
+ 		{ý}{{\'y}}1
+ 		{ú}{{\'u}}1
+ 		{ó}{{\'o}}1
+ 		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Aplico giro_base: obtengo vector con coordenadas x, y, z del giro que representa una de las dos partes del cruce de una trenza. 
-   Aplico cilindro_base: obtengo vector con coordenadas x, y, z de una funcion lineal que representa una cadena sin giro. 
+   Aplico giro_base: obtengo vectores con coordenadas x, y, z del giro que representa una de las dos partes del cruce de una trenza. 
+   Aplico cilindro_base: obtengo vectores con coordenadas x, y, z de una funcion lineal que representa una cadena sin giro. 
    Si la trenza no tiene cruces...
       anulamos las matrices x, y, z 
    Para cada cadena de la trenza (sera la cadena actual)...
-      Para cada indice de indices_braid...
-         Si |indice|=0 (recordemos que es posible porque lo usamos para visualizaciones mejores)  -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslacion correspondiente.
-         Si |indice|=cadena actual  -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslacion y giro correspondiente.  
-         Si |indice|=cadena actual -1 -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslacion correspondiente.
-         Si no -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslacion correspondiente. 
-      Genero las matrices x,y,z como concatenacion de dichos vectores. 
+      Para cada índice de índices_braid...
+         Si |índice|=0 (recordemos que es posible porque lo usamos para visualizaciones mejores) -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslación correspondiente.
+         Si |índice|=cadena actual -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslación y giro correspondiente.  
+         Si |índice|=cadena actual -1 -> creo vectores con coordenadas x, y, z que representan a un giro_base con la traslación correspondiente.
+         Si no -> creo vectores con coordenadas x, y, z que representan a un cilindro_base con la traslación correspondiente. 
+      Genero las matrices x,y,z como concatenación de dichos vectores. 
    Si la trenza tiene cadenas a la derecha sin cruces...
-      Ani0ado para cada cadena una fila a cada matriz x, y, z con cilindros base con las traslaciones correspondientes. 
+      Añado para cada cadena una fila a cada matriz x, y, z con cilindros base con las traslaciones correspondientes. 
       
          
 \end{lstlisting}
@@ -350,15 +412,20 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
 \begin{alg}
   	\textbf{Algoritmo representar\_trenza}(br, N\_cortes, Radio)\\
   	ENTRADA: br (trenza)\\
-  	\hspace*{2.2cm} N\_cortes (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
   	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
   	
-  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+  		{í}{{\'i}}1
+  		{é}{{\'e}}1
+  		{ú}{{\'u}}1
+  		{ó}{{\'o}}1
+  		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5
+   Si número_argumentos=1 -> N_cortes=20, Radio=0.5
    Aplico param_cadenas: obtengo 3 matrices con coordenadas x, y, z de las funciones que representan las cadenas de la trenza.
    Para cada cadena de la trenza (cada fila de las matrices)...
-     Represento la funcion de la cadena (hago un plot de la cadena a partir de la fila correspondiente de la matriz x, y, z)
+     Represento la función de la cadena (hago un plot de la cadena a partir de la fila correspondiente de la matriz x, y, z)
      Aplico tubep a dicha cadena con N_cortes y Radio.
 \end{lstlisting}
 \end{alg}
@@ -370,20 +437,26 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
 \begin{alg}
 	\textbf{Algoritmo representar\_trenza}(br\_c, N\_cortes, Radio)\\
 	ENTRADA: br\_c (trenza cerrada)\\
-	\hspace*{2.2cm} N\_cortes (numero de cortes que tendrá el tubo (cadena de la trenza))\\
+	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
 	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
 	
-	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}}
+	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+		{í}{{\'i}}1
+		{é}{{\'e}}1
+		{ú}{{\'u}}1
+		{ó}{{\'o}}1
+		{ñ}{{\~n}}1}
 \begin{lstlisting}
-   Si numero_argumentos=1 -> N_cortes=20, Radio=0.5.
+   Si número_argumentos=1 -> N_cortes=20, Radio=0.5.
    Aplico representar_trenza@trenza.
    Creo una semicircunferencia en el plano x-z.
-   Aplico cilindro_base: obtengo vector con coordenadas x, y, z de una funcion lineal que representa una cadena sin giro.
+   Aplico cilindro_base: obtengo vector con coordenadas x, y, z de una función lineal que representa una cadena sin giro.
    Para cada cadena de la trenza...
      Represento la semicircunferencia para los cierres superiores de las cadenas con los escalados y traslaciones correspondientes.
      Aplico tubep.
      Represento las cadenas para hacer los cierres a partir de cilindro_base.
      Aplico tubep.
      Represento la semicircunferencia para los cierres inferiores de las cadenas con los escalados y traslaciones correspondientes.
+     Aplico tubep.
 \end{lstlisting}
 \end{alg}

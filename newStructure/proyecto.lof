@@ -2,10 +2,6 @@
 \select@language {USenglish}
 \select@language {spanish}
 \gdef \the@ipfilectr {}
-\gdef \the@ipfilectr {@-2}
-\select@language {USenglish}
-\select@language {spanish}
-\gdef \the@ipfilectr {}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces De izquierda a derecha: nudo trivial, nudo tr\IeC {\'e}bol, nudo de ocho.\relax }}{3}{figure.caption.3}
