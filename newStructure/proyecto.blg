@@ -1,8 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: proyecto.aux
-A level-1 auxiliary file: tex/portada.aux
+A level-1 auxiliary file: tex/prefacio.aux
 The style file: apalike.bst
+I found no \citation commands---while reading file proyecto.aux
 Database file #1: tex/bibliografia.bib
-Warning--empty journal in 14
-Warning--empty journal in 12
-Warning--empty journal in 13
-(There were 3 warnings)
+(There was 1 error message)
