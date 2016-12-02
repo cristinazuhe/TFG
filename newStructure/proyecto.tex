@@ -14,51 +14,51 @@
 \newtheorem{alg}{Algoritmo}[section]
 \selectlanguage{spanish}
 \pagenumbering{gobble}
-%\include{tex/portada}
+\include{tex/portada}
 
 \frontmatter
 \pagenumbering{gobble}
 \include{tex/prefacio}
 
-%\tableofcontents
-%\listoffigures
+\tableofcontents
+\listoffigures
 
 \mainmatter
 \chapter{Introducción}
 \label{ch0}
 \input{tex/introduccion}
 
-%\chapter{Teoría de nudos.}
-%\label{ch1}
-%\input{tex/nudos/nudos}
-%\input{tex/nudos/historia}
-%\input{tex/nudos/composicion}
-%\input{tex/nudos/equivalencia}
-%\input{tex/nudos/invariantes}
-%\input{tex/nudos/notacion}
-%\input{tex/nudos/conexionteo}
+\chapter{Teoría de nudos.}
+\label{ch1}
+\input{tex/nudos/nudos}\label{1sub1}
+\input{tex/nudos/historia}\label{1sub2}
+\input{tex/nudos/composicion}\label{1sub3}
+\input{tex/nudos/equivalencia}\label{1sub4}
+\input{tex/nudos/invariantes}\label{1sub5}
+\input{tex/nudos/notacion}\label{1sub6}
+\input{tex/nudos/conexionteo}\label{1sub7}
 
-%\chapter{Teoría de trenzas.}
-%\label{ch2}
-%\input{tex/trenzas/trenzas}
-%\input{tex/trenzas/grupo}
-%\input{tex/trenzas/invariantes}
-%\input{tex/trenzas/palabras}
-%\input{tex/trenzas/conclu}
+\chapter{Teoría de trenzas.}
+\label{ch2}
+\input{tex/trenzas/trenzas}\label{2sub1}
+\input{tex/trenzas/grupo}
+\input{tex/trenzas/invariantes}\label{2sub3a}
+\input{tex/trenzas/palabras}\label{2sub4}
+\input{tex/trenzas/conclu}\label{2sub5}
 
-%\chapter{Desarrollo informático.}
-%\label{ch3}
-%\input{tex/informatica/basico}
-%\input{tex/informatica/imatlab}
-%\input{tex/informatica/pseudo}
-%\input{tex/informatica/tour}
+\chapter{Desarrollo informático.}
+\label{ch3}
+\input{tex/informatica/basico}
+\input{tex/informatica/imatlab}
+\input{tex/informatica/pseudo}
+\input{tex/informatica/tour}
 
-%\chapter{Conclusiones y vías futuras}
-%\label{ch4}
-%\input{tex/conclu}
+\chapter{Conclusiones y vías futuras}
+\label{ch4}
+\input{tex/conclu}
 
 \bibliographystyle{apalike}
-\bibliography{tex/bibliografia}
+\bibliography{tex/bibliografia}\label{bibliog}
 \addcontentsline{toc}{chapter}{Bibliografía}
 
 \end{document}

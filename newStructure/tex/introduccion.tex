@@ -1,26 +1,60 @@
 \section{Contextualización.}
-Dentro de la ciencia matemática nos encontramos una rama, conocida como topología, que se encarga del estudio de las propiedades de aquellos cuerpos que, mediante transformaciones continuas sobre los cuerpos, permanecen inalteradas. Aunque no se conoce una fecha exacta del origen de la topología, se suele establecer en 1735 con la resolución, por parte de Leonhard Euler, del problema de los 7 puentes de Königsberg.\\
+Dentro de la ciencia matemática nos encontramos una rama, conocida como topología, que se encarga del estudio de las propiedades de aquellos cuerpos que, mediante transformaciones continuas sobre los mismos, permanecen inalteradas. Aunque no se conoce una fecha exacta del origen de la topología, se suele establecer en 1735 con la resolución, por parte de Leonhard Euler, del problema de los 7 puentes de Königsberg.\\
 
 Dentro de la topología surge la teoría de nudos que sólo tiene algo más de unos 200 años. Se puede decir que es una teoría bastante reciente y cuyos resultados más interesantes se han ido descubriendo en las últimas décadas. Es por esto que la teoría de nudos es muy llamativa tanto para investigadores matemáticos como para biólogos, físicos, químicos, marineros, expertos en supervivencia y una gran cantidad de científicos que encuentra en esta teoría una respuesta a sus planteamientos. Lo atractivo de dicha teoría es que, al ser relativamente reciente, aún tiene muchas cuestiones abiertas en las que se puede trabajar. \\
 
-//COMPLETAR CON ALGO DE LA PARTE DE HISTORIA PONIÉNDOLO CON OTRAS PALABRAS Y TAL.....
+En concreto en el siglo XIX, algunos científicos trataron de relacionar la teoría de nudos con la química, asociando cada nudo con un elemento de la naturaleza. De este modo se crearía una tabla de nudos que reemplazaría a la tabla periódica actual. Aunque posteriormente este planteamiento fue rechazado, sirvió como base para incitar el estudio de dicha teoría. \\
 
+A lo largo de este proyecto veremos que se ha podido establecer una relación directa entre la teoría de nudos y la teoría de trenzas. \\
 
-
+A día de hoy, uno de los campos en los que encontramos utilidad práctica de la teoría de trenzas (y por tanto en teoría de nudos) es en el campo de la biología. En concreto, para analizar y justificar las modificaciones que se producen sobre la estructura del ADN estudiamos la teoría de trenzas. \\
+ 
 \section{Problema abordado.}
+El problema que abordamos en este proyecto consiste en la realización de un estudio teórico sobre teoría de nudos y teoría de trenzas, así como la implementación de un toolbox en Matlab donde recogemos todos los aspectos matemáticos desarrollados sobre teoría de trenzas. \\
 
-\section{Técnicas y áreas matemáticas.}
+El estudio teórico de la teoría de nudos aborda especialmente la composición, equivalencia, invariantes y notación de nudos. Además, mostramos la relación entre teoría de nudos y teoría de trenzas. El estudio teórico de la teoría de trenzas muestra la estructura de grupo de las trenzas, algunos invariantes y la equivalencia de trenzas, centrándonos en el problema de las palabras. \\
+
+Finalmente, se ha desarrollado un programa informático que implementa los aspectos vistos en teoría de trenzas. Dicho programa también nos permite trabajar con trenzas cerradas que serán equivalentes a nudos. \\
+
+\section{Técnicas y áreas matemáticas e informáticas.}
+Por una parte, las principales áreas matemáticas en las que nos hemos basado para realizar este proyecto son:
+\begin{itemize}
+	\item Topología I.
+	\item Topología II.
+	\item Taller de Geometría y Topología.
+	\item Álgebra - Teoría de grupos. 
+	\item Geometría.
+\end{itemize}
+Por otra parte, las principales áreas y técnicas informáticas en las que nos hemos basado son:
+\begin{itemize}
+	\item Fundamentos de programación.
+	\item Informática gráfica.
+	\item Programación y diseño orientado a objetos. 
+\end{itemize}
 
 \section{Contenido de la memoria.}
+En el capítulo \ref{ch1} recogemos los conceptos y resultados matemáticos referentes a teoría de nudos. En la sección \ref{1sub1} proporcionamos definiciones formales con las que trabajar con los nudos. En la sección \ref{1sub2} damos un recorrido por la historia de la teoría de nudos y vemos algunas de sus aplicaciones más destacadas. En la sección \ref{1sub3} estudiamos la composición de nudos. A continuación, en la sección \ref{1sub4} estudiamos la equivalencia de nudos mediante los movimientos de Reidemeinter. En la sección \ref{1sub5} estudiamos algunos de los invariantes más destacados y útiles de nudos. En la sección \ref{1sub6} mostramos algunas notaciones de nudos y en la última sección vemos la conexión con la teoría de grafos y de trenzas.\\
+
+En el capítulo \ref{ch2} recogemos los conceptos y resultados matemáticos referentes a teoría de trenzas. En la sección \ref{2sub1} analizamos la equivalencia, proyección y notación de trenzas. En la sección \ref{grupotrenzas} estudiamos la estructura de grupo de las trenzas. En la siguiente sección vemos algunos invariantes de trenzas. En la sección \ref{2sub4} estudiamos el problema de las palabras y finalmente mostramos algunas conclusiones generales. \\
+
+En el capítulo \ref{ch3} realizamos el desarrollo informático sobre teoría de trenzas. Mostramos pseudocódigo para algunos de los algoritmos que hemos implementado y mostramos un recorrido por toxtren, el toolbox que hemos creado en Matlab, tanto para trenzas como para trenzas cerradas. \\
+
+Finalmente en el capítulo \ref{ch4} mostramos las conclusiones y vías futuras. 
 
 \section{Fuentes principales.}
+Las principales fuentes consultadas son \cite{1}, \cite{2}, \cite{3}, \cite{4} y \cite{5}. Sin embargo, hemos consultado muchas otras fuentes destacando las que mostramos en la página \pageref{bibliog}.
 
 \section{Objetivos.}
 
 En la propuesta inicial se propusieron los siguientes objetivos:
+\begin{itemize}
+	\item Estudio de la teoría de nudos haciendo especial énfasis en las técnicas que, de modo práctico, permiten establecer la equivalencia o ausencia de ella entre dos nudos. Normalmente esta comprobación se realiza mediante un invariante de nudo, que suele ser una valor que se calcula a partir de distintas representaciones (o descripciones) del mismo nudo, y que debe coincidir en el caso de que correspondan al mismo nudo.
+	
+	\item Estudio de una API gráfica que permita desarrollar semiautomáticamente nudos en el espacio $ R^{3} $, y desarrollo del prototipo de aplicación para definición de nudos.
+	
+	\item Estudio de técnicas de animación para desarrollar sobre la API gráfica animaciones que permitan comprobar visualmente la equivalencia entre dos diagramas de nudo.
+\end{itemize}
 
-\begin{enumerate}
-\item Estudiar...//PONER LOS OBJETIVOS INICIALES
-\end{enumerate}
+En el capítulo \ref{ch1} se cubre el primer objetivo por completo. Además, aquí se podría decir que se ha añadido otro objetivo con tanto peso como este al estudiar teoría de trenzas. \\
 
-//PONER DONDE SE CUBREN LOS OBJETIVOS
+El desarrollo informático cubre los objetivos dos y tres con el siguiente detalle: no trabajamos directamente con nudos sino con trenzas y trenzas cerradas, pero las trenzas cerradas se pueden considerar como nudos y los nudos como trenzas cerradas. 

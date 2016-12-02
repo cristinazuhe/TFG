@@ -1,8 +1,191 @@
 \gdef \the@ipfilectr {@-1}
 \select@language {USenglish}
 \select@language {spanish}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
 \select@language {USenglish}
 \select@language {spanish}
 \gdef \the@ipfilectr {}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces De izquierda a derecha: nudo trivial, nudo tr\IeC {\'e}bol, nudo de ocho.\relax }}{5}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Proyecciones del nudo trivial, nudo tr\IeC {\'e}bol, nudo de ocho.\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Nudo tr\IeC {\'e}bol y nudo de ocho.\relax }}{8}{figure.caption.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {J}}}{8}{figure.caption.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {K}}}{8}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Composici\IeC {\'o}n de nudo tr\IeC {\'e}bol y nudo de ocho.\relax }}{8}{figure.caption.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Haciendo la composici\IeC {\'o}n}}}{8}{figure.caption.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {J\#K}}}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Nudo tr\IeC {\'e}bol y nudo trivial.\relax }}{8}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {J}}}{8}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {K}}}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Composici\IeC {\'o}n de nudo tr\IeC {\'e}bol y nudo trivial.\relax }}{9}{figure.caption.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Haciendo la composici\IeC {\'o}n}}}{9}{figure.caption.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {J\#K}}}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Tabla de nudos primos.\relax }}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ambas orientaciones del nudo tr\IeC {\'e}bol.\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Nudo factor J y K.\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Las composiciones no son equivalentes.\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Primer movimiento Reidemeister.\relax }}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Segundo movimiento de Reidemeister.\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Tercer movimiento de Reidemeister.\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Equivalencia de dos proyecciones de nudos.\relax }}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {P1}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {R1}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {R3}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Isotopia}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {R3}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {R1}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Isotopia}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Isotopia}}}{13}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {P2}}}{13}{figure.caption.17}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Enlace con dos componentes.\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Crossing number del nudo tr\IeC {\'e}bol.\relax }}{15}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {4 cruces}}}{15}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {3 cruces}}}{15}{figure.caption.19}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Tipo de cruce.\relax }}{16}{figure.caption.20}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Demo R1\relax }}{16}{figure.caption.21}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Demo R2\relax }}{17}{figure.caption.22}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Demo R2\relax }}{17}{figure.caption.23}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Demo R3\relax }}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Dos nudos no equivalentes.\relax }}{19}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {No tricolorable}}}{19}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Tricolorable}}}{19}{figure.caption.25}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Unknotting number tr\IeC {\'e}bol.\relax }}{19}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Nudo de partida}}}{19}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Nudo modificado}}}{19}{figure.caption.26}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Tipos de cruces.\relax }}{20}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$ L_{+} $}}}{20}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$ L_{-} $}}}{20}{figure.caption.27}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$ L_{0} $}}}{20}{figure.caption.27}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Cambio cruces tr\IeC {\'e}bol\relax }}{21}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {A}}}{21}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {B}}}{21}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {C}}}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Cambio cruces\relax }}{21}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {D}}}{21}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {E}}}{21}{figure.caption.29}
+\contentsline {figure}{\numberline {2.27}{\ignorespaces \IeC {\'A}rbol de resoluci\IeC {\'o}n del nudo tr\IeC {\'e}bol.\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Numeraci\IeC {\'o}n de cruces-Dowker.\relax }}{24}{figure.caption.31}
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Numeraci\IeC {\'o}n de cruces-Gauss.\relax }}{24}{figure.caption.32}
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Enredos\relax }}{25}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enredo general}}}{25}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ejemplo de enredo}}}{25}{figure.caption.33}
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Tipos b\IeC {\'a}sicos de enredos.\relax }}{26}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enredo $\infty $}}}{26}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Enredo 0}}}{26}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Enredo 4}}}{26}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Enredo -4}}}{26}{figure.caption.34}
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Operaciones con enredos.\relax }}{26}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Operacion suma}}}{26}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Operacion multiplicacion}}}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Enlace -2 3 2\relax }}{26}{figure.caption.36}
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Enlaces equivalentes\relax }}{27}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Enlace -2 3 2}}}{27}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Enlace 3 -2 3}}}{27}{figure.caption.37}
+\contentsline {figure}{\numberline {2.35}{\ignorespaces Ejemplos de grafos planos.\relax }}{28}{figure.caption.38}
+\contentsline {figure}{\numberline {2.36}{\ignorespaces De proyecci\IeC {\'o}n a grafo\relax }}{28}{figure.caption.39}
+\contentsline {figure}{\numberline {2.37}{\ignorespaces De grafo a proyecci\IeC {\'o}n.\relax }}{29}{figure.caption.40}
+\contentsline {figure}{\numberline {2.38}{\ignorespaces Ejemplos de trenzas\relax }}{30}{figure.caption.41}
+\contentsline {figure}{\numberline {2.39}{\ignorespaces Transformando la proyecci\IeC {\'o}n de un cruce.\relax }}{30}{figure.caption.42}
+\contentsline {figure}{\numberline {2.40}{\ignorespaces Arco de reducci\IeC {\'o}n.\relax }}{31}{figure.caption.43}
+\contentsline {figure}{\numberline {2.41}{\ignorespaces Movimiento de reducci\IeC {\'o}n.\relax }}{31}{figure.caption.44}
+\contentsline {figure}{\numberline {2.42}{\ignorespaces Movimiento de reducci\IeC {\'o}n.\relax }}{32}{figure.caption.45}
+\contentsline {figure}{\numberline {2.43}{\ignorespaces Algoritmo Yamada-Vogel.\relax }}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Proyecci\IeC {\'o}n nudo}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {C\IeC {\'\i }rculos Seifert}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {C\IeC {\'\i }rculos Seifert}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arco reducci\IeC {\'o}n}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Movimiento reducci\IeC {\'o}n}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Movimiento reducci\IeC {\'o}n}}}{32}{figure.caption.45}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Final}}}{32}{figure.caption.45}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplos de trenzas\relax }}{33}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{figure.caption.46}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Trenzas equivalentes.\relax }}{34}{figure.caption.47}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Movimiento elemental\relax }}{35}{figure.caption.48}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Proyecci\IeC {\'o}n de una trenza\relax }}{36}{figure.caption.49}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Proyecci\IeC {\'o}n de trenzas\relax }}{36}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{36}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{36}{figure.caption.50}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Signo cruce.\relax }}{37}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\sigma _{i}^{-1}$}}}{37}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\sigma _{i}$}}}{37}{figure.caption.51}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Trenza $\sigma 3\sigma 2^{-1}\sigma 4$.\relax }}{37}{figure.caption.52}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Producto trenzas\relax }}{38}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\sigma 3^{-1}\sigma 1$}}}{38}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\sigma 2\sigma 3$}}}{38}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\sigma 3^{-1}\sigma 1\sigma 2\sigma 3$}}}{38}{figure.caption.53}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Equivalencia producto\relax }}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\sigma 3^{-1}\sigma 2^{-1}\sigma 3^{-1}$}}}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\sigma 2^{-1}\sigma 3^{-1}\sigma 2^{-1}$}}}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\sigma 3^{-1}\sigma 1\sigma 3^{-1}$}}}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\sigma 1\sigma 3^{-1}\sigma 3^{-1}$}}}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\sigma 3^{-1}\sigma 2^{-1}\sigma 3^{-1}\sigma 3^{-1}\sigma 1\sigma 3^{-1}$}}}{39}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\sigma 2^{-1}\sigma 3^{-1}\sigma 2^{-1}\sigma 1\sigma 3^{-1}\sigma 3^{-1}$}}}{39}{figure.caption.54}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Asociatividad producto\relax }}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta 1 =\sigma 3^{-1}\sigma 1$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta 2 = \sigma 2\sigma 3$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\beta 3 = \sigma 3$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\beta 1\beta 2$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$(\beta 1\beta 2)\beta 3$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\beta 2\beta 3$}}}{40}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\beta 1(\beta 2\beta 3$)}}}{40}{figure.caption.55}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces No conmutatividad producto\relax }}{41}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta 1 = \sigma 3\sigma 2^{-1}$}}}{41}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta 2 = \sigma 3^{-1}$}}}{41}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\beta 1\beta 2$}}}{41}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\beta 2\beta 1$}}}{41}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\beta 2\beta 1$}}}{41}{figure.caption.56}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Primer movimiento\relax }}{42}{figure.caption.57}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Trenzas inversas\relax }}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta = \sigma 4^{-1}\sigma 1^{-1}\sigma 2$}}}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta ^{-1} = \sigma 2^{-1}\sigma 1\sigma 4$}}}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\beta \beta ^{-1}$}}}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\beta \beta ^{-1}$}}}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\beta \beta ^{-1}$}}}{43}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\beta \beta ^{-1}$}}}{43}{figure.caption.58}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Primer movimiento.\relax }}{44}{figure.caption.59}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Segundo movimiento.\relax }}{44}{figure.caption.60}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Tercer movimiento.\relax }}{45}{figure.caption.61}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Trenzas equivalentes.\relax }}{45}{figure.caption.62}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Trenzas equivalentes.\relax }}{46}{figure.caption.63}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Trenzas Markov-equivalentes.\relax }}{47}{figure.caption.64}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Conjugaci\IeC {\'o}n Markov.\relax }}{48}{figure.caption.65}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Estabilizaci\IeC {\'o}n Markov.\relax }}{49}{figure.caption.66}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Trenzas Markov-equivalentes.\relax }}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\sigma 2^{-1}\sigma 1\sigma 2^{-1}\sigma 1\sigma 3$}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Mv2}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\sigma 2^{-1}\sigma 1\sigma 2^{-1}\sigma 1$}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Mv1}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\sigma 1\sigma 2^{-1}\sigma 1$ $\sigma 2^{-1}\sigma 1\sigma 1^{-1}$}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {M1}}}{49}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {$\sigma 1\sigma 2^{-1}\sigma 1\sigma 2^{-1}$}}}{49}{figure.caption.67}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces $\sigma 3\sigma 2^{-1}\sigma 3^{-1}$\relax }}{50}{figure.caption.68}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Trenzas no equivalentes.\relax }}{51}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {exp($ \beta 1 $) = +1}}}{51}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {exp($ \beta 2 $) = -1}}}{51}{figure.caption.69}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Trenzas con mismo exponente.\relax }}{51}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {exp($ \beta 1 $) = +1}}}{51}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {exp($ \beta 2 $) = +1}}}{51}{figure.caption.70}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces $\sigma 3\sigma 2^{-1}\sigma 3^{-1}$\relax }}{52}{figure.caption.71}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Trenzas no equivalentes.\relax }}{53}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\pi ( \beta 1 $) = 1 2 4 3}}}{53}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\pi ( \beta 2 $) = 2 3 4 1}}}{53}{figure.caption.72}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Trenza no libremente reducida.\relax }}{62}{figure.caption.73}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Main handle.\relax }}{62}{figure.caption.74}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces A handle.\relax }}{63}{figure.caption.75}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Reducci\IeC {\'o}n local.\relax }}{64}{figure.caption.76}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Trenzas equivalentes.\relax }}{65}{figure.caption.77}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\beta 1$}}}{65}{figure.caption.77}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\beta 2$}}}{65}{figure.caption.77}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Estructura clases\relax }}{71}{figure.caption.78}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Funciones base\relax }}{78}{figure.caption.79}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Giro base}}}{78}{figure.caption.79}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cilindro base}}}{78}{figure.caption.79}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Representaci\IeC {\'o}n trenza Matlab.\relax }}{83}{figure.caption.80}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Transformaci\IeC {\'o}n Dehornoy Matlab.\relax }}{84}{figure.caption.81}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Representaci\IeC {\'o}n trenza cerrada Matlab.\relax }}{86}{figure.caption.82}
 \addvspace {10\p@ }
