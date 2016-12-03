@@ -15,7 +15,7 @@ Cristina Zuheros Montes.\\
 
 \vspace{0.7cm}
 \noindent{\textbf{Resumen}}\\
-En este proyecto comenzamos analizando la teoría de nudos: explicamos qué se entiende por un nudo, vemos un breve recorrido por la historia de los nudos viendo sus aplicaciones más destacadas, estudiamos la composición de nudos, analizamos una de las cuestiones que más nos interesan como es la equivalencia entre nudos, mostramos algunos invariantes de nudos, las notaciones más usuales de los mismos y concluimos relacionando dicha teoría con la teoría de grafos y la teoría de trenzas.\\
+En este proyecto comenzamos analizando la teoría de nudos: explicamos qué se entiende por un nudo, vemos un breve recorrido por la historia de dicha teoría mostrando sus aplicaciones más destacadas, estudiamos la composición de nudos, analizamos una de las cuestiones que más nos interesan como es la equivalencia entre nudos, mostramos algunos invariantes de nudos, las notaciones más usuales de los mismos y concluimos relacionando dicha teoría con la teoría de grafos y la teoría de trenzas.\\
 
 Como ya hemos comentado, uno de los problemas clave que tratamos en este proyecto es la equivalencia de nudos. Encontramos solución usando invariantes de nudos, pero esta solución no es completa en el sentido de que no siempre vamos a obtener respuesta usando invariantes. Por este motivo, entre otros que iremos viendo, nos enfocamos en la teoría de trenzas. Al tener una relación directa entre nudos y trenzas cerradas, podemos plantearnos el problema de la equivalencia de nudos como el problema de la equivalencia de trenzas cerradas.\\ 
 
@@ -44,7 +44,7 @@ Cristina Zuheros Montes.\\
 \end{center}
 
 %\vspace{0.7cm}
-\noindent{\textbf{Keywords}: knot, link, trivial knot, invariant, braid, closed braid, word, crossing, handle, toolbox.}\\
+\noindent{\textbf{Keywords}: knot, link, trivial knot, invariant, braid, closed braid, word, crossing, toolbox, handle.}\\
 
 \vspace{0.7cm}
 \noindent{\textbf{Abstract}}\\
@@ -67,10 +67,10 @@ Next, we see a brief but interesting tour on the history of this theory and we s
 Once we know the notion of knot and we have some motivation to work with them, we study the composition of knots. Also at this point, we see what is meant by a prime or compound knot, we define an oriented knot and we examine when a knot is invertible. We show some projections of prime knots having less than 8 crossings.\\
 
 
-Next we are concerned with one of the most striking aspects of this theory: the equivalence of knots. We consider the basic movements, known as Reidemeister movements, that allow us to modify the projection of the knot without modifying the knot itself. We see Reidemeister's theorem, which allows us to determine if two projections represent the same knot. However, this process is really complicated and we have no guarantee that this algorithm ends in reasonable finite time.\\
+Next we are concerned with one of the most striking aspects of this theory: the equivalence of knots. We consider the basic movements, known as Reidemeister movements, that allow us to modify the projection of the knot without modifying the knot itself. We expose Reidemeister's theorem, which allows us to determine if two projections represent the same knot. However, this process is really complicated and we have no guarantee that this algorithm ends in reasonable finite time.\\
 
 
-For this reason, we analyze some invariants for knots. We presento a formal definition of the invariant concept and we study the number of components of a link, the crossing number of a knot, tricolorability, the unknotting number and Alexander's polynomial. In order to understand all these concepts, we apply the different invariants over some projections of knots.\\ 
+For this reason, we analyze some invariants for knots. We present a formal definition of the invariant concept and we study the number of components of a link, the crossing number of a knot, tricolorability, the unknotting number and Alexander's polynomial. In order to understand all these concepts, we apply the different invariants over some projections of knots.\\ 
 
 
 Afterwards, we see some of the most common knots’s notations. In particular, we analyze Dowker's notation, Gauss's notation, and Conway's notation. This last notation, by the specific way of projecting knots, has a special interest in the study of the structure of DNA.\\
@@ -88,7 +88,7 @@ Concerning braid theory, we justify the relationship a bit more deeply. In a rel
 
 
 
-As we have previously discussed, one of the key problems that we are dealing in this project is the equivalence of knots, but with the algorithm provided in the Reidemeister's theorem we can not always obtain an answer in an acceptable time. We found a solution that uses invariants for knots, but this solution is not complete in the sense that we will not always get response using invariants. For this reason, we focus on braid theory. Having a direct relationship between knots and closed braids, we can consider the problem of knot equivalence as the problem of the equivalence of closed braids. In addition, braid theory has direct application to cryptography and fluid mechanics, among other subjects.\\
+As we have previously discussed, one of the key problems that we are dealing in this project is the equivalence of knots, but with the algorithm provided in the Reidemeister's theorem we can not always obtain an answer in an acceptable time. We found a solution that uses invariants of knots, but this solution is not complete in the sense that we will not always get response using invariants. For this reason, we focus on braid theory. Having a direct relationship between knots and closed braids, we can consider the problem of knot equivalence as the problem of the equivalence of closed braids. In addition, braid theory has direct application to cryptography and fluid mechanics, among other subjects.\\
 
 
 
@@ -113,13 +113,13 @@ As we do in knot theory, we study the notion of braid equivalence. Now we only g
 
 Below we study one of the most important aspect to consider in braid theory: by providing the set of all braids equivalent to each other of the product of braids we find a non-abelian group structure. We define the product of braids and we check the properties of the non-abelian group with some examples ir order to make proofs as intuitive as possible.\\
 
-Once we have defined the group structure of the braids, we examine the notion of equivalence of braids in a more formal way. We define the group of equivalent braids by equivalence relations or basic movements. Clearly if two braids are equivalent, the braid closures will also be not equivalent. The problem that we find is that if two braids are not equivalent, their closures need not be equivalent. That is, the closed braids may be equivalent even though the respective braids are not equivalent. We study this idea through the Markov’s movements: conjugation and stabilization.\\
+Once we have defined the group structure of the braids, we examine the notion of equivalence of braids in a more formal way. We define the group of equivalent braids by equivalence relations or basic movements. Clearly if two braids are equivalent, the braid closures will also be equivalent. The problem that we find is that if two braids are not equivalent, their closures maybe be equivalent. That is, the closed braids could be equivalent even though the respective braids are not equivalent. We study this idea through the Markov’s movements: conjugation and stabilization.\\
 
 
-As we commented in the knot theory, this notion of equivalence of braids and Markov-equivalent braids is not feasible to put into practice because we would have to apply a number of possible movements that might not finish in a reasonable time. Therefore, we return to study some of the most essential invariants. In this case we study the exponent and the permutation of a braid and Alexander's polynomial of a closed braid.\\
+As we commented in the knot theory, this notion of equivalence of braids and Markov-equivalent braids is not feasible to put into practice because we would have to apply a number of possible movements that might not finish in a reasonable time. Therefore, we return to study some of the most essential invariants. In this case, we study the exponent and the permutation of a braid and Alexander's polynomial of a closed braid.\\
 
 
-However, these invariants will not let us to know if two braids are or are not equivalent to each other. The problem of finding some method to know if the words of braids are equivalent or not is known as the problem of words. In this project we study the method of Patrick Dehornoy to solve this problem. The problem of analyzing whether or not two braids are equivalent can be seen as the problem of determining whether a given braid is equivalent to the trivial braid. This idea is essential in Dehornoy's method: we can determine in a relatively simple way if a word of a given braid is equivalent to the trivial braid.\\
+However, these invariants will not let us always to know if two braids are or are not equivalent to each other. The problem of finding some method to know if the words of braids are equivalent or not is known as the problem of words. In this project we study the method of Patrick Dehornoy to solve this problem. The problem of analyzing whether or not two braids are equivalent can be seen as the problem of determining whether a given braid is equivalent to the trivial braid. This idea is essential in Dehornoy's method: we can determine in a relatively simple way if a word of a given braid is equivalent to the trivial braid. At this point, we use also the notion of handle.\\
 
 
 
