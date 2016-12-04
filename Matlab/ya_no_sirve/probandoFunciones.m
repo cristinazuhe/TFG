@@ -22,10 +22,10 @@ indices_braid = leer_trenza();
 % disp(pol_Alexander);
 
 % Representacion 3D de la trenza.
-%  N_cortes=20;
-%  Radio=0.7;
-%  n=7;
-%  representar_braid2(indices_braid,n, N_cortes, Radio);
+ N_cortes=20;
+ Radio=0.7;
+ n=7;
+ representar_braid2(indices_braid,n, N_cortes, Radio);
 
 %Representacion Dehornoy de la trenza.
 %  disp('Initial braid:'); disp(indices_braid);

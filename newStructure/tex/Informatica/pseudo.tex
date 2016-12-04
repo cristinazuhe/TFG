@@ -293,7 +293,7 @@ Tanto para ver la trivialidad de una trenza como la trivialidad de una trenza ce
 
 \newpage
 
-Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos matemáticos que hemos ido desarrollando a lo largo de este proyecto, vamos a centrarnos en el algoritmo de representación de trenzas y trenzas cerradas que hemos creado. Cabe comentar que estos algoritmos han ido pasando por distintas versiones hasta obtener una versión con la que poder representar las transiciones de trenzas para el algoritmo de Dehornoy de la forma más elegante e intuitiva posible. 
+Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos matemáticos que hemos ido desarrollando a lo largo de este proyecto, vamos a centrarnos en el algoritmo de representación de trenzas y trenzas cerradas que hemos creado. Cabe comentar que estos algoritmos han ido pasando por distintas versiones hasta obtener una versión con la que poder representar las transiciones de trenzas para el algoritmo de Dehornoy de la forma más elegante e intuitiva posible. Veamos la versión final:
 
  \begin{center}
  	\textbf{Algoritmo para representar una trenza.}
@@ -460,3 +460,198 @@ Una vez hemos visto los algoritmos más relevantes enfocados a los aspectos mate
      Aplico tubep.
 \end{lstlisting}
 \end{alg}
+
+\bigskip
+ \begin{center}
+ 	\textbf{Algoritmo para representar una trenza (versión antigua).}
+ \end{center}
+A continuación, vamos a mostrar la versión inicial que realizamos para representar trenzas. Antes de entrar en detalle vamos a tratar de mostrar una idea general sobre el algoritmo y argumentaremos porqué descartamos el uso de esta versión, creando la nueva versión que acabamos de ver. \\
+
+En la versión que hemos explicado y que se encuentra implementada en toxtren, representamos las trenzas considerando cada una de las cadenas de la misma por separado pero sin cortes en ellas. \\
+En la versión que vamos a ver a continuación, versión inicial y de la que ya no hacemos uso, representamos las trenzas mediante cortes de las cadenas que producen los cruces. Es decir, al considerar un cruce de la trenza representamos todas las secciones de cadenas que se encuentran en el mismo intervalo de planos que el cruce. Las funciones que representan a las cadenas están definidas por partes y tenemos un gran número de funciones para cada cadena, en concreto tendremos tantas funciones como cruces. Si consideramos el número de funciones por cadena y el número de cadenas de la trenza, vemos que esta versión es más complicada de manejar que en la versión actual.\\
+
+Sin embargo, el motivo principal para desechar esta versión inicial es el siguiente: al aplicar el algoritmo de Dehornoy y tratar de representar los movimientos de las cadenas, es notablemente más elegante trabajar con la cadena como una función completa y no con funciones por partes que, por la manera de construir el algoritmo, están dispersas. No obstante, vamos a ver cómo implementamos dicha versión:\\
+
+\bigskip
+Al igual que hacíamos anteriormente, creamos un método que nos permita representar un tubo de ciertas dimensiones (radio y número de cortes) con centro una función dada por las coordenadas x, y, z. En este caso no hemos  aplicado textura a las trenzas:
+ \begin{alg}
+ 	\textbf{Algoritmo tubep}(x,y,z,N,R)\\
+ 	ENTRADA: x (coordenada x de la función)\\
+ 	\hspace*{2.2cm} y (coordenada y de la función)\\
+ 	\hspace*{2.2cm} z (coordenada z de la función)\\
+ 	\hspace*{2.2cm} N (número de cortes que tendrá el tubo (cadena de la trenza))\\
+ 	\hspace*{2.2cm} R (Radio del tubo (cadena de la trenza))
+ 	
+ 	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+ 		{í}{{\'i}}1
+ 		{é}{{\'e}}1
+ 		{ú}{{\'u}}1
+ 		{ó}{{\'o}}1
+ 		{ñ}{{\~n}}1}
+\begin{lstlisting}
+   Obtenemos matrices con puntos circulares con centro la función de entrada.
+   Creamos una superficie a partir de dichas matrices.
+   Establecemos puntos de iluminación. 	
+\end{lstlisting}
+ \end{alg}
+ 
+ \bigskip
+ A continuación, vemos la función que nos permite crear y visualizar un cilindro a una altura determinada por los valores de inicio y fin. Dichos valores tienen que diferir en un valor de 3$ \pi $. Además, representamos el cilindro en su posición correcta en base al eje x pues hacemos una traslación del cilindro hasta que se encuentre en el número de cadena indicado.
+  \begin{alg}
+  	\textbf{Algoritmo cilindro\_braid}()\\
+  	ENTRADA: numero\_cadena (número de cadena en la que representa el cilindro)\\
+  	\hspace*{2.2cm} inicio (plano z inicial en el que iniciamos el cilindro)\\
+  	\hspace*{2.2cm} fin (plano z final en el que finaliza el cilindro)\\
+  	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+  		{í}{{\'i}}1
+  		{é}{{\'e}}1
+  		{ú}{{\'u}}1
+  		{ó}{{\'o}}1
+  		{ñ}{{\~n}}1}
+\begin{lstlisting}
+   z <- vector con valores de inicio a fin con frecuencia 0.1
+   y <- vectores nulos de longitud igual a la de z. 
+   x <- vectores de valor numero_cadena de longitud igual a la de z. 
+   Represento la función cilindro a partir de x, y, z. 
+   Aplico tubep. 
+\end{lstlisting}
+  \end{alg}
+  
+  \bigskip
+  Para representar los cruces de las trenzas creamos cuatro funciones auxiliares para contemplar los 4 casos que tenemos en un cruce: cadena de izquierda a derecha (de derecha a izquierda) cruzando por delante y cruzando por detrás. Este es otro aspecto clave por el que no nos parece un algoritmo sofisticado, pues se produce cierta repetición de código. Sin embargo, no deja de ser un algoritmo totalmente válido y rápido, aunque menos que el actual. 
+  \begin{alg}
+  	\textbf{Algoritmo braid\_neg}()\\
+  	ENTRADA: numero\_cadena (número de cadena en la que representa el cilindro)\\
+  	\hspace*{2.2cm} inicio (plano z inicial en el que iniciamos el cilindro)\\
+  	\hspace*{2.2cm} fin (plano z final en el que finaliza el cilindro)\\
+  	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+  		{í}{{\'i}}1
+  		{é}{{\'e}}1
+  		{ú}{{\'u}}1
+  		{ó}{{\'o}}1
+  		{ñ}{{\~n}}1}
+ \begin{lstlisting}
+   Aplico giro_braid_neg con signo positivo.
+   Aplico giro_braid_neg con signo negativo.  
+\end{lstlisting}
+  \end{alg}
+  
+ \bigskip
+Con el siguiente algoritmo obtenemos los posibles giros que podemos tener en un cruce dependiendo del signo. 
+\begin{alg}
+    	\textbf{Algoritmo giro\_braid\_neg}()\\
+    	ENTRADA: numero\_cadena (número de cadena en la que representa el cilindro)\\
+    	\hspace*{2.2cm} signo (signo indicando si el giro va de izquierda a derecha o viceversa)\\
+    	\hspace*{2.2cm} inicio (plano z inicial en el que iniciamos el cilindro)\\
+    	\hspace*{2.2cm} fin (plano z final en el que finaliza el cilindro)\\
+    	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+    	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+    	
+    	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+    		{í}{{\'i}}1
+    		{é}{{\'e}}1
+    		{ú}{{\'u}}1
+    		{ó}{{\'o}}1
+    		{ñ}{{\~n}}1}
+\begin{lstlisting}
+   x <- vector con valores numero_cadena o siguiente cadena(en función de inicio, fin y signo) desde inicio hasta inicio+pi , coseno con la traslación correspondiente desde inicio+pi a inicio+2pi , valores con la cadena no tomada al inicio del vector de inicio+2pi a final.
+   y <- vector con valores nudos de inicio hasta inicio+pi , seno con la traslación correspondiente desde inicio+pi a inicio+2pi, nulos de inicio+2pi a final.
+   z <- vector con valores de inicio a fin con frecuencia 0.1.   
+   Represento la función cilindro a partir de x, y, z. 
+   Aplico tubep. 
+\end{lstlisting}
+\end{alg}
+
+\bigskip
+Implementamos algoritmos similares para los otros dos tipos de giros posibles en un cruce. 
+  \begin{alg}
+  	\textbf{Algoritmo braid\_pos}()\\
+  	ENTRADA: numero\_cadena (número de cadena en la que representa el cilindro)\\
+  	\hspace*{2.2cm} inicio (plano z inicial en el que iniciamos el cilindro)\\
+  	\hspace*{2.2cm} fin (plano z final en el que finaliza el cilindro)\\
+  	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+  		{í}{{\'i}}1
+  		{é}{{\'e}}1
+  		{ú}{{\'u}}1
+  		{ó}{{\'o}}1
+  		{ñ}{{\~n}}1}
+\begin{lstlisting}
+   Aplico giro_braid_pos con signo positivo.
+   Aplico giro_braid_pos con signo negativo.  
+\end{lstlisting}
+  \end{alg}
+  
+  \newpage
+  \begin{alg}
+  	\textbf{Algoritmo giro\_braid\_pos}()\\
+  	ENTRADA: numero\_cadena (número de cadena en la que representa el cilindro)\\
+  	\hspace*{2.2cm} signo (signo indicando si el giro va de izquierda a derecha o viceversa)
+  	\hspace*{2.2cm} inicio (plano z inicial en el que iniciamos el cilindro)\\
+  	\hspace*{2.2cm} fin (plano z final en el que finaliza el cilindro)\\
+  	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+  	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+  	
+  	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+  		{í}{{\'i}}1
+  		{é}{{\'e}}1
+  		{ú}{{\'u}}1
+  		{ó}{{\'o}}1
+  		{ñ}{{\~n}}1}
+\begin{lstlisting}
+   x <- vector con valores numero_cadena o siguiente cadena(en función de inicio, fin y signo) desde inicio hasta inicio+pi , coseno con la traslación correspondiente desde inicio+pi a inicio+2pi , valores con la cadena no tomada al inicio del vector de inicio+2pi a final.
+   y <- vector con valores nudos de inicio hasta inicio+pi, -seno con la traslación correspondiente desde inicio+pi a inicio+2pi, nulos de inicio+2pi a final.
+   z <- vector con valores de inicio a fin con frecuencia 0.1.   
+   Represento la función cilindro a partir de x, y, z. 
+   Aplico tubep. 
+\end{lstlisting}
+  \end{alg}
+  
+  Para entender mejor estos últimos cuatro algoritmos que hemos mostrado, vamos a visualizar las salidas que se generan con algunos ejemplos. En concreto vamos a mostrar los giros que se producen al indicar inicio=0 y final=-3$ \pi $ (que sería el primer intervalo de planos que se mostraría en cualquier trenza). Podemos ver los cuatro casos posibles en la figura \ref{final2}.
+  
+  Finalmente mostramos el algoritmo que nos permite representar una trenza cualquiera. Otro de los motivos por los que hemos decidido usar la versión de la sección anterior reside en el hecho de que en esta versión las trenzas no podrán tener cadenas finales (a la derecha) si no intervienen en ningún cruce. 
+    \begin{alg}
+    	\textbf{Algoritmo representar\_braid}()\\
+    	ENTRADA: indices\_braid (cadena de enteros que representa los cruces de una trenza)\\
+    	\hspace*{2.2cm} N\_cortes (número de cortes que tendrá el tubo (cadena de la trenza))\\
+    	\hspace*{2.2cm} Radio (Radio del tubo (cadena de la trenza))
+    	
+    	\lstset{language=Matlab, breaklines=true, basicstyle=\ttfamily\small ,numbers=left, stepnumber=1, numberstyle=\color{blue}, literate={á}{{\'a}}1
+    		{í}{{\'i}}1
+    		{é}{{\'e}}1
+    		{ú}{{\'u}}1
+    		{ó}{{\'o}}1
+    		{ñ}{{\~n}}1}
+\begin{lstlisting} 
+   Para cada cruce de indices_braid...
+      Desde 1 hasta el valor del cruce...
+         Aplicar cilindro_braid con traslación correspondiente.
+      Si el valor del cruce es positivo 
+         Aplicar braid_neg con traslación correspondiente.
+      Si no 
+         Aplicar braid_pos con traslación correspondiente.
+      Desde el valor del cruce hasta cadena final...
+         Aplicar cilindro_braid con traslación correspondiente. 
+\end{lstlisting}
+    \end{alg}
+    
+    \newpage
+     \begin{figure}[h!]
+     	\centering
+     	\subfigure[giro\_braid\_neg (signo+)]{\includegraphics[width=6.5cm]{img/neg.png}}
+     	\subfigure[giro\_braid\_neg (signo -)]{\includegraphics[width=7cm]{img/-neg.png}}
+     	
+     	\subfigure[giro\_braid\_pos (signo+)]{\includegraphics[width=6.3cm]{img/pos.png}}
+     	\subfigure[giro\_braid\_pos (signo -)]{\includegraphics[width=7cm]{img/-pos.png}}
+     	\caption{Giros cruce}
+     	\label{final2} 
+     \end{figure}
+    

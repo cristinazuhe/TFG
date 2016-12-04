@@ -49,8 +49,8 @@
 \contentsline {chapter}{\numberline {4}Desarrollo inform\IeC {\'a}tico.}{69}{chapter.4}
 \contentsline {section}{\numberline {4.1}Teor\IeC {\'\i }a de trenzas con Matlab.}{70}{section.4.1}
 \contentsline {section}{\numberline {4.2}Pseudoalgoritmos.}{72}{section.4.2}
-\contentsline {section}{\numberline {4.3}Usando toxtren}{81}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Clase trenza.}{81}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Clase trenza\_cerrada.}{85}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Conclusiones y v\IeC {\'\i }as futuras}{87}{chapter.5}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{89}{chapter*.83}
+\contentsline {section}{\numberline {4.3}Usando toxtren}{85}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Clase trenza.}{85}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Clase trenza\_cerrada.}{89}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Conclusiones y v\IeC {\'\i }as futuras}{91}{chapter.5}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{93}{chapter*.84}

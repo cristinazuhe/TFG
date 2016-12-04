@@ -185,7 +185,12 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Funciones base\relax }}{78}{figure.caption.79}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Giro base}}}{78}{figure.caption.79}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cilindro base}}}{78}{figure.caption.79}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Representaci\IeC {\'o}n trenza Matlab.\relax }}{83}{figure.caption.80}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Transformaci\IeC {\'o}n Dehornoy Matlab.\relax }}{84}{figure.caption.81}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Representaci\IeC {\'o}n trenza cerrada Matlab.\relax }}{86}{figure.caption.82}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Giros cruce\relax }}{84}{figure.caption.80}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {giro\_braid\_neg (signo+)}}}{84}{figure.caption.80}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {giro\_braid\_neg (signo -)}}}{84}{figure.caption.80}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {giro\_braid\_pos (signo+)}}}{84}{figure.caption.80}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {giro\_braid\_pos (signo -)}}}{84}{figure.caption.80}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Representaci\IeC {\'o}n trenza Matlab.\relax }}{87}{figure.caption.81}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Transformaci\IeC {\'o}n Dehornoy Matlab.\relax }}{88}{figure.caption.82}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Representaci\IeC {\'o}n trenza cerrada Matlab.\relax }}{90}{figure.caption.83}
 \addvspace {10\p@ }
