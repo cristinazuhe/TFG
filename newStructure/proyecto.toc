@@ -40,7 +40,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Estructura de grupo no abeliano:}{38}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Trenzas equivalentes:}{44}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Trenzas Markov-equivalentes:}{47}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Algunos invariantes.}{48}{section.3.3}
+\contentsline {section}{\numberline {3.3}Algunos invariantes.}{49}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Exponente:}{50}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Permutaci\IeC {\'o}n:}{52}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Polinomio de Alexander:}{53}{subsection.3.3.3}
@@ -53,4 +53,4 @@
 \contentsline {subsection}{\numberline {4.3.1}Clase trenza.}{85}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Clase trenza\_cerrada.}{89}{subsection.4.3.2}
 \contentsline {chapter}{\numberline {5}Conclusiones y v\IeC {\'\i }as futuras}{91}{chapter.5}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{93}{chapter*.84}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{93}{chapter*.88}

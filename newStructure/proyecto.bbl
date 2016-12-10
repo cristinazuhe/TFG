@@ -47,11 +47,17 @@ Jkasd (2008).
 \newblock
   \url{https://en.wikipedia.org/wiki/File:Knot_table.svg#/media/File:Knot_table.svg}.
 
-\bibitem[Matlab, 2016]{6}
-Matlab (1994-2016).
+\bibitem[Matlab, 2016a]{6}
+Matlab (1994-2016a).
 \newblock Create and share toolboxes.
 \newblock
   \url{http://es.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html#buf2ahi-3}.
+
+\bibitem[Matlab, 2016b]{15}
+Matlab (1994-2016b).
+\newblock Display custom documentation.
+\newblock
+  \url{https://es.mathworks.com/help/matlab/matlab_prog/display-custom-documentation.html}.
 
 \bibitem[Murasugi, 2007]{5}
 Murasugi, K. (2007).
