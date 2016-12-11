@@ -1,7 +1,7 @@
 %% Ejemplo de uso de la clase trenza. 
 
 %% Constructor y representar_trenza.
-%Creamos una trenza y la representamos.
+% Creamos una trenza y la representamos.
 trenza_a = trenza([2 -1])
 trenza_a.representar_trenza
     
@@ -18,7 +18,7 @@ trenza_a.get_indices
 trenza_a.length
     
 %% inver
-%Obtenemos la trenza inversa de la trenza.
+% Obtenemos la trenza inversa de la trenza.
 trenza_a.inver
     
 %% set_n

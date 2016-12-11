@@ -6,7 +6,7 @@ trenzacerrada_a=trenza_cerrada([3 -1 1])
 trenzacerrada_a.representar_trenza
 
 %% inver
-%Obtenemos la trenza cerrada inversa de la trenza cerrada.
+% Obtenemos la trenza cerrada inversa de la trenza cerrada.
 trenzacerrada_a.inver
 
 %% set_indices

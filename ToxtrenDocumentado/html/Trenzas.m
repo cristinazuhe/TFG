@@ -56,4 +56,4 @@
         %Entrada: trenza y número de cadenas que establecemos a dicha trenza. 
 %%   trenza - Constructor de la clase trenza.  
         %Constructor de la clase trenza. 
-        %Entrada: cadena que representa a una trenza y número de cadenas de la trenza (este parametro se puede omitir).
+        %Entrada: cadena que representa a una trenza y número de cadenas de la trenza (este parámetro se puede omitir).

@@ -4,10 +4,10 @@
 
 %% trenza
 % A partir de dicha clase podemos analizar trenzas.
-% Disponemos de los atributos indices_trenza (indices de los cruces de la trenza) y
-% n_cadenas (numero de cadenas de la trenza).
+% Disponemos de los atributos indices_trenza (índices de los cruces de la trenza) y
+% n_cadenas (número de cadenas de la trenza).
 
 %% trenza_cerrada
 % Dicha clase hereda de la clase trenza. 
 % A partir de ella podemos analizar trenzas cerradas.
-% Disponemos, además, del atributo n_enlaces (numero de enlaces de una trenza cerrada).
+% Disponemos, además, del atributo n_enlaces (número de enlaces de una trenza cerrada).

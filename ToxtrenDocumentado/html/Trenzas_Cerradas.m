@@ -15,11 +15,10 @@
         %Comprobar si dos trenzas cerradas dadas son o no equivalentes. 
         %Entrada: trenza cerrada 1 y trenza cerrada 2.
 %%   es_trivial - Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
-        %Comprobar si una trenza cerrada dada es o no equivalente a la
-        %trenza trivial.
+        %Comprobar si una trenza cerrada dada es o no equivalente a la trenza trivial.
         %Entrada: trenza cerrada.
 %%   inver - Obtener trenza inversa de una trenza cerrada dada.
-        %Obtener trenza inversa de una trenza cerrda dada.
+        %Obtener trenza inversa de una trenza cerrada dada.
         %Entrada: trenza cerrada.
 %%   pote - Obtener la trenza cerrada potencia de una trenza cerrada dada.
         %Obtener la trenza cerrada potencia de una trenza cerrada dada. 
@@ -35,4 +34,4 @@
         %Entrada: trenza cerrada, nuevos cruces de la trenza cerrada y número de cadenas que le establecemos. 
 %%   trenza_cerrada - Constructor de la clase trenza_cerrada.
         %Constructor de la clase trenza cerrada. 
-        %Entrada: cadena que representa a una trenza cerrada y número de cadenas de la trenza cerrada (este parametro se puede omitir).
+        %Entrada: cadena que representa a una trenza cerrada y número de cadenas de la trenza cerrada (este parámetro se puede omitir).

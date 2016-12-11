@@ -1,7 +1,7 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="926870437" file="C:\Users\Cris\Desktop\PruebaDoc\Toxtren.prj" location="C:\Users\Cris\Desktop\PruebaDoc" name="Toxtren" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="3683035331" file="C:\Users\Cris\Documents\GitHub\TFG\ToxtrenDocumentado\Toxtren.prj" location="C:\Users\Cris\Documents\GitHub\TFG\ToxtrenDocumentado" name="Toxtren" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>Toxtren</param.appname>
-    <param.authnamewatermark>Cristina Zuheros Montes</param.authnamewatermark>
+    <param.authnamewatermark>Cristina Zuheros</param.authnamewatermark>
     <param.email>zuhe18@gmail.com</param.email>
     <param.company />
     <param.summary>Toolbox para analizar trenzas y trenzas cerradas.</param.summary>
@@ -11,21 +11,18 @@
     <param.output>${PROJECT_ROOT}\Toxtren.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
-      <item>Model Predictive Control Toolbox</item>
       <item>Symbolic Math Toolbox</item>
     </param.products.name>
     <param.products.id>
       <item>1</item>
-      <item>22</item>
       <item>15</item>
     </param.products.id>
     <param.products.version>
       <item>8.5</item>
-      <item>5.0.1</item>
       <item>6.2</item>
     </param.products.version>
     <param.platforms />
-    <param.guid>5a595270-b98a-4298-b543-870a314778f2</param.guid>
+    <param.guid>ac5ad6ef-452c-4771-82e3-82381dabd970</param.guid>
     <param.exclude.filters />
     <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;examples/&gt;</param.examples>
@@ -43,7 +40,7 @@
       <param.apps />
     </unset>
     <fileset.rootdir>
-      <file>C:\Users\Cris\Desktop\PruebaDoc</file>
+      <file>C:\Users\Cris\Documents\GitHub\TFG\ToxtrenDocumentado</file>
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\aniade_cilindros.m</file>
@@ -69,7 +66,7 @@
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\Cris\Desktop\PruebaDoc" name="Toxtren.mltbx" optional="false">C:\Users\Cris\Desktop\PruebaDoc\Toxtren.mltbx</file>
+      <file location="C:\Users\Cris\Documents\GitHub\TFG\ToxtrenDocumentado" name="Toxtren.mltbx" optional="false">C:\Users\Cris\Documents\GitHub\TFG\ToxtrenDocumentado\Toxtren.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>

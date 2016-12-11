@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Analisis de trenzas.</h1><!--introduction--><p>Este m&oacute;dulo nos permite trabajar con el grupo de las trenzas. Disponemos de los siguientes m&eacute;todos:</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">asignar_trenza - Asigno los valores de la trenza2 a la trenza1.</a></li><li><a href="#2">dehornoy - Reducci&oacute;n Dehornoy de una trenza dada.</a></li><li><a href="#3">equivalentes - Comprobar si dos trenzas dadas son o no.</a></li><li><a href="#4">es_trivial - Comprobar si una trenza dada es o no equivalente a la trenza trivial.</a></li><li><a href="#5">exp - Exponente de una trenza dada.</a></li><li><a href="#6">get_indices - Obtener los &iacute;ndices de una trenza dada.</a></li><li><a href="#7">get_n - Obtener el n&uacute;mero de cadenas de una trenza dada.</a></li><li><a href="#8">inver - Obtener trenza inversa de una trenza dada.</a></li><li><a href="#9">length - Obtener n&uacute;mero de cruces de una trenza dada.</a></li><li><a href="#10">matriz_burau - Matriz Burau de una trenza dada.</a></li><li><a href="#11">perm - Permutaci&oacute;n de una trenza dada.</a></li><li><a href="#12">pote - Obtener la trenza potencia de una trenza dada.</a></li><li><a href="#13">producto - Obtener la trenza producto de dos trenzas dadas.</a></li><li><a href="#14">pura - Comprobar si una trenza dada es pura.</a></li><li><a href="#15">representar_trenza - Representaci&oacute;n 3D de la trenza.</a></li><li><a href="#16">set_indices - Establece nuevos &iacute;ndices y n&uacute;mero de cadenas a la trenza dada.</a></li><li><a href="#17">set_n - Establece el n&uacute;mero de cadenas de una trenza dada.</a></li><li><a href="#18">trenza - Constructor de la clase trenza.</a></li></ul></div><h2>asignar_trenza - Asigno los valores de la trenza2 a la trenza1.<a name="1"></a></h2><pre class="codeinput">        <span class="comment">%Asigno los valores de la trenza2 a la trenza1.</span>
+  </style></head><body><div class="content"><h1>Analisis de trenzas.</h1><!--introduction--><p>Este m&oacute;dulo nos permite trabajar con el grupo de trenzas (trenza). Disponemos de los siguientes m&eacute;todos:</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">asignar_trenza - Asigno los valores de la trenza2 a la trenza1.</a></li><li><a href="#2">dehornoy - Reducci&oacute;n Dehornoy de una trenza dada.</a></li><li><a href="#3">equivalentes - Comprobar si dos trenzas dadas son o no.</a></li><li><a href="#4">es_trivial - Comprobar si una trenza dada es o no equivalente a la trenza trivial.</a></li><li><a href="#5">exp - Exponente de una trenza dada.</a></li><li><a href="#6">get_indices - Obtener los &iacute;ndices de una trenza dada.</a></li><li><a href="#7">get_n - Obtener el n&uacute;mero de cadenas de una trenza dada.</a></li><li><a href="#8">inver - Obtener trenza inversa de una trenza dada.</a></li><li><a href="#9">length - Obtener n&uacute;mero de cruces de una trenza dada.</a></li><li><a href="#10">matriz_burau - Matriz Burau de una trenza dada.</a></li><li><a href="#11">perm - Permutaci&oacute;n de una trenza dada.</a></li><li><a href="#12">pote - Obtener la trenza potencia de una trenza dada.</a></li><li><a href="#13">producto - Obtener la trenza producto de dos trenzas dadas.</a></li><li><a href="#14">pura - Comprobar si una trenza dada es pura.</a></li><li><a href="#15">representar_trenza - Representaci&oacute;n 3D de la trenza.</a></li><li><a href="#16">set_indices - Establece nuevos &iacute;ndices y n&uacute;mero de cadenas a la trenza dada.</a></li><li><a href="#17">set_n - Establece el n&uacute;mero de cadenas de una trenza dada.</a></li><li><a href="#18">trenza - Constructor de la clase trenza.</a></li></ul></div><h2>asignar_trenza - Asigno los valores de la trenza2 a la trenza1.<a name="1"></a></h2><pre class="codeinput">        <span class="comment">%Asigno los valores de la trenza2 a la trenza1.</span>
         <span class="comment">%Entrada: trenza1 y trenza2.</span>
 </pre><h2>dehornoy - Reducci&oacute;n Dehornoy de una trenza dada.<a name="2"></a></h2><pre class="codeinput">        <span class="comment">%Reducci&oacute;n Dehornoy de una trenza dada.</span>
         <span class="comment">%Entrada: trenza, n&uacute;mero de cortes, radio de la trenza y bool para representar o no las transformaciones.</span>
@@ -102,11 +102,11 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 </pre><h2>set_n - Establece el n&uacute;mero de cadenas de una trenza dada.<a name="17"></a></h2><pre class="codeinput">        <span class="comment">%Establece el n&uacute;mero de cadenas de una trenza dada.</span>
         <span class="comment">%Entrada: trenza y n&uacute;mero de cadenas que establecemos a dicha trenza.</span>
 </pre><h2>trenza - Constructor de la clase trenza.<a name="18"></a></h2><pre class="codeinput">        <span class="comment">%Constructor de la clase trenza.</span>
-        <span class="comment">%Entrada: cadena que representa a una trenza y n&uacute;mero de cadenas de la trenza (este parametro se puede omitir).</span>
+        <span class="comment">%Entrada: cadena que representa a una trenza y n&uacute;mero de cadenas de la trenza (este par&aacute;metro se puede omitir).</span>
 </pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Analisis de trenzas. 
-% Este módulo nos permite trabajar con el grupo de las trenzas. 
+% Este módulo nos permite trabajar con el grupo de trenzas (trenza). 
 % Disponemos de los siguientes métodos:
 
 %%   asignar_trenza - Asigno los valores de la trenza2 a la trenza1.  
@@ -163,7 +163,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
         %Entrada: trenza y número de cadenas que establecemos a dicha trenza. 
 %%   trenza - Constructor de la clase trenza.  
         %Constructor de la clase trenza. 
-        %Entrada: cadena que representa a una trenza y número de cadenas de la trenza (este parametro se puede omitir).
+        %Entrada: cadena que representa a una trenza y número de cadenas de la trenza (este parámetro se puede omitir).
 
 ##### SOURCE END #####
 --></body></html>
