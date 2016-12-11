@@ -1,0 +1,297 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Ejemplo de uso de la clase trenza.</title><meta name="generator" content="MATLAB 8.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-12-11"><meta name="DC.source" content="Ejemplo_Trenzas.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Ejemplo de uso de la clase trenza.</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Constructor y representar_trenza.</a></li><li><a href="#2">get_n</a></li><li><a href="#3">get_indices</a></li><li><a href="#4">length</a></li><li><a href="#5">inver</a></li><li><a href="#6">set_n</a></li><li><a href="#7">set_indices</a></li><li><a href="#8">perm</a></li><li><a href="#9">pura</a></li><li><a href="#10">exp</a></li><li><a href="#11">matriz_burau</a></li><li><a href="#12">asignar_trenza</a></li><li><a href="#13">equivalentes</a></li><li><a href="#14">dehornoy</a></li><li><a href="#15">es_trivial</a></li><li><a href="#16">pote</a></li><li><a href="#17">producto</a></li></ul></div><h2>Constructor y representar_trenza.<a name="1"></a></h2><pre class="codeinput"><span class="comment">%Creamos una trenza y la representamos.</span>
+trenza_a = trenza([2 -1])
+trenza_a.representar_trenza
+</pre><pre class="codeoutput">
+trenza_a = 
+
+  trenza with properties:
+
+    indices_trenza: [2 -1]
+         n_cadenas: 3
+
+</pre><img vspace="5" hspace="5" src="Ejemplo_Trenzas_01.png" alt=""> <h2>get_n<a name="2"></a></h2><p>Obtenemos el n&uacute;mero de cadenas de la trenza.</p><pre class="codeinput">trenza_a.get_n
+</pre><pre class="codeoutput">
+ans =
+
+     3
+
+</pre><h2>get_indices<a name="3"></a></h2><p>Obtenemos los &iacute;ndices de la trenza.</p><pre class="codeinput">trenza_a.get_indices
+</pre><pre class="codeoutput">
+ans =
+
+     2    -1
+
+</pre><h2>length<a name="4"></a></h2><p>Obtenemos el n&uacute;mero de cruces de la trenza.</p><pre class="codeinput">trenza_a.length
+</pre><pre class="codeoutput">
+ans =
+
+     2
+
+</pre><h2>inver<a name="5"></a></h2><pre class="codeinput"><span class="comment">%Obtenemos la trenza inversa de la trenza.</span>
+trenza_a.inver
+</pre><pre class="codeoutput">
+ans = 
+
+  trenza with properties:
+
+    indices_trenza: [1 -2]
+         n_cadenas: 3
+
+</pre><h2>set_n<a name="6"></a></h2><p>Modificamos el n&uacute;mero de cadenas de la trenza.</p><pre class="codeinput">set_n(trenza_a,5)
+trenza_a
+</pre><pre class="codeoutput">
+trenza_a = 
+
+  trenza with properties:
+
+    indices_trenza: [2 -1]
+         n_cadenas: 5
+
+</pre><h2>set_indices<a name="7"></a></h2><p>Modificamos los &iacute;ndices de la trenza.</p><pre class="codeinput">set_indices(trenza_a,[-1 2])
+trenza_a
+</pre><pre class="codeoutput">
+trenza_a = 
+
+  trenza with properties:
+
+    indices_trenza: [-1 2]
+         n_cadenas: 3
+
+</pre><h2>perm<a name="8"></a></h2><p>Obtenemos la permutaci&oacute;n de la trenza.</p><pre class="codeinput">trenza_a.perm
+</pre><pre class="codeoutput">
+ans =
+
+     3     1     2
+
+</pre><h2>pura<a name="9"></a></h2><p>Comprobamos si la trenza es pura.</p><pre class="codeinput">trenza_a.pura
+</pre><pre class="codeoutput">
+ans =
+
+     0
+
+</pre><h2>exp<a name="10"></a></h2><p>Obtenemos el exponente de la trenza.</p><pre class="codeinput">trenza_a.exp
+</pre><pre class="codeoutput">
+ans =
+
+     0
+
+</pre><h2>matriz_burau<a name="11"></a></h2><p>Obtenemos la matriz de Burau de la trenza.</p><pre class="codeinput">trenza_a.matriz_burau
+</pre><pre class="codeoutput"> 
+ans =
+ 
+[   0,        1 - t,     t]
+[ 1/t, -(t - 1)^2/t, t - 1]
+[   0,            1,     0]
+ 
+</pre><h2>asignar_trenza<a name="12"></a></h2><p>Creamos otra trenza y asignamos la nueva a la trenza anterior.</p><pre class="codeinput">trenza_b = trenza(<span class="string">'+s3-s1+s2+s1'</span>);
+asignar_trenza(trenza_a,trenza_b);
+trenza_a
+trenza_b
+</pre><pre class="codeoutput">
+trenza_a = 
+
+  trenza with properties:
+
+    indices_trenza: [3 -1 2 1]
+         n_cadenas: 4
+
+
+trenza_b = 
+
+  trenza with properties:
+
+    indices_trenza: [3 -1 2 1]
+         n_cadenas: 4
+
+</pre><h2>equivalentes<a name="13"></a></h2><p>Comprobamos si las trenzas son equivalentes.</p><pre class="codeinput">equivalentes(trenza_a,trenza_b)
+</pre><pre class="codeoutput">
+ans =
+
+     1
+
+</pre><h2>dehornoy<a name="14"></a></h2><p>Obtenemos la reducci&oacute;n Dehornoy de la trenza.</p><pre class="codeinput">warning (<span class="string">'off'</span>,<span class="string">'all'</span>);
+[es_trivial, reduccionDeh]=dehornoy(trenza_a,20,0.5,true);
+reduccionDeh
+</pre><pre class="codeoutput">
+reduccionDeh =
+
+     3     2     1    -2
+
+</pre><img vspace="5" hspace="5" src="Ejemplo_Trenzas_02.png" alt=""> <h2>es_trivial<a name="15"></a></h2><p>Comprobamos si la trenza es trivial.</p><pre class="codeinput">trenza_a.es_trivial
+</pre><pre class="codeoutput">
+ans =
+
+     0
+
+</pre><h2>pote<a name="16"></a></h2><p>Obtenemos la trenza potencia de la trenza.</p><pre class="codeinput">pote(trenza_a,3)
+</pre><pre class="codeoutput">
+ans = 
+
+  trenza with properties:
+
+    indices_trenza: [3 -1 2 1 3 -1 2 1 3 -1 2 1]
+         n_cadenas: 4
+
+</pre><h2>producto<a name="17"></a></h2><p>Obtenemos la trenza producto de dos trenzas.</p><pre class="codeinput">producto(trenza_a,trenza_b)
+</pre><pre class="codeoutput">
+ans = 
+
+  trenza with properties:
+
+    indices_trenza: [3 -1 2 1 3 -1 2 1]
+         n_cadenas: 4
+
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Ejemplo de uso de la clase trenza. 
+
+%% Constructor y representar_trenza.
+%Creamos una trenza y la representamos.
+trenza_a = trenza([2 -1])
+trenza_a.representar_trenza
+    
+%% get_n
+% Obtenemos el número de cadenas de la trenza.
+trenza_a.get_n
+    
+%% get_indices
+% Obtenemos los índices de la trenza.
+trenza_a.get_indices
+    
+%% length
+% Obtenemos el número de cruces de la trenza.
+trenza_a.length
+    
+%% inver
+%Obtenemos la trenza inversa de la trenza.
+trenza_a.inver
+    
+%% set_n
+% Modificamos el número de cadenas de la trenza.
+set_n(trenza_a,5)
+trenza_a
+
+%% set_indices
+% Modificamos los índices de la trenza.
+set_indices(trenza_a,[-1 2])
+trenza_a
+
+%% perm
+% Obtenemos la permutación de la trenza.
+trenza_a.perm
+
+%% pura 
+% Comprobamos si la trenza es pura.
+trenza_a.pura
+
+%% exp 
+% Obtenemos el exponente de la trenza.
+trenza_a.exp
+
+%% matriz_burau
+% Obtenemos la matriz de Burau de la trenza.
+trenza_a.matriz_burau
+
+%% asignar_trenza
+% Creamos otra trenza y asignamos la nueva a la trenza anterior.
+trenza_b = trenza('+s3-s1+s2+s1');
+asignar_trenza(trenza_a,trenza_b);
+trenza_a
+trenza_b
+
+%% equivalentes
+% Comprobamos si las trenzas son equivalentes.
+equivalentes(trenza_a,trenza_b)
+
+%% dehornoy 
+% Obtenemos la reducción Dehornoy de la trenza.
+warning ('off','all');
+[es_trivial, reduccionDeh]=dehornoy(trenza_a,20,0.5,true);
+reduccionDeh
+
+%% es_trivial
+% Comprobamos si la trenza es trivial. 
+trenza_a.es_trivial
+
+%% pote
+% Obtenemos la trenza potencia de la trenza.
+pote(trenza_a,3)
+
+%% producto 
+% Obtenemos la trenza producto de dos trenzas.
+producto(trenza_a,trenza_b)
+
+%%
+
+
+
+##### SOURCE END #####
+--></body></html>
