@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  10 DEC 2016 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  12 DEC 2016 00:36
 entering extended mode
 **proyecto.tex
 (proyecto.tex
@@ -736,49 +736,50 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 23.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<img/logo_etsiit.png, id=196, 110.814pt x 40.4712pt>
-File: img/logo_etsiit.png Graphic file (type png)
- <use img/logo_etsiit.png>
-Package pdftex.def Info: img/logo_etsiit.png used on input line 33.
-(pdftex.def)             Requested size: 145.11053pt x 52.99727pt.
-
-<img/logo_ciencias.jpg, id=198, 222.8325pt x 75.28125pt>
+<img/logo_ciencias.jpg, id=196, 222.8325pt x 75.28125pt>
 File: img/logo_ciencias.jpg Graphic file (type jpg)
 
 <use img/logo_ciencias.jpg>
-Package pdftex.def Info: img/logo_ciencias.jpg used on input line 33.
+Package pdftex.def Info: img/logo_ciencias.jpg used on input line 35.
 (pdftex.def)             Requested size: 145.11053pt x 49.02411pt.
+
+<img/logo_etsiit.png, id=197, 110.814pt x 40.4712pt>
+File: img/logo_etsiit.png Graphic file (type png)
+ <use img/logo_etsiit.png>
+Package pdftex.def Info: img/logo_etsiit.png used on input line 35.
+(pdftex.def)             Requested size: 96.73788pt x 35.33069pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 39.
- [1
+(babel)             in language  on input line 40.
+
+[1
 
 
 
 
 {C:/Users/Cris/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/logo_u
-gr.jpg> <./img/logo_etsiit.png> <./img/logo_ciencias.jpg>])
+gr.jpg> <./img/logo_ciencias.jpg> <./img/logo_etsiit.png>])
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 19.
 Package babel Info: Redefining spanish shorthand >>
@@ -7004,7 +7005,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
 Here is how much of TeX's memory you used:
  13244 strings out of 493673
  188091 string characters out of 3143963
- 437474 words of memory out of 3000000
+ 436474 words of memory out of 3000000
  15461 multiletter control sequences out of 15000+200000
  17533 words of font info for 73 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -7034,7 +7035,7 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2
 ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsf
 s/rsfs10.pfb>
-Output written on proyecto.pdf (113 pages, 5736764 bytes).
+Output written on proyecto.pdf (113 pages, 5738196 bytes).
 PDF statistics:
  1941 PDF objects out of 2073 (max. 8388607)
  731 named destinations out of 1000 (max. 500000)
