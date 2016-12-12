@@ -1,0 +1,6 @@
+Para la instalación de Toxtren necesitamos únicamente Toxtren.mltbx:
+1-.Inicializar Matlab.
+2-.Seleccionar como nuevo directorio de trabajo la carpeta que contiene el arhivo Toxtren.mltbx.
+3-.Click derecho sobre dicho archivo --> Instalar. 
+
+Podemos acceder a la documentación mediante el buscador de ayuda (Toxtren Toolbox) o mediante help en la ventana de comandos. 
