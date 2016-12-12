@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  12 DEC 2016 00:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.16)  12 DEC 2016 19:09
 entering extended mode
 **proyecto.tex
 (proyecto.tex
@@ -7005,7 +7005,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
 Here is how much of TeX's memory you used:
  13244 strings out of 493673
  188091 string characters out of 3143963
- 436474 words of memory out of 3000000
+ 437474 words of memory out of 3000000
  15461 multiletter control sequences out of 15000+200000
  17533 words of font info for 73 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -7035,7 +7035,7 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2
 ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/rsf
 s/rsfs10.pfb>
-Output written on proyecto.pdf (113 pages, 5738196 bytes).
+Output written on proyecto.pdf (113 pages, 5736822 bytes).
 PDF statistics:
  1941 PDF objects out of 2073 (max. 8388607)
  731 named destinations out of 1000 (max. 500000)
