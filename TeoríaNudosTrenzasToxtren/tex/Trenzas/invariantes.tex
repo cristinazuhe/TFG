@@ -1,0 +1,626 @@
+\bigskip
+\section{Algunos invariantes.}
+Ya conocemos cuáles son los movimientos básicos que nos permiten determinar si dos trenzas dadas son equivalentes. Pero al igual que ocurría con los nudos, llevar esta idea a la práctica no es factible.\\
+
+En esta sección vamos a ver algunos invariantes de trenzas que nos permitirán determinar de forma relativamente rápida si dos trenzas no son equivalentes.\\
+
+\underline{\textbf{Definición:}} \\
+Un \textbf{invariante} de una trenza es una propiedad que no cambia cuando la trenza sufre deformaciones en el espacio. \\
+
+Vamos a ver algunos invariantes de trenzas que usaremos posteriormente en la práctica.
+
+\bigskip
+\subsection{Exponente:}\label{invtren1}
+\textbf{\underline{Definición:}}\\
+Sea $\beta \in B_{n}$ representada como $\beta $= $\sigma_{i_{1}}^{e_{1}} \sigma_{i_{2}}^{e_{2}} ... \sigma_{i_{m}}^{e_{m}}$ donde $e_{i} \in \{-1,1\}$, 1 $\le i_{1}, i_{2},..,i_{m} \le$ n-1.\\
+Llamamos \textbf{exponente} de $\beta$ al entero $ \sum_{i=1}^{m} e_{i} $. Se denotará como exp($\beta$).\\
+
+El exponente de la trenza $\beta = \sigma3\sigma2^{-1}\sigma3^{-1}$ de la figura \ref{exp1} es $+1-1-1=-1$.\\
+   \begin{figure}[h!]
+   	\centering
+   	\includegraphics[width=4.3cm]{itrenzas/4c3.png}
+   	\caption{Trenza $\sigma3\sigma2^{-1}\sigma3^{-1}$}
+   	\label{exp1} 
+   \end{figure}
+
+\begin{pro}
+	El exponente de una trenza $\beta \in B_{n}$ es un invariante. 
+	\begin{proof}
+		Veamos que dadas las trenzas $\beta1,\beta2 \in B_{n}$ tales que $\beta1 \sim \beta2$, se verifica que exp($\beta1$)=exp($\beta2$).\\
+		
+		Al ser $\beta1 \sim \beta2$, por la definición \ref{defequi}, sabemos que existe la secuencia de trenzas equivalentes tal que: 
+		\begin{center}
+			$ \beta1 = \beta1_{0} \rightarrow \beta1_{1} \rightarrow ... \rightarrow \beta1_{m}=\beta2$ 
+		\end{center}
+	    donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Estos movimientos elementales se pueden reducir a las relaciones las  \ref{rel1} y \ref{rel2} que definen al grupo $ B_{n} $ . Por tanto,para verificar que el exponente de cada par $ \beta_{j}, \beta_{j+1}$ es igual, tenemos que ver que estas relaciones de igualdad tienen el mismo exponente:
+	    
+	    \begin{enumerate}
+	    \item $\sigma_{i+1}\sigma_{i}\sigma_{i+1} =\sigma_{i}\sigma_{i+1}\sigma_{i} $ siendo $i=2,..,n-2 $:\\
+	    exp($ \sigma_{i+1}\sigma_{i}\sigma_{i+1})$ = exp$(\sigma_{i}\sigma_{i+1}\sigma_{i} $).
+	    \item $\sigma_{i}\sigma_{j}=\sigma_{j}\sigma_{i}$ siendo $1 \le i < j \le n-1 $, $j-i \geq 2$:\\
+	    exp($\sigma_{i}\sigma_{j})$ = exp$(\sigma_{j}\sigma_{i}$).  	
+	    \end{enumerate}
+	\end{proof}
+\end{pro}
+
+Haciendo uso de este invariante podremos ver muy fácilmente si dos trenzas dadas tienen distintos exponente y por tanto no son equivalentes. Podemos ver un ejemplo de dos trenzas no equivalentes en la figura \ref{exp2}. La trenza $\beta1 = \sigma2\sigma1\sigma2^{-1}$ tiene exponente +1, mientras que la trenza $\beta1 = \sigma2^{-1}\sigma1^{-1}\sigma2$ tiene exponente -1.\\ 
+	\begin{figure}[h!]
+		\centering
+		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=3.5cm]{itrenzas/6c1.png}}
+		\subfigure[exp($ \beta2 $) = -1]{\includegraphics[width=3.5cm]{itrenzas/6c4.png}}
+		\caption{Trenzas no equivalentes.}
+		\label{exp2} 
+	\end{figure}
+	
+Si tuviesen igual exponente tendríamos que estudiar otros invariantes para ver si las trenzas son iguales. Por ejemplo, en la figura \ref{exp3} vemos que las trenzas $\beta1 = \sigma2\sigma2\sigma3^{-1}$ y $\beta2 = \sigma3^{-1}\sigma2\sigma1$ tienen el mismo exponente (+1) luego no podremos saber si son o no equivalentes. Al estudiar el invariante de la siguiente sección veremos que no lo son.  \\
+	\begin{figure}[h!]
+		\centering
+		\subfigure[exp($ \beta1 $) = +1]{\includegraphics[width=3.5cm]{itrenzas/7c1.png}}
+		\subfigure[exp($ \beta2 $) = +1]{\includegraphics[width=3.5cm]{itrenzas/7c2.png}}
+		\caption{Trenzas con mismo exponente.}
+		\label{exp3} 
+	\end{figure}
+
+\bigskip
+\subsection{Permutación:}\label{invtren2}
+\textbf{\underline{Definición:}}\\
+Sea $\beta \in B_{n}$. Consideramos la cadena i que conecta el punto inicial $ A_{i}$ con el punto final $B_{j_{i}}$. Llamaremos \textbf{permutación} asociada a la trenza a la matriz:\\
+\[\pi(\beta)=\begin{bmatrix}
+1 & 2 & .. & n\\
+j_{1} & j_{2} & .. & j_{n} \\
+\end{bmatrix}\]
+Por simplicidad podremos denotar la permutación de la trenza como el vector $j_{1} j_{2} ... j_{n}$.\\
+
+La permutación de la trenza $\beta = \sigma3\sigma2^{-1}\sigma3^{-1}$ de la figura \ref{perm1} es \[\pi(\beta)=\begin{bmatrix}
+1 & 2 & 3 & 4\\
+1 & 4 & 3 & 2 \\
+\end{bmatrix}\] o bien directamente la permutación: 1 4 3 2.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=5.5cm]{itrenzas/4c3.png}
+	\caption{Trenza $\sigma3\sigma2^{-1}\sigma3^{-1}$}
+	\label{perm1} 
+\end{figure}
+
+\begin{pro}
+    La permutación de una trenza $\beta \in B_{n}$ es un invariante. 
+    \begin{proof}
+    	Veamos que dadas las trenzas $\beta1,\beta2 \in B_{n}$ tales que $\beta1 \sim \beta2$, se verifica que $\pi(\beta1$)=$\pi(\beta2$).\\
+    	
+    	Por la definición \ref{defequi}, existirá la secuencia de trenzas equivalentes tal que: 
+    	\begin{center}
+    		$ \beta1 = \beta1_{0} \rightarrow \beta1_{1} \rightarrow ... \rightarrow \beta1_{m}=\beta2$ 
+    	\end{center}
+    	donde cada par de trenzas $ \beta_{j}, \beta_{j+1}, j=0,..,m-1, $ está relacionado por un movimiento elemental. Los movimientos elementales, por definición, no permiten intercambiar los extremos a los que están sujetas las cuerdas de las trenzas. Por este motivo las permutaciones tienen que ser iguales. \\
+    \end{proof}
+\end{pro}
+
+Haciendo uso de este invariante podemos ver un ejemplo de dos trenzas que no son equivalentes en la figura \ref{perm2}: la trenza $\beta1 = \sigma2\sigma2\sigma3^{-1}$ tiene permutación 1 2 4 3 mientras que la trenza $\beta2 = \sigma3^{-1}\sigma2\sigma1$ tiene permutación 2 3 4 1.\\ 
+	\begin{figure}[h!]
+		\centering
+		\subfigure[$\pi( \beta1 $) = 1 2 4 3]{\includegraphics[width=4.4cm]{itrenzas/7c1.png}}
+		\subfigure[$\pi( \beta2 $) = 2 3 4 1]{\includegraphics[width=4.8cm]{itrenzas/7c2.png}}
+		\caption{Trenzas no equivalentes.}
+		\label{perm2} 
+	\end{figure}
+
+
+\bigskip
+\subsection{Polinomio de Alexander:}\label{invtren3}
+En la sección \ref{alenudos} estudiamos el polinomio de Alexander como un invariante para nudos. Por el teorema \ref{teoMarkov}, podremos hacer uso de las trenzas como una base para obtener los invariantes de nudos, en concreto, para estudiar este invariante que implementaremos posteriormente. \\
+
+Para poder obtener el polinomio de Alexander de una trenza, tendremos que ver unos conceptos previos, \cite{3}:
+
+\textbf{\underline{Definición:}}\\
+Sea la trenza $\beta $= $\sigma_{i_{1}}^{e_{1}} \sigma_{i_{2}}^{e_{2}} ... \sigma_{i_{m}}^{e_{m}}$ donde $e_{i} \in \{-1,1\}$, 1 $\le i_{1}, i_{2},..,i_{m} \le$ n-1. Podemos definir el homomorfismo
+\begin{center}
+	 $ \phi_{n} : B_{n}  \rightarrow  M(n,\mathds{Z}[t,t^{-1}])$	 
+\end{center}
+\[ \phi_{n} ( \sigma_{i}) = \begin{bmatrix}
+I_{i-1} &  &  & \\
+ & 1-t & t &  \\
+ & 1 & 0 &  \\
+ &  &  & I_{n-i-1} \\
+\end{bmatrix}\]
+donde $ I_{i} $ representa a la matriz i$\times$i identidad y los espacios en blanco representan matrices nulas. Llamaremos a esta representación como \textbf{representación de Burau}.\\
+
+En consecuencia tenemos 
+	\[ \phi_{n} ( \sigma_{i}^{-1}) = \phi_{n} ( \sigma_{i})^{-1}= \begin{bmatrix}
+	I_{i-1} &  &  & \\
+	& 0 & 1 &  \\
+	& t^{-1} & 1-t^{-1} &  \\	
+	&  &  & I_{n-i-1} \\
+	\end{bmatrix}\]
+
+
+\bigskip
+Veamos la matriz de Burau de la trenza $\beta \in B_{4}$ representada como $\beta = \sigma2\sigma3^{-1}$.\\
+Matriz Burau de $ \sigma2 $:
+	\[ \phi_{4} ( \sigma2) = \begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1-t & t & 0  \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 \\
+	\end{bmatrix}\]
+
+Matriz Burau de $ \sigma3^{-1} $:
+\[ \phi_{4} ( \sigma3^{-1}) = \begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1  \\	
+	0 & 0 & t^{-1} & 1-t^{-1} \\
+\end{bmatrix}\]
+ 
+ Por tanto, la matriz Burau de $\beta = \sigma2\sigma3^{-1}$ es:
+ \[ \phi_{4} (\sigma2\sigma3^{-1}) = \phi_{4} (\sigma2) \phi_{4}(\sigma3^{-1}) = \begin{bmatrix}
+ 1 & 0 & 0 & 0 \\
+ 0 & 1-t & 0 & t \\
+ 0 & 1 & 0 & 0  \\	
+ 0 & 0 & t^{-1} & 1-t^{-1} \\
+ \end{bmatrix}\]\\
+ 
+ 
+\begin{teo}\label{teoalex}
+	Sea la trenza $\beta \in B_{n}$ con representación de Burau $\phi_{n}(\beta)$. Supongamos que su trenza cerrada genera el nudo K.\\
+    Entonces $\exists k \in \mathds{Z}$ tal que el polinomio ($ \pm $ $ t^{k} )det[\phi_{n}(\beta)$ - $ I_{n} $$ ]_{1,1} $ es un invariante de K. A este polinomio, conocido como polinomio de Alexander, se le denota como $ \triangle_{k} $(t).
+\end{teo}
+
+Nota: Sea la matriz cuadrada A de dimensión n y A' la matriz de dimensión n-1 que se obtiene al suprimir en la matriz A la fila i y la columna i. 
+Se tiene $ det[A]_{i,i}=det[A'] $. A dicho valor real se le conoce como menor adjunto $\delta_{i,j}$ de A.  \\ 
+
+Gracias a este teorema podemos afirmar que si dos trenzas $\beta1 \in B_{n}, \beta2 \in B_{m}$ cerradas generan el mismo nudo entonces se verificará la igualdad:\\
+det[$\phi_{n}(\beta1)$ - $ I_{n} $$ ]_{1,1}$ = $ \pm t^{k} $det[$\phi_{m}(\beta2)$ - $ I_{m} $$ ]_{1,1}$.\\
+
+Para ver la demostración necesitamos un lema previo y los siguientes conceptos:\\
+
+\newpage
+Sea $\phi_{n}(\beta)$ = $M$ = $||a_{ij}||$ $1 \le i,j \le n$, donde $\beta \in B_{n}$. Definimos las siguientes matrices de dimensión nxn:\\
+  \[ S = \begin{bmatrix}
+  1 & 1 & 1 &... & 1 & 1 \\
+  0 & 1 & 1 &... & 1 & 1\\
+  0 & 0 & 1 &... & 1 & 1 \\
+  ... & ... & ...& ... & 1 & 1 \\	
+  0 & 0 & 0 & ... & 1 & 1\\	
+  0 & 0 & 0 & ... & 0 & 1\\
+  \end{bmatrix} 
+  S^{-1} = \begin{bmatrix}
+  1 & -1 & 0 & ... & 0 & 0 \\
+  0 & 1 & -1 & ... & 0 & 0\\
+  0 & 0 & 1 & ... & 0  & 0\\
+  ... & ... & ...& ... & 0 & 0  \\	
+  0 & 0 & 0 &...& 1 & -1  \\	
+  0 & 0 & 0 & ... & 0 & 1 \\
+  \end{bmatrix}\]\\
+  
+ Podemos considerar el producto de matrices $S^{-1}MS$
+   \[ M S = \begin{bmatrix}
+   a_{1,1} & a_{1,2} & a_{1,3} &... & a_{1,n} \\
+   a_{2,1} & a_{2,2} & a_{2,3} &...  & a_{2,n}\\
+   ... & ... & ...& ... & ... \\		
+   a_{n,1} & a_{n,2} & a_{n,3} & ... & a_{n,n}\\
+   \end{bmatrix} 
+   \begin{bmatrix}
+   1 & 1 & 1 &... & 1  \\
+   0 & 1 & 1 &... & 1 \\
+   ... & ... & ...& ... & ... \\	
+   0 & 0 & 0 & ... & 1\\
+   \end{bmatrix}\]
+   
+   \[= \begin{bmatrix}
+   a_{1,1} & a_{1,1}+a_{1,2} & ... & a_{1,1} + a_{1,2}+...+a_{1,n} = 1  \\
+   a_{2,1} & a_{2,1}+a_{2,2} &... & a_{2,1} + a_{2,2}+...+a_{2,n} = 1  \\
+   ... & ... & ... & ... \\	
+   a_{n,1} & a_{n,1}+a_{n,2} & ... & a_{n,1} + a_{n,2}+...+a_{n,n} = 1 \\
+   \end{bmatrix}\]\\
+  
+  Luego la matriz  $S^{-1}MS$ tendrá la siguiente forma:\\
+     \[ S^{-1}MS = \begin{bmatrix}
+     1 & -1 & 0 &... & 0 \\
+     0 & 1 & -1 &...  & 0\\
+     ... & ... & ...& ... & ... \\		
+     0 & 0 & 0 & ... & 1\\
+     \end{bmatrix} 
+     \begin{bmatrix}
+     a_{1,1} & a_{1,1}+a_{1,2} & ... & a_{1,1} + a_{1,2}+...+a_{1,n} = 1  \\
+     a_{2,1} & a_{2,1}+a_{2,2} &... & a_{2,1} + a_{2,2}+...+a_{2,n} = 1  \\
+     ... & ... & ... & ... \\	
+     a_{n,1} & a_{n,1}+a_{n,2} & ... & a_{n,1} + a_{n,2}+...+a_{n,n} = 1 \\
+     \end{bmatrix}\]
+     
+     \[= \begin{bmatrix}
+     a_{1,1}-a_{2,1} & a_{1,1}+a_{1,2}-a_{2,1}-a_{2,2} & ... & 1-1 = 0  \\
+     a_{2,1}-a_{3,1} & a_{2,1}+a_{2,2}-a_{3,1}-a_{3,2}&... & 1 - 1=0  \\
+     ... & ... & ... & ... \\	
+     a_{n,1} & a_{n,1}+a_{n,2} & ... & 1 \\
+     \end{bmatrix}\]\\
+     
+     De un modo más simple, vamos a denotar a dicha matriz del siguiente modo:\\
+     \[ S^{-1}MS = \left[\begin{array}{r|r}
+     \Lambda (t) & 0 \\ \hline	
+     * ... * & 1\\
+     \end{array}\right]\]\\
+  Nota:  Es claro que $ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $.\\
+  
+  \newpage
+ \begin{lem}
+ 	Se verifica la siguiente igualdad:
+	 \begin{center}
+ 		det $(\Lambda(t) - I_{n-1})$ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $
+	 \end{center}
+	 \begin{proof}
+	 	Consideramos la matriz de dimensión (n-1)x(n-1):
+	            \begin{center}
+	            	$ \Lambda(t) - I_{n-1}= $ 
+	            \end{center}	           
+	           \[\begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,1}+a_{1,2}-a_{2,1}-a_{2,2} & ... &  a_{1,1}+...+a_{1,n-1}-a_{2,1}-...-a_{2,n-1} \\
+	           a_{2,1}-a_{3,1} & a_{2,1}+a_{2,2}-a_{3,1}-a_{3,2}-1&... & a_{2,1}+...+a_{2,n-1}-a_{3,1}-...-a_{3,n-1}  \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,1}+a_{n-1,2}-a_{n,1}-a_{n,2} & ... & a_{n-1,1}+...+a_{n-1,n-1}-a_{n,1}-...-a_{n,n-1} \\
+	           \end{bmatrix}\]\\
+	           
+	           Es claro que det $(\Lambda(t) - I_{n-1})$ = det$(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$ donde $S^{T}$ es la matriz traspuesta de dimensión (n-1)x(n-1) de la matriz $S$. Por tanto, vamos a trabajar con la matriz $(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$:
+	           
+	           \[ (\Lambda(t) - I_{n-1})S^{-1} = (\Lambda(t) - I_{n-1}) \begin{bmatrix}
+	           1 & -1 & 0 &... & 0 \\
+	           0 & 1 & -1 &...  & 0\\
+	           ... & ... & ...& ... & ... \\		
+	           0 & 0 & 0 & ... & 1\\
+	           \end{bmatrix}=\]
+	                
+	           \[= \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{2,1}-a_{3,1} & a_{2,2}-a_{3,2}-1&... &  a_{2,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,2}-a_{n,2}&... &  a_{n-1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix}\]\\
+	           
+	           Luego:	          
+	           \begin{center}
+	            	$  S^{T}(\Lambda(t) - I_{n-1})S^{-1} =$
+	           \end{center}
+	           \[ = \begin{bmatrix}
+	           1 & 0 & 0 &... & 0 \\
+	           1 & 1 & 0 &...  & 0\\
+	           ... & ... & ...& ... & ... \\		
+	           1 & 1 & 1 & ... & 1\\
+	           \end{bmatrix}
+	           \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{2,1}-a_{3,1} & a_{2,2}-a_{3,2}-1&... &  a_{2,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{n-1,1}-a_{n,1} & a_{n-1,2}-a_{n,2}&... &  a_{n-1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix}=\]\\
+	           
+	           \[ = \begin{bmatrix}
+	           a_{1,1}-a_{2,1}-1 & a_{1,2}-a_{2,2}+1 & ... & a_{1,n-1}-a_{2,n-1}  \\
+	           a_{1,1}-a_{3,1}-1 & a_{1,2}-a_{3,2}&... &  a_{1,n-1}-a_{3,n-1} \\
+	           ... & ... & ... & ... \\	
+	           a_{1,1}-a_{n,1}-1 & a_{1,2}-a_{n,2}&... &  a_{1,n-1}-a_{n,n-1} \\
+	           \end{bmatrix} =
+	           \begin{bmatrix}
+	           A_{1} - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix}\]\\
+	           
+	           Donde los vectores $A_{i} $ $ 1 \le i \le n $ son las filas de la matriz $[M-I_{n}]_{0,n}$, es decir, tienen la siguiente forma:
+			   \begin{center}
+		           $ A_{1} = [a_{1,1}-1, a_{1,2},...,a_{1,n-1}] $\\
+	               $ A_{2} = [a_{2,1}, a_{2,2}-1,...,a_{2,n-1}] $\\
+	               ...\\
+	               $ A_{n} = [a_{n,1}, a_{n,2},...,a_{n,n-1}] $\\
+		       \end{center}
+	           
+	           Por tanto det $(\Lambda(t) - I_{n-1})$ = det$(S^{T}(\Lambda(t) - I_{n-1})S^{-1})$ = 
+	           \[=det\begin{bmatrix}
+	           A_{1} - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix}=\]
+	           \[=det\begin{bmatrix}
+	           A_{1} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix} + det\begin{bmatrix}
+	           - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix} =det\begin{bmatrix}
+	           A_{1} \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix} + det\begin{bmatrix}
+	           - A_{2} \\
+	           A_{1} - A_{3} \\
+	           ... \\	
+	           A_{1} - A_{n} \\
+	           \end{bmatrix}=...=\]
+	           
+	           \[=det\begin{bmatrix}
+	           A_{1}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}+det\begin{bmatrix}
+	           -A_{2}  \\
+	           A_{1} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}+...+det\begin{bmatrix}
+	           -A_{2}  \\
+	           -A_{3} \\
+	           ... \\
+	           -A_{k}\\
+	           A_{1}\\
+	           -A_{k+2}
+	           ...\\	
+	           - A_{n} \\
+	           \end{bmatrix}+...+det\begin{bmatrix}
+	           -A_{2}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n-1} \\
+	           A_{1}\\
+	           \end{bmatrix}+det\begin{bmatrix}
+	           - A_{2}  \\
+	           - A_{3} \\
+	           ... \\	
+	           - A_{n} \\
+	           \end{bmatrix}\]
+	           
+	           Para obtener el valor de estos determinantes vamos a hacer uso de la siguiente igualdad:
+	           \begin{center}
+	           	$ det[M-I_{n}]_{p,q} = (-1)^{p-q}t^{p-1}det[M-I_{n}]_{1,1}	 $ $1\le p,q \le n$  
+	           \end{center}    
+	           
+	           De modo que tomando $ p=k+1 $ y $ q=n $, se tiene:     
+	           
+	           \[det\begin{bmatrix}
+	           -A_{2}  \\
+	           -A_{3} \\
+	           ... \\
+	           -A_{k}\\
+	           A_{1}\\
+	           -A_{k+2}
+	           ...\\	
+	           - A_{n} \\
+	           \end{bmatrix}=(-1)^{n-k-1}det[M-I_{n}]_{k+1,n} = t^{k}det[M-I_{n}]_{1,1}\]
+	           
+	           Por tanto, det $(\Lambda(t) - I_{n-1})$ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $.
+	 \end{proof}
+ \end{lem}
+ 
+
+ \begin{cor}\label{corlem}
+ 		Se verifica la siguiente igualdad:
+ 		\begin{center}
+ 			$ det[S^{-1}(M-I_{n})S]_{n,n} = det(\Lambda(t)-I_{n-1}) $ = (1+t+..+$ t^{n-1} $) det$[ M - I_{n}] _{1,1} $
+ 		\end{center}
+ \end{cor}
+ 
+ \bigskip
+ Ya estamos en condiciones de demostrar el teorema \ref{teoalex}:
+ \begin{proof}
+ 	Por el teorema \ref{teoMarkov} sabemos que es suficiente con probar las siguientes igualdades, donde $ \gamma, \beta \in B_{n} $ :
+ 	\begin{itemize}
+ 		\item Movimiento elemental M1: \\
+ 		$ det[\phi_{n}(+\sigma_{i}-\sigma_{i}) - I_{n}]_{1,1} = det[\phi_{n}(-\sigma_{i}+\sigma_{i}) - I_{n}]_{1,1}$, siendo $i<n$
+ 		\item Movimiento elemental M2: \\
+ 		$ det[\phi_{n}(\sigma_{i}\sigma_{i+1}\sigma_{i}) - I_{n}]_{1,1} = det[\phi_{n}(\sigma_{i+1}\sigma_{i}\sigma_{i+1}) - I_{n}]_{1,1}$, siendo $ i+1<n $.
+ 		\item Movimiento elemental M3:\\
+ 		$ det[\phi_{n}(\sigma_{i}\sigma_{j}) - I_{n}]_{1,1} = det[\phi_{n}(\sigma_{j}\sigma_{i}) - I_{n}]_{1,1}$, siendo $i<n, |i-j| > 1$
+ 		\item Verificando conjugación Mv1: $ det[\phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$ 
+ 		\item Verificando estabilización Mv2: $ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$   
+  	\end{itemize}
+	 Para demostrar las igualdades referentes a los movimientos elementales basta con probar las siguientes igualdades:
+	 \begin{itemize}
+	 	 \item Para el movimiento elemental M1: \\
+	 	 $ \phi_{n}(+\sigma_{i}-\sigma_{i}) = \phi_{n}(-\sigma_{i}+\sigma_{i})$, siendo $i<n$.\\
+	 	 Esta igualdad es clara pues por definición $-\sigma_{i}$ es la matriz inversa de $\sigma_{i}$  luego $ \phi_{n}(+\sigma_{i}-\sigma_{i}) = \phi_{n}(+\sigma_{i})\phi_n(-\sigma_{i}) = \phi_{n}(-\sigma_{i})\phi_n(+\sigma_{i}) = \phi_{n}(-\sigma_{i}+\sigma_{i})$
+	 	 
+	 	 \item Para el movimiento elemental M2: \\
+	  	 $ \phi_{n}(\sigma_{i}\sigma_{i+1}\sigma_{i}) = \phi_{n}(\sigma_{i+1}\sigma_{i}\sigma_{i+1})$, siendo $ i+1<n $.\\
+	  	 Sin pérdida de generalidad podemos suponer $i=1, n=3$ de modo que:
+	  	 	\[ \phi_{3}(\sigma_{1}\sigma_{2}\sigma_{1}) = 
+	  	 	\begin{bmatrix}
+	  	 	  1-t & t & 0  \\
+	  	 	  1 & 0 & 0 \\
+	  	 	  0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}=\]
+	  	 	
+	  	 	\[ = 
+	  	 	\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1-t & 0 & t \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix}=
+	  	 	\begin{bmatrix}
+	  	 	(1-t)^{2}+(1-t)t = 1-t & (1-t)t & t^{2}  \\
+	  	 	1-t & t & 0 \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix}=\]
+	  	 	
+	  	 	\[\begin{bmatrix}
+	  	 	1-t& (1-t)t & t^{2}  \\
+	  	 	1-t & t & 0 \\
+	  	 	1 & 0 & 0 \\
+	  	 	\end{bmatrix} = 
+	  	 	\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & (1-t)t & t^{2}  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}= \]
+	  	 	\[\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1-t & t & 0  \\
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 0 & 1 \\
+	  	 	\end{bmatrix}\begin{bmatrix}
+	  	 	1 & 0 & 0 \\
+	  	 	0 & 1-t & t \\
+	  	 	0 & 1 & 0 \\
+	  	 	\end{bmatrix}= \phi_{3}(\sigma_{2}\sigma_{1}\sigma_{2})\]
+	  	 	
+	  	 
+	 	 \item Para el movimiento elemental M3:\\
+	 	 $ \phi_{n}(\sigma_{i}\sigma_{j}) = \phi_{n}(\sigma_{j}\sigma_{i})$, siendo $i<n, |i-j| > 1$\\
+	 	 Sin pérdida de generalidad podemos suponer $ i+1<j $ de modo que:
+	 	 \[ \phi_{n} (\sigma_{i}) \phi_{n} (\sigma_{j}) = \begin{bmatrix}
+	 	 I_{i-1} &  &  & \\
+	 	 & 1-t & t &  \\
+	 	 & 1 & 0 &  \\
+	 	 &  &  & I_{j-i-2} \\
+	 	 & & & & 1-t & t &  \\
+	 	 & & & & 1 & 0 &  \\
+	 	 & & & & & & I_{n-j-1}  \\
+	 	 \end{bmatrix}= \phi_{n} (\sigma_{j}) \phi_{n} (\sigma_{i})\]
+ 	 \end{itemize}
+ 	 
+ 	 Veamos ahora que se verifican las igualdades referentes a los movimientos de Markov.
+ 	 \begin{itemize}
+ 	 	\item 
+ 	 Veamos que se verifica la igualdad para el primer movimiento de Markov, es decir, veamos que se verifica $ det[\phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$:\\
+ 	 Consideramos las matrices $ S $ y $ S^{-1} $ que definimos anteriormente y definimos los productos de matrices     
+ 	 \[S^{-1}\phi_{n}(\gamma)S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma) & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right];
+ 	 S^{-1}\phi_{n}(\beta)S = \left[\begin{array}{r|r}
+ 	 \Lambda (\beta) & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right];
+ 	 S^{-1}\phi_{n}(\gamma^{-1})S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma)^{-1} & 0 \\ \hline	
+ 	 * ... * & 1\\
+ 	 \end{array}\right]\]\\
+ 	 
+ 	 De modo que  	 
+ 	 \[ S^{-1}\phi_{n}(\gamma\beta\gamma^{-1})S = \left[\begin{array}{r|r}
+ 	 \Lambda (\gamma)\Lambda (\beta)\Lambda (\gamma)^{-1} & 0 \\ \hline	
+ 	 * ...................... * & 1\\
+ 	 \end{array}\right]\]\\
+	 Por el corolario \ref{corlem} sabemos que \\
+	 $ (1+t+..+ t^{n-1} ) det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = det[S^{-1}(\phi_{n}(\gamma\beta\gamma^{-1}))S-I_{n}]_{n,n}$\\
+	 
+	 Desarrollando este segundo término tenemos:
+	 \[det[S^{-1}(\phi_{n}(\gamma\beta\gamma^{-1}))S-I_{n}]_{n,n} = det[\Lambda (\gamma)\Lambda (\beta)\Lambda (\gamma)^{-1}-I_{n-1}] =\]
+	 \[
+	 det[\Lambda (\gamma)(\Lambda (\beta)-I_{n-1})\Lambda (\gamma)^{-1}] =
+	 det[\Lambda (\beta)-I_{n-1}] \]
+	 
+	 Aplicando de nuevo el corolario \ref{corlem} tenemos la siguiente igualdad\\
+	 $det[\Lambda (\beta)-I_{n-1}]  = (1+t+..+ t^{n-1} ) det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	 
+	 Luego obtenemos la igualdad:\\
+	  $ (1+t+..+ t^{n-1} ) det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = (1+t+..+ t^{n-1} ) det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	  
+	  y podemos concluir
+	  $ det[ \phi_{n}(\gamma\beta\gamma^{-1}) - I_{n}] _{1,1} = det[ \phi_{n}(\beta) - I_{n}] _{1,1} $\\
+	  
+	  \item 
+	  Por último vamos a ver que se verifica la igualdad para el segundo movimiento de Markov, es decir, veamos que se verifica $ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta) - I_{n}]_{1,1}$ .\\
+	  
+	  Llamemos $ M = \phi_{n}(\beta) $ de modo que 
+ 	 \[ \phi_{n+1}(\beta) = \left[\begin{array}{r|r}
+ 	  M & 0 \\ \hline	
+ 	  0 & 1\\
+ 	 \end{array}\right]\]\\	  
+ 	 
+ 	 Por otra parte sabemos que 
+ 	 \[ \phi_{n+1} (\sigma_{n}) = \begin{bmatrix}
+ 	 I_{n-1} &  &  \\
+ 	 & 1-t & t  \\
+ 	 & 1 & 0  \\
+ 	 \end{bmatrix}\]\\
+ 	 
+ 	 Por tanto, 
+ 	 \[ \phi_{n+1} (\beta\sigma_{n}) = \begin{bmatrix}
+ 	 & & & a_{1,n}(1-t) & a_{1,n}t\\
+ 	 & M_{n-1,n-1} & & ... & ...\\
+ 	 & & & a_{n-1,n}(1-t) & a_{n-1,n}t\\
+ 	 a_{n,1}& ... & a_{n,n-1} & a_{n,n}(1-t) & a_{n,n}t\\
+ 	 & & & 1 & 0\\
+ 	 \end{bmatrix}\]\\
+	  
+	 De este modo se tiene 
+ 	 \[det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{n,n} = det \left[\begin{array}{r|r}
+    	M_{n-1,n-1} - I_{n-1} & \\ \hline	
+ 	    & -1\\
+ 	 \end{array}\right]\] 
+ 	 \begin{center}
+ 	 	$ = -det[M_{n-1,n-1}-I_{n-1}] = -det[\phi_{n}(\beta)-I_{n}]_{n,n} $ 
+ 	 \end{center} 
+ 	 
+ 	 Obteniendo la igualdad
+ 	  	 \begin{center}
+ 	  	 	$ det[\phi_{n+1}(\beta\sigma_{n}) - I_{n+1}]_{1,1} = det[\phi_{n}(\beta)-I_{n}]_{1,1} $ 
+ 	  	 \end{center}
+      \end{itemize}
+ \end{proof}
+
+
+De este modo, el polinomio de Alexander de la trenza $\beta1 = \sigma1$ se obtendría del siguiente modo:\\
+Por definición tenemos que  
+\[ \phi_{2} (\beta1) = \begin{bmatrix}
+1-t & t  \\
+1 & 0 \\
+\end{bmatrix}\]
+luego 
+\[ \phi_{2} (\beta1) - I_{2}= \begin{bmatrix}
+-t & t  \\
+1 & -1 \\
+\end{bmatrix}\]
+Finalmente tenemos 
+\[ det(\phi_{2} (\beta1) - I_{2})_{1,1} = det(\begin{bmatrix}
+-1 \\
+\end{bmatrix}) = -1.\]
+
+Veamos ahora el polinomio de Alexander de una trenza más compleja, en concreto de la trenza $\beta2 = \sigma2\sigma3^{-1}$. Ya sabemos que 
+ \[ \phi_{4} (\beta2) = \begin{bmatrix}
+ 1 & 0 & 0 & 0 \\
+ 0 & 1-t & 0 & t \\
+ 0 & 1 & 0 & 0  \\	
+ 0 & 0 & t^{-1} & 1-t^{-1} \\
+ \end{bmatrix}\]
+ luego
+  \[ \phi_{4} (\beta2) - I_{4} = \begin{bmatrix}
+  0 & 0 & 0 & 0 \\
+  0 & -t & 0 & t \\
+  0 & 1 & -1 & 0  \\	
+  0 & 0 & t^{-1} & t^{-1} \\
+  \end{bmatrix}.\]
+  
+  Finalmente tenemos 
+    \[ det(\phi_{4} (\beta2) - I_{4})_{1,1} = det(\begin{bmatrix}
+    -t & 0 & t \\
+     1 & -1 & 0  \\	
+     0 & t^{-1} & t^{-1} \\
+    \end{bmatrix}) = 1-1 = 0.\]
+    
+Por tanto tenemos que las trenzas $\beta1$ y $\beta2$ no pueden generar nudos equivalentes pues sus polinomios de Alexander son distintos.\\
+    
