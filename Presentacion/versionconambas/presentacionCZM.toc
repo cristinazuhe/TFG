@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Teor\IeC {\'\i }a de nudos.}{3}{0}{1}
+\beamer@sectionintoc {2}{Teor\IeC {\'\i }a de trenzas.}{20}{0}{2}
+\beamer@sectionintoc {3}{Toxtren.}{34}{0}{3}
